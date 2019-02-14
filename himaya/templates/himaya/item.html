@@ -1,0 +1,144 @@
+
+{% extends 'base3.html' %}
+{% load staticfiles %}
+    {%block head%}
+     
+    {% if item != None %}
+        <title>{{item.name}}-Selected Class</title>
+        
+    {% else %}
+        <title>Invalid Item ID- Selected Class</title>
+    {% endif %}
+    
+    {%endblock%}
+
+
+   {% block body %}
+
+
+ <a href="{% url 'home:index' %}">&lt; Back to the list</a>
+               
+      
+         
+                      <div class="container">
+                            <small><span class="caps">Book</span></small>
+                            <div class="line-sep"></div>
+                              
+                                {% if item != None %}   
+                                    
+                                <div class="section-title">{{item.name}}</div>
+                                    <hr>
+                      </div>
+                     
+               
+                
+                                <section class="section grey-scale">
+                     <div class="container">
+                                        
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <h3>Kwa ufupi</h3>
+                                        <p>{{item.description}}</p>
+                                    <h3>Cover</h3>
+                                        {% if item.image%}
+                                                <img src='{{item.image.url}}' class= 'img-responsive'/>
+                                                
+                                         {%endif%}
+                                    
+                                    </div><br>
+                                   
+                                    <div class="col-md-5">
+					<h3>Bei Tsh {{item.price}} </h3>
+					<div class="card right-in">
+					    <div class="card-icon">
+                                                <br><br>
+						<ul class="tutor-icons">
+                                                   
+                                                    <br><br> 
+						    
+                                                    <h4><a class="btn btn-follow btn-lg "href="{% url 'home:chat'%}"> Nenda Kazini</a></h4>                                                   -->
+                                                    
+                                              
+						</ul>
+                                                    
+                                                
+                                                  <br>
+                                                   <hr>
+                                                  
+                                            </div>
+                                        </div>
+                                    </div>      
+                                {% else %}
+                                                <p>Invalid Item ID.</p>
+                                {% endif %}
+                                                                
+                              </div>
+                    </div>
+                </section>
+                
+      <br>
+                
+                <div class="container"
+        <section class="section">
+            
+                 <small><span class="caps">Hasira Hasara</span></small>
+                            <div class="line-sep"></div>
+                
+                 <div class="col-md-12">
+						
+                                                <div class="row">
+                                                    <h1>Kuhusu Muandishi</h1>
+							<!--<div class="col-md-5">-->
+                                                            
+								<div class="tutor">
+                                                                    
+									<div class="tutor-image">
+										{% if item.image%}
+										<img src='{{item.image_author.url}}' />
+                                                                                {%endif%}
+									</div>
+
+									
+                                                                        
+                                                                        <div class="text-center">
+										<h4>
+											Overblessing A Msuya
+										</h4>
+										
+                                                                                <hr>
+									</div>
+
+									
+									    
+								</div>
+							</div>
+                                                        
+                                                        <!--<div class="col-md-6">-->
+                                                           
+									
+
+									<div class="text-left">
+										<p>
+										{{item.author_description}}
+											
+                                                                                        
+										</p>
+										
+                                                                             
+									</div>
+
+									
+							</div>
+
+
+        </section>
+        
+      </div>
+           <hr>
+            
+            <br><br>
+
+
+
+
+   {% endblock %}

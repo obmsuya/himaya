@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+
+
+
+
+   {% block body %}
+       
+     
+        
+         <div class="container">
+             <div class='col-sm-6 col-sm-offset-3'>
+                 <a href="{% url 'home:class' %}">&lt; Back to the list</a>
+         
+         
+         
+                 {% if detail != None %}   
+                 <h3>{{detail.title}}</h3>
+                  <h3>  {{title}}</h3>
+                    <h3>  {{itm}}</h3>
+                 <h4>{{detail.content}}</h4>
+                     {% if detail.image%}
+                     <img src='{{detail.image.url}}' class= 'img-responsive'/>
+                     {%endif%}
+                 {% else %}
+                     <p>Invalid Item ID.</p>
+                 {% endif %} 
+             </div>
+         </div>
+   {% endblock %}

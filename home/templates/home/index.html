@@ -1,0 +1,55 @@
+
+{% extends 'base2.html' %}
+
+{% load staticfiles %}
+
+
+   {% block body %}
+        <br>  <br>  
+        <section class="section">
+	    <div class="container">
+			<small>
+							<span class="caps">Items</span>
+						</small>
+                        <div class="line-sep"></div>
+                
+              
+			  <p>Hii ni listi ya vitabu vinavyopatikana OBG online. Bonyeza chaguo lako ili kupata maelezo zaidi.<p>
+                          <p>Kuona listi ya vitabu ulivyokwisha lipia bonyeza hapa <a href="{% url 'home:chat'%}"><span>Biashara yangu</span></a></p>
+		  
+                <hr>
+                <div class="row">
+                     <div class="col-md-6">
+                        
+                        
+                        
+                       
+						
+                        
+                        
+                       {% for category in categories %}
+                           
+		    
+                           <h3>{{category.name}}</h3>
+                           
+                           
+                           {%for item in category.item_set.all %}
+                              
+                               <h3><a href="{% url 'home:item' item_id=item.id %}"> <ul> {{item.name}}</ul></a></h3>
+                            
+                           {%endfor%}
+                        {%endfor%}
+          
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+     
+      <br><br>
+      
+      
+
+
+   {% endblock %}

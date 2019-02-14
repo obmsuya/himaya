@@ -1,0 +1,78 @@
+
+{% extends 'base.html' %}
+
+
+
+{% block head %}
+
+      <title> </title>
+{% endblock %}
+
+
+
+   {% block body %}
+       
+       <div class="container">
+                  
+                      <div class="row">
+  
+       <h1>OFISI YANGU</h1>
+       <h1>1) Taarifa Binafsi</h1>
+          <p>Jina la Kiofisi:{{user}}</p>
+          <p>Jina la kwanza: {{user.first_name}}</p>
+          <p>Jina la mwisho: {{user.last_name}}</p>
+          <p>barua pepe: {{user.email}}</p>
+          <p>Your Country:{{user.userprofile.country}}</p>
+          <p>Your Region:{{user.userprofile.region}}</p>
+          <!--<p>Website:{{user.userprofile.website}}</p>-->
+          <p>Your Phone Number:{{user.userprofile.phone}}</p>
+          
+          <h3>PICHA</h3>
+           {%if user.userprofile.image%}
+          <img src="{{ user.userprofile.image2.url }}" width="240">
+            {%endif%}
+          
+          <br><br>
+        <h1>2)Mtandao wangu</h1>  
+        <p> Jina la Kiongozi wangu: {{user.userprofile.upliner}}</p>
+        <p>Idadi ya Wafuasi wangu: {{user.userprofile.downliner}}
+        <p> Majina ya wafuasi wanne wa chini pamoja na namba zao:{{user.userprofile.Maelezo}}
+        <h3>Mtandao wangu</h3>
+        {%if user.userprofile.image%}
+          <img src="{{ user.userprofile.image.url }}" width="240">
+            {%endif%}
+        <br><br>
+        
+          
+            
+            <h1>3) Account yangu</h1>  
+            <p> Kiasi cha Fedha:{{user.userprofile.account}}</p>
+            <p> Kiasi unachodaiwa:{{user.userprofile.debt}}</p>
+            <p> Maelezo ya account yako:{{user.userprofile.accountdescription}}</p>
+            
+            
+            
+            <h1>Ujumbe kutoka ofisini</h1> 
+         
+          <p>4) Maelezo Mengine: {{user.userprofile.Proffession}}</p>
+        <br>
+          <h1> 5) Malalamiko</h1>
+          <div class="container">
+        <div class="container">
+    <h1><a href="{% url 'home:make' %}"> Bonyeza hapa kuwasiliana na ofisi</a></h1>
+        </div>
+          
+          
+          
+          
+            
+          
+                      </div>
+          </div>
+          </div>
+   </div>
+   
+
+
+   </div>
+   {% endblock %}

@@ -1,0 +1,98 @@
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+/*body {
+    background-color: lightblue;
+}*/
+
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4, p {
+    font-family: 'Lobster';
+    text-indent: 25px;
+}
+
+h2 {
+    color: #330000;
+}
+h1 {
+    text-align:center;
+    
+}
+
+span {
+    font-weight:bold;
+    color:darkblue;
+}
+li a {
+    color: #FCA205;
+    font-family: 'lobster';
+}
+
+p{
+font-size: 18px;
+}
+
+.page-header {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+.redtext {color:red;
+
+}
+
+
+.wrapper {
+    
+    border: red;
+    border: solid 3px;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.image {
+    /*position: relative;*/
+    display: block;
+    margin-left: 400px;
+    margin-right:auto;
+    
+}
+.video-container {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.tab button {
+    /*display: block;
+    background-color: inherit;
+    color: black;*/
+    padding: 22px 16px;
+    width: 100%;
+    border: 2px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 12px;
+  
+}
+
+

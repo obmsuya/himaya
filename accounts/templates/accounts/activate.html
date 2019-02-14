@@ -1,0 +1,110 @@
+
+
+
+{% extends 'base2.html' %}
+
+{% load staticfiles %}
+<br><br>
+
+   {% block body %}
+     <br><br>
+      
+      
+      
+      
+       <main class="page-wrapper">
+		<div class="page-header">
+		</div>
+			<div class="page-conten container mt-50">
+				<div class="row">
+
+					
+                                        
+                                        <div class="col-md-12 col-sm-12">
+                                                 <h2>Activation Form</h2> 
+                                                  <hr>
+                                               <div class="line-sep"></div>  
+                                                  <p>This form must be filled with the help of your <span>upliner</span>.<p>
+                                                 
+						 <hr>	    
+					</div>
+                                       
+                                        <br><br>
+                                        
+                                        <div class="col-md-6">
+						
+
+
+						
+
+
+						<div class="row">
+							<div class="col-md-10 col-sm-12">
+								<div class="alert alert-danger">
+									<div class="form">
+                                                                        
+									<form method="POST" action ='' enctype='multipart/form-data'>
+                                                                        {% csrf_token%}
+                                                                        {{form.as_p}}
+                                                                    
+                                                                    
+                                                            <button type="submit" class="btn btn-follow block btn-login">
+										 	submit </button>
+                                                                            </form>
+                                                                        
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+						
+							
+
+								<!--<div class="row">-->
+									<div class="col-md-10 col-sm-12">
+										<hr>
+										
+											<!--<p>I don't have Account<a href="{% url 'accounts:register'%}"> Create&raquo;</a></p>-->
+                                                                                    <p><a href="{% url 'accounts:reset_password'%}">I forgot my Password &raquo;</a></p>
+								      <hr>
+									</div>
+								<!--</div>-->
+							</form>
+						</div>
+					</div>
+
+
+
+					<div class="col-md-6">
+						
+						  <img src="{%static 'img/logpic2.jpg'%}" class="img-responsive" alt=""'>
+						<hr>
+
+
+						<h3>
+							<a href="http://gis4life.pythonanywhere.com/" target="_blank">GIS ONLINE</a> 
+						</h3>
+
+						<p>
+							Become GIS pro within a short period of time.
+						</p>
+						<hr>
+
+
+
+						<h3>
+							Read Books
+						</h3>
+
+						<p class="mb-20">
+							Do you believe in knowledge. buy books here.
+						</p>
+						
+					</div>
+				</div>
+			</div>
+	</main>
+   {% endblock %}

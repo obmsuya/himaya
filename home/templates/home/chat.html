@@ -1,0 +1,61 @@
+
+
+{% extends 'base2.html' %}
+
+
+   {% block body %}
+        <br>
+ 
+ 
+  <main class="page-wrapper">
+   
+                
+			<div class="page-conten container mt-50">
+                            <p>Hi {{ user.first_name }}!</p>
+     <div class="line-sep"></div>
+		<div class="intro mb-8"><span>LIPA KUPATA HUDUMA</span></div>
+              <hr><hr>
+				<div class="row">
+					<div class="col-md-7">
+                                          
+						
+                                                   {% for post in posts%}                  
+                                                      {%if post.user in friends%}
+                                                                   
+                                                                 <h2>VITABU</<h2>
+                                                                     <div class="line-sep"></div>
+                                                                  <p>Soma: <a href="{{post.post}}">Mbinu ya kudhubiti Hasira</a></p>
+                                                                 
+                                                                 <br>
+                                                                 
+                                                                  	
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 {%endif%}
+                                                                 
+                                                              {%endfor%}
+                                                              
+                                                              
+                                        </div>
+                                       
+                                        <div class="col-md-5">
+                                    
+                                        {%if user.userprofile %}
+                                            <h3>JENGA HIMAYA</h3>
+                                             <div class="line-sep"></div>
+                                      <h3><a href="{{user.userprofile.country}}"> Activate</a> New Member</h3>
+                                      
+                                       <h3><a href="{{user.userprofile.Proffession}}">My Back office </a></h3>
+                                       {%endif%}
+                                       </div>          
+				 </div>
+			   </div>
+
+	</main>
+        
+        
+        
+
+   {% endblock %}

@@ -1,0 +1,126 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% load staticfiles %}
+
+<html>
+
+
+    <head>
+
+        <title>OBGGLOBAL </title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'accounts/style7.css' %}">
+        <!--<link rel="stylesheet" href="{% static 'home/house.css' %}">-->
+         
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"   
+
+        {% block head %}
+
+        {% endblock %}
+
+    </head>
+
+
+    <body>
+        <img src="{%static 'img/mmm8.jpg'%}"   class= 'img-responsive'>
+ <center><p>This Website is in Swahili, click <span>here </span> to get the english version </p></center>    
+<br>
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>   
+    </div>  
+          <div id="navbar" class="navbar-collapse collapse">
+              {% if user.is_authenticated %}
+            
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="{% url 'home:home'%}">Mwanzo</a></li>
+                <!--<li><a href="{% url 'home:chat'%}">Talk to Others</a></li>
+                <li><a href="{% url 'home:index'%}">Register</a></li>-->
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li><a href= "{% url 'accounts:view_profile'%}">Profile</a></li>-->
+                <!--<li><a href="{% url 'accounts:edit_profile'%}">Edit Profile</a></li>-->
+                <li><a href="{% url 'accounts:change_password'%}">Badili neno la siri</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="{% url 'accounts:logout'%}">Funga Ofisi</a></li>
+            </ul>
+
+
+              {%else%}
+
+           <ul class="nav navbar-nav navbar-left"> 
+                <li><a href="{% url 'home:home'%}">Mwanzo</a></li>
+            </ul>
+            
+            <ul class="nav navbar-nav navbar-right">
+               <li><a href="{% url 'accounts:login'%}">Ingia</a></li>
+               <!--<li><a href="{% url 'accounts:register'%}">Sign up</a></li>-->
+                <li><a href="{% url 'accounts:reset_password'%}">Nimesahau neno la siri</a></li>
+            </ul>
+            {%endif %}
+
+    </div><!--/.nav-collapse -->
+    
+
+ </nav>
+   
+        
+        
+       
+      
+      <!--<center><img src="{%static 'img/mmm7.jpg'%}"   class= 'img-responsive'></center>-->
+    <!--  <img src="{%static 'img/mama2.jpg'%}"   alt="">-->
+      <!--<img src="{%static 'img/dark2.jpg'%}"   alt="">
+      <img src="{%static 'img/bluish2.jpg'%}"   alt="">
+      <img src="{%static 'img/bluishextend2.jpg'%}"   alt="">-->
+       
+    
+       
+       
+            <div class="row">
+            <div class="col-md-8">
+                    
+                    
+         
+      
+                    {% block body %}
+                        
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+ 
+    <footer class="container">
+      <p>&copy; Company 2017-2018</p>
+    </footer>
+    <img src="{%static 'img/mmm8.jpg'%}"   class= 'img-responsive'>
+    </body>
+    
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"></script> 
+    
+    <script
+       src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+       integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+       crossorigin="anonymous"></script>
+    
+    
+</html>

@@ -1,0 +1,80 @@
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4, p {
+    font-family: 'Lobster';
+}
+
+h2 {
+    color: #330000;
+}
+h1 {
+    text-align:center;
+    
+}
+
+span {
+    font-weight:bold;
+    color:darkblue;
+}
+li a {
+    color: #FCA205;
+    font-family: 'Lobster';
+}
+
+p{
+font-size: 18px;
+}
+
+.page-header {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+.redtext {color:blue;
+}
+
+/**{
+    margin: 0;
+    padding: 0;
+}
+
+
+@-webkit-keyframes slide
+{
+    0%{left: 0;}
+    10%{left: 0;}
+    20%{left: -100;}
+    30%{left: -100;}
+    40%{left: -200;}
+    50%{left: -200;}
+    60%{left: -200;}
+    70%{left: -300;}
+    80%{left: -400;}
+    90%{left: -400;}
+    100%{left: 0;}
+}
+
+
+#slider{
+    overflow: hidden;
+    
+}
+#slider figure img{
+    float: left;
+    width: 20%
+}
+
+#slider figure{
+    position: relative;
+    width:500%;
+    -webkit-animation: slide 5s infinite;
+    
+}
+*/

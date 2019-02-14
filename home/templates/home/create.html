@@ -1,0 +1,100 @@
+
+{% extends 'base2.html' %}
+{% load staticfiles %}
+
+   {% block body %}
+         
+
+
+
+      
+      
+      
+      
+       <main class="page-wrapper">
+		<div class="page-header">
+		</div><div class="jumbotron">
+			<div class="page-conten container mt-50">
+				<div class="row">
+
+					
+                                        
+                                        <div class="col-md-12 col-sm-12">
+                                                  <hr>
+                                                 
+                                                 <h1><center> Welcome,</center></h1> 
+                                    <h1><center>Let's create an account for you.</center></h1>
+                                                 
+						 <hr> <hr> 
+					</div>
+                                       
+                                        <br><br>
+                                        
+                                        <div class="col-md-8">
+						
+
+						
+
+
+						<div class="row">
+							<div class="col-md-10 col-sm-12">
+								<div class="alert alert-danger">
+									<div class="form">
+                                                                        <form method="post">
+
+                                                                        {% csrf_token%}
+                                                                        {{form.as_p}}
+                                                                    <P>You have read and agree to the E-Communication Policy,
+                                                                    which provides that this is an online service and that you
+                                                                    will receive the account notices and information electronically
+                                                                    via your primary email address. You have also read and agree to
+                                                                    the User Agreement and Privacy Statement that if you provide your mobile phone number, you give us permission
+                                                                    to contact you about your accounts. Thanks.</P>
+                                                                    
+                                                            <button type="submit" class="btn btn-success block btn-login">
+										 	Agree and Create Account </button>
+                                                                            </form>
+                                                                        
+								</div>
+							</div>
+						</div>
+
+
+								
+							</form>
+						</div>
+					</div>
+
+
+
+					<div class="col-md-4">
+						
+						  <img src="{%static 'img/logpic2.jpg'%}" class="img-responsive" alt=""'>
+						<hr>
+
+
+						<h3>
+							<a href="http://gis4life.pythonanywhere.com/" target="_blank">GIS ONLINE</a> 
+						</h3>
+
+						<p>
+							Become GIS pro within a short period of time.
+						</p>
+						<hr>
+
+
+
+						<h3>
+							Build your Empire
+						</h3>
+
+						<p class="mb-20">
+							Are you an enterpreneur. Do you want to build your Empire? Contact us. Thanks
+						</p>
+						
+					</div>
+				</div>
+			</div>
+	</main>
+
+   {% endblock %}

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+{% extends 'base2.html' %}
+{% load staticfiles %}
+
+{%block head%}
+     
+    
+    
+    {%endblock%}
+
+
+
+ {% block body %}
+
+	<main class="main-wrapper">
+		
+		<aside class="side-panel">
+			<!--<div class="search-area"><form action=""><input type="text" placeholder="Type to search.. "></form></div>-->
+				
+				<div class="scroll-able mt-10">
+					<ul class="top-ul">
+						<li><a href="" class="active">{{user}}</a>	
+							<ul class="submenu">
+								<li><a href="" id="link1">Mtandao wangu</a></li>
+									
+								<li><a href="" id="link2">Account yangu</a></li>
+								<li><a href="" id="link3">Ujumbe kutoka ofisini</a></li>
+								<li><a href="" id="link4">Malalamiko</a></li>
+								
+                                                               
+							</ul>
+							
+						</li>
+	
+						
+                                                <li><a href="" >Reffer anothe person</a></li>
+						
+						
+						
+					</ul>
+				</div>
+				
+		</aside>
+		
+
+
+
+
+
+	<div class="main-section">
+		<div class="container">
+
+
+				<h1 class="topic-title">{{user.first_name}}</h1>
+
+			<div id="linkintro">
+                              
+                              <h3>Your Picture</h3>
+                              {%if user.userprofile.image2%}
+                                          <img src="{{ user.userprofile.image2.url }}" width="240">
+                              {%endif%}
+			    <!--<img src="{%static 'img/stack.jpg'%}" class="img-responsive" alt="">-->
+                                <p>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#regprocess">contact us
+										</button> and make appointment
+                                for live support.</p>
+                              
+                         <h3>Your First Name: </h3>
+                         <P class="btn btn-link">{{user.first_name}}</P>
+                            <p></p>
+                            <div class="text-center">
+			    <img src="{%static 'img/vutia.jpg'%}" class="img-responsive" alt=""'>	
+			    </div>
+			    <h3>Your Phone number.</h3>
+			    <P class="btn btn-link">{{user.userprofile.phone}}</P>
+			    
+			    <h3>Your Email Address.</h3>
+			    <P class="btn btn-link">{{user.email}}</p>
+                            
+			    
+					
+				
+                            
+				
+				 
+	        
+                <div class="modal fade bd-example-modal-lg" id="regprocess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">Contact us</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                
+                                        <div class="modal-body">
+                                             
+                                            <p> +255653397942  </p>
+                                            <p>obgglobal@gmail.com</>
+                                                
+                                                    
+                                                    
+                                            </div>
+              
+                            </div>
+                        </div>
+                    </div>                           
+                                
+						
+					
+	</div>
+
+			
+	
+
+			
+			<div id="link1data" class="animated fadeIn">
+
+
+				<h2>QGIS Installation</h2>
+				<div class="section2 grey-scale">
+					<div class="text-center">
+					
+					<h3 class="font-weight-bold">READING TUTORIAL.</h3> 
+					</div>
+					</div>
+					
+				<hr>
+						
+				<p>There are two types of QGIS installer packages;
+				<p>1. QGIS standalone installer- this package installs the binary version of QGIS and the Geographic Resource Analysis Support System (GRASS) using a standard
+				Windows installation tool. and</p>
+				<p>2. OSGeo4W Network Installer - this package provides the user with opportunity to download either the binary or source code
+				version of QGIS, as well as experimental releases of QGIS. Additionally, the OSGeo4W installer allows you to install
+				other open source tools and their dependencies.</p>
+				
+				<p> If you want an easy installation experience of QGIS choose standalone installer and  and if you want an advanced
+				features in QGIS choose OSGeo4W Network Installer option. For new users we recommend
+				using QGIS standalone installers.</p>
+				
+				<div class="text-center">
+			    <img src="{%static 'img/installation.jpg'%}" class="img-responsive" alt=""'>	
+			    </div>
+				
+				Below are the instructions for downloading and installing each option. Remember, you only need one type of installation, so once
+				you install Standalone installer you don't need to install OSGeo4W installer.
+				
+				
+				 <p class="font-weight-bold">If you get stuck during installation watch the video below first before you seek for a live support.</p>
+	
+<br>
+                                <h4 class="font-weight-bold">Standalone installer </h4>
+				
+				<hr>
+                                 
+				 
+				 <h5>Installation Process</h5>
+				 <p>Installing  Standalone QGIS installer is fairly simple. You can download
+				 the installer directly from our gis4life server or from the qgis website. Keep the downloaded files in your local
+				 directory for future installations. Make sure you download the same version of QGIS as the one used in this course (QGIS 3.2).</p>
+				 
+				 <p> To download Standalone Installer from GIS4life server click <a href= "{%static 'qgis.zip'%}" download>Download here</a>, then follow Instruction 1  below.
+				 <P>Instruction 1.</P>
+				  <img src="{%static 'img/qgis1.jpg'%}" class="image-responsive" alt="">
+				 <br><br>
+				 <p>To download from QGIS website
+				 click <a href="http://download.osgeo.org/qgis/win64/" target="_blank" />Download qgis</a>, then follow  Instruction 2  followed by  Instruction 1 (skip step 4 of instruction 1) </p>
+						
+						<P>Instruction 2. </P>
+					<img src="{%static 'img/qgis2.jpg'%}" class="image-responsive" alt="">
+						<br><br>
+							<!--<img src="{%static 'img/qgis3.jpg'%}" class="image-responsive" alt="">-->
+				
+				
+				<p class="font-weight-bold">2. After downloading, double click to start the installation process. Accept the defalts by clicking next, i agree, install then finish.</p>
+				
+				<br><br>
+				<h3>Uninstalling Standalone QGIS</h3>
+				
+				
+				<hr>
+				<img src="{%static 'img/qgis4.jpg'%}" class="image-responsive" alt="">
+					<br><br>
+					<img src="{%static 'img/qgis5.jpg'%}" class="image-responsive" alt="">
+						<br><br>
+						<img src="{%static 'img/qgis6.jpg'%}" class="image-responsive" alt="">
+							<br>
+							
+							<img src="{%static 'img/qgis7.jpg'%}" class="image-responsive" alt="">
+					<br><br><br><br>
+                                 <h4 class="font-weight-bold">OSGeo4W installer </h4>
+				 <hr>
+				 <div class="flex f-start f-col"><small>Skip this part, if you installed Standalone installer.</small></div>
+				
+				 <p>Installing OSGeo4W installer is fairly simple. For this example, the OSGeo4W 64-bit installer is used. I like this installer because it can
+				also be used to install other open source packages at one time. It's a bundled set of packages that you can choose what
+				to install and/ or update. For new users the standalone installers are recommended. For more advanced users you can
+				use the OSGeo4W package to install several versions in parallel. The installer is able to install from internet or just
+				download all needed packages beforehand. The downloaded files are kept in a local directory for future installations.You can download the installer directly from our gis4life server or from the qgis website. Keep the downloaded files in your local
+				 directory for future installations. </p>
+				 
+				 <p>1. Go to <a href= "{%static 'qgis.zip'%}" download> gis4life</a> to download from our server or  <a href="http://download.osgeo.org/qgis/win64/" target="_blank" />www.qgis.com</a> to
+				 download directly from QGIS website. Make sure you download the right version of QGIS for your OS.
+				 <p class="font-weight-bold">Watch the video below for more undestanding.</p>
+				 
+				 <p>2. After downloading the installer, double click on it to start installation.</p>
+				 
+				 <img src="{%static 'img/osgeo4w0.jpg'%}" class="image-responsive" alt="">
+					<br><br><br>
+					<p class="font-weight-bold">From three options above</p>
+					<p>-First option: The express install-is a quick way of installing some of the most high profile OSGeo4W packages in a minimum
+					number of steps</p>
+					<p>-Second option: Express web-GIS install - is a quick way of installing GIS related drives.</p>
+					<p>-Third option: Advance install- allows control over many details of the installations.</p>
+				 
+				 <p>3.Select first option click next.</p>
+				 <img src="{%static 'img/osgeo4w1.jpg'%}" class="image-responsive" alt="">
+					<br>
+				<p> Go through the installation process using default options. Choose download source - use the Install from
+			       Internet option. Use the default root installation directory as C:\OSGeo4W. Install for all users and select
+			       options to create icons on desktop and start menu. During the installation process you may also get a
+			       window that says other required software dependencies are needed - install them.</p>
+				
+				 <img src="{%static 'img/osgeo4w2.jpg'%}" class="image-responsive" alt="">
+				
+				<p class="font-weight-bold">End of Installation using option one. If you choosed option three, below are the steps</p>
+				
+				
+
+				<p>3.For Optional Driver Installation, select third option then click next.</p>
+				
+					<img src="{%static 'img/osgeo4w0.jpg'%}" class="image-responsive" alt="">
+						<br><br>
+				<p>In the Setup window, select the Advanced Install option and click Next</p>
+							
+			<p>4. Click Install from Install from Internet, then select the directory where you downloaded the installation packages
+			if different from the default path (e.g. C:\Users\stephanies\AppData\Local\Temp).</p>
+				<img src="{%static 'img/osgeo4w3.jpg'%}" class="image-responsive" alt="">
+					<br><br>
+				
+			5. In the Select Packages window, expand Libs section. Find the option, gdal-filegdb: OGR FileGDB Driver, then click
+				the "refresh" symbol for options to either: Install, Uninstall, Keep, Upgrade or Downgrade a library package.
+				Finish the installation process.
+				
+					<img src="{%static 'img/osgeo4w4.jpg'%}" class="image-responsive" alt="">
+					<br><br>
+				
+				
+					
+				<h3>Uninstalling OSGeo4W</h3>
+				
+				<P>To uninstall QGIS that you installed using the OSGeo4W utility, just delete the root directory and associated folders (e.g.
+				C:\OSGeo4W and C:\Users\stephanies\.qgis). Desktop icons and folder in the Startup menu need to be removed
+				manually.</P>
+				
+				
+				<div class="section2 grey-scale">
+					<div class="text-center">
+					
+					<h3 class="font-weight-bold">VIDEO LECTURE.</h3> 
+					</div>
+					</div>
+					
+				<hr>
+				
+				<div class="video-holder">
+						<iframe src="https://www.youtube.com/embed/V0m2gxGFRx4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					
+				
+				<br><br>
+					<div class="section2 grey-scale">
+					<div class="text-center">
+					
+					<h3 class="font-weight-bold">TEST.</h3> 
+					</div>
+					</div>
+					
+				<hr>
+
+			</div>
+
+			
+
+			<div id="link2data" class="animated fadeIn">
+					<div class="section2 grey-scale">
+					<div class="text-center">
+					<h2>Files Management</h2>
+					</div>
+					</div>
+					
+				<hr>
+					<br>					
+
+					 <div class="text-center">
+				<img src="{%static 'img/fmngt111.jpg'%}" class="image-responsive" alt="">	
+					 </div>
+				
+				<br>
+				<P>Working with GIS software requires lots of interactions with folders and files. If you are new in computer, file management is good for you.</P>
+				
+                                        
+				
+				<p>The data that we work with on our personal computer is all arranged in a hierarchical system which uses directories and organizes the files
+				into a tree structure. Although we use the operating system for structuring our files, how we name them, how we organize the nested folders,
+				and how the files in those folders are arranged, form the basic feature of file management.
+				Keeping track of the files and being able to find them instantly at the time of requirement can add great value to understanding of GIS.
+				</P>
+				
+				<p>This subtopic will help you to learn the following; </P>
+					
+					 <ul>
+					<li><spanb>What are files and folders</span></li>
+					<li><spanb>organizes your files and folders</span></li>
+					<li><spanb>CREATING A FOLDER</span></li>
+					<li><spanb>Understand the parts of a folder</span></li>
+					<li><spanb>Viewing your files in folder</span></li>
+					<li><spanb>Finding your files</span></li>
+					<li><spanb>Copying and moving files and folders(copying and moving files an folders)</span></li>
+					<li><spanb>SAVING LOCATIONS</span></li>
+					<li><spanb>RENAMING FILES AND FOLDER</span></li>
+					<li><spanb>Creating and delelting files(deleting)</span></li>
+					<li><spanb>Opening an existing file</span></li>
+					<li><spanb>ESTORING DELETED FILES</span></li>
+				      </ul>  
+       
+					
+					
+					<h4>What are files and folders</h4>
+					<P><span>A file</span> is very much like a typed document that you might find on someone's desk or in a filing cabinet; it's an item that 
+				contains a collection of related information. On a computer, examples of files include text documents, spreadsheets, digital 
+				pictures, and even songs. Every picture you take with a digital camera, for example, is a separate file, and a music CD might 
+				contain a dozen individual song files.
+				Your computer represents files with icons. By looking at a file's icon, you can tell at a glance what kind of file it is. Here are 
+				some common file icons</P>
+					<img src="{%static 'img/fmngt11.jpg'%}" class="image-responsive" alt="">
+						
+				<p><span>A folder </span>is little more than a container in which you can store files. 
+				If you put thousands of paper files on someone's desk, it would be virtually impossible to find any particular one when you needed it.
+				That's why people often store paper files in 
+				folders inside a filing cabinet. Arranging files into logical groups makes it easy to locate any particular file.
+				Folders on your computer work exactly the same way. This is what a typical folder icon looks like: </p>
+					<img src="{%static 'img/fmngt22.jpg'%}" class="image-responsive" alt="">	
+					
+					
+				<h4>How Windows organizes your files and folders</h4>	
+					
+					<p>When it comes to getting organized, you don't need to start from scratch. Windows comes with a handful of common folders 
+					that you can use as anchors to begin organizing your files. Here's a list of some of the most common folders you can store 
+					your files and folders in:</p>
+					
+					
+					<ul>
+					<li><p><span>Documents. </span>Use this folder to store your word processing files,
+					spreadsheets, presentations, and other business oriented files.</p></li>
+					<li><p><span>Pictures. </span>Use this folder to store all of your digital pictures, whether you
+					get them from your camera, scanner, or in email from other people.</p></li>
+					<li><p><span>Music . </span>Use this folder to store all of your digital music, such as songs that
+					you copy from an audio CD or download from the Internet.</p></li>
+					<li><p><span>Videos. </span>Use this folder to store your videos, such as clips from your digital
+					camera, camcorder, or video files that you download from the Internet</p></li>
+					<li><p><span>Downloads. </span>Use this folder to store files and programs that you download from the web</p></li>
+					
+				      </ul>  
+					
+					<p>There are many ways to find these folders. The easiest method is to open the personal folder,
+					which gathers all of your common folders in one place. The personal folder isn't actually called "personal"
+					it's labeled with the user name that you used to log on to the computer. To open it, click the Start
+					button, and then click your user name at the top of the Start menu's right pane.</p>
+					<img src="{%static 'img/fmngt33.jpg'%}" class="image-responsive" alt="">
+						<br><br>
+					<p>Remember that you can create subfolders inside any of these folders to help you better
+					organize your files. In the Pictures folder, for example, you might create subfolders to organize
+					pictures by date, by event, by the names of people in the pictures, or by any other scheme that helps you work more efficiently.</p>
+					
+				<h4>creating folder</h4>
+					Right click where you want to make the folder (on desktop, in another folder, etc.). 
+					Choose New > New Folder. 
+					
+					<img src="{%static 'img/fmngt1.jpg'%}" class="image-responsive" alt="">
+					<br>
+					<p>Type a name, then press <span>Enter</span></p>
+					
+					<p>Right click and choose<span> Rename </span>to rename.  </p>
+				<h4>Creating and deleting files	</h4>
+				
+					<p>The most common way to create new files is by using a program. For example, you can create a text 
+					document in a word processing program or a movie file in a video editing program.</p>
+					
+					<p>Some programs create a file when you open them. When you open WordPad, for example, it starts with a blank page. This 
+					represents an empty (and unsaved) file. Start typing, and when you are ready to save your work, click 
+					<spanb>File </spanb>in the menu bar  and then click  <spanb>Save As</spanb>.In the dialog box that appears, type a file name that will help you find the file again in the future, 
+					and then click <spanb>Save</spanb>.</p>
+					
+					<p>By default, most programs save files in common folders like Documents, Pictures, and Music, which makes it easy to find the 
+					files again next time. </p>
+					
+					<p>When you no longer need a file, you can remove it from your computer's hard disk to save space and keep your computer from 
+					getting cluttered with unwanted files. To delete a file, open the folder that contains the file and then select the file. Press DELETE and then, in the 
+					<spanb>Delete File </spanb>dialog box, click <spanb>Yes</spanb>.</p>
+					
+					<p>When you delete a file, it's temporarily stored in the Recycle Bin. Think of the Recycle Bin as a safety folder that allows you 
+					to recover files or folders that you deleted accidentally. Occasionally, you should empty the Recycle Bin to reclaim all of t
+					he hard disk space being used by your unwanted files. </p>
+									
+									
+				<h4>Viewing your files in a folder</h4>
+					
+					<p>When you open a folder and see your files, you might prefer larger (or smaller) icons, or an arrangement that lets you see 
+					different kinds of information about each file. To make these kinds of changes, use the Views button in the toolbar.
+					Each time you click the Views button, the folder window changes the way it displays your file and folder icons, alternating 
+					between large icons, a smaller icon view called Tiles, and a view called Details that shows several columns of information 
+					about the file. If you click the arrow next to the Views button, you have even more choices. Drag the slider up or down to fine
+					tune the size of the file and folder icons. You can see the icons change size as you move the slider</p>
+					<img src="{%static 'img/fmngt44.jpg'%}" class="image-responsive" alt="">
+						
+				<h4>Finding your files</h4>
+					<p>When you need to find a particular file, you'll often know that it's located somewhere in a common folder like Documents or 
+					Pictures. Unfortunately, actually locating the file you want might mean browsing through hundreds of files and subfolders
+					not an easy task. To save yourself time and effort, use the Search box to find your file.</p>
+					<img src="{%static 'img/fmngt55.jpg'%}" class="image-responsive" alt="">
+					
+					
+					<p>The Search box is located at the top of every folder. To find a file, open the folder that contains the file you are looking 
+					for, click the Search box, and start typing. The Search box filters the current view based on the text that you type. Files are 
+					displayed as search results if your search term matches the file's name, 
+					tags, or other file properties. Text documents are displayed if the search term occurs in any of the text inside the document.
+					Your search looks in the current folder as well as all subfolders.</p>
+					<p>If you have no idea where to look for a file, you can expand your search to include the entire computer, not just a single 
+					folder.</p> 
+										
+					
+					
+					
+					
+					
+				<h4>Copying and Moving files and folders</h4>
+					
+					<p>Copy vs. Move.</p>
+					<p><span>Copy</span> -copy files and folders when you want to keep it in the original location, and add a copy in another location. </p>
+					<p><span>Move </span>-move files when you want them in a new location, and you no longer need them in the old location.</p>    
+							
+							
+					Copying Files     
+					<p>Right click on the file or folder. Choose Copy. </p>
+					<p>Open the window where you want to put the file or folder. </p>
+					<p>Right click in a blank area and choose Paste.</p>
+							
+					<img src="{%static 'img/fmngt2.jpg'%}" class="image-responsive" alt="">
+					
+					
+					<p>Moving Files</p>
+					<p>Open the folder where the original file or folder is located.</p> 
+					<p>Open the folder where you want the file or folder to be. </p>
+					<p>Drag from one window to the other. </p> 	
+					<img src="{%static 'img/fmngt3.jpg'%}" class="image-responsive" alt="">
+						
+					
+				<h4>SAVING LOCATIONS  </h4> 
+					<p>By default, Microsoft Office programs save in My Documents.</p> 
+					<p>You can save a document wherever you want by navigating to a new location during the <span>Save process.</span>  </p> 
+					<p>To save a file in an existing folder in My Documents, double click the folder. </p> 
+					<img src="{%static 'img/fmngt4.jpg'%}" class="image-responsive" alt="">
+					<p>To save a file in a location other thanMy Documents, use the Save In drop down menu at the top of the screen, or the links on the left 
+						hand side, and browse to a new location.</p>  
+						<img src="{%static 'img/fmngt5.jpg'%}" class="image-responsive" alt="">
+							
+							
+				<h4>RENAMING FILES AND FOLDERS</h4>
+					<p>Right click on the file or folder and choose Rename.</p>
+					
+					<img src="{%static 'img/fmngt6.jpg'%}" class="image-responsive" alt="">
+					<p>Type the new name, then press Enter. Note:A computer will not allow two files in the same location to have the same name. </p>
+					<p>Caution:When renaming a file whose file extension is displayed (the letters after the dot), do not disturb the dot or the letters followi
+					ng the dot.  Change only the name of the file-the part to the left of the dot.</p>
+					
+				<h4>DELETING</h4>
+					<p>When a file is deleted, it goes to the recycle bin.However, it is still in your computer, 
+					taking up space.  To completely delete a document, you need to empty the Recycle Bin.  
+					Emptying the Recycle Bin Open the Recycle Bin and choose File > Empty Recycle Bin.</p> 
+					
+					
+					<img src="{%static 'img/fmngt7.jpg'%}" class="image-responsive" alt="">
+					
+				<h4>Restoring From the Recycle Bin</h4>
+					Open the Recycle Bin.Right click on the file or folder you want to restore, and choose Restore.</p>
+					<p>It will re-appear in the folder from which it was deleted.</p>
+					<img src="{%static 'img/fmngt8.jpg'%}" class="image-responsive" alt="">
+					
+					
+					<p>Bypass Recycle Bin To delete a file without having it go to the Recycle Bin, select the file or folder you wish 
+					to delete.  Hold the SHIFTkey and the press the Delete key.  
+					
+					
+					
+					
+					
+					<h3>QGIS Browser</h3>
+					
+					<h3>QGIS Desktop Interface or GUI</h3>
+
+					<h3>Interface Video</h3>
+					<div class="video-holder">
+						<iframe src="https://www.youtube.com/embed/V0m2gxGFRx4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+
+					<hr>
+			</div>
+
+
+
+			<div id="link3data" class="animated fadeIn">
+					
+					<div class="section2 grey-scale">
+					<div class="text-center">
+					<h2>QGIS Plugins</h2>
+					</div>
+					</div>
+					
+				<hr>
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam ipsam sit ea distinctio vel,
+                                                quaerat
+                                                non totam quae cum. Assumenda consequatur maxime praesentium, minima! Blanditiis aperiam
+                                                repudiandae eos perferendis necessitatibus?
+					</p>
+
+					<hr>
+			</div>
+			
+			
+			<div id="link4data" class="animated fadeIn">
+					
+					
+					<div class="section2 grey-scale">
+					<div class="text-center">
+					<h2>User Interface</h2>
+					</div>
+					</div>
+					
+				<hr>
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam ipsam sit ea distinctio vel,
+                                                quaerat
+                                                
+					</p>
+
+					<hr>
+			</div>
+
+
+
+
+
+		</div>
+	
+</main>
+     
+     
+      {% endblock %}   
+        
+       
