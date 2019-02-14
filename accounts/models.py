@@ -7,7 +7,7 @@ from django.db.models.signals import post_save
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User,unique=True, on_delete=models.CASCADE)
     fullname = models.CharField (max_length=50, default='')
     upliner = models.CharField (max_length=50, default='')
     uplinerphone = models.IntegerField(default=0)
