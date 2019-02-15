@@ -6,7 +6,7 @@ class UserProfileAdmin(admin.ModelAdmin):
     list_display = ('user', 'country','phone','user_info')
 
     def user_info(self,obj):
-        return obj.Proffession
+        return obj.backofice
 
 
     def get_queryset(self, request):

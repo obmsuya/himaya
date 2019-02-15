@@ -12,7 +12,8 @@ class UserProfile(models.Model):
     upliner = models.CharField (max_length=50, default='')
     uplinerphone = models.IntegerField(default=0)
     Maelezo = models.TextField()
-    Proffession = models.CharField (max_length=100, default='')
+    profilemake = models.CharField (max_length=100, default='')
+    backofice = models.CharField (max_length=100, default='')
     country = models.CharField (max_length=100, default='')
     region = models.CharField (max_length=100, default='')
     
