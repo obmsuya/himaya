@@ -76,37 +76,37 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 
 #live
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME':'oamsuy06$default',
-#         'USER': 'oamsuy06',
-#         'OPTIONS': {
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-#             #Tell mysql to connect with 'utf8mb4' character set
-#             'charset':'utf8mb4',
-#             },
-#         #Tell django to build the test database with 'utf8mb4'character set
-#         'TEST': {
-#             'CHARSET': 'utf8mb4',
-#             'COLLATION': 'utf8mb4_unicode_ci',
-#         },
-#         'PASSWORD': 'Pa55w0rd',
-#         'HOST': 'oamsuy06.mysql.pythonanywhere-services.com',
-#         'PORT': '',
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'oamsuy06$default',
+        'USER': 'oamsuy06',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            #Tell mysql to connect with 'utf8mb4' character set
+            'charset':'utf8mb4',
+            },
+        #Tell django to build the test database with 'utf8mb4'character set
+        'TEST': {
+            'CHARSET': 'utf8mb4',
+            'COLLATION': 'utf8mb4_unicode_ci',
+        },
+        'PASSWORD': 'Pa55w0rd',
+        'HOST': 'oamsuy06.mysql.pythonanywhere-services.com',
+        'PORT': '',
        
-#     }
-# }
+    }
+}
 
 
 # Password validation
@@ -177,6 +177,14 @@ LOGIN_EXEMPT_URLS = (
 
 
 
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 1025
 
+
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 1025
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'oamsuy06'
+EMAIL_HOST_PASSWORD = 'Savioury9'
