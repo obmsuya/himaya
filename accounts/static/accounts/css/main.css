@@ -1004,3 +1004,23 @@ spanb {
     color:blue;
 }
 
+
+
+
+
+
+#ad {
+   height:60px;
+}
+@media only screen and (height:90px) {
+   /* 90 pixels high */
+   #ad {
+      height:90px;
+   }
+}
+@media only screen and (height:125px) {
+   /* 125 pixels high */
+   #ad {
+      height:125px;
+   }
+}
