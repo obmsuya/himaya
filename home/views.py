@@ -93,12 +93,15 @@ def payment(request):
 def hasira(request):
     return render (request, "home/hasira.html", {})
 
+def hasira2(request):
+    return render (request, "home/hasira2.html", {})
 
 @login_required 
 def gis(request):
     return render (request, "home/gis.html", {})
 
-
+def gis2(request):
+    return render (request, "home/gis2.html", {})
 
 
 #post_list      
