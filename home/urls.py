@@ -22,7 +22,7 @@ urlpatterns = [
     url(r'^hasira/$', views.hasira, name = "hasira"),
     url(r'^hasira2/$', views.hasira2, name = "hasira2"),
     url(r'^gis/$', views.gis, name = "gis"),
-     url(r'^gis2/$', views.gis2, name = "gis2"),
+    url(r'^gis2/$', views.gis2, name = "gis2"),
     url(r'^index/$', views.index, name = "index"),
     
     url(r'^item/(?P<item_id>\d+)/$', views.item, name = "item"),
