@@ -32,7 +32,7 @@
                      
                
                 
-                                <section class="section grey-scale">
+      <section class="section grey-scale">
                      <div class="container">
                                         
                                 <div class="row">
@@ -51,17 +51,17 @@
                                     </div><br>
                                    
                                     <div class="col-md-5">
-					                               <h3>Bei Tsh {{item.price}} </h3>
-					                                   <div class="card right-in">
-					                                       <div class="card-icon">
+                                         <h3>Bei Tsh {{item.price}} </h3>
+                                             <div class="card right-in">
+                                                 <div class="card-icon">
                                                 <br><br>
-						                                        <ul class="tutor-icons">
+                                                    <ul class="tutor-icons">
                                                    
                                                     <br><br> 
-						    
+                
                                                     <h4><a class="btn btn-follow btn-lg "href="{% url 'home:payment'%}"> Nataka kununua.</a></h4></li> 
-<h4><a class="btn btn-success btn-lg "href="{{item.subtitle}}"> Soma bure.</a></h4></li>
-						                                      </ul>
+                                                      <h4><a class="btn btn-success btn-lg "href="{{item.subtitle}}"> Soma bure.</a></h4></li>
+                                                  </ul>
                                                     <br>
                                                     
                                                   <br>
@@ -76,61 +76,62 @@
                                                                 
                               </div>
                     </div>
-                </section>
+                 
+        </section>
                 
       <br>
                 
                 <div class="container"
         <section class="section">
             
-                 <small><span class="caps">Hasira Hasara</span></small>
+                 <small><span class="caps">Author</span></small>
                             <div class="line-sep"></div>
                 
                  <div class="col-md-12">
-						
+            
                                                 <div class="row">
                                                     <h1>Kuhusu Muandishi</h1>
-							<!--<div class="col-md-5">-->
+              <!--<div class="col-md-5">-->
                                                             
-								<div class="tutor">
+                <div class="tutor">
                                                                     
-									<div class="tutor-image">
-										{% if item.image%}
-										<img src='{{item.image_author.url}}' />
+                  <div class="tutor-image">
+                    {% if item.image%}
+                    <img src='{{item.image_author.url}}' />
                                                                                  {%endif%}
-									</div>
+                  </div>
 
-									
+                  
                                                                         
                                                                         <div class="text-center">
-										<h4>
-											Overblessing A Msuya
-										</h4>
-										
+                    <h4>
+                      Overblessing A Msuya
+                    </h4>
+                    
                                                                                 <hr>
-									</div>
+                  </div>
 
-									
-									    
-								</div>
-							</div>
+                  
+                      
+                </div>
+              </div>
                                                         
                                                         <!--<div class="col-md-6">-->
                                                            
-									
+                  
 
-									<div class="text-left">
-										<p>
-										{{item.author_description}}
-											
+                  <div class="text-left">
+                    <p>
+                    {{item.author_description}}
+                      
                                                                                         
-										</p>
-										
+                    </p>
+                    
                                                                              
-									</div>
+                  </div>
 
-									
-							</div>
+                  
+              </div>
 
 
         </section>

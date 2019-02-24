@@ -1,437 +1,147 @@
-<!DOCTYPE html>
-<html lang="en">
-    
-{% extends 'base4.html' %}
-{% load staticfiles %}
 
-{%block head%}
+{% extends 'base2.html' %}
+{% load staticfiles %}
+    {%block head%}
      
-    
+    {% if item != None %}
+        <title>{{item.name}}-Selected Class</title>
+        
+    {% else %}
+        <title>Invalid Item ID- Selected Class</title>
+    {% endif %}
     
     {%endblock%}
 
 
-
- {% block body %}
-
-	
-   
-   
-   <main class="main-wrapper">
-		
-		<aside class="left-sidebar">
-			<div class="search-area"><form action=""><input type="text" placeholder="Type to search.. "></form></div>
-
-			 <div class="scroll-sidebar">
-			 	<!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav" class="top-ul">
-                              <li><a href="" class="active">{{user}}</a>	
-                        <li class="nav-small-cap">MENU</li>
-                        <li><a href="" class="active">Introduction</a>	
-							<ul class="submenu">
-                                                            
-                                                            
-                                                            <li><a href="" id="link1">My network</a></li>
-									
-								<li><a href="" id="link2">My Account</a></li>
-								<li><a href="" id="link3">Message from Office</a></li>
-								<li><a href="" id="link4">Complaint</a></li>
-							</ul>
-							
-						
-	
-						<li><a href="" >Toka</a></li>
-						
-						
-                       </li>
-                    </ul>
-                </nav>
-                <!-- End Sidebar navigation -->
-			 </div>
-				
-	
-				
-		</aside>
-		
+   {% block body %}
 
 
-
-
-
-	<div class="main-section">
-		<div class="container">
-
-
-				<h1 class="topic-title">{{user.first_name}}</h1>
-<hr><hr>
-			<div id="linkintro">
-                                <h2>Picha</h2>
-                                <div class="line-sep"></div>
-                               <section class="section grey-scale" >
-			<div class="container">
-                              
-				 <div class="text-center">
-				
-					<h2 class="font-weight-bold">How do i look?</h2>
-						
-					{%if user.userprofile.image2%}
-                                          <img src="{{ user.userprofile.image2.url }}" class="img-responsive" width="400" height="500" alt="">
-                                             
-                              {%endif%}
-					
-
-                                 </div>
-					
-				
-			</div>
-        
-        </section>
-        
-                              
-                            
-                           
-                              <h2>Taarifa Binafsi</h2>
-                               <div class="text-center">
-                              <div class="line-sep"></div>
-                              <div class="row">
-                                    <div class="col-md-6">
-                                         
-                                     <h3 >Jina Kamili  </h3>
+ <a href="{% url 'home:index' %}">&lt; Back to the list</a>
                
-					<div class="card right-in">
-					    <div class="card-icon">
-                                                <br><br>
-						<ul class="tutor-icons">
-                                                   
-                                                    <br>
-						    
-                                                    <P>{{user.userprofile.fullname}}</P>
-                                              <br>
-						</ul>
-                                                    
-                                                
-                                                  
-                                                   
-                                                  
-                                            </div>
-                                        </div>
+      
+         
+                      <div class="container">
+                            <small><span class="caps">Book</span></small>
+                            <div class="line-sep"></div>
+                              
+                                {% if item != None %}   
                                     
+                                <div class="section-title">{{item.name}}</div>
+                                    <hr>
+                      </div>
+                     
+               
+                
+      <section class="section grey-scale">
+                     <div class="container">
+                                        
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        
+                                    <h3>Cover</h3>
+                                     <div class="line-sep"></div>
+                                        {% if item.image%}
+                                                <img src='{{item.image.url}}' class= 'img-responsive'/>
+                                                <!--<img src="{%static 'img/hasira2.jpg'%}" class="image-responsive" alt=""'>-->
+                                        {%endif%}
+                                      <br><br>
+                                    <h3>Kitabu kwa ufupi</h3>
+                                     <div class="line-sep"></div>
+                                        <p>{{item.description|linebreaks}}</p>
                                     </div><br>
                                    
-                                    <div class="col-md-6">
-					<h3>Simu yangu </h3>
-					<div class="card right-in">
-					    <div class="card-icon">
-                                                <br>
-						<ul class="tutor-icons">                                                    
-                                              <P>{{user.userprofile.phone}}</P>
-						</ul>                                                 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-md-6">
-					<h3>E mail yangu </h3>
-					<div class="card right-in">
-					    <div class="card-icon">
-                                                <br>
-						<ul class="tutor-icons">                                                    
-                                              <P>{{user.email}}</P>
-						</ul>                                                 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-					<h3>Mkoa wangu </h3>
-					<div class="card right-in">
-					    <div class="card-icon">
-                                                <br>
-						<ul class="tutor-icons">                                                    
-                                              <P>{{user.userprofile.region}}</P>
-						</ul>                                                 
-                                            </div>
-                                        </div>
-                                    </div>     
-                              </div>
-                              
-                              
-                             
-                            </div>
-                        </div>
- 	        
-                
-                        
-          				
-					
-	</div>
-
-			
-	<div class="container"
-
-			
-			<div id="link1data" class="animated fadeIn">
-
-                              
-				
-                                <P>{{user.userprofile.upliner}}</P>
-				<div class="section2 grey-scale">
-					<div class="text-center">
-					
-					<p  class="submenu">My network.</p> 
-					</div>
-			      </div>
-					
-				<hr>
-			              <div class="text-center">      
-                            <h2>Upliner Wangu ni:{{user.userprofile.upliner}}. Simu yake ni: 0{{user.userprofile.uplinerphone}}</h2>
-                                      </div>
-                                 <hr>
-                                     <div class="row">
-                                  
-                                 <div class="col-md-5">
-                                    <h2>Buy and sell</h2>
-                                     <div class="line-sep"></div>
-                                        {%if user.userprofile %}
-                                           <P>{{user.userprofile.upliner}}</P>
-                                             <P>{{user.userprofile.firstgenb}}</P>
-                                           <P>{{user.userprofile.secondgenb}}</P>
-                                           <P>{{user.userprofile.thirdgenb}}</P>
-                                           <P>{{user.userprofile.fouthgenb}}</P>
-                                           <P>{{user.userprofile.fifthgenb}}</P>
-                                           
-                                           <P>{{user.userprofile.firstmthb}}</P>
-                                           <P>{{user.userprofile.secondmthb}}</P>
-                                           <P>{{user.userprofile.thirdmthb}}</P>
-                                           <P>{{user.userprofile.fouthmthb}}</P>
-                                           <P>{{user.userprofile.fifthmthb}}</P>
-                                           <P>{{user.userprofile.sixthmthb}}</P>
-                                      
-                                      
-                                       {%endif%}
-                                    </div>
-                                 
-                               <div class="col-md-7">
-                                       
-                            
-			   
-                                <h2>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#regprocess">REFFERAL
-                              </div>						</button> </h2>                            
-                            <div class="text-center">
-					
-			
-                        <div class="modal fade bd-example-modal-lg" id="regprocess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLongTitle">REFFERAL</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                
-                                        <div class="modal-body">
-                                             
-                                            
-                                                 <section class="section grey-scale" >
-                                                                           <div class="container">
-                                                                                 <h2 class="font-weight-bold">Timu yako</h2>
-                                                                                    <div class="text-center">
-                                                                                   
-                                                                                           
-                                                                                                   
-                                                                                           <p>Kizazi cha kwanza una watu: {{user.userprofile.firstgenr}}</p>
-                                           
-                                                                                          <p>Kizazi cha pili una watu: {{user.userprofile.secondgenr}}</p>
-                                                                                        
-                                                                                        <P>Kizazi cha tatu una watu: {{user.userprofile.thirdgenr}}</P>
-                                                                                                
-                                                                                    </div>
-                                                                                           
-                                                                                   
-                                                                           </div>
-                                                           
-                              
-                                           <!--<P>{{user.userprofile.fouthgenr}}</P>-->
-                                           <!--<P>{{user.userprofile.fifthgenr}}</P>-->
-                                           <!---->
-                                           
-
-                                           </section>
-                                      
-                                                    
-                                                    
-                                            </div>
-              
-                            </div>
-                        </div>
-                    </div>
-                                                           
-                                       
-                                 
-                               </div>
-               </div>
-               </div>
-        
-        </div>
-        <div class="container"
-                        <div id="link2data" class="animated fadeIn">
-					<div class="section2 grey-scale">
-					<div class="text-center">
-					<h2>Account</h2>
-					</div>
-					</div>
-					
-				<hr>
-					
-
-					<div class="text-center">
-                              
-                              
-			   
-                                <p>  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#regprocess">contact us
-                              </div>						</button> </p>                            
-                            
-					
-			</div>
-                        <div class="modal fade bd-example-modal-lg" id="regprocess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLongTitle">Contact us</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                
-                                        <div class="modal-body">
-                                             
-                                            <section class="section grey-scale" >
-                                                                           
-                              
-                                           <!--<P>{{user.userprofile.fouthgenr}}</P>-->
-                                           <!--<P>{{user.userprofile.fifthgenr}}</P>-->
-                                           <!---->
-                                           <h3>Mapato yako</h3>
-                                           <table>
-                                             <tr>
-                                               <th>MWEZI</th>
-                                               <th>KIPATO</th>
-                                             </tr>
-                                             <tr>
-                                               <td>January</td>
-                                               <td><P>{{user.userprofile.firstmthr}}</P></td>
-                                             </tr>
-                                             <tr>
-                                               <td>February</td>
-                                               <td><P>{{user.userprofile.secondmthr}}</P></td>
-                                             </tr>
-                                             <tr>
-                                               <td>March</td>
-                                               <td><P>{{user.userprofile.thirdmthr}}</P></td>
-                                             </tr>
-                                             <tr>
-                                               <td>April</td>
-                                               <td><P>{{user.userprofile.fouthmthr}}</P></td>
-                                             </tr>
-                                             <tr>
-                                               <td>May</td>
-                                               <td><P>{{user.userprofile.fifthmthr}}</P></td>
-                                             </tr>
-                                             <tr>
-                                               <td>June</td>
-                                               <td><P>{{user.userprofile.sixthmthr}}</P></td>
-                                             </tr>
-                                             <tr>
-                                               <td>July</td>
-                                               <td> <P>0</P></td>
-                                             </tr>
-                                             <tr>
-                                               <td>August</td>
-                                               <td>0</td>
-                                             </tr>
-                                             <tr>
-                                               <td>September</td>
-                                               <td>0</td>
-                                             </tr>
-                                             <tr>
-                                               <td>October</td>
-                                               <td>0</td>
-                                             </tr>
-                                             <tr>
-                                               <td>November</td>
-                                               <td>0</td>
-                                             </tr>
-                                             <tr>
-                                               <td>December</td>
-                                               <td>0</td>
-                                             </tr>
-                                           </table>
-                                           
-
-                                           </section>
-                                        </div>
-                            </div>
-                        </div>
-                        </div>
-                        </div>
-                        
-                        
-                        
-                        
-                                      
-			</div>
-
-</div>
-
-			
-                                             <div class="container"
-                                     
-                                                             <div id="link3data" class="animated fadeIn">
-                                                                             
-                                                                             <div class="section2 grey-scale">
-                                                                             <div class="text-center">
-                                                                             <h2>From office</h2>
-                                                                             </div>
-                                                                             </div>
-                                                                             
-                                                                     <hr>
-                                                                   
-                                                                                     
-                                                                                         
-                                                                                         
-                                                                                 </div>
+                                    <div class="col-md-5">
+                                         <h3>Bei Tsh {{item.price}} </h3>
+                                             <div class="card right-in">
+                                                 <div class="card-icon">
+                                                <br><br>
+                                                    <ul class="tutor-icons">
                                                    
-                                                                 </div>
-</div>
-</div>
-</div>
+                                                    <br><br> 
+                
+                                                    <h4><a class="btn btn-follow btn-lg "href="{% url 'home:payment'%}"> Nataka kununua.</a></h4></li> 
+                                                      <h4><a class="btn btn-success btn-lg "href="{{item.subtitle}}"> Soma bure.</a></h4></li>
+                                                  </ul>
+                                                    <br>
+                                                    
+                                                  <br>
+                                                   <hr>
+                                                  
+                                            </div>
+                                        </div>
+                                    </div>      
+                                {% else %}
+                                                <p>Invalid Item ID.</p>
+                                {% endif %}
+                                                                
+                              </div>
+                    </div>
+                 
+        </section>
+                
+      <br>
+                
+                <div class="container"
+        <section class="section">
+            
+                 <small><span class="caps">Hasira Hasara</span></small>
+                            <div class="line-sep"></div>
+                
+                 <div class="col-md-12">
+            
+                                                <div class="row">
+                                                    <h1>Kuhusu Muandishi</h1>
+              <!--<div class="col-md-5">-->
+                                                            
+                <div class="tutor">
+                                                                    
+                  <div class="tutor-image">
+                    {% if item.image%}
+                    <img src='{{item.image_author.url}}' />
+                                                                                 {%endif%}
+                  </div>
 
-			
-                              <div class="container"	
-                                              <div id="link4data" class="animated fadeIn">
-                                                              
-                                                              
-                                                              <div class="section2 grey-scale">
-                                                              <div class="text-center">
-                                                              <h2>Submit your Complaint</h2>
-                                                              </div>
-                                                              </div>
-                                                              
-                                                      <hr>
+                  
+                                                                        
+                                                                        <div class="text-center">
+                    <h4>
+                      Overblessing A Msuya
+                    </h4>
+                    
+                                                                                <hr>
+                  </div>
+
+                  
                       
-                                                              
-                                                              <hr>
-                                              </div>
+                </div>
+              </div>
+                                                        
+                                                        <!--<div class="col-md-6">-->
+                                                           
+                  
+
+                  <div class="text-left">
+                    <p>
+                    {{item.author_description}}
                       
-                                              
-                                      
-                      
-                                      </div>
-</div>
-	
-</main>  
-     
-      {% endblock %}   
+                                                                                        
+                    </p>
+                    
+                                                                             
+                  </div>
+
+                  
+              </div>
+
+
+        </section>
         
-       
+      </div>
+           <hr>
+            
+            <br><br>
+
+
+
+
+   {% endblock %}
