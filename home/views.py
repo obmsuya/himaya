@@ -96,7 +96,7 @@ def hasira(request):
 def hasira2(request):
     return render (request, "home/hasira2.html", {})
 
-@login_required 
+
 def gis(request):
     return render (request, "home/gis.html", {})
 
