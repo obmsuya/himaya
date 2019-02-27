@@ -32,7 +32,7 @@ class Item(models.Model):
         verbose_name_plural = 'Item'
     
     name = models.CharField(max_length= 50)
-    subtitle = models.CharField (max_length=120, default='Introduction to GIS')
+    subtitle = models.CharField (max_length=120, default='', blank=True)
     description = models.TextField()
     image = models.ImageField(null=True, blank=True,
             width_field="width_field",
@@ -115,4 +115,30 @@ class Downliner (models.Model):
                     
     def __str__(self):
         return self.title        
-    
+
+
+
+class Payment(models.Model):
+    user = models.OneToOneField(User,unique=True, on_delete=models.CASCADE)
+    name = models.CharField (max_length=120, default='')
+    item = models.CharField (max_length=120, default='')
+    tigopesa = models.IntegerField(default=0, blank=True)
+    mpesa = models.IntegerField(default=0, blank=True)
+    airtel = models.IntegerField(default=0, blank=True)
+    halotel = models.IntegerField(default=0, blank=True)
+ 
+
+    def __str__(self):
+        return self.name
+
+class donate(models.Model):
+    user = models.OneToOneField(User,unique=True, on_delete=models.CASCADE)
+    name = models.CharField (max_length=120, default='')
+    item = models.CharField (max_length=120, default='')
+    tigopesa = models.IntegerField(default=0, blank=True)
+    mpesa = models.IntegerField(default=0, blank=True)
+    airtel = models.IntegerField(default=0, blank=True)
+    halotel = models.IntegerField(default=0, blank=True)
+
+    def __str__(self):
+        return self.name

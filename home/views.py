@@ -89,19 +89,19 @@ def register(request):
 def payment(request):
     return render (request, "home/payment.html", {})
 
-@login_required 
+def donate(request):
+    return render (request, "home/donate.html", {})
+
 def hasira(request):
     return render (request, "home/hasira.html", {})
 
-def hasira2(request):
-    return render (request, "home/hasira2.html", {})
+
 
 
 def gis(request):
     return render (request, "home/gis.html", {})
 
-def gis2(request):
-    return render (request, "home/gis2.html", {})
+
 
 
 #post_list      
