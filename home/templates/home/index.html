@@ -8,10 +8,10 @@
         <br>  <br>  
         <section class="section">
 	    <div class="container">
-			<small>
+			<!-- <small>
 							<span class="caps">Items</span>
 						</small>
-                        <div class="line-sep"></div>
+                        --> 
                 
               
 			  <p>Hii ni listi ya vitabu vinavyopatikana OBG online. Bonyeza chaguo lako ili kuona bei na maelezo zaidi,
@@ -22,23 +22,22 @@
                 <div class="row">
                      <div class="col-md-6">
                         
-                        
-                        
                        
-						
-                        
                         
                        {% for category in categories %}
-                           
+                            
 		    
-                           <h3>{{category.name}}</h3>
+                           <h1>{{category.name}}</h1>
+                           <div class="line-sep"></div>
                            
-                           
+                          
                            {%for item in category.item_set.all %}
                               
-                               <h3><a href="{% url 'home:item' item_id=item.id %}"> <ul> {{item.name}}</ul></a></h3>
+                              <h3> {{forloop.counter}}. <a href="{% url 'home:item' item_id=item.id %}"> {{item.name}}</a></h3>
                             
                            {%endfor%}
+
+                        
                         {%endfor%}
           
                     </div>
