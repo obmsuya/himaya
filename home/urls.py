@@ -21,9 +21,10 @@ urlpatterns = [
     url(r'^payment/$', views.payment, name = "payment"),
      url(r'^donate/$', views.donate, name = "donate"),
     url(r'^hasira/$', views.hasira, name = "hasira"),
-   
     url(r'^gis/$', views.gis, name = "gis"),
-    
+    url(r'^bitcoin/$', views.bitcoin, name = "bitcoin"),
+
+
     url(r'^index/$', views.index, name = "index"),
     
     url(r'^item/(?P<item_id>\d+)/$', views.item, name = "item"),

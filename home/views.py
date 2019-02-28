@@ -95,12 +95,11 @@ def donate(request):
 def hasira(request):
     return render (request, "home/hasira.html", {})
 
-
-
-
 def gis(request):
     return render (request, "home/gis.html", {})
 
+def bitcoin(request):
+    return render (request, "home/bitcoin.html", {})
 
 
 

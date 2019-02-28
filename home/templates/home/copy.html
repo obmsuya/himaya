@@ -1,147 +1,534 @@
-
-{% extends 'base2.html' %}
+<!DOCTYPE html>
+<html lang="en">
+    
+{% extends 'base3.html' %}
 {% load staticfiles %}
-    {%block head%}
+
+{%block head%}
      
-    {% if item != None %}
-        <title>{{item.name}}-Selected Class</title>
-        
-    {% else %}
-        <title>Invalid Item ID- Selected Class</title>
-    {% endif %}
+    
     
     {%endblock%}
 
 
-   {% block body %}
+
+ {% block body %}
+
+  <main class="main-wrapper">
+    
+    
+    
 
 
- <a href="{% url 'home:index' %}">&lt; Back to the list</a>
-               
-      
+
+
+
+  <div class="main-section">
+    <div class="container">
+      <div id="test" onmousedown='return false;' onselectstart='return false;'>
+
+<a href="{% url 'home:index'%}">Other Books</a>
+<!-- <a href="{% url 'accounts:logout'%}">Home</a> -->
+        <h1 class="topic-title">Sarafu ya Kidigitali Inayobadili Dunia kwa Kasi</h1>
+
+                            <hr>
+                            <h3><span>ISBN 978-9976- 5508-0-1</span></h3>
+
+<p>Kazi hii inalindwa na sheria ya umiliki ya Jamuhuri ya Muungano wa Tanzania. Haki zote zimehifadhiwa, hairuhusiwi kuiga, kunakili au kutoa kopi ya kitabu hiki kwa njia yeyote ile bila ya idhini ya mwandishi.</p>
+<p>Yaliyomo kwenye kitabu hiki yanaweza kubadilika wakati wowote bila taarifa.</p>
+<p>Unaweza kupata kopi ya kitabu hiki kwa kupiga simu nambari +255652784755 au kupitia e mail ifuatayo;  youngsaviour@hotmail.com.</p>
+
+<p>Kitabu Kimeandikwa na Youngsaviour Msuya. </p>
+<p>Cover ya kitabu imetengenezwa na Youngsaviour Msuya.</p>
+<p>Kimehaririwa na Overblessing Msuya.</p>
+
+
+  <hr>      
+<h3>COVER.</h3>
+<div class="line-sep"></div>
+<div class="text-center">
+<img src="{%static 'accounts/img/savcover.jpg'%}" class="img-responsive" alt=""'>
+    </div>    
+        <hr>
+
+<h3>MUANDISHI.</h3>
+         <div class="line-sep"></div>
+
+
+<p>Bwana Youngsaviour. A. Msuya ni muandishi wa vitabu na mjasiriamali, pia ni  Mwanasheria na Wakili wa Kujitegemea. Amepata Shahada yake ya kwanza katika fani ya Sheria mwaka 2007 katika Chuo Kikuu cha Tumaini-Iringa University College ambacho kwa sasa kinajulikana kama University of Iringa na Kusajiliwa kama wakili wa Kujitegemea mwaka 2010.</p>
+
+<div class="text-center">
+<img src="{%static 'accounts/img/savpic2.jpg'%}" class="img-responsive" alt=""'>
+</div>
+<hr>
+          
+                     <h3><a name="yaliyomo">YALIYOMO</a></h3>
+
+            
+            <div class="line-sep"></div>
+            <div>
+
+            
+            <P><a href="#shukran">SHUKURANI</a> </P>
+            <P><a href="#utangulizi">UTANGULIZI </a></P>
+            <P><a href="#madhara">BITCOIN NI NINI?</a></P>  
+            <P><a href="#sayahasira">HISTORIA YA BITCOIN  </a></P>
+            <P><a href="#sayamsukumo">TOFAUTI YA BITCOIN NA FEDHA ZA KAWAIDA</a></P>
+            <P><a href="#ugonjwa">KWA NINI BITCOIN ILIANZISHWA?</a> </P>
+            <P><a href="#vyanzo">HISTORIA FUPI YA FEDHA.</a></P>
+            <P><a href="#mapenzi">BLOCK CHAIN NI NINI?</a></P>
+            <P><a href="#ujasiriamali">BITCOIN MINING NI NINI?</a></P>
+            <P><a href="#namna">JINSI YA KUHIFADHI BITCOIN.</a></a></P>
+          
+            <p><a href="#ufupi">MUSTAKABALI WA BITCOIN.</a></p>
+
+            <P><a href="#hitimisho">HITIMISHO</a> </P>
+
+
+<hr> 
          
-                      <div class="container">
-                            <small><span class="caps">Book</span></small>
-                            <div class="line-sep"></div>
-                              
-                                {% if item != None %}   
-                                    
-                                <div class="section-title">{{item.name}}</div>
-                                    <hr>
-                      </div>
-                     
-               
-                
-      <section class="section grey-scale">
-                     <div class="container">
-                                        
-                                <div class="row">
-                                    <div class="col-md-7">
-                                        
-                                    <h3>Cover</h3>
-                                     <div class="line-sep"></div>
-                                        {% if item.image%}
-                                                <img src='{{item.image.url}}' class= 'img-responsive'/>
-                                                <!--<img src="{%static 'img/hasira2.jpg'%}" class="image-responsive" alt=""'>-->
-                                        {%endif%}
-                                      <br><br>
-                                    <h3>Kitabu kwa ufupi</h3>
-                                     <div class="line-sep"></div>
-                                        <p>{{item.description|linebreaks}}</p>
-                                    </div><br>
-                                   
-                                    <div class="col-md-5">
-                                         <h3>Bei Tsh {{item.price}} </h3>
-                                             <div class="card right-in">
-                                                 <div class="card-icon">
-                                                <br><br>
-                                                    <ul class="tutor-icons">
-                                                   
-                                                    <br><br> 
-                
-                                                    <h4><a class="btn btn-follow btn-lg "href="{% url 'home:payment'%}"> Nataka kununua.</a></h4></li> 
-                                                      <h4><a class="btn btn-success btn-lg "href="{{item.subtitle}}"> Soma bure.</a></h4></li>
-                                                  </ul>
-                                                    <br>
-                                                    
-                                                  <br>
-                                                   <hr>
-                                                  
-                                            </div>
-                                        </div>
-                                    </div>      
-                                {% else %}
-                                                <p>Invalid Item ID.</p>
-                                {% endif %}
-                                                                
-                              </div>
-                    </div>
-                 
-        </section>
-                
-      <br>
-                
-                <div class="container"
-        <section class="section">
-            
-                 <small><span class="caps">Hasira Hasara</span></small>
-                            <div class="line-sep"></div>
-                
-                 <div class="col-md-12">
-            
-                                                <div class="row">
-                                                    <h1>Kuhusu Muandishi</h1>
-              <!--<div class="col-md-5">-->
-                                                            
-                <div class="tutor">
-                                                                    
-                  <div class="tutor-image">
-                    {% if item.image%}
-                    <img src='{{item.image_author.url}}' />
-                                                                                 {%endif%}
-                  </div>
 
-                  
-                                                                        
-                                                                        <div class="text-center">
-                    <h4>
-                      Overblessing A Msuya
-                    </h4>
-                    
-                                                                                <hr>
-                  </div>
-
-                  
-                      
-                </div>
-              </div>
-                                                        
-                                                        <!--<div class="col-md-6">-->
-                                                           
-                  
-
-                  <div class="text-left">
-                    <p>
-                    {{item.author_description}}
-                      
-                                                                                        
-                    </p>
-                    
-                                                                             
-                  </div>
-
-                  
-              </div>
-
-
-        </section>
         
-      </div>
-           <hr>
+
+<h3><a name="shukran"></a></h3>
+      <h3>SHUKRANI</h3>
+      <div class="line-sep"></div>
+      
+      <p>Napenda kupeleka shukrani zangu za dhati kwa mke wangu mpendwa Dorcas, kwa ushauri wake na upendo alionionyesha kipindi chote cha utayarishaji wa kitabu hiki. Napenda kutoa shukrani zangu za dhati kwa watoto wangu Gospeller, Charity na Divinefavour kwa upendo wao kwangu.</p>
+<p>Kitabu hiki kisingeweza kufika hapa bila msaada wa ndugu na jamaa zangu pamoja na makampuni mbali mbali kwa kutoa misaada yao ya hali na mali katika kufanikisha safari hii. Kipekee ningependa kuwashukuru Goodluck Mghonu, Overblessing Msuya na Faith Ephata kwa kunitia moyo na kushiriki na mimi katika mijadala iliyoibua hamu ya uandishi wa kitabu hiki. </p>
+
+
+               
+<p><a href="#yaliyomo">Rudi Yaliyomo</a></p>
+                      <hr>
+<br>
+      <h3><a name="utangulizi"></a></h3>
+      <div class="text-center">
+        <h1>SURA YA KWANZA</h1>
+        <br>
+      <h2>UTANGULIZI</h2>
+    </div>
+      <br>
+      <p>Bila shaka mpaka umepata hamu ya kusoma kitabu hiki umeshasikia neno <i>Bitcoin</i> au <i>Cryptocurrency</i> na kama yalivyo maneno mengi ya teknolojia ya habari na mawasiliano haya nayo yanaweza kuwa yamekuwa msamiati kwako. </p>
+<p>Technolojia hii inagusa kwa kiasi kikubwa na kwa kasi ya ajabu maana ya fedha na jinsi inavyoweza kutengenezwa, kutumika na kuhifadhiwa. 
+<i>Bitcoin</i> ni fedha ya kwanza ya kidigitali na ina umri usiozidi miaka 10 toka kuanzishwa kwake lakini athari zake ni kubwa sana kuliko uvumbuzi wowote uliowahi kutokea katika fedha.</p>
+<p>Haijalishi kazi unayofanya au kundi unalotoka katika jamii, alimradi unatumia fedha kununua au kuuza bidhaa na huduma basi huna budi kujifunza na kufahamu maana ya bitcoin na <i>cryptocurrency</i>.</p>
+<p>Nimeamua kuandika kitabu hiki kwa lugha ya Kiswahili ili kuufahamisha umma mkubwa unaozungumza lugha ya kiswahili kuhusianana na uvumbuzi huu na jinsi unavyofanya kazi kwani kuna maaandiko machache sana kuhusu jambo hili yaliyowekwa katika lugha yetu adhimu ya Kiswahili. Bitcoin na ndugu zake wanaoitwa kwa ujumla cryptocurrecy wameanza wameanza kubadili jinsi biashara ya ulimwengu inavyofanyika na muda si mrefu fedha hizi zitabadili kabisa mifumo ya fedha na uchumi wa dunia.</p>
+<p>Lengo  la kitabu hiki ni kukupa mwanga na ufahamu wa fedha za kidigitali, jinsi zinavyofanya kazi, na mustakabali wake kwa kuangazia historia ya fedha ilivyo, ili kuchochea hamu ya kujifunza zaidi ili uwe mtaalamu wa fedha za kidigitali na uweze kufanya biashara na kufaidika.</p>
+<p>Ufahamu huu wa awali ni muhimu sana kwani utakusaidia zaidi pale utakapopata fursa ya kusoma mfululizo wa matoleo ya vitabu vyetu vingine kuhusiana  na fedha za kidigitali, utakao kufundisha jinsi ya ut kutengezeza pesa nyingi kwa kuuza na kununua au kuwekeza fedha za kidigitali.</p>
+<p>Fahamu kwamba, una bahati sana ya kupata fursa ya kusoma kitabu hiki, kwani uvumbuzi wa bitcoin katika maisha ya binaadamu ni sawa na ilivyokuwa ndege  miaka ya 1930, au internet miaka ya 1980 na simu janja miaka ya 2000.</p>
+
+<p><a href="#yaliyomo">Rudi Yaliyomo</a></p>
+
+<hr>
+
+<div class="text-center">
+<img src="{%static 'accounts/img/obgAd.jpg'%}" class="img-responsive" alt=""'>
+</div>
+  <hr>
+
+
+<h3><a name="madhara"></a></h3>
+<div class="text-center">
+  <h1>SURA YA PILI</h1>
+        <br>
+      <h2>BITCOIN NI NINI?</h2>
+  </div>
+      
+      <p>Bitcoin ni fedha ya kwanza ya kielektoniki (cryptocurrency) kuwahi kuvumbuliwa na kutumika na mwanadamu katika manunuzi ya bidhaa na malipo ya huduma.</p>
+<p>Fedha hii ilivumbuliwa mwaka 2009 na tokea wakati huo mpaka sasa watu mbali mbali kwa madhumuni tofauti tofauti wameshatengeneza fedha za kielektroniki zaidi ya 2000 zenye majina tofauti tofauti ambazo kwa ujumla wao zinajulikana kama cryptocurrency.</p>
+<p>Bitcoin Ni sarafu ya kiuchumi ambayo inaishi na kupatikana katika mfumo wa kielektroniki peke yake na kwa jinsi hiyo haiwezi kuwa katika mfumo wa sarafu za kawaida,kama ilivyo sarafu ya Shilingi ya Tanzania.</p>
+<p>Kwa mfanano Bitcoin ni kama kuwa na uwezo wa kutuma sarafu ya dhahabu kupitia barua pepe, bila ya benki kuu au mamlaka yeyote ya usimamizi.
+Bitcoin na cryptocurrency nyingine unaweza kuzifananisha sana na mifumo ya fedha ya simu kama vile mpesa, tigo pesa, airtell money, halo pesa na kadhalika, lakini tofauti  kubwa ni kwamba wakati mifumo ya fedha ya simu inasimamiwa na mamlaka za Serikali na zinaweza kuthibitiwa na mamlaka hizo, fedha hii ya bitcoin haina uthibiti wala mamlaka kuu na  inaweza kutumwa kutoka kwa mtumiaji mmoja hadi kwa mtumiaji mwingine, kwenye mtandao wa compyuta,  bila ya msimamizi wa kati. </p>
+<p>Lakini pia jambo la kushangaza ni kwamba mfumo uliotengeneza fedha hii ambao unaitwa blockchain ni tofauti k abisa na mfumo unaofanya kazi kwenye fedha za simu kwani mfumo huu wa block chain hauwezi kuingiliwa na wahalifu wa mitandao kwa namna yeyote ile.Huu mtandao ni mtandao mpya wa makubaliano ambao unawezesha  mfumo mpya wa malipo na pesa ya kidigitali.</p>
+<p><span>Sifa kubwa ya bitcoin.</span></p>
+<p>Sifa kubwa ya Bitcoin ni kwamba ni mtandao wa kwanza wa malipo kati ya watu na watu (peer to peer) ambao hakuna mtumiaji mwenye mamlaka kuu ya mtandao huo, yaani hakuna msimamizi mkuu (administrator) kama ilivyo katika mifumo mingine ya computer au ya kifedha.</p>
+<p>Shughuli za utengenezaji fedha hii  zinaandikwa , zinahakikishwa na zinasambazwa kwa mtandao huu wa  blockchain na hakuna mtu ambaye anaweza kuamrisha kuzalishwa kwa kiasi fulani cha fedha tofauti na mfumo wa computer wa blockchain ulivyosetiwa.</p>
+
+
+<p><a href="#yaliyomo">Rudi Yaliyomo</a></p>
+<!-- <hr>
+<div class="text-center">
+<img src="{%static 'accounts/img/merrylight.jpg'%}" class="img-responsive" alt=""'>
+</div> -->
+  <hr>
+
+<h3><a name="sayahasira"></a></h3>
+<div class="text-center">
+  <h1>SURA YA TATU</h1>
+        <br>
+<h2>HISTORIA YA BITCOIN.</h2>
+</div>
+      
+<p>Bitcoin ilitengenezwa na mtu aliyejitambulisha kwa jina la Satoshi Nakamoto lakini kwa wakati wote huu tokea kuanzisha bitcoin mpaka sasa ubini wake wala utambulisho wake wa halisi haujawahi kutambulika na kuna nadharia nyingi za nani haswa ni Satoshi Nakamoto.</p>
+<p>Hali hii imepelekea kufikiriwa na wachambuzi wa mambo kwamba labda ni mmoja ya wataalamu wa mifumo ya kompyuta waliokuwa wakifanya tafiti za cryptocurrency au labda ni kikundi cha watu, wengi wakihusisha na vikundi vya kijasusi vya nnchi zilizoendelea./p>
+<p>Jambo jingine la kushangaza ni kwamba mvumbuzi wa fedha hii aliitoa programu ya kutengeneza fedha hii kama programu ya bure ( open source) mwaka 2009, ambapo kwa kufanya hivyo kumewezesha utengenezaji wa fedha nyingine za kielektroniki kwa kasi kubwa sana. kwani ni rahisi kwa wataalamu wa mifumo ya kompyuta sasa kusoma kunakili na kubadili kwa kiasi msimbo (codes) zilizotumika na hatimaye kutengezeza fedha nyingine ya kidigitali zinazofanana kabisa na bitcoin au zenye utofauti na bitcoin.</p>
+
+<p>Bitcoins huundwa au kuzalishwa kama malipo kwa mchakato unaojulikana kama "mining" (neno mining kwenye bitcoin imetokana na mining inayotumika kwenye uchimbaji wa madini). Mtu anayemiliki Bitcoin anaweza kubadilishana kwa sarafu nyingine, bidhaa, na huduma kama pesa ya kawaida. </p>
+<p>Utafiti uliofanywa na Chuo Kikuu cha Cambridge unakadiria  kuwa mwaka 2017 kulikuwa na watumiaji wa fedha za kidigitali (cryptocurrency) kati ya  milioni 2.9 hadi 5.8 wengi wao wakitumia bitcoin.</p>
+<p>Bitcoin inashutumiwa kwa matumizi yake katika shughuli haramu, matumizi yake ya juu ya umeme katika uchimbaji (mining) na kuwa na bei tete zinazobadilika badilika, watu wengi wanaonunua Bitcoin wanaitumia zaidi kama aina ya uwekezaji, ingawa mashirika kadhaa ya udhibiti katika nchi mbali mbali duniani yametoa tahadhari za uwekezaji katika bitcoin. </p>
+<p>Kwa kweli Bitcoin imekuwa ndio utekelezaji wa kwanza wa vitendo wa nadharia ya miaka mingi ya sarafu ya kidigitali baada ya majaribio kadhaa wa kadha kushindikana miaka ya nyuma kuanzia miaka ya 1970.</p>
+
+<p>Dalili ya kwanza ya Bitcoin na ushahidi wa dhana ya fedha ya kidigitali ilionekana mwaka 2009 baada ya chapisho la Satoshi Nakamoto ambaye alijielezea kidogo, lakini hadi sasa hajawahi kujitokeza hadharani. Katika chapisho lake hilo alieleza jinsi fedha hiyo itakavyofanya kazi na umuhimu wa fedha hiyo katika nyakati hizi huku akituhumu mifumo ya fedha iliyopo kwamba inaipa seerikali mamala ya kuhodhi fedha na kunyang’anya uhuru kutoka kwa wananchi.</p>
+<p>Satoshi Nakamoto baada ya kuanzisha fedha hii alijihusisha na mtandao wa bitcoin kwa muda mfupi hadi  mwishoni mwa mwaka 2010 na baadae aliuacha mtandao huo chini ya programmers(wataalamu wengine wa mifumo ya kompyuta) waliojiunga na mtandao huo na ambao hao wanajulikana. </p>
+<p>Kitendo cha kuanzisha fedha hii na kutoa msimbo wa chanzo (Source code) kuwa huru kwa mtu yeyote kuufikia unafanya bitcoin kuweza kuendelea kutumika bila kutegemea uwepo au kutokuwepo kwa ndugu satoshi kwani sasa hivi msanidi (developer) yeyote anaweza kurekebisha msimbo (code) ya programu. </p>
+<p>Historia inaonyesha kwwamba Jina la kikoa (website) cha  "bitcoin.org" lilisajiliwa tarehe 18 Agosti 2008 na mnamo Januari 2009, nakamoto alifanya muamala wa kwanza katika mtandao wa bitcoin na mpokeaji wa kwanza wa muamala huo  alikuwa ndugu Hal Finney.
+Kwa miaka mingi ndugu finley anaonekana kuwa alikuwa na uundaji wa mifumo ya fedha za kielektroniki bila mafanikio na taarifa zinaonyesha kuwa ndugu finley alipokea bitcoins kumi kutoka kwa nakamoto mnamo tarehe 12 Januari 2009. Kwa bwana finley kuwa mtu wa kwanza kupokea bitcoins kunafanya baadhi ya watu kumtaja kuwa labda yeye mwenyewe ndiye bwana Satoshi lakini yeye binafsi amekuwa akikataa taarifa hizo.</p>
+<p>Wafuasi wengine wa kwanza kwanza wa bitcoin walikuwa ni bwana Wei Dai, mteengenezaji wa sarafu ya “b-money”, na bwana Nick Szabo mwanasayansi na msomi wa sheria aliyejihusishana utafiti wa fedha za kidigitali kuanzia miak ya 1990.</p>
+<p>Bitcoin ya kwanza iliyohusisha muamala wa kibiashara  wakati bwana Laszlo Hanyecz aliponunua pizza mbili za Papa John kwa bitcoin 10,000. </p>
+<p>Inakadiriwa kuwa Nakamoto alizalisha  bitcoins milioni moja  kabla ya kuacha kujishughulisha na mtandao huo mwaka 2010, na baada ya hapo akakabidhi kiini cha tahadhari ya mtandao na udhibiti wa uhifadhi wa kanuni kwa ndugu Gavin Andresen ambaye baadaye alikuja kuwa mmoja wa maafisa wakuu wa taasisi iliyoanzishwa baadae ya Bitcoin Foundation.</p>
+
+
+<p><a href="#yaliyomo">Rudi Yaliyomo</a></p>
+<hr>
+<!-- <div class="text-center">
+<img src="{%static 'accounts/img/gstar.jpg'%}" class="img-responsive" alt=""'>
+</div>
+<hr> -->
+
+<h3><a name="sayamsukumo"></a></h3>
+<div class="text-center">
+  <h1>SURA YA NNE</h1>
+        <br>
+<h2>TOFAUTI YA BITCOIN NA FEDHA ZA KAWAIDA</h2>
+</div>
+      
+<p>Bitcoin hutumiwa kufanya malipo kwa njia ya kielektroniki ikiwa pande zote mbili zinakubaliana katika matumizi ya bitcoin kama fedha halali. Inapotumika katika miamala ya kibiashara Bitcoin ni kama fedha ya kawaida kabisa kama ilivyo Shilingi, dola, Yen au Euro. Pamoja na sifa hiyo ya mfanano, bado Bitcoin ina tofauti kubwa sana ikilinganishwa na fedha za jadi/kawaida kama ifuatavyo :</p>
+<p><span>Usimamizi. </span></p>
+<p>Mojawapo ya sifa muhimu zaidi za Bitcoin ni kwamba fedha hiii haina Mamlaka ya usimamizi. Yaani Hakuna taasisi au mamlaka ya kudhibiti uzalishaji wala usambazaji wa Bitcoin. Hii ni tofauti kabisa na fedha nyingine ambazo husimamiwa na benki kuu za nnchi husika. </p>
+<p>Mfumo wa bitcoin unasimamiwa na wanakikundi wenyewe ambao hufanya kazi kwenye mtandao wa wazi  ulio enea ulimwenguni kote. Mtandao huu unaruhusu mtu yeyote kujiunga na akishajiunga nayea anakuwa na haki sawa katika usimamizi wa mtandao huu. uhuru huu wa mamlaka unaotawanyika kwa wana vikundi wote ni mzuri kwa watu binafsi au vikundi ambavyo vinataka uhuru wa kusimamia fedha zao na sio mabenki au mamlaka za serikali kuwa na udhibiti, umiliki na usimamizi wa fedha zao.</p>
+<p><span>Usambazaji mdogo.</span></p>
+<p>Sarafu zote za jadi kama vile Shilingi, Euro, Dollar, Yen, nk zinategemea usambazaji wa Benki kuu au mamlaka ya serikali ya nnchi husika ambayo inaweza kutoa sarafu mpya kulingana na mahitaji ya nnchi na inaweza kuamua thamani ya sarafu yake dhidi ya  sarafu nyingine.</p>
+<p>Wamiliki wa fedha, hasa wananchi wa kawaida, mara zote wanabebeshwa gharama za mfumuko wa bei unaoweza kusababishwa na mamlaka za usimamizi wa fedha kwa kutokuzingatia vigezo vya kiuchumi katika kuchapisha fedha zaidi. Kwa bitcoin hali  ni tofauti kabisa kwani kwani mfumo wa Blockchain umetengenezwa na mahesabu imara sana katika kudhibiti ugavi wa Bitcoin ambao unaruhusu idadi ndogo sana ya Bitcoins kuzaliwa kila saa.</p>
+<p>Mfumo wa blockchain unaozalisha bitcoin, umesetiwa kuwa na ukomo pale ambapo uzalishaji wa bitcoin utafikia bitcoin Milioni Ishirini na Moja(21,000,000). Ukomo huu unafanya bitcoin kuvutia kama mali yenye thamani katika uwekezaji. Kinadharia, endapo ugavi wa pesa unabakia sawa lakini mahitaji yake yanazidi kukua basi thamani ya fedha husika itaongezeka.</p>
+
+<p><span>Usiri wa Utambulisho.</span></p>
+<p>Utambulisho wa Watumiaji wa malipo ya jadi ya elektroniki kama “credit card” huwa uko wazi na hakuna usiri wowote wa utambulisho wao, lakini watumiaji wa Bitcoin hufanya kazi bila kujulikana. Hii ni kwa sababu hakuna mamalaka ya usimamizi wa kati hivyo watumiaji wa sarafu ya digital hawana haja ya utambulisho wao kujulikana wakati wa kuhamisha  Bitcoin kutoka kwa mtumiaji mmoja hadi kwa mtumiaji mwingine.</p>
+<p>Kinachofanyika katika bitcoin ni kwamba mmiliki wa bitcoin anawasilisha ombi la kuhamisha fedha kwenda kwa mtumiaji mwingine na baada ya mfumo kupokea maombi hayo , mfumo wa blockchain  hufanya uhakiki ili kuthibitisha kuwa mtumaji ana kiasi kinachopaswa cha Bitcoin pamoja na ana mamlaka ya kutumia bitcoins hizo. </p>
+<p>Mfumo huu hauhitaji kujua utambulisho wa mtumiaji. Kwa kweli, kila mtumiaji anajulikana kwa anwani yake ya mkoba (Wallet) na shughuli zote zinaweza kufuatiliwa kwa kuzingatia anuani ya mkoba (wallet). Pamoja na kiwango hicho cha usiri,Mamlaka kadha wa kadha za utekelezaji wa sheria katika  serikali za mataifa mbalimbali  zimetengeneza mbinu kadhaa za kuweza kufuatilia na kutambua watumiaji wakati inapolazimu.</p> 
+
+<p><span>Ulinzi wa mfumo.</span></p> 
+<p>Tofauti na shughuli za kielektroniki katika mifumo mingine kama credit card, shughuli za Bitcoin haziwezi kuingiliwa. Hivyo kwa kuwa hakuna mkandarasi au mthibiti wa kati, endapo mbasi mtumiaji wa bitcoin atakosea kuzituma fedha zake, mtu huyo hawezi kuzirejesha kwa sababu hakuna admin(msimamizi) wa kuthibitisha au kusababisha kurejeshwa kwa bitcoins husika.</p>
+<p>Kwa ufupi ukishafanya manunuzi katika mtandao kwa kutumia bitcoin haiwezekani tena kurekebisha maelekezo yako. Hii inaweza kuwafadhaisha wengine, lakini ni angalizo kwamba unapotumia bitcoins au cryptocurrency nyingine hakikisha uko makini kwani ukishafanya muamala huwezi kuurekebisha.</p>
+<p>Bitcoin bado iko katika hatua za kukua na nchi nyingi zimeanza kuangalia namna ya kudhibiti sarafu hii. Serikali zingine zina wasiwasi juu ya ukosefu wa kodi pale ambapo bitcoin zitaendelea kutumika. </p>
+
+
+
+<p><a href="#yaliyomo">Rudi Yaliyomo</a></p>
+<hr>
+<!-- <div class="text-center">
+<img src="{%static 'accounts/img/merrylight.jpg'%}" class="img-responsive" alt=""'>
+</div>
+  <hr> -->
+
+<h3><a name="ugonjwa"></a></h3>
+<div class="text-center">
+  <h1>SURA YA TANO</h1>
+        <br>
+<h2>KWA NINI BITCOIN ILIANZISHWA?</h2>
+</div>
+
+<p>Waanzilishi na Watetezi wa bitcoin wanaieleza bitcoin na sarafu nyingine za kidigitali kwamba ni fedha halisi kuliko fedha za sasa kwani zina sifa kuu tatu kama ifuatavyo;</p>
+
+<p><span>Hakuna mfumuko wa bei wa kutegenezwa.</span></p> 
+<p>Watetezi wanasema kwamba kwa kutumia bitcoin, unthibitiwa zaidi na kuwa halisi kuliko  kutumia pesa za jadi kwani wakati kuna upungufu wa sarafu au ikiwa serikali inahitaji fedha zaidi benki kuu ya nchi husika inaweza kuchapisha fedha zaidi na mwishoni, soko likajaa fedha zenye thamani ile ile ya mwanzo lakini ikiwa na wingi wa noti na hivyo kusababisha mfumuko wa bei.</p>
+<p>Kwa mfano, ikiwa kuna dola bilioni 1 na benki ya nnchi husika ikachapisha dola nyingine bilioni 1. Maana yake ni kwamba soko litakuwa na dola bilioni 2 lakini thamani ya fedha inabaki dola bilioni 1. Kwa maana hiyo bei ya kila kitu itapanda. Kwa mfano kitu kilichokuwa kinauzwa dola kumi basi sasa kitauzwa dola 20, lakini pia fedha ya nnchi husika itapungua thamani ukilinganisha na fedha za nchi nyingine ambazo hazijachezewa na ziko imara.</p>
+<p>Hali hii inasemekana kwamba kwa fedha za crypto, haitatokea. Kwa mfano, Bitcoins zilipangwa tu kuwa milioni 21 katika mzunguko na hivyo baada ya zote kuzalishwa kwa mfumo wa uchimbaji hakutakuwa na kuzalishwa zaidi wala hakutakuwa na uchakachuzi wa kuchapisha nyingine kwa sababau mfumo utakuwa umefika mwisho na matumizi ya bitcoin yatakomea kwenye mzunguko wa ukomo wa Bitcoin Milioni 21.</p>
+
+<p><span>Usalama: Hakuna wizi wa utambulisho.</span></p> 
+<p>Kadi za mkopo zilipatikana katika miaka ya 1940, kabla kabisa ya kuundwa kwa mtandao wa internet. Lakini si mengi yaliyobadilishwa katika kadi hizo jambo linalofanya kutokuwa na usalama na kuweza kuibwa na wadanganyifu wa mitandaoni. Kwa mfano, kama wewe ni mjuzi tu wa wastani unaweza kutafuta kwenye mtandao nambari za kadi ya mkopo, na utapata mamilioni ya namba. Jambo baya zaidi ni kwamba taarifa hizi zinapatikana katika tovuti za kawaida kabisa wala sio zile zilizotengenezwa maalumu kwa udukuzi.</p>
+<p>Tofauti iliyopo sasa kati ya credit cards na fedha za Crypto ni kwamba fedha za crypto ziliundwa hasa kwenye mtandao na zimetengenezwa kuzingatia  usalama wa mtandaoni. Hali hii inafanya matumizi ya fedha za crypto kuwa salama sana haswa pale ambapo taarifa zako za siri hautazihifadhi mtandaoni.</p>
+
+<p><span>Fedha za jadi zinadhibitiwa na wachache.</span></p> 
+<p>Baadhi ya wachumi na wabobezi wa fedha , haswa fedha za crryptocurrency wana nadharia kwamba fedha huwa hazimilikiwi na serikali au uongozi wa nnchi kama inavyosemekana bali wasomi na matajiri ndio wanaodhibiti fedha na madaraka. </p>
+<p>Hii inaweza kuonekana kuwa nadharia ya njama kuu ( conspirancy theory)  lakini ikiwa unatazama maelezo zaidi, basi kuna ukweli kiasi kwenye nadharia hiyo kuliko uongo. Kwa mfano Ikiwa serikali inahitaji fedha, huwa mara nyingi zinakwenda kwenye mabenki na kukopa fedha, sasa katika mfano huo ni nani mwenye fedha na madaraka? Je ni benki au serikali?. Fahamu kwamba  mara nyingi sana kama sio mara zote yule  anayedhibiti fedha ndiye pia anayethibiti madaraka.</p>
+<p>Lengo la Fedha za Crypto kama inavyotanabaishwa na watetezi wake ni kutaka kuondoa uthibiti wa fedha kutoka kwa watu wachache na kuweka uthibiti mkubwa kwa watu kwa sababu hakuna mtu au mamlaka inayohusika na udhibiti. Hii inafanya soko la fedha za crypto kuwa huru tofauti na fedha za jadi.</p>
+
+
+<p><a href="#yaliyomo">Rudi Yaliyomo</a></p>
+<hr>
+<div class="text-center">
+<img src="{%static 'accounts/img/obgAd.jpg'%}" class="img-responsive" alt=""'>
+</div>
+  <hr>
+
+
+<h3><a name="vyanzo"></a></h3>  
+<div class="text-center">
+  <h1>SURA YA SITA</h1>
+        <br>
+<h2>HISTORIA FUPI YA FEDHA.</h2>
+
+</div>
+
+
+<p>Fedha ni chombo au kitu cha kati cha kubadilishana bidhaa na huduma. Dhana ya Fedha ina karibia miaka 3000 iliyopita ambapo wanahistoria wanaihusisha sana na mwanzo wa ustaarabu wa mwanadamu. Fedha inaruhusu mtu binafsi aweze kununua kile anahokitaka kwa kubadilishana na fedha aliyonayo. Historia ya fedha inaonyesha kwamba vitu mbali mbali kwa nyakati tofauti tofauti vilihesabikka kama fedha.</p>
+<p>Kwa sasa, kuna sarafu zaidi ya 150 ambazo zinatumika katika nnchi mbali mbali duniani kote na zaidi ya asilimia sabini ya thamani ya fedha hizo zinapimwa ikilinganishwa na thamani ya dola ya Marekani, Euro ya Ulaya, Pound ya uingereza, Yen ya Japan , na Yuan ya China.</p>
+<p>Historia ya fedha katika kitabu hiki imegawanywa katika makundi makubwa saba kama ifuatavyo;</p>
+
+<p><span>Mfumo wa kubadilishana vitu dhidi ya vitu (BARTER TRADE)</span></p> 
+<p>Historia inaonyesha kwamba watu walipoanza kulima mazao na kufuga wanyama. Mifugo na wanyama vilitumika Kubadilishana na vitu vingine vilivyoonekana kuwa muhimu wakati huo.</p>
+<p><spanb>2279 KK:</spanb>  Wababiloni wa kale walielezea miongozo ya kwanza ya "fedha" na kuanzisha aina ya kipimo iliyoitwa "shekeli". Ilikuwa na msingi wa uzito maalum wa vitu tofauti na ilitumika kwenye aina mbalimbali za bidhaa kuanzia shayiri hadi dhahabu.</p>
+
+<p><span>Maganda ya kobe wa baharini ( SHELLS )</span></p> 
+<p><spanb>1300 KK:</spanb> Viganda vya kobe wa baharini vilitumiwa kama fedha katika maeneo kama vile Afrika, Asia ya Kusini, Australia na Oceania. Shells hizi zilikuwa zimeundwa na shells nzima au vipande vipande ambavyo vilikuwa vimekaa kama mapambo.</p>
+<p><spanb>1100 KK:</spanb>Ustaarabu wa awali wa Kichina ulikuja na matumizi ya kwanza ya sarafu iliyotumia saruji ya shaba na vitu vingine ikiwa na umbo la duara na mashimo katikati ambayo yalimwezesjha mtumiaji kuziunganisjha sarafu kadhaa kwa pamoja.</p>
+<p><spanb>687 KK: </spanb>Ustaarabu Lydia( kwa sasa Uturuki) ulianza kuendeleza sarafu yake iliyokuwa na picha ya  kichwa cha simba cha kuomboleza ambayo ilitolewa na Mfalme Alyattes wa nnchi hiyo.</p>
+<p><spanb>300 KK:</spanb>Dola ya Kirumi ilianzisha sarafu yake yenyewe, inayojulikana kama Denarius. Sarafu hizi zilifanywa kwa kiasi kikubwa cha fedha na zilionyesha picha muhimu zilizohusu Jamhuri ya Kirumi.</p>
+
+<p><span>Fedha ya Kichina kwenye ngozi ya kulungu</span></p> 
+<p><spanb>118 KK: </spanb>Wachina walitoa matangazo ya kwanza ya fedha iliyotengenezwa na ngozi nyeupe nyeupe ya kulingu. Fedha hizi zilibadilishwa kwa bidhaa.</p>
+
+<p><span>Fedha za Karatasi</span></p> 
+<p><spanb>700 - 1100: </spanb>Fedha za karatasi zilianza mwanzoni mwa karne ya 7 Baada ya Kristo, lakini zilikuja kuenea baadaye. Kuibuka kwa fedha za karatasi kunahusishwa na upungufu wa shaba pamoja na mapungufu yaliyojitokeza haswa ya uzito wa sarafu katika shughuli kubwa za biashara.</p>
+<p><spanb>1290: </spanb>Mchunguzi wa Ulaya bwana Marco Polo, alishangazwa sana na sarafu ya karatasi ya Kichina na aliijadili sana katika kitabu chake, "Safari za Marco Polo" alichokiandika baada ya kutembelea nnchi mbali mbali ikiwemo china. Kitendo chake cha kujadili fedha ya karatasi ya uchina katika kitabu chake kinatamkwa na wanahistoria kama chanzo cha wazo la pesa za karatasi katika jamii za Ulaya.</p>
+<p><spanb>1661: </spanb>Noti za kibenki za kwanza zilichapishwa Ulaya nchini Sweden na Stockholms Banco. Uchapishaji wake ulianza vizuri kwa kuzalisha kiasi cha noti kilichoakisi kiasi halisi cha fedha zilizokuwepo, lakini mambo yaliponoga benki ilianza kutoa noti zaidi kuliko uhalisia na mwaka wa 1668, benki ilianguka.</p>
+
+<p><span>Zama za Dhahabu</span></p>   
+<p><spanb>1800: </spanb>sarafu za dhahabu ilikuwa dhana ya ubunifu ambayo ilijumuisha sifa zilizokuwamo katika fedha za karatasi na zile za sarafu. Wazo hili lilifanyiwa kazi marekani ambapo mamlaka ya usimamizi wa fedha ilitoa sarafu  zilizokuwa na madini ya dhahabu.</p>
+<p><spanb>1844: </spanb>Nchini Uingereza, "Sheria ya Mkataba wa Benki"(Bank Charter Act)  ilieleza kuwa noti za Benki ya Uingereza zilithaminishwa kikamilifu na dhahabu. tendo hili liliashiria kufanya dhahabu kuwa standard ya fedha ya uingereza.</p>
+<p><spanb>1879: </spanb>Dhahabu ilikuwa kiwango rasmi cha thamani nchi ya marekani. Na mtu aliweza kununua ounce moja ya dhahabu kwa dola 20.67 wakati dola moja ilitafsiriwa na mamalaka kuwa ni sawa na thamani ya punje (grains) 23.22 ya dhahabu halisi.</p>
+<p><spanb>1933: </spanb>Baada ya marekani kuathiriwa na Anguko al Uchumi (Great Depression) marekani iliachana na kutumia dhahabu kama kiwango cha thamani ili kuiwezesha serikali kuingiza pesa nyingi  katika mzunguko ili kufufua uchumi uliokuwa hoi bin taabani.Nchi nyingi zilifuata mkumbo na hatimaye thamani ya dhahabu kama kiwango cha thamani kwa taratibu kikaaza kutoweka katika uchumi.</p>
+
+<p><span>Kadi za Mkopo( Credit Cards)</span></p> 
+<p><spanb>1946: </spanb>Kadi ya kwanza kibenki ilianzishwa mwaka 1946 na John Biggins, ambaye alikuwa mtaalamu wa masuala ya benki mjini Brooklyn. Kwa kutumia kadi hii mnunuzi aliweza kufanya manunuzi na muuzaji kulipwa na benki.</p>
+<p><spanb>1950: </spanb>Club ya The Dinners huko nnchini marekani ilianzisha kadi yake na ilitumika kwenye migahawa zaidi ya ishirini katika jiji la New York kulipia matumizi bila ya kuwa na fedha taslimu.</p>
+<p><spanb>1958: </spanb>Kadi ya mkopo ya American Express ilizinduliwa na ikawa ndio kadi ya kwanza ya mkopo kukubalika duniani mwote.</p>
+<p><spanb>1970 BK:</spanb>Kadi za mkopo ziliboreshwa zaidi haswa katika mchoro wa magnetiki (magnetic Strip) hivyo kuwezesha taarifa binafsi na zile za kifedha kuweza kusomwa na mashine. Na uboreshaji huu sasa ukafanya kadi za mkopo kuweza kutumika katika ulimwengu wa technologia na baadae kwenye manunuzi ya mtandaoni.</p>
+
+<p><span>Mwanzo wa Fedha za Kielectroniki.</span></p> 
+<p><spanb>1990: </spanb>Teknolojia ya “Chip” ilianzishwa. Hii iliruhusu kiasi kikubwa cha habari kuhifadhiwa na kuweza kuthibitishwa katika mashimne ya mauzo (Point of Sell) inayokuwepo kwa muuzaji wa bidhaa mfano wa mashine hizi ni zili zilizopo kwenye supermarkets.  Mastercard ikawa ni katika watumiaji wa mwanzo wa teknolojia hii kwa kuanzisha mfumo wa kuruhusu kadi za chip kutumika duniani kote.</p>
+<p><spanb>1994 :</spanb>Kuanzishwa kwa mtandao na server ya wavuti (websites) na matumizi ya internet kukazalisha sasa mfumo wa manunuzi ya mtandaoni. Moja ya matukio ya mwanzo kabisa ya mannuzi ya mtandaoni ilikuwa ni ununuzi wa pizza ya pepperoni katika mgahawa wa pizzahut huko nnchini marekani.</p>
+
+<p><spanb>1997:</spanb>Mabenki ya Ulaya yalianza kutoa huduma za kibenki za simu kwa kutumia matoleo ya kale ya simu. Huduma za biashara ya simu za mkononi zilianzishwa wakati Coca-Cola ilipoanzisha mashine kadhaa za vending ambazo zinaweza kukubali malipo kupitia ujumbe wa maandishi.</p>
+<p><spanb>1998: </spanb>PayPal ilianzishwa California na iliwawezesha wanachama wake kununua katika mtandao, kufanya malipo na kuhamisha fedha. Ilisaidia sana katika kuenea kwa biashara za mtandaoni na kutokana na mafanikio yake mwaka 2002 kampuni ya Ebay iliinunua kwa dola bilioni moja na nusu ( $ 1.5 Bilioni).</p>
+
+<p><spanb>2008 : </spanb>M-Pesa huduma ya kutuma na kupokea pesa kwa kutumia simu ya mkononi iligundulika nnchini Kenya na Kenya kuwa ndio nnchi ya kwanza kuwahi kutumia huduma hii maarufu ambayo ilizinduliwa mwezi aprili 2008 kwa ushirikiano kati ya safaricom na Vodafone. Tangu wakati huo imekuwa mashuhuri na imesaidia sana wanananchi hasa wale wa mapato ya chii wasio na akaunti za benki katika nchi za Africa mashariki, Kenya na Tanzania zikiongoza katika matumizi yake.</p>
+ 
+<p><span>Cryptocurrencies.</span></p> 
+<p><spanb>2008 : </spanb>Satoshi Nakamoto alichapisha andiko (white paper) lenye jina la “Bitcoin: A Peer to Peer Electronic Cash System”. Ambayo kwa tafsiri isiyorasmi inamaanisha "Bitcoin: Mtandao wa rika wa malipo ya kielektroniki.</p>
+<p><spanb>2012 : </spanb>Cryptocurrency nyingine inayojulikana kama Ripple iliundwa.
+<p><spanb>2015: </spanb>Ethereum ilizinduliwa na bwana na mwanzilishi wake, kijana mdogo wa kimarekani mwenye asili ya urusi kwa jina la Vitalik Buterin. Ethereum inasifika kwa kuwa na mfumo wa mikataba janja( Smart Contract)</p>
+
+<p><spanb>2016: </spanb>Teknolojia za Bitcoin na blockchain zinaanza kuenea katika vyombo vya habari vya kawaida. Watu zaidi na zaidi wanafahamika kwa ufumbuzi wa cryptocurrency.</p>
+
+<p><spanb>2017: </spanb>Habari ya bitcoin inakuwa kubwa zaidi duniani, pale ambapo mwezi desemba 2017 thamani ya bitcoin moja inakuwa sawa na dola ya marekani Elfu kumi na tisa(USD 19,000$). Wastani wa bitcoin moja kwa shilling ya Tanzania Milioni Arobaini na Mbili, laki tano sitini elfu (42,560,000/=)</p>
+
+
+
+<p><a href="#yaliyomo">Rudi Yaliyomo</a></p>
+<hr>
+<!-- <div class="text-center">
+<img src="{%static 'accounts/img/merrylight.jpg'%}" class="img-responsive" alt=""'>
+</div>
+  <hr> -->
+
+<h3><a name="mapenzi"></a></h3>
+<div class="text-center">
+  <h1>SURA YA SABA</h1>
+        <br>
+<h2>BLOCK CHAIN NI NINI?</h2>
+</div>
+  
+<p>Blockchain ni mfumo wa computer  ambao unatumika kutengeneza pesa za mtandao. Bitcoin imejengwa na mfumo huu wa Block chain. Kama nilivyoeleza hapo awali, Bitcoin inajulikana kama cryptocurrency ya kwanza ya ulimwengu na inafafanuliwa vizuri kama sarafu ya kidigitali inayopatikana kwenye mfumo wa kielekronikali peke yake. Maana yake, sarafu hii haiwezi kuchapishwa kama ilivyo Shilingi ya Tanzania. Kwa lugha nyingine ni sarafu isiyoshikika.</p>
+<p>Vile vile Bitcoin imewekwa rasmi, lakini haina mamlaka kuu ya kutoa au taasisi ya kisiasa inayodhibiti kiasi cha bitcoin katika mzunguko, kama ilivyo kwa Benki Kuu ya Tanzania au federal Reserve ya Marekani ambazo zinadhibiti kiasi cha fedha za nnchi zao katika mzunguko. Kinachosimamia na kudhibiti kiasi cha mzunguko wa Bitcoin ni jukwaa lililojengwa na mfumo uitwao Block Chain ambao umejengwa katika hali ambayo inazuia kiwango chochote cha uongo na udanganyifu na wakati huo huo ukitunza usiri.</p>
+<p>Mchakato wote ni rahisi sana na umeandaliwa katika hali ambayo wamiliki wa Bitcoin wanaweza kuhamisha bitcoins kupitia mtandao rika (peer to peer). Uhamisho huu unafanyika kwenye mfumo wa  "blockchain," . Mfumo huu wa blockhain unasajili kila shughuli za bitcoin zilizofanywa toka shughuli ya kwanza tangu uzinduzi wa mfumo ulipoanza bila kupoteza kumkumbu hata moja.</p>
+<p>Kila muamala katika blockchain umefungamanishwa na kuwa kama block moja ambao sasa unaunganishwa katika mnyororo na kutokea kitu kinachoitwa “Blockchain”. Kufanya hivi ni muhimu kwani kwani kunawezesha mfumo kutambua udanganyifu au faili zilizoharibiwa. Ikiwa faili moja katika mlolongo limeharibiwa au limefanyika kwa udanganyifu, blockchain inazuia muamala huo kuendelea,</p>
+<p>Badala ya kutegemea serikali kuchapisha sarafu mpya, programu ya blockchain ya Bitcoin inashughulikia miamala na wakati huo huo mfumo umetengenezwa katika hali ambayo ili muamala uthibitishwe lazima ufanyiwe uhakiki na watumiaji wengine wa mfumo, utaratibu unaoitwa mining. </p>
+<p>Mfumo umetengenezwa katika hali ambayo muamala unapothibitishwa ndipo na bitcoin nyingine inapozalishwa kwa uwiano ambao hauwezi kuathiri mzunguko wa bitcoin katika soko.
+Kwa sasa kuna karibu bitcoins Milioni 17 katika mzunguko bila ya shirika la kati la udhibiti au serikali inayodhibiti ugavi wa bitcoins, maana ugavi unadhibitiwa na mfumo.
+Kama nilivyoeleza hapo mwanzo inaaminika kuwa Bitcoin imeundwa katika hali ambayo haina mfumuko wa bei ili kupambana na matumizi ya serikali ya mfumuko wa bei kama kodi ya siri ili kugawa tena utajiri wa mali. Watu wengi wanaisifu Bitcoin kwa kuwawezesha watu kumiliki fedha zao na kuharibu uwezo wa wanasiasa wa kuchapisha sarafu bila kuzingatia vigezo vya kiuchumi.</p>
+<p>Mojawapo ya sifa za Bitcoin zinazovutia zaidi ni mchakato wake wa kuthibiti uovu, ambayo hupunguza hatari ya udanganyifu. Watu wanaojitolea kufanya shughuli ya uchimbaji wanajulikana kama  "wachimbaji" (Miners) ambao kazi yao ni kuhakiki,  kuthibitisha na kusahihisha blockchain na mara baada ya zoezi hilo block nyingine inaongezwa kwa blockchain na biashara inaendelea kama kawaida."</p>
+<p>Wachimbaji" wanaojitolea wanafidiwa muda wao kwa kupewa kiasi kidogo cha bitcoin, hivyo kufanya uchimbaji kuwa njia moja wapo ya kujipatia bitcoin.</p>
+
+<p><span>Tofauti kati ya Blockchain na Mfumo wa Benki.</span></p>
+<p>Ili kuelewa hasa blockchain ni nini, ngoja tutofautishe kati ya mfumo wa Block chain na Benki;</p>
+<p>Kimsingi, blockchain ni ledger iliyosambazwa (distributed ledger) ambayo ukiilinganisha na benki ni kama vile kusema;</p>
+<p>Benki yako ina Kazidata Kuu “Central Database” ya maelezo yote ya wateja. Hii inaweza kuhifadhi nambari za akaunti, mizania, miamala n.k. Wakati wowote unapofanya shughuli kwenye akaunti yako (kama vile kutoa fedha au kuhamisha), benki yako inasahihisha rekodi zake na ni benki tu ambayo ina uwezo wa kufikia ‘central database’, hivyo ikiwa wanaamua kufanya mabadiliko, hakuna mengi ambayo unaweza kufanya kuhusu hilo.</p>
+
+<p>Sasa fikiria kama mdukuzi (hacker) akiweza kuingia kwenye database hii. Wanaweza kubadilisha mizania, kufuta shughuli, nk, lakini kama sehemu ya usalama benki yako inaweza kurejesha taarifa zilizoharibiwa kutoka kwenye backup, lakini jumla ya yote ni chombo kimoja tuu cha kati (benki) yenye udhibiti.</p>
+ 
+<p>Sasa distributed ledger ambayo iko kwenye blockchain ni nadhifu zaidi sana kuliko mfumo wa kazidata kuu (Central Database) ambao unatumika na benki kwani badala ya mtu mmoja au kampuni moja kuwa na mamlaka ya kusimamia ledger kwenye blockchain watu wengi wanakuwa na nakala ya distributed ledger na kila mtumiaji, ambaye anajulikana kama ‘node’, anahifadhi nakala ya data zote kuanzia mwanzo kabisa wa miamala katika ledger.kila node anakuwa na jukumu la kuhakiki data hizo na ku-update rekodi zake ili kila kitu kwenye mtandao kiwe up to date na katika msawazo(balanced).</p>
+<p>Kila mwamala mpya katika mtandao wa blockchain unaonganishwa na miamala mingine kwenye block”, Block hizi zinaleta faida maridhawa sana kwani hakuna mtu wa katikati (admin) ambaye anaweza kucheza au kubadilisha rekodi za mtandao na endapo ukitaka kufanya hivyo basi nodes wote lazima wakubaliane. </p> 
+<p>Kwa sababu mchato huu haufanyiki na wanadamu bali hufanyika na mashiene za kikomputa, basi ni vigumu sana kufanya nodes wote wakubaliane kupitisha muamala wenye kasoro au udanganyifu. Kwa mfano, wakati ninandika kazi hii, kuna  nodes wa bitcoin zaidi ya elfu kumi (10,000) ambao wamesambaa dunia nzima.</p>
+<p>Uthibitisho wa blockchain: Funguo kwa umma na funguo binafsi ( Public and Private Keys)
+Kama ulivyoona hapo awali, blokchain ni stoo ya taarifa za miamala  ambayo imesambazwa (decentralized store of data). </p>
+<p>Kwa mfano nikimtumia OB bitcoin moja, ni sawa na kuwaambia nodes wote duniani kile ninachokifanya na wote wanahifadhi ule mwamala na kuuthibitisha kama unaruhusiwa kuendelea. Kwa kuangalia ‘ledgers’, nodes wanaweza kuukataa mwamala huo kama sina bitcoin za kutosha kutuma au kama mimi sio mmiliki wa account iliyotuma muamala. </p>
+
+<p>Kila muamala lazima upate uthibitisho, na hapo ndipo teknolojia ya blockchain inapokuwa nzuri. Kila mkoba (wallet) wa blockchain (ambao ni kama vile account yako ya benki) una funguo kwa umma (public keys) na funguo binafsi (private key).</p>
+<p>Funguo ya umma sio nyeti kama funguo binafsi.  Ni mmiliki wa account peke yake ambaye anapaswa kufahamu namba za funguo binafsi na endapo mtu mwingine asiye mmiliki wa account atapata namba hizo za funguo basi account yake inaweza kuchukuliwa. </p>
+<p>Kama unataka account yako iwe salama hakikisha umeiandika kwenye kitabu na kukiificha kitabu hicho kama kipande cha almasi, na hakikisha ufunguo wako wa binafsi hauja uhifadhi kwenye mtandao kwani ni rahisi kudukuliwa na fedha zako kuchukuliwa.  </p> 
+<p>Katika mfano uliopita hapo juu, ninapotaka kumtumia OB bitcoin, mkoba wangu (wallet) unawasilisha namba za funguo za umma pamoja na saini ya kidigitali (Digital signature). Saini hii ya kidigitali ni ya kipekee na inazalishwa na zile funguo zangu za binafsi. Hivyo kwa kutumia saini na funguo zangu za umma, nodes wengine wanaweza kuthibitisha kama muamala nilioutuma ni halali au laa bila ya mimi kutoa au kuonyesha namba za funguo zangu za binafsi.</p>
+<p>Huu mfano, umeelezea tu kwa urahisi kile kinachotokea nyuma ya pazia kwani namba zinazotumika kwenye blockchain sio sawa na zile za account ya benki bali huzalishwa kwa mfumo wa mahesabu  magumu zaidi ya Alogarithim yanayoitwa  “Secure Hash Algorithm 256 (SHA-256) na RACE Integrity Primitives Evaluation Message Digest 160 (RIPEMD-160).”
+Je umewahi kuyasikia mahesabu hayo? . Usijali kwani huhitaji kufahamu mahesabu hayo kwa undani ili uweze kutumia cryptocurrency, ni kama vile ambavyo huhitaji kuwa fundi wa gari ili kuendesha gari. Kama alivyo dereva unahitaji kufahamu mambo machache tu ili uweze kuutumia mfumo huu na mengine ukawaachia wataalamu wa mifumo.</p>
+<p>Kwa sasa fahamu tuu kwamba uthibitisho wa miamala hii katika block chain unafanyika kimfumo na kwa gharama. kila node anahitaji vifaa imara vya computer ili kuweza kuthibitisha miamala yote inayofanyika katika mtandao wa blockchain ili kuweza ku update  ledger yake inavyopaswa.</p>
+<p>Na hapa ndipo uchimbaji wa bitcoin au Bitcoin mining unapojitokeza na ambapo sasa hawa watumiaji (nodes) wanapopewa kiasi flani cha bitcoin kama malipo ya gharama za kuthibitisha malipo.</p>
+
+
+
+
+<p><a href="#yaliyomo">Rudi Yaliyomo</a></p>
+<hr>
+<!-- <div class="text-center">
+<img src="{%static 'accounts/img/gstar.jpg'%}" class="img-responsive" alt=""'>
+</div>
+<hr> -->
+
+<h3><a name="ujasiriamali"></a></h3>
+
+<div class="text-center">
+  <h1>SURA YA NANE</h1>
+        <br>
+<h2>BITCOIN MINING NI NINI?</h2>
+</div>
+<p>Bitcoin Mining ni kitendo cha kuzalisha Bitcoin katika mfumo wa blockchain kinachotokea kama zao( product) ya mchakato wa kuthibitisha miamala inayofanyika kwenye  mfumo. 
+<p>Kitendo hiki kinatokea kwenye mfumo wa blockchain tuu, kwa sababukatika mifumo mingine ya komputa, huwa  kuna seva moja katika mfumo ambayo inathibitisha shughuli zote za mfumo, lakini katika mfumo huu wa blockchain badala ya seva moja katika mfumo kuthibitisha shughuli zote za mfumo, kimsingi kila mtu kwenye mtandao anajukumu la kuthibitisha  kila shughuli inayofanyika kwenye mtandao kama ilivyoelezewa hapo juu.</p>
+<p>Kwa maana nyingine, hakuna msimamizi (administrator) wa mfumo ambaye anamamlaka ya kuthibitisha shughuli za mfumo kama kubadilisha neno la siri (password) na kadhalika.
+Kinachotokea katika mfumo wa blockchain ni kwamba  wachimbaji (nodes) wanawasilishiwa  hesabu ngumu na wa kwanza kutatua hesabu hiyo anaongeza "block " iliyohakikishwa katika mfumo hivyo mwisho wa siku inatokea mnyororo wa blocks au kwa kiingereza "blockchain".
+Mahesabu yanayowasilishwa yanategemea Uthibitisho wa Kazi (Proof of Work), au uthibitisho kwamba kiwango cha chini cha nishati kimetumiwa kupata jibu sahihi.</p>
+<p>Hakuna watu halisi wanaotengwa kufanya mahesabu hayo kwenye computa au karatasi au kikokoteo bali mahesabu hayo hufanyika na vifaa vya kikomputa (hardwares) maalumu.
+Mfumo wa malipo ya Bitcoin huwapa fidia wachimbaji waliofanikiwa kwa kuwapatia tuzo ya bitcoins kadhaa.Tuzo inabadilika kwa wakati kwa programu ya Bitcoin, na sehemu ya malipo ya kuzuia kila baada ya miaka minne. </p>
+<p>Hapo awali mtu angeweza ku mine bitcoin kwa kutumia compyuta za kawaida, lakini siku zinavyozidi kwenda na mfumo kuwa mkubwa zaidi Michakato ya mining imezidi kuwa ya kisasa. Njia inayojulikana zaidi hutumia Mzunguko wa ASICS. ASICS ni mifumo ya vifaa sawa na kompyuta za CPU zilizojengwa kwa sababu pekee ya ku mine bitcoins.</p>
+
+<p>Shughuli za kuchimba (mine) Bitcoin sio rahisi, huitaji juhudi na   kiasi kikubwa cha ushindani hivyo hufanya vigumu kwa wageni kuingia katika kazi hii na kutengeneza faida. Mchimbaji mpya hatakiwi  tu kuwa na uwezo na ujuzi  wa kutosha wa kompyuta  lakini pia anahitaji kiasi kikubwa cha mitaji ili kununulia na kuendesha vifaa vya uchimbaji. Hata hivyo kwa fedha zingine za kidigitali, bado mtu anaweza kutumia CPU na GPU ku-mine </p>
+
+
+<p><a href="#yaliyomo">Rudi Yaliyomo</a></p>
+<hr>
+
+<div class="text-center">
+<img src="{%static 'accounts/img/obgAd.jpg'%}" class="img-responsive" alt=""'>
+</div>
+  <hr>
+  
+<h3><a name="namna"></a></h3>
+<div class="text-center">
+  <h1>SURA YA TISA</h1>
+        <br>
+<h2>JINSI YA KUHIFADHI BITCOIN.</h2>
+</div>
+
+<p>Inawezekana kabisa kufikia hapa umeshaelewa bitcoin ni nini lakini labda unajiuliza endapo utanunua au uta-mine bitcoin utahifadhi vipi? Ni wazi kabisa kwamba sarafu hii ya kidigitali huwezi kuitunza mfukoni mwako kama zilivyo sarafu nyingine za kawaida. Ili kufahamu kwa ufasaha namna ya kuhifadhi ni muhimu kufahamu kwanza  mambo yafuatayo :
+Jukwaa la kubadilishana: ni jukwaa la kielektroniki ambako unaweza kubadilisha fedha za jadi na fedha za kimtandao (crypto) au kubadili fedha moja ya crypto kwa fedha nyingine kama Bitcoin, Ethereum, au Litecoin. Unaweza pia kufanya biashara ya cryptocurrency moja kwa jukwaa jingine.</p>
+<p><span>Mkoba (Wallet): </span>kimsingi wallet au mkoba ni kama vile akaunti yako ya benk mahsusi kwa kuhifadhi bitcoin au fedha nyingine za crypto. Mkoba unaweza pia kuwa nnje ya mtandao ili kuongeza kiwango cha ulinzi na kuvamiwa kwa wallet yako na wahalifu wa mtandao.
+Ufunguo wa Jamii: hii ni Nambari yako ya akaunti. Sawa na namba yako ya akaunti ya benki , hii ni taarifa unayompa mtu kupokea cryptos.</p>
+<p><span>Ufunguo Binafsi (Private  Key):</span> huu ni ufunguo wa SIRI, huu ndio utambulisho wako wa siri wa kutumia bitcoin zako. Unashauriwa kuilinda kwa uwezo wako wote kwani mtu akiupata ufunguo huu au akiuiba basi bitcoin zako zote zitakuwa zimeshaibiwa.
+Ifahamike kwamba, mfumo wa blockchain hauwezi kuvamiwa na wahalifu wa mtandao wala kuharibiwa au kubadili uzalishaji wa bitcoins, lakini mfumo wa uhifadhi yakiwemo majukwaa ya kubadilishana na mikoba ya uhifadhi bitcons inaweza kuvamiwa na bitcoins kuibiwa. Kama ambavyo benki inaweza kuvamiwa na fedha kuibiwa.</p>
+<p>Hali hii imeshajitokeza mara kadhaa na moja ya habari iliyowasha masikio ni kuvamiwa kwa hazina ya makao ya Tokyo mwaka 2018 ambapo bitcoins 850,000 zenye thamani ya zaidi ya dola milioni 350 zilitoweka ghafla kutoka kwenye jukwaa. Hii haimaanishi kwamba blockchain ilidukuliwa la hasha, bali inamaanisha kwamba jukwaa la kubadilishana lilipigwa. </p>
+
+
+<h3><span>Jinsi ya kuhifadhi bitcoin.</span></h3>
+<p>Kabla ya kumiliki bitcoin yeyote , unahitaji kufahamu na kuwa na sehemu ya kuzihifadhi. Sehemu hiyo inaitwa wallet. Badala ya wewe kushikilia na kuhifadhi bitcoin halisi, unachotakiwa kufanya ni kuhakikisha unashikilia na kuhifadhi funguo binafsi ya wallet yako ambazo zinakupa uwezo wa kufikia na kutumia anuani yako ya bitcoin ambayo inajulikana pia kama  funguo za umma.</p>
+<p>Mkoba wa bitcoin unaweza kuhifadhiwa kwenye komputer yako au kwenye kifaa cha mawasiliano kama simu,  flash au hata kwenye kipisi cha karatasi. Hapa tutaangalia kwa ufupi namna tofauti.</p>
+
+<p><span>Electronic wallets (Mikoba ya kielektroniki), </span></p>
+<p>Mikoba ya kielektroniki inaweza kupakuliwa kama software au kuhifadhiwa mawinguni (on Cloud), hii kama software na linahifadhiwa katika computa yako au kifa kinachowezesha kufanya muamala kama simu. Hii ya pili ambayo inakuwa hosted on clouds mara nyingi inakuwa na mfumo rafiki lakini unhitaji kumuamini mtu mwingine na funguo zako za binafsi hivyo sio salama sana.</p>
+
+
+<p><span>Software wallet.</span></p>
+
+<p>Unapo pakuwa na ku-install wallet kwenye computer yako, hapa unakuwa na uhuru wa kupata na kuzisimamia  funguo zako za siri (binafsi)  lakini changamoto yake ni kwamba aina hii ya mkoba inahitaji marekebisho ya mara kwa mara kwa kuwa updated . kwa mfano computa yako ikiibiwa au ikiharibika na ukawa haujahifadhi namba zake mahali pengine  basi utakuwa umeshapoteza bitcoin zako.</p>
+
+<p>Kwa upande mwingine pia zinahitaji uangalizi mkubwa sana wa kiusalama kwani ikiwa computa yako imedukuliwa na wezi wakaweza kuifikia wallet yako au funguo zako za siri, basi aakuwa tayari ameshaweza kuchukua bitcoin zako.</p>
+
+
+<p><span>Mobile wallets.</span></p>
+<p>Mikoba ya simu inapatikana kama apps ya simu janja, aina hii inakuwa yenye manufaa zaidi kama unataka kulipia bitcoin kwenye duka au unataka kununua wakati ukiwa unatembea. mikoba mingi ya kimtandao inaweza pia kuwa na app ya simu.</p>
+
+
+<p><span>Hardware wallets.</span></p>
+<p>Mikoba ya hardware ni vifaa vidogo ambavyo vinaunganishwa na mtandao ili kuwezesha miamala ya bitcoin. Aina hizi za wallet ndio salama sana kwani zinakuwa offline na mtu hawezi kuzidukua. zinaweza kuibiwa au kupotea pamoja na bitcoin, na funguo za siri/binafsi. Wawekezaji wakubwa wanaweka hardwares hizi katika masanduku ya kuhifadhia vitu vya thamani benki. </p>
+
+
+<p><span>Paper wallets (Mikoba ya Karatasi.)</span></p>
+<p>Huu ndio mkoba rahisi kuliko yote, mkoba huu ni kipisi cha karatasi ambacho kimeandikwa namaba za funguo za umma na zile za funguo za binafsi. Inafaa sana kwa uhifadhi wa muda mrefu wa bitcoin ( mbali na moto na maji bila shaka) au kama unataka kumpa mtu zawadi ya bitcoin.</p>
+<p>Kwangu binafsi napendelea aina hii ya uhifadhi wa mkoba.nashauri ununue note book mpya mbili ambazo utaanika funguo zako za siri ( zile za umma na zile za binafsi ) halafu notebook moja ifiche mbali sana ikiwezekana kwenye sanduku la benki wakati nyingine unaweza kuificha lada kwenye safe mahali ambapo utakuwa unaweza kuitumia utakapo.</p>
+<p>KUMBUKA FUNGUO ZA SIRI/ BINAFSI NDIO BITCOIN ZAKO.</p>
+
+
+<p><a href="#yaliyomo">Rudi Yaliyomo</a></p>
+<hr>
+<!-- <div class="text-center">
+<img src="{%static 'accounts/img/gstar.jpg'%}" class="img-responsive" alt=""'>
+</div>
+<hr> -->
+
+
+ <h3><a name="ufupi"></a></h3>
+
+         <div class="text-center">
+  <h1>SURA YA KUMI</h1>
+        <br>
+<h2>MUSTAKABALI WA BITCOIN.</h2> 
+</div>
+         
+        <p>Unapozungumzia mustakabali (future)wa bitcoin na Cryptocurrency, unaweza kuwagawanya watoa nadharia katika makundi makubwa matatu.
+          <ol>
+<li><p>Kundi la kwanza ni wale ambao wana fikiri kwamba cryptocurrencies zinaenda kufanya mapinduzi ya moja kwa moja katika fedha kama ambavyo noti za benki zilivyobadili matumizi ya dhahabu kama kipimo cha mabadiloshano.</p></li>
+<li><p>Kundi la pili ni lile ambalo linaona bitcoin na fedha nyingine za cryptocurrency zitakufa na kutoweka.</p></li>
+<li><p>Kundi la tatu wanaona kwamba cryptocurrency zitaendelea kuwepo japo wanakubali kwamba zaidi ya asilimia 90 ya fedha hizi zitakufa. Hili kundi linajitahidi kuwa makini kutoa majibu ya moja kwa moja kuhusiana na cryptocurrency. </p></li>
+</ol>
+<p>Wanataadharisha pia kwamba thamani ya bitcoin haitaweza kuwa kubwa kama ambavyo imetokea decemba ya 2017 kufikia zaidi ya dola za marekanin19,000 kwa bitcoin moja.
+Kundi la kwanza wanafika mbali kuamini kwamba federal reserve ya marekani pamoja na mabenki mengine makuu ya nchi kadhaa wa kadhaa yatafikia hatua ya kutengezea cryptocurrency zao wenyewe.</p>
+<p>Pia kuna fununu kwamba makampuni makubwa kama vile Amazon, Walmart na Starbucks wanaweza kutoa sarafu za digital zinazohamasisha uaminifu na kupata kukubalika zaidi.
+Wafanyabiashara wa rejareja, kwa kukubali malipo kwa fedha, wanaweza kuinua umuhimu wa Bitcoin, na wanafika mbali zaidi kusema kwamba, ikiwa uaminifu katika fedha za serikali, utaendelea kuporomoka basi, baadaye cryptocurrency inaweza kuja kuwa fedha kuu. </p>
+<p>Wasomi wa Chuo Kikuu cha Yale wamependekeza FedCoin. Ambapo wanasema katika siku zijazo za cryptocurrency, FedCoin inaweza kufanya sera za fedha kuwa rahisi zaidi na yenye nguvu, hata katika swala zima la kuthibiti viwango vya riba mbaya.</p>
+<p>Benki ya Uingereza kwa upande mwingine katiak kuchunguza endapo cryptocurrency ikitumika katika mifumo ya kibenki inaweza kuongeza pato la Taifa, wamegundua kwamba inawezekana Pato la Taifa kuongezeka kwa asilimia 3%. Moja ya sababu ikiwa ni kutokana na kushuka kwa gharama za kuhamisha fedha.</p>
+<p>Hata hivyo matumizi za cryptocurrency katika mfumo rasmi wa benki za nnchi ni ngumu kwani unaweza kuondoa nafasi ambayo benki inachangia katika uchumi wa nnchi husika kwa kuindoa mizania ya amana dhidi ya mkopo ambapo kwa sasa dola moja ya amana inaweza kutoa mkopo mpaka wa dola kumi.</p>
+
+
+<p><a href="#yaliyomo">Rudi Yaliyomo</a></p>
+
+<hr>
+<div class="text-center">
+<img src="{%static 'accounts/img/obgAd.jpg'%}" class="img-responsive" alt=""'>
+</div>
+  <hr>
+
+
+
+
+
+<h3><a name="hitimisho"></a></h3>
+<div class="text-center">
+  <h1>SURA YA KUMI NA MOJA</h1>
+        <br>
+<h2>HITIMISHO</h2> 
+</div>
+
+<p>Bitcoins inaweza kupatikana kwa njia nyingi, ambayo kila moja ni tofauti kabisa na njia nyingine. Ni muhimu kutambua kwamba bitcoins ni rahisi sana kutuma kutoka kwa mtu mmoja kwenda kwa mtu mwingine. </p>
+
+<P>Pamoja na ukweli kwamba Bitcoin ni ghalilakini pia ni ukweli kwamba bei ya bitcoin inabadilika  sana kwani decemba 2017, bitcoin moja ilikuwa ina thamani ya dola za marekani 19,000 wakati mnamo mwezi wa tatu mwaka 2018 Bitcoin ilishuka thamani na kufikia dola za marekani 3600.</p> 
+<p>Pamoja na ukweli huo kwamba bitcoin ni ghali, lakini pia unaweza kumiliki sehemu tu ya bitcoin, kwani kipimo cha bitcoin kiko kwenye decilimali tisa na kama sarafu nyingine ya kidigitali, moja ya sifa kubwa za bitcoin ni uwezo wake wa kupelekwa au kugawanyika kwa  vipimo vinavyoitwa "satoshis."</p> 
+<p>Watu wengi wanashauku ya kujua nini mustakabali wa fedha hasa baada ya ujio wa Bitcoin, lakini  ukweli ni kwamba bitcoin imebadili kabisa maana na kwa ujumla ulimwengu wote wa fedha umebadilika.</p>
+<p>Kama ilivyoonyeshwa hapo juu wafahidhina wanaamini kwamba bitcoin na cryptocurrencess nyingine hazitakwenda mahali kokote na wanatoa sababu kadha wakadha lakini kwa upande mwingine, kundi la watu huru ( liberal ) kuhusiana na maswala ya fedha wanaamini kwamba bitcoin na cryptocurrency ndio mustakabali wa fedha na mpango mzima.</p>
+Swala la kwamba bitcoin ni mustakabali wa fedha au la ni swala mtambuka. ukifuatilia historia unaona kwamba kwa miaka nenda rudi kumekuwa na ubashiri tofauti tofauti kuhusu mustakabali wa fedha huku bashiri nyingine zikiwa kweli na nyingine zikishindwa kabisa kudhihirika.</p>
+<p>Kwa vyovyote vile nililojifunza ni kwamba kuna fursa nyingi za kunufaika na uwepo wa Bitcoin na cryptocurrencies nyingine. Inachotakiwa kufanya ni kujifunza kwa makini na kuchukua hatua taratibu huku ukianza na kiwango kidogo cha uwekezaji katika tasnia hii mpya kabisa ya uchumi.</p>
+<p>Endelea kufuatilia mfululizo wa vitabu vyangu kuhusu cryptocurrency kuona ni namna gani unaweza kufaidi.</p>
+
+
+<p><a href="#yaliyomo">Rudi Yaliyomo</a></p>
+
+<hr>
+<<!-- div class="text-center">
+<img src="{%static 'accounts/img/merrylight.jpg'%}" class="img-responsive" alt=""'>
+</div>
+  <hr> -->
+<div class="text-center">
+<h1><span>ASANTE</span></h1>
+</div>
+
+  <br>
+            </div>
             
-            <br><br>
+      </div>
 
 
-
-
-   {% endblock %}
+    </div>
+  
+</main>
+     
+     
+      {% endblock %}   
+        
+       
