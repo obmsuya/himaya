@@ -27,6 +27,15 @@ class Category(models.Model):
     
     def __str__(self):
         return self.name
+
+class Paymentdetail(models.Model):
+    name = models.CharField (max_length=120, default='')
+    
+    def __str__(self):
+        return self.name
+    
+
+
 class Item(models.Model):
     class Meta:
         verbose_name_plural = 'Item'
@@ -47,16 +56,24 @@ class Item(models.Model):
     author = models.CharField(max_length=200, default= "")
     author_description = models.TextField(default= "")
     price = models.IntegerField(default=0)
+    tigopesa = models.IntegerField(default=0, blank=True)
+    mpesa = models.IntegerField(default=0, blank=True)
+    airtel = models.IntegerField(default=0, blank=True)
+    halotel = models.IntegerField(default=0, blank=True)
     category = models.ForeignKey(Category)
+    paymentdetail = models.ForeignKey(Paymentdetail, null=True, on_delete=models.PROTECT)
     
     def __str__(self):
         return self.name
 
 
+
+
+
 class Friend(models.Model):
     users = models.ManyToManyField(User)
     post = models.CharField(max_length=200, default= "")
-    current_user = models.ForeignKey(User, related_name='owner', null=True, on_delete=models.PROTECT)
+    current_user = models.ForeignKey(User, related_name='owner', null=True, on_delete=models.CASCADE)
     
     
     
@@ -118,27 +135,5 @@ class Downliner (models.Model):
 
 
 
-class Payment(models.Model):
-    user = models.OneToOneField(User,unique=True, on_delete=models.CASCADE)
-    name = models.CharField (max_length=120, default='')
-    item = models.CharField (max_length=120, default='')
-    tigopesa = models.IntegerField(default=0, blank=True)
-    mpesa = models.IntegerField(default=0, blank=True)
-    airtel = models.IntegerField(default=0, blank=True)
-    halotel = models.IntegerField(default=0, blank=True)
- 
 
-    def __str__(self):
-        return self.name
 
-class donate(models.Model):
-    user = models.OneToOneField(User,unique=True, on_delete=models.CASCADE)
-    name = models.CharField (max_length=120, default='')
-    item = models.CharField (max_length=120, default='')
-    tigopesa = models.IntegerField(default=0, blank=True)
-    mpesa = models.IntegerField(default=0, blank=True)
-    airtel = models.IntegerField(default=0, blank=True)
-    halotel = models.IntegerField(default=0, blank=True)
-
-    def __str__(self):
-        return self.name

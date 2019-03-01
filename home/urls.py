@@ -18,8 +18,8 @@ urlpatterns = [
     url(r'^chat', HomeView.as_view(), name = 'chat'),
     
     url(r'^home/$', views.home, name = "home"),
-    url(r'^payment/$', views.payment, name = "payment"),
-     url(r'^donate/$', views.donate, name = "donate"),
+    # url(r'^payment/$', views.payment, name = "payment"),
+    # url(r'^donate/$', views.donate, name = "donate"),
     url(r'^hasira/$', views.hasira, name = "hasira"),
     url(r'^gis/$', views.gis, name = "gis"),
     url(r'^bitcoin/$', views.bitcoin, name = "bitcoin"),
@@ -28,12 +28,12 @@ urlpatterns = [
     url(r'^index/$', views.index, name = "index"),
     
     url(r'^item/(?P<item_id>\d+)/$', views.item, name = "item"),
-    
-    
+
+    url(r'^item/(?P<item_id>\d+)/payment/$', views.payment, name = "payment"),
+    url(r'^item/(?P<item_id>\d+)/donate/$', views.donate, name = "donate"),
+
+
     url(r'^register/$', views.register, name = "register"),
-   
-  
-  
     url(r'^class/$', views.classes_home, name = "class"),
     url(r'^make/$', views.classes_create, name = "make"),
     url(r'^detail/(?P<id>\d+)/$', views.classes_detail, name = "detail"),

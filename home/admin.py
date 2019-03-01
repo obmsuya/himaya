@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post,Item, Category, Post4, Friend, Payment, donate
+from .models import Post,Item, Category, Post4, Friend, Paymentdetail
 
 # Register your models here.
 
@@ -57,6 +57,6 @@ admin.site.register(Item)
 admin.site.register(Category)
 admin.site.register(Post4)
 admin.site.register(Friend)
-admin.site.register(Payment)
-admin.site.register(donate)
+admin.site.register(Paymentdetail)
+
 

@@ -8,7 +8,7 @@ from django.template import loader
 
 
 from home.forms import HomeForm, ClassRegistration, PostForm2, Images
-from home.models import Post,Item, Category,Post4, Downliner, Friend
+from home.models import Post,Item, Category,Post4, Downliner, Friend, Paymentdetail
 from django.contrib.auth.decorators import login_required
 
 #These class views is for chating
@@ -57,7 +57,31 @@ def index(request):
        'categories':Category.objects.all() 
     }
     return render(request, 'home/index.html', context)
-    
+
+
+def payment(request, item_id):
+    try:
+        itm = Item.objects.get(id=item_id)
+    except Item.DoesNotExist:
+        itm = None
+        
+    context = {
+        'item': itm
+    }
+
+    return render (request, "home/payment.html", context)
+
+def donate(request, item_id):
+    try:
+        itm = Item.objects.get(id=item_id)
+    except Item.DoesNotExist:
+        itm = None
+        
+    context = {
+        'item': itm
+    }
+
+    return render (request, "home/payment.html", context)
     
 def item(request, item_id):
     try:
@@ -69,6 +93,10 @@ def item(request, item_id):
         'item': itm
     }
     return render(request, 'home/item.html', context)
+
+
+
+
 
 #This view is for class registration- 
 def register(request):
@@ -84,13 +112,8 @@ def register(request):
         
 
 
+       
 
-@login_required         
-def payment(request):
-    return render (request, "home/payment.html", {})
-
-def donate(request):
-    return render (request, "home/donate.html", {})
 
 def hasira(request):
     return render (request, "home/hasira.html", {})
@@ -100,6 +123,9 @@ def gis(request):
 
 def bitcoin(request):
     return render (request, "home/bitcoin.html", {})
+
+
+
 
 
 
