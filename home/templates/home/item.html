@@ -60,7 +60,7 @@
                                                     <br><br> 
                                                      {%if item.subtitle %}
                                            <h4><a class="btn btn-follow btn-lg "href="{{item.subtitle}}"> Soma bure.</a></h4></li>
-    <h4><a class="btn btn-success btn-lg "href="{% url 'home:payment' item_id=item.id %}"> Donate.</a></h4></li>
+    <h4><a class="btn btn-success btn-lg "href="{% url 'home:donate' item_id=item.id %}"> Donate.</a></h4></li>
 
                                            {%else%}
                                           <h4><a class="btn btn-follow btn-lg "href="{% url 'home:payment' item_id=item.id %}"> Nataka kununua.</a></h4></li>
