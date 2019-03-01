@@ -58,7 +58,7 @@ def index(request):
     }
     return render(request, 'home/index.html', context)
 
-
+@login_required
 def payment(request, item_id):
     try:
         itm = Item.objects.get(id=item_id)
@@ -82,7 +82,7 @@ def donate(request, item_id):
     }
 
     return render (request, "home/payment.html", context)
-    
+
 def item(request, item_id):
     try:
         itm = Item.objects.get(id=item_id)
