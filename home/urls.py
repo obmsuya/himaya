@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^hasira/$', views.hasira, name = "hasira"),
     url(r'^gis/$', views.gis, name = "gis"),
     url(r'^bitcoin/$', views.bitcoin, name = "bitcoin"),
-
+    url(r'^makala/$', views.makala, name = "makala"),
 
     url(r'^index/$', views.index, name = "index"),
     

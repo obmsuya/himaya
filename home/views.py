@@ -117,6 +117,10 @@ def hasira(request):
 
 def gis(request):
     return render (request, "home/gis.html", {})
+
+def makala(request):
+    return render (request, "home/makala.html", {})
+
 @login_required
 def bitcoin(request):
     return render (request, "home/bitcoin.html", {})
