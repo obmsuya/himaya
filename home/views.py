@@ -81,7 +81,7 @@ def donate(request, item_id):
         'item': itm
     }
 
-    return render (request, "home/payment.html", context)
+    return render (request, "home/donate.html", context)
 
 def item(request, item_id):
     try:

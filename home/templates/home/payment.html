@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     
-{% extends 'base3.html' %}
+{% extends 'base2.html' %}
 {% load staticfiles %}
 
 {%block head%}
@@ -14,37 +14,10 @@
 
  {% block body %}
 
-    <main class="main-wrapper">
-        
-        <!--<aside class="left-sidebar">-->
-            <!--<div class="search-area"><form action=""><input type="text" placeholder="Type to search.. "></form></div>-->
+   
 
-             <!--<div class="scroll-sidebar">-->
-                <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav" class="top-ul">      
-                        <li><a href="" class="active">Countries</a> 
-                            
-                            
-                            
-                            
-                            <ul class="submenu">
-                                 <li class="nav-item mr-20"><a class="btn btn-follow href="{% url 'accounts:logout'%}">Logout</a></li>                               
-                                <li><a href="" id="link1">Tanzania</a></li>         
-                                <li><a href="" id="link2">Kenya </a></li>
-                                <li><a href="" id="link3">Abroad</a></li>
 
-                                                                <!--<li><a href="" id="link4">Abroad</a></li>-->
-                                                               
-                            </ul>
-                        </li>
-    
-                        
-                        
-                    </ul>
-        </nav>
-                </div>
-        </aside>
+       
 
 
 
@@ -53,14 +26,19 @@
     <div class="main-section">
         <div class="container">
 
-                <div>
-                                              
-                                              <h1>Payment Options</h1>
+
+                                              <h2>Payment Options</h2>
                                                 <div class="line-sep"></div>
                                                 <hr>
 
-                                                <p><span>Chagua nchi uliyopo hapo juu kupata options za malipo</span></h2>
-                     <p>{{item.mpesa}}</p>
+                                                <p><span>Bofya nchi uliyopo kupata options za malipo</span></h2>
+
+                                              <ol>                        
+                                <li><a href="" id="link1">Tanzania</a></li>         
+                                <li><a href="" id="link2">Kenya </a></li>
+                                <li><a href="" id="link3">Abroad</a></li>
+                            </ol>      
+                 
                         <br><br>
                                                 
                 </div>
@@ -102,7 +80,7 @@
                                                 
                                                 <hr>
                                      
-                                                <p><span>NOTE: Baada ya kulipa, tuma namba ya uthibitisho kuelekea whatsapp namba +255-713-545-454</span>, subiri nusu saa kisha bonyeza   
+                                                <p><span>NOTE: Baada ya kulipa, tuma namba ya uthibitisho kuelekea whatsapp namba 0-653-3979-42</span>, subiri nusu saa kisha bonyeza   
                                    <a class=class="btn btn-follow" href="{% url 'home:chat'%}"> Kitabu changu</a> kuanza kusoma.</p>
                                                 <hr>
                        
@@ -138,7 +116,7 @@
                        
 
                        <br>
-                                                <p><span>NOTE: Baada ya kulipa, tuma namba ya uthibitisho kuelekea whatsapp namba +255-713-545-454</span>, subiri nusu saa kisha bonyeza   
+                                                <p><span>NOTE: Baada ya kulipa, tuma namba ya uthibitisho kuelekea whatsapp namba 0-653-3979-42</span>, subiri nusu saa kisha bonyeza   
                                    <a class=class="btn btn-follow" href="{% url 'home:chat'%}"> Kitabu changu</a> kuanza kusoma.</p>
                                                 <hr>
                                                 <hr>
@@ -155,22 +133,22 @@
                                                                                                 <div class="row">    
                                                                                 
                                                                                 
-                                                                                                       USA <div class="col-md-3">
-                                                                                                        <p><span>MPESA: +255 {{user.donate.mpesa}} </p>
-                                                                            </span></p>
-                                                                                                    </div>
-                                                                                                       EUROPE<div class="col-md-3">
-                                                                                                         <p><span>TIGO PESA: +255 {{user.donate.tigopesa}} </p>
+                                       USA <div class="col-md-3">
+                                               <p><span>MPESA: +255 {{item.mpesa}} </p>
+                                        </span></p>
+                                            </div>
+                                            EUROPE<div class="col-md-3">
+                                             <p><span>TIGO PESA: +255 {{item.tigopesa}}</p>
 
-                                                                                                    </div>
+                                                </div>
                                                                                                         
                                                         
-                                                                                                </div>
+                                                       </div>
                                                                                              
-                                                                                <p><div class="menuItem"><a class="level2"href= "" target="sites"> Accounts Holder: {{user.donate.name}}.</a></p></div> 
+                                                         <p><div class="menuItem"><a class="level2"href= "" target="sites"> Accounts Holder: {{item.author}}.</a></p></div> 
 
 <br>
-                                                <p><span>NOTE: Baada ya kulipa, tuma namba ya uthibitisho kuelekea whatsapp namba +255-713-545-454</span>, subiri nusu saa kisha bonyeza   
+                                                <p><span>NOTE: Baada ya kulipa, tuma namba ya uthibitisho kuelekea whatsapp namba +255-653-3979-42</span>, subiri nusu saa kisha bonyeza   
                                    <a class=class="btn btn-follow" href="{% url 'home:chat'%}"> Kitabu changu</a> kuanza kusoma.</p>
                                                 <hr>
                                                                                 
