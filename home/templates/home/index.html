@@ -28,13 +28,13 @@
                        {% for category in categories %}
                             
 		    
-                           <h1>{{category.name}}</h1>
+                           <p><span>{{category.name}}</span></p>
                            <div class="line-sep"></div>
                            
                           
                            {%for item in category.item_set.all %}
                               
-                              <h3> {{forloop.counter}}. <a href="{% url 'home:item' item_id=item.id %}"> {{item.name}}</a></h3>
+                              <p> {{forloop.counter}}. <a href="{% url 'home:item' item_id=item.id %}"> {{item.name}}</a></p>
                             
                            {%endfor%}
 
