@@ -58,18 +58,7 @@ def index(request):
     }
     return render(request, 'home/index.html', context)
 
-@login_required
-def payment(request, item_id):
-    try:
-        itm = Item.objects.get(id=item_id)
-    except Item.DoesNotExist:
-        itm = None
-        
-    context = {
-        'item': itm
-    }
 
-    return render (request, "home/payment.html", context)
 
 def donate(request, item_id):
     try:
@@ -125,6 +114,54 @@ def makala(request):
 def bitcoin(request):
     return render (request, "home/bitcoin.html", {})
 
+@login_required
+def book(request, item_id):
+    form = PostForm2(request.POST or None, request.FILES or None)
+   
+    if form.is_valid():
+        create = form.save(commit=False)
+        create.save()
+            
+        return redirect('home:payment', item_id)
+            
+    item = {'form': form}
+        
+    return render(request, 'home/book_request.html', item)
+
+@login_required
+def payment(request, item_id):
+    try:
+        itm = Item.objects.get(id=item_id)
+    except Item.DoesNotExist:
+        itm = None
+        
+    context = {'item': itm}
+
+    return render (request, "home/payment.html", context)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -153,7 +190,9 @@ def classes_detail(request,id):
             
     return render(request, "home/class_detail.html", context)   
 
-#post create   
+#post create 
+
+
 def classes_create(request):
     form = PostForm2(request.POST or None, request.FILES or None)
    

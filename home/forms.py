@@ -51,12 +51,28 @@ class ClassRegistration(forms.ModelForm):
         fields = ('fullname', 'username','country', 'region','phone')
 
 class PostForm2(forms.ModelForm):
+
+    fullname= forms.CharField(widget=forms.TextInput(
+        attrs={
+            'class':'form-control',
+            'placeholder': 'Weka hapa jina lako la kwanza na la mwisho....'
+        }
+    ))
+
+    book= forms.CharField(widget=forms.TextInput(
+        attrs={
+            'class':'form-control',
+            'placeholder': 'Weka hapa jina la kitabu unachokitaka kununu ....'
+        }
+    ))
+
+
+
     class Meta:
         model = Post4
         fields= [
             "fullname",
-            "Simu",
-            "Tukusaidiaje",
+            "book",   
             
         ]
         

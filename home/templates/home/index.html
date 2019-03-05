@@ -13,11 +13,12 @@
 						</small>
                         --> 
                 
-              
-			  <p>Hii ni listi ya vitabu vinavyopatikana OBG online. Bonyeza chaguo lako ili kuona bei na maelezo zaidi,
-     bonyeza <a href="{% url 'home:chat'%}"><span>Biashara yangu</span></a> kuona listi ya vitabu ulivyokwisha lipia </p>
-                          
-		  
+             {% if user.is_authenticated %} 
+			  <p>Hii ni listi ya vitabu vinavyopatikana OBG online. Bonyeza chaguo lako ili kuona bei na maelezo zaidi.
+     Bonyeza <a href="{% url 'home:chat'%}"><span>Biashara yangu</span></a> kuona listi ya vitabu ulivyokwisha lipia </p>
+              {%else%}             
+		  <p>Hii ni listi ya vitabu vinavyopatikana OBG online. Bonyeza chaguo lako ili kuona bei na maelezo zaidi.</p>
+       {%endif %} 
                 <hr>
                 <div class="row">
                      <div class="col-md-6">

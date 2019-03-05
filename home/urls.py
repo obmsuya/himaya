@@ -29,6 +29,8 @@ urlpatterns = [
     
     url(r'^item/(?P<item_id>\d+)/$', views.item, name = "item"),
 
+    url(r'^item/(?P<item_id>\d+)/book/$', views.book, name = "book"),
+
     url(r'^item/(?P<item_id>\d+)/payment/$', views.payment, name = "payment"),
     url(r'^item/(?P<item_id>\d+)/donate/$', views.donate, name = "donate"),
 
