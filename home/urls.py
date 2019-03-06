@@ -18,8 +18,8 @@ urlpatterns = [
     url(r'^chat', HomeView.as_view(), name = 'chat'),
     
     url(r'^home/$', views.home, name = "home"),
-    # url(r'^payment/$', views.payment, name = "payment"),
-    # url(r'^donate/$', views.donate, name = "donate"),
+    
+    url(r'^authors/$', views.authors, name = "authors"),
     url(r'^hasira/$', views.hasira, name = "hasira"),
     url(r'^gis/$', views.gis, name = "gis"),
     url(r'^bitcoin/$', views.bitcoin, name = "bitcoin"),

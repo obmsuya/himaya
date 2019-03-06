@@ -100,6 +100,8 @@ def register(request):
         return render(request, 'home/create.html', args)
         
 
+def authors(request):
+    return render (request, "home/authors.html", {})
 
 def hasira(request):
     return render (request, "home/hasira.html", {})
