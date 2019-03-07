@@ -35,9 +35,7 @@
                            {%for item in category.item_set.all %}
                               
                               <p> {{forloop.counter}}. <a href="{% url 'home:item' item_id=item.id %}"> {{item.name}}</a></p>
-                              <div>
-                              <p>Kimeandikwa na: {{item.author}}</p>
-                            </div>
+                              
                            {%endfor%}
 
                         
