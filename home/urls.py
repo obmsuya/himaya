@@ -29,7 +29,7 @@ urlpatterns = [
 
 
     url(r'^hasira/$', views.hasira, name = "hasira"),
-    url(r'^gis/$', views.gis, name = "gis"),
+    url(r'^gispay/$', views.gis, name = "gis"),
     url(r'^bitcoin/$', views.bitcoin, name = "bitcoin"),
     url(r'^matangazo/$', views.matangazo, name = "matangazo"),
     
