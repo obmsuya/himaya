@@ -83,10 +83,6 @@ def item(request, item_id):
     }
     return render(request, 'home/item.html', context)
 
-
-
-
-
 #This view is for class registration- 
 def register(request):
         form = ClassRegistration(request.POST or None)
@@ -99,23 +95,6 @@ def register(request):
         args = {'form': form}
         return render(request, 'home/create.html', args)
         
-
-def authors(request):
-    return render (request, "home/authors.html", {})
-
-def hasira(request):
-    return render (request, "home/hasira.html", {})
-
-def gis(request):
-    return render (request, "home/gis.html", {})
-
-def makala(request):
-    return render (request, "home/makala.html", {})
-
-@login_required
-def bitcoin(request):
-    return render (request, "home/bitcoin.html", {})
-
 @login_required
 def book(request, item_id):
     form = PostForm2(request.POST or None, request.FILES or None)
@@ -141,6 +120,22 @@ def payment(request, item_id):
 
     return render (request, "home/payment.html", context)
 
+def authors(request):
+    return render (request, "home/authors.html", {})
+
+
+
+def hasira(request):
+    return render (request, "home/hasira.html", {})
+def gis(request):
+    return render (request, "home/gis.html", {})
+def makala(request):
+    return render (request, "home/makala.html", {})
+@login_required
+def bitcoin(request):
+    return render (request, "home/bitcoin.html", {})
+def matangazo(request):
+    return render (request, "home/matangazo.html", {})
 
 
 

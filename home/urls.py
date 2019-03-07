@@ -18,21 +18,23 @@ urlpatterns = [
     url(r'^chat', HomeView.as_view(), name = 'chat'),
     
     url(r'^home/$', views.home, name = "home"),
+    url(r'^index/$', views.index, name = "index"),    
+    url(r'^item/(?P<item_id>\d+)/$', views.item, name = "item"),
+    url(r'^item/(?P<item_id>\d+)/book/$', views.book, name = "book"),
+    url(r'^item/(?P<item_id>\d+)/payment/$', views.payment, name = "payment"),
+    url(r'^item/(?P<item_id>\d+)/donate/$', views.donate, name = "donate"),
     
+    url(r'^makala/$', views.makala, name = "makala"),
     url(r'^authors/$', views.authors, name = "authors"),
+
+
     url(r'^hasira/$', views.hasira, name = "hasira"),
     url(r'^gis/$', views.gis, name = "gis"),
     url(r'^bitcoin/$', views.bitcoin, name = "bitcoin"),
-    url(r'^makala/$', views.makala, name = "makala"),
-
-    url(r'^index/$', views.index, name = "index"),
+    url(r'^matangazo/$', views.matangazo, name = "matangazo"),
     
-    url(r'^item/(?P<item_id>\d+)/$', views.item, name = "item"),
 
-    url(r'^item/(?P<item_id>\d+)/book/$', views.book, name = "book"),
 
-    url(r'^item/(?P<item_id>\d+)/payment/$', views.payment, name = "payment"),
-    url(r'^item/(?P<item_id>\d+)/donate/$', views.donate, name = "donate"),
 
 
     url(r'^register/$', views.register, name = "register"),
