@@ -127,9 +127,11 @@ def authors(request):
 
 def hasira(request):
     return render (request, "home/hasira.html", {})
-@login_required
 def gis(request):
     return render (request, "home/gis.html", {})
+@login_required
+def gispay(request):
+    return render (request, "home/gispay.html", {})
 def makala(request):
     return render (request, "home/makala.html", {})
 @login_required
@@ -137,7 +139,8 @@ def bitcoin(request):
     return render (request, "home/bitcoin.html", {})
 def matangazo(request):
     return render (request, "home/matangazo.html", {})
-
+def mahesabu(request):
+    return render (request, "home/matangazo.html", {})
 
 
 

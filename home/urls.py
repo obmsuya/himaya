@@ -29,9 +29,12 @@ urlpatterns = [
 
 
     url(r'^hasira/$', views.hasira, name = "hasira"),
-    url(r'^gispay/$', views.gis, name = "gis"),
+    url(r'^gis/$', views.gis, name = "gis"),
+
+    url(r'^gispay/$', views.gispay, name = "gispay"),
     url(r'^bitcoin/$', views.bitcoin, name = "bitcoin"),
     url(r'^matangazo/$', views.matangazo, name = "matangazo"),
+    url(r'^mahesabu/$', views.mahesabu, name = "mahesabu"),
     
 
 
