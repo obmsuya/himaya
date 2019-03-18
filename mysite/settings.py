@@ -37,7 +37,7 @@ SECRET_KEY = 'mob_we*$0e2cpfq^0jey+wakxnzl&46%6v=tov)0p+&0!4(4!b'
 
 
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'oamsuy06.pythonanywhere.com','www.obgmycompany.com']
 
@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -90,12 +91,56 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+
+
+
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+
+
+
+
+
+
+#local/mysql(og)
+
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME':'oamsuy06',
+#        'USER': 'oamsuy06',
+#        'PASSWORD': 'Savioury9',
+#        'OPTIONS': {
+#            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#            #Tell mysql to connect with 'utf8mb4' character set
+#            'charset':'utf8mb4',
+#            },
+#        #Tell django to build the test database with 'utf8mb4'character set
+#        'TEST': {
+#            'CHARSET': 'utf8mb4',
+#            'COLLATION': 'utf8mb4_unicode_ci',
+#        },
+       
+#    }
+# }
+
+
+
+# CORS_REPLACE_HTTPS_REFERER = False
+# SECURE_PROXY_SSL_HEADER = None
+# SECURE_SSL_REDIRECT = False
+# SESSION_COOKIE_SECURE=False
+# CRSF_COOKIE_SECURE = False
+# SECURE_HSTS_SECONDS = None
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+# SECURE_FRAME_DENY = False
+
 
 
 #live
@@ -121,6 +166,23 @@ DATABASES = {
        
     }
 }
+
+
+CORS_REPLACE_HTTPS_REFERER = True
+HOT_SCHEME = "https://"
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE=True
+CRSF_COOKIE_SECURE = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_SECONDS = 1000000
+SECURE_FRAME_DENY = True
+
+
+
+
+
+
 
 
 # Password validation
@@ -165,19 +227,37 @@ LOGIN_URL = '/account/login/'
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_root')
+# STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_root')
 
 
-STATICFILES_DIRS = (
-  os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_dirs'),
+# STATICFILES_DIRS = (
+#   os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_dirs'),
 
-)
+# )
 
-#MEDIA_ROOT =  os.path.join(BASE_DIR, 'mysite/media')
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'media')
+# #MEDIA_ROOT =  os.path.join(BASE_DIR, 'mysite/media')
+# MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'media')
 
 
 MEDIA_URL = '/media/'
+
+
+AWS_ACCESS_KEY_ID = 'AKIAIGCRUOY6E5QWAXDQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'www.obgmycompany.com'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_S3_REGION_NAME = 'eu-west-2'
+AWS_S3_SIGNATURE_VERSION = "s3v4"
+AWS_S3_FILE_OVERWRITE = False
+AWS_FILE_EXPIRE = 200
+
+
+
+
 
 LOGIN_EXEMPT_URLS = (
     r'^account/logout/$',
