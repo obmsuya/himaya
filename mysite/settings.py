@@ -37,7 +37,7 @@ SECRET_KEY = 'mob_we*$0e2cpfq^0jey+wakxnzl&46%6v=tov)0p+&0!4(4!b'
 
 
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'oamsuy06.pythonanywhere.com','www.obgmycompany.com', 'www.vitabutanzania.com']
 
@@ -227,33 +227,33 @@ LOGIN_URL = '/account/login/'
 
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_root')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_root')
 
 
-# STATICFILES_DIRS = (
-#   os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_dirs'),
+STATICFILES_DIRS = (
+  os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_dirs'),
 
-# )
+)
 
-# #MEDIA_ROOT =  os.path.join(BASE_DIR, 'mysite/media')
-# MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'media')
+#MEDIA_ROOT =  os.path.join(BASE_DIR, 'mysite/media')
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'media')
 
 
 MEDIA_URL = '/media/'
 
 
-AWS_ACCESS_KEY_ID = 'AKIAIGCRUOY6E5QWAXDQ'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'www.obgmycompany.com'
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# AWS_ACCESS_KEY_ID = 'AKIAIGCRUOY6E5QWAXDQ'
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_STORAGE_BUCKET_NAME = 'www.obgmycompany.com'
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL = None
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-AWS_S3_REGION_NAME = 'eu-west-2'
-AWS_S3_SIGNATURE_VERSION = "s3v4"
-AWS_S3_FILE_OVERWRITE = False
-AWS_FILE_EXPIRE = 200
+# AWS_S3_REGION_NAME = 'eu-west-2'
+# AWS_S3_SIGNATURE_VERSION = "s3v4"
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_FILE_EXPIRE = 200
 
 
 
