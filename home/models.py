@@ -53,6 +53,13 @@ class Item(models.Model):
             height_field="height_field")
     height_field = models.IntegerField(default=0)
     width_field = models.IntegerField(default=0)
+
+    image_index = models.ImageField(null=True, blank=True,
+            width_field="width_field",
+            height_field="height_field")
+    height_field = models.IntegerField(default=0)
+    width_field = models.IntegerField(default=0)
+    
     author = models.CharField(max_length=200, default= "")
     author_description = models.TextField(default= "")
     price = models.IntegerField(default=0)

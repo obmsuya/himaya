@@ -26,7 +26,9 @@ urlpatterns = [
     
     url(r'^makala/$', views.makala, name = "makala"),
     url(r'^authors/$', views.authors, name = "authors"),
+    
 
+    url(r'^category/(?P<category_id>\d+)/$', views.category, name = "category"),
 
     url(r'^hasira/$', views.hasira, name = "hasira"),
     url(r'^gis/$', views.gis, name = "gis"),

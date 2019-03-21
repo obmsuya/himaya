@@ -114,7 +114,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #    'default': {
 #        'ENGINE': 'django.db.backends.mysql',
 #        'NAME':'oamsuy06',
-#        'USER': 'oamsuy06',
+#        'USER': 'gis4life',
 #        'PASSWORD': 'Savioury9',
 #        'OPTIONS': {
 #            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",

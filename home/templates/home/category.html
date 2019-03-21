@@ -1,20 +1,34 @@
 
 {% extends 'basebooks.html' %}
-
 {% load staticfiles %}
+    {%block head%}
+
+     {% if category != None %}
+        <title>{{category.name}}-Selected Class</title>
+        
+    {% else %}
+     
+    
+        <title>Invalid Item ID- Selected Class</title>
+
+    {% endif %}
+    
+    
+    {%endblock%}
 
 
    {% block body %}
-        <br>  <br>  
-        <section class="section">
+
+
+  <section class="section" style="padding-top: 64px">
+      <div class="container-fluid">
+        <div class="row">
 
 
 
 
-	    <div class="container-fluid">
-			 <div class="row">
 
-          <div class="sidebar">
+          <!-- the side menu -->  <div class="sidebar">
             <div class="side-bar">
               <div class="sb-title">
                 <p>
@@ -26,14 +40,13 @@
 
               <ul class="cat-lists">
                 <li>
-                  <a href="{% url 'home:index' %}" class="active">
+                  <a href="{% url 'home:index' %}">
                     All Categories
                   </a>
                 </li>
-
                 {% for category in categories %}
                 <li>
-                  <a href="{% url 'home:category' category_id=category.id %}">
+                  <a href="{% url 'home:category' category_id=category.id %}" id="category_{{category.id}}">
                     {{category.name}}
                   </a>
                 </li>
@@ -45,10 +58,10 @@
           </div> 
 
 
-          <!-- main body -->
 
-          <div class="col-md-8">
-            {% for category in categories %}
+
+          <!-- the main menu -->
+            <div class="col-md-8">
             <div class="main-part">
               <div class="mp-title">
                 <h2>
@@ -56,7 +69,7 @@
                 </h2>
                 <div class="mp-books-count">
                   <span>
-                    <!-- 0 books -->
+                    Vitabu {{ count }} 
                   </span>
                 </div>
                 <hr>
@@ -71,14 +84,25 @@
                     <div class="card book-card">
                       <div class="book-body">
                         <div class="book-image">
-
-<a href="{% url 'home:item' item_id=item.id %}">
+                          <a href="{% url 'home:item' item_id=item.id %}">
                           <img src="{{item.image_index.url}}" alt="">
                           </a>
                         </div>
 
                               
-                             
+                              <!-- <p> <a href="{% url 'home:item' item_id=item.id %}"> </a></p> -->
+                              
+
+                        <!-- <div class="book-desc">
+                          <p class="book-name">
+                            <a href="{% url 'home:item' item_id=item.id %}">
+                               {{item.name}}
+                           </a>
+                          </p>
+                          <span class="book-auth-name">
+                            {{item.author}}
+                          </span>
+                        </div> -->
                       </div>
                     </div>
                   </div>
@@ -89,24 +113,19 @@
                 </div>
               </div>
             </div>
-            {% endfor %}
           </div>
+        </div>
+      </div>
+  </section>
 
 
-       </div>
+   <script>
 
-            
+      </script>
+      
 
 
-             
-            </div>
-        </section>
-        
-        
-     
-      <br><br>
-
-     
+               
       
 
 

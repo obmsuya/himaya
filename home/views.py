@@ -83,6 +83,18 @@ def item(request, item_id):
     }
     return render(request, 'home/item.html', context)
 
+def category(request, category_id):
+    try:
+        catg = Category.objects.get(id=category_id)
+    except Category.DoesNotExist:
+        catg = None
+    context = {
+        'category': catg,
+        'categories': Category.objects.all(),
+        'count': Item.objects.filter(category=category_id).count()
+    }
+    return render(request, 'home/category.html', context)
+
 #This view is for class registration- 
 def register(request):
         form = ClassRegistration(request.POST or None)

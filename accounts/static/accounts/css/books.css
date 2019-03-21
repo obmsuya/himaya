@@ -1,0 +1,103 @@
+.sidebar{
+	width: 220px;
+	border-right: 1px solid rgba(0,0,0,0.12);
+}
+.side-bar{
+	padding: 10px 15px;
+}
+.sb-title{
+	font-weight: 500;
+	font-size: 2rem;
+	font-synthesis: all;
+	color: rgba(0,0,0,0.76);
+}
+.cat-lists{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+.cat-lists li{
+	width: 100%;
+	list-style: none;
+}
+.cat-lists li a {
+	color: rgba(0,0,0,0.67);
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 5px 0px;
+	line-height: 36px;
+	font-weight: 400;
+	text-transform: capitalize;
+}
+.cat-lists li a.active{
+	color: #673AB7;
+	font-weight: 500;
+}
+
+/*main part*/
+.main-part{
+	padding-left: 50px;
+}
+.mp-title h2{
+	font-weight: 500;
+	font-size: 2rem;
+	padding: 15px 0px;
+	text-transform: capitalize;
+}
+.mp-books-count{
+	color: rgba(0,0,0,0.56);
+}
+.book-image{
+	overflow: hidden;
+	height: 240px;
+}
+.book-image img{
+	/*width: 100%;*/
+	height:100%;
+}
+
+.book-desc{
+	padding: 15px;
+}
+.book-name{
+	font-weight: 400;
+	font-size: 17px;
+	color: rgba(0,0,0,0.67);
+	line-height: 22px;
+}
+.book-auth-name{
+	font-weight: 300;
+	font-size: 13px;
+	color: rgba(0,0,0,0.57);
+}
+.book-card{
+	border: 1px solid rgba(0,0,0,0.07);
+	box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.06);
+	margin: 10px;
+	width: 150px;
+}
+.all-cats{
+	font-size: 14px !important;
+	padding-left: 14px;
+	margin: 0;
+	list-style: none;
+}
+.all-cats li a{
+	font-size: 14px !important;
+	padding: 5px;
+}
+.asidenav a{
+	padding: 2px 7px 4px 13px;
+}
+@media screen and (max-width: 420px){
+	.sidebar{
+		/*width: 100vh;*/
+		/*text-align: center !important;*/
+		display: none;
+	}
+	.main-part{
+		padding-left: 10px;
+	}
+}

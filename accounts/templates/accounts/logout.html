@@ -1,4 +1,4 @@
-{% extends 'base3.html' %}
+{% extends 'base2.html' %} 
 {% load staticfiles %}
     {%block head%}
      
@@ -13,82 +13,12 @@
 
 
    {% block body %}
-	<!-- Added for Social Sharing -->
-	<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="right:0px; top:147px; background-color: rgb(71, 107, 140);">
-		<p class="share_to" style="font-size: 14px;"><span style="color: white;"><b>Share On</b></span></p>
-		<a class="a2a_button_facebook" style="margin-top: -31px;" title="Share to Facebook"></a>
-		<a class="a2a_button_twitter" title="Share to Twitter"></a>
-		<a class="a2a_button_google_plus" title="Share to Google+"></a>
-		<a class="a2a_button_linkedin" title="Share to Linkedin"></a>
-	</div>
-	<script async src="https://www.ciowhitepapersreview.com/assets/js/social_sharing.js"></script>	
-<header>
-		<nav class="navbar navbar-expand-lg navbar-light">
-
-			<div class="container">
-			  <button class="btn menu-btn d-md-none .d-lg-none"  onclick="openNav()">
-			  	<i class="fa fa-bars"></i>
-			  </button>
-
-			  <a class="navbar-brand" href="#">OBG GLOBAL</a>
-			
-                            
-                            <div id="mySidenav" class="asidenav">
-                              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</li>
-                              
-                          <a href="{% url 'accounts:login'%}">LogIn</a>
-                          <a href="{% url 'accounts:register'%}" role="button">SignUp</a>
-                             <!-- <a href="{% url 'accounts:logout'%}" role="button">Logout </a>
-			      <a href="{% url 'home:chat'%}" role="button">My Books</a> -->
-                               
-                              
-                            </div>
-
-			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-			    <ul class="navbar-nav ml-auto">
-			     	  {% if user.is_authenticated %}
-                                
-                                
-                <li class="nav-item mr-20"><a href="{% url 'home:chat'%}">My Books</a></li>
-                
-                <li class="nav-item mr-20"><a class="btn btn-follow href="{% url 'accounts:logout'%}">Logout</a></li>
-			    </ul>
-                            
-                      {%else%}         
-                            
-               <ul class="navbar-nav ml-auto">
-                <!--<li class="nav-item mr-20"><a href="{% url 'home:home'%}">Home</a></li>-->
-		<li class="nav-item mr-20"><a href="{% url 'accounts:login'%}">Login in</a></li>
-                <li class="nav-item mr-20"><a href="{% url 'accounts:register'%}" role="button">SignUp</a></li>
-                <!--<li class="nav-item mr-20"><a href="{% url 'accounts:reset_password'%}">Reset Password</a></li>-->
-            </ul>
-            {%endif %}            
-                            
-                            
-                            
-                            
-			  </div>
-			</div>
+	
+	
 
 
-		<div class="line"></div>
-		</nav>
-	</header>
-                    
-                
-                    
-                   
-
-	<style>
-.terms-home{
-background: url(https://whatis.ciowhitepapersreview.com/border_diagonal.png) repeat-x 0 bottom;
-}
-.contnthere ul li {
-	list-style-type : disc !important;
-}
-</style>
- 
-          <br> <br> 
+      
+          <br> 
 	
         
         <section class="section grey-scale">
@@ -118,23 +48,12 @@ background: url(https://whatis.ciowhitepapersreview.com/border_diagonal.png) rep
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <section id="vedio-sec" style="background-color: #fff;">
-        <div class="container">
-          
+      
+          <div class="container">
           
             <div class="row pad-top-botm" style="padding-top: 40px;">
-				
-                            
-                            
+				           
                 <div class="col-md-8">
 					<div class="col-lg-12 col-md-12">
 						<div class="col-lg-12 col-md-12" style="padding-left: 0;padding-right: 0;">
@@ -142,50 +61,38 @@ background: url(https://whatis.ciowhitepapersreview.com/border_diagonal.png) rep
 								
                                                                 
 							</div>
-                 <!--  <h2 class="btn btn-follow" ><span><a href="{% url 'accounts:login'%}" style="color:#fff;text-decoration:none;">Login</a></span></h2> -->
- <h2 class="btn btn-follow" ><span><a href="{% url 'home:index'%}" style="color:#fff;text-decoration:none;">Buy books</a></span></h2>
-                 <h2 class="btn btn-follow" ><span><a href="{% url 'home:authors'%}" style="color:#fff;text-decoration:none;">Authors</a></span></h2> 
+                 
+ <h2 class="btn btn-follow" ><span><a href="{% url 'home:index'%}" style="color:#fff;text-decoration:none;">Nunua Vitabu</a></span></h2>
+                 <h2 class="btn btn-follow" ><span><a href="{% url 'home:authors'%}" style="color:#fff;text-decoration:none;">Waandishi</a></span></h2> 
 						</div>
 					</div>
-                                        
-                                        
-                                        
-			    
-			    
-                                        
                                         
                                         
                                         
 					<div class="col-lg-12 col-md-12  col-sm-12" style="padding-left: 0;padding-right: 0;margin-bottom: 15px;">
 						<div class="col-lg-12 col-md-12  col-sm-12 contnthere" style="margin-bottom: 15px;">
 							 <p style="text-align: justify;">
-							 <p><span>OBG</span> is one of the leading direct selling companies,
-                                                         offering meaningful products in diverse markets. Our focus is to enable people to rise
-                                                         through solutions that power entrepreneurship and enhance lifestyles.
+							 <p><span>OBG</span> vitabutanzania operates under  OBG Company limited is one of the most popular online services that enables authors to sell their books (ebook) and readers to read books online. This network enables many people, especially those who speak Swahili, to find educating and entertaining reading materials .
 
-                                                       OBG grass-roots business model enables ordinary people from all walks of life to start
-                                                        their own business with minimal overhead. With hard work and dedication, OBG distributors,
-                                                        known as Independent Representatives (IRs), have the opportunity to become economically
-                                                        self-sufficient, improving the life of their families and communities as well as helping
-                                                        others to achieve their dreams.</span></p>
+                             OBG grass-roots business model enables ordinary people from all walks of life to star their own business with minimal overhead. With hard work and dedication, OBG puplisher, have the opportunity to become economically self-sufficient, improving the life of their families and communities as well as helping
+                             others to achieve their dreams.</span></p>
 
 <h2><u><span style="font-size:18px"><strong>Our Mission and Vision</strong></span></u></h2>
 
 
 
-<p>Our MISSION is to contribute to the global community through the daily application efforts. We do this by helping individuals achieve their goals and lead better lives
-through a combination of an entrepreneurial business opportunity with life-enhancing products.</p>
+<p>Our MISSION is to contribute to the swahili speaking community through the daily application efforts. We do this by helping individuals achieve their goals and lead better lives through a combination of an entrepreneurial business opportunity with life-enhancing products.</p>
 
-<p>Our VISION is to be the global eCommerce leader within the direct selling industry, leveraging this position so as to be a positive influencer in the development
-of sustainable and professional network marketing communities around the world.</p>
+<p>Our VISION is to be ebook leader within the direct selling industry, leveraging this position so as to be a positive influencer in the development of sustainable and professional communities around east Africa.</p>
+
+</div></section>
 
 
 <div class="container">
-
 <div class="col-md-12 whatis-terms-home">
 					<section class="trending-topics-section" id="trendingTopics">
 						<div class="trending-topics">
-							<h2 class="terms-home"><i class="icon whatis_trending"></i>OUR PRODUCT</h2>
+							<h2 class="terms-home"><i class="icon whatis_trending"></i>OUR PRODUCTS</h2>
 							
 						</div>
                                                 
@@ -199,32 +106,25 @@ of sustainable and professional network marketing communities around the world.<
 						</div>
                                                 
                                                 <p> An invaluable learning experience in a professional yet informal
-                                                education setting, designed for networkers and entrepreneurs to develop their skills and abilities needed to succeed in their business.</p>
+                                                education setting, designed for all people to develop their skills and abilities needed to succeed in their life.</p>
 
-					</section>
-
-
-
-</div>
-
-
-<h3><span>THE OBG COMPENSATION PLAN</span></h3>
-<hr>
-<p>At OBG GLOBAL, we make it our top priority to deliver world-class quality products and services to all our customers
-worldwide, and our mission to make these OBG products a part of their everyday lives. What sets us apart is that these products are complemented
-with a dynamic Compensation Plan that rewards you for selling and referring our products and services, and empowering others to do the same.</p>
-
-<p>A sustainable business and the lasting power of true residual income are within reach for every OBG Independent
-Representative who develops and practises the disciplines of <span>REFER, REPEAT, RISE, AND RETAIN.</span></p>
-</div>
-<section class="section grey-scale">
-			<div class="container">
 				
+
+
+
+</div>
+
+
+<h3><span>THE OBG  PLAN</span></h3>
+<hr>
+<p>At OBG GLOBAL, we make it our top priority to deliver world-class quality products and services to all our customers, and our mission to make our products part of their everyday lives. Sustainable business and the lasting power of true income are within reach for every OBG Author who develops and practises the disciplines of <span>REFER, REPEAT, RISE, AND RETAIN.</span></p>
+
+		
 				<div class="row">
 					<div class="col-md-3">
 						<h4><span style="font-size:14px"><strong>Refer</strong></span></h4>
                                                 <div class="line-sep"></div>
-<p> Regularly using and referring OBG products as you build your sales team is a discipline and practice that will
+<p> Regularly using and referring OBG products as you build your sales  is a discipline and practice that will
 build your foundation for long term growth and sustained income.</p>
 					<!--<img src="{%static 'img/i.jpg'%}" class="img-responsive" alt=""'>	-->
 					<img src="{%static 'accounts/img/safront5.jpg'%}" class="img-responsive" alt=""'>	
@@ -235,8 +135,7 @@ build your foundation for long term growth and sustained income.</p>
 						<div class="course-image bottom-in">
 							<h4><span style="font-size:14px"><strong>Repeat</strong></span></h4>
                                                         <div class="line-sep"></div>
-<p> Be a product of your product and consume. Create this repetition behaviour in your business team to enjoy true
-residual income.</p>
+<p> Be a product of your product and consume. Create this repetition behaviour in your business team to enjoy true income.</p>
 	
 							<img src="{%static 'accounts/img/safront6.jpg'%}" class="img-responsive" alt=""'>	
 								<!--<img src="{%static 'img/i.jpg'%}" class="img-responsive" alt=""'>-->
@@ -247,8 +146,7 @@ residual income.</p>
 						<div class="course-image bottom-in">
 								<h4><span style="font-size:14px"><strong>Rise</strong></span></h4>
                                                                 <div class="line-sep"></div>
-<p>You rise in rank, stature, and earning as you advance in the OBG. Do not underestimate the importance of setting
-and achieving goals through this Rank Advancement platform.</p>
+<p>You rise in earning as you advance in the OBG. Do not underestimate the importance of setting and achieving goals through this Rank Advancement platform.</p>
 							<img src="{%static 'accounts/img/safront7.jpg'%}" class="img-responsive" alt=""'>	
 								<!--<img src="{%static 'img/i.jpg'%}" class="img-responsive" alt=""'>-->
 						</div>
@@ -258,8 +156,7 @@ and achieving goals through this Rank Advancement platform.</p>
 						<div class="course-image bottom-in">
 								<h4><span style="font-size:14px"><strong>Retain</strong></span></h4>
                                                                 <div class="line-sep"></div>
-<p>Retain the success that you and your sales team have achieved to ensure a sustainable and solid business that will
-help you lead more people to the incredible benefits.</p>
+<p>Retain the success that you have achieved to ensure a sustainable and solid business that will help you lead more people to the incredible benefits.</p>
 
 							<img src="{%static 'accounts/img/safront8.jpg'%}" class="img-responsive" alt=""'>	
 								<!--<img src="{%static 'img/i.jpg'%}" class="img-responsive" alt=""'>-->
@@ -272,32 +169,272 @@ help you lead more people to the incredible benefits.</p>
 
 
 
-							</p> 		
-						</div>		
-					</div>			
-				</div>				
-				<div class="col-md-4 whatis-terms-home">
-					
-                    
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- Whatis.ciowhitepapersreview -->
-                    <ins class="adsbygoogle"
-                         style="display:inline-block;width:300px;height:250px;margin-left:20px;"
-                         data-ad-client="ca-pub-5965893319682433"
-                         data-ad-slot="8926337567"></ins>
-                         
-						<script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                     
-                    
-				</div>
-                
 							
+
+
+<section class="section">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-12">
+						
+						<small><span class="caps"><a name="top"></a>contact us</span></small>
+						
+						<div class="line-sep"></div>
+						<div class="section-title">
+							Get in touch
+							
+							<small><span class="caps"><a class="btn btn-follow "href="{% url 'accounts:login'%}" role="button">LogIn &raquo;</a></span></small>
+
+						</div>
+					</div>
+					<div class="col-md-7">
+						<!--  <div class="tab">
+		                          <button class="tablinks" onclick="openCity(event, 'contact')" id="defaultOpen">Contact</button>
+		                </div> -->
+                        
+                                           
+		                <div id="contact">
+		                                
+		                
+		                    <div class="video-container">                                   
+		                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5233.185493903763!2d39.27138706048278!3d-6.833484473017059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4ba5bbc1ba7b%3A0x2f4f0a88e2089417!2sKariakoo%2C+Dar+es+Salaam!5e0!3m2!1sen!2stz!4v1538828227060" frameborder="0" style="border:0" allowfullscreen></iframe>
+		                    </div>
+		                    
+		                </div>
+					</div>
+
+<br>
+					<div class="col-md-5">
+						<div class="">
+							<div>
+								<p>
+									Give us a call at <a href="tel:0653397942" class="pull-right">+255653397942</a>
+								</p>
+
+								
+							</div>
+                        
+	
+                            <hr>
+                            <p class="text-center">Or <br> be classical</p>
+                       
+                                                <form>
+                                                                <div class="form-group">
+                                                                  <input type="text" class="form-control" name="" value="" placeholder="Name">
+                                                                </div>
+                                                                
+                                                                <div class="form-group">
+                                                                  <input type="email" class="form-control" name="" value="" placeholder="E-mail">
+                                                                </div>
+                                                                
+                                                                <div class="form-group">
+                                                                  <input type="tel" class="form-control" name="" value="" placeholder="Phone">
+                                                                </div>
+                                                                
+                                                                <div class="form-group">
+                                                                  <textarea class="form-control" name="" rows="3" placeholder="Message"></textarea>
+                                                                </div>
+                                                                
+                                                                <button class="btn btn-follow pull-right" type="submit" name="button">
+                                                                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Submit
+                                                                </button>
+                                                </form>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</section>
+<br>
+		 
+	</main>
+
+
+ <div class="modal fade bd-example-modal-lg" id="regprocess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">Registration Process</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                
+                                            <!--<div class="modal-body">-->
+                                            
+                                            <ul class="courses-lists " align="left">
+                                            
+                                                <li><p>1.Click buy books to see the list of all Books </p></li>
+                                                <li><p>2. Click on your choice to see the detail.</p></li>
+                                                
+                                         
+                                                <li><p>3. Click buy If it is your first time the site will prompt you to register</p></li> 
+                                                
+                                                <li><p>5. After registration the site will take you to the payment page.</p></li>
+                                                <li><p>6. Make the payment then contact your author for activation.</p></li>
+                                                <li><p>7.Two minutes later, your book will be activated and ready to read.</p></li>
+                                                <li><p>8. Click my books button to see all your paid books.</p></li>
+                                                </ul> 
+                                               
+                                                    
+                                                
+                                                    
+                                                    
+                                           
+              
+                            </div>
+                        </div>
+                    </div>
+
+
+	
+
+							
+					
 					
 						
 			</div>
 		</div>
 			
     </section>
+
+
+
+
+    <footer>
+		<div class="footer">
+			<div class="container">
+				
+				<div class="row">
+					<div class="col-md-4">
+						<div class="link-title">
+							<p>
+								About Us
+							</p>
+							<div class="separator"></div>
+						</div>
+
+
+						<div>
+							<p>
+								<p> We are a compay Aiming at changing the lives of people through books.</p>
+							</p>
+						</div>
+					</div>
+
+
+					<div class="col-md-2">
+						
+
+						<ul class="links">
+							<div class="link-title">
+							<p>
+								links
+							</p>
+							<div class="separator"></div>
+						</div>
+                                                        
+                                                        <li>
+								<a href="{% url 'home:index'%}">List of books</a>
+							</li>
+
+							<li>
+								<a href="">Privacy Policy</a>
+							</li>
+						</ul>
+					</div>
+
+					
+					<div class="col-md-3">
+						<div class="link-title">
+							<p>
+								More
+							</p>
+							<div class="separator"></div>
+						</div>
+
+						<ul class="links">
+                                                    
+                                                        <li>
+								
+                                                                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#regprocess">Registration process
+										</button>
+							</li>            
+							<!-- <li>
+								<a href="">Student Support</a>
+							</li>
+
+							<li>
+								<a href="">Course Categories</a>
+							</li>
+ -->
+							<li>
+								<a href="{% url 'home:authors'%}">Become an Author</a>
+							</li>
+						</ul>
+					</div>
+
+
+					<div class="col-md-3">
+						<div class="link-title">
+							<p>
+								Contact Us
+							
+							</p>
+							<div class="separator"></div>
+						</div>
+
+						<p>
+							3rd Floor, Imalaseko Investment Limited, <br>
+							Kariakoo <br>
+							P. O. Box 123 <br>
+							Dar Es Salaam, Tanzania
+						</p>
+						<a href="tel:+255652441424" class="a-link">
+							(+255) 653 397942
+							
+						</a>
+
+						<a href="mailto:obmsuya@yahoo.com" class="a-link">
+							obgcompanyltd@gmail.com
+						</a>
+
+					</div>
+
+
+				</div>
+
+				
+					<hr class="white">
+<hr class="white">
+
+					<div class="footer-bottom">
+						<span>
+							@2018 OBG
+						</span>
+
+						<span>
+							
+						</span>
+					</div>
+                                        
+                                        
+                                        
+                                     
+                                        
+                                        
+	    </div>
+	</div>
+    </footer>
+
+
+	<script>
+			function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+	</script>
  {% endblock %}
