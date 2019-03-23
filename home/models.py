@@ -50,6 +50,7 @@ class Item(models.Model):
 
     image_index = models.ImageField(default='default.jpg', upload_to='media')
     
+    videofile= models.FileField(default='default.mp4', upload_to='media', null=True, verbose_name="")
 
     author = models.CharField(max_length=200, default= "")
     author_description = models.TextField(default= "")
@@ -62,7 +63,8 @@ class Item(models.Model):
     paymentdetail = models.ForeignKey(Paymentdetail, null=True, on_delete=models.PROTECT)
     
     def __str__(self):
-        return self.name
+        return self.name + ": " + str(self.videofile)
+  
 
 
 

@@ -1,1057 +1,159 @@
-<!DOCTYPE html>
-    {% load staticfiles %}
-<html>
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>   
-            
-        <link rel="stylesheet" href="{% static 'accounts/style12.css' %}">
-        <!--<link rel="stylesheet" href="{% static 'home/house.css' %}">-->
-         
-         <meta name="viewport" content="width=device-width, initial-scale=1.0"   
-
-        <!--<link rel="stylesheet" href="{% static 'accounts/style14.css' %}">-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-<style>
-* {box-sizing: border-box}
-body {font-family: "Lato", sans-serif;}
-
-/* Style the tab */
-.tab {
-    float: left;
-    border: 0px solid #ccc;
-    /*background-color: #f1f1f1;*/
-    width: 20%;
-    height: auto;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-    /*display: block;
-    background-color: inherit;
-    color: black;*/
-    padding: 22px 16px;
-    width: 100%;
-    border: 2px;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 14px;
-    /*font-size: 2wv;*/
-    /*lines: line-height: 1;*/
-    line-height: !important;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current "tab button" class */
-.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    float: left;
-    padding: 0px 6px;
-    border: 3px solid #ccc;
-    width: 80%;
-    border-left: none;
-    height: auto;
-}
-
-.video-container {
-  position:relative;
-  padding-bottom:450px;
-  padding-top:10px; width: 100%; max-width: 820px; padding-right:0px;
-max-height:430px; overflow: auto;
-border: none; 
-}
-
-.video-container iframe, .video-container object, .video-container embed {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%; max-width: 834px; width:100%; max-height:480px; height:100%; margin: 0px;}
-
-</style>
-</head>
-<body>
-
-<br>
-    <div class="container">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>   
-    </div>  
-          <div id="navbar" class="navbar-collapse collapse">
-              
-            
-            <ul class="nav navbar-nav navbar-left">
-                <li><a href="{% url 'home:home'%}">Home</a></li>
-                <li><a href="{% url 'home:chat'%}">My courses</a></li>
-                <li><a href="{% url 'home:index'%}">Register New Course</a></li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href= "{% url 'accounts:view_profile'%}">Profile</a></li>
-                <li><a href="{% url 'accounts:edit_profile'%}">Edit Profile</a></li>
-                <li><a href="{% url 'accounts:change_password'%}">Change Password</a></li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="{% url 'accounts:logout'%}">Logout</a></li>
-            </ul>
-
-
-    </div>
-    
-
- </nav>
-        </div>
-
-
-
-
-
-
-<h1>GIS4LIFE Training College</h1><h3>For live support <span>click here</span> to make appointment.</h3>
-
-
-
-
-<div id="intro" class="tabcontent">
-      <h3>Introduction</h3>
-      <p>After completing this course, you will be able to perform the following tasks:
-    Define GIS, Differentiate between vector and raster data, Navigate a GIS map, Use tools to access feature information,
-        Create a location query and an attribute query.</p>
-      <h3>Approaching the tutorial</h3>
-      <p>To accomplish this course you need to install QGIS software and to download Data. Also you need to install video dowloader to your machine.
-     Above each video you will find a url link for download. On the next download section you will find three videos
-     which demostrate these procedures.<br><br>
-             
-             <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Next to Downloads &raquo;</button>
-             </div>
-      <div class="video-container">
-        <iframe  name="sites" id="sites" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
+{% extends 'base2.html' %}
+{% load staticfiles %}
+    {%block head%}
      
+    {% if item != None %}
+        <title>{{item.name}}-Selected Class</title>
         
-</div>
+    {% else %}
+        <title>Invalid Item ID- Selected Class</title>
+    {% endif %}
+    
+    {%endblock%}
 
 
+   {% block body %}
 
-<div id="downloads" class="tabcontent">
-    <p>In this training we are going to use an Open Source Software called QGIS.  The First video walks you through QGIS installation process, please watch it
-                first to avoid any confusion. The second video walks you through downloading data for this course. The third video walks you through the software for
-                    downloading our videos </p><br>
-    <p>QGIS Installation</p>
-    
-  <div class="video-container" style="border:#333333 2px solid; border-radius:12px; overflow:hidden;">
-    <iframe src="https://www.youtube.com/embed/f-SPJ92Egxg?rel=0&amp;showinfo=0" frameborder="0"allow="autoplay; encrypted-media"
-          allowfullscreen></iframe>
-  </div>
-    <p>Please visit <a href= "https://qgis.org/en/site/forusers/download.html" target="_blank">www.qgis.com</a>to download Software.</p>        
-    <br>
-        
-    <p>Download Data</p>      
-    
-  <div class="video-container" style="border:#333333 2px solid; border-radius:12px; overflow:hidden;">
-    <iframe src="https://www.youtube.com/embed/f-SPJ92Egxg?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"
-        allowfullscreen></iframe>
-  </div>
-    
-    <p>Click <a href= "{%static 'Reg_Centre.zip'%}" download>Here</a> to download data for this Course.<br>
-    
-    <p>Downloading videos</p>
-            <div class="video-container" style="border:#333333 2px solid; border-radius:12px; overflow:hidden;">
-            <iframe src="https://www.youtube.com/embed/f-SPJ92Egxg?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"
-                allowfullscreen></iframe></div>
-    <br>
-        <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'Paris')">Next to Key Terms &raquo;</button>
-       
-       </div>
+
+ <a href="{% url 'home:index' %}">&lt; Back to the list</a>
+               
       
-       
-</div>
- <br>
-</div>
- <br> 
-
-
-
-
-<div id="keyterms" class="tabcontent">
-  <h1>Key Terms</h1>
-  <p><h2>Attribute query</h2>
-     <p>Request for features based on values in the attribute table. The three basic components of an attribute query are the attribute field, operator,
-     and attribute value.
-     </p>
-     <h2>Feature</h2>
-        <p>A representation of a real-world object on a GIS map.</p>
-        
-        <h2>Geographical Coordinates</h2>
-        <p>A measurement of a location on the earth's surface expressed in degrees of latitude and longitude.</p>
-        
-        <h2>GIS</h2>
-        <p>Acronym for geographic information system. An integrated system of data, software, hardware, people and workflows used to answer questions, make
-        decisions,and provide tools to create, share, and use geographic information.</p>
-        
-        <h2>Layers</h2>
-        <p>References GIS data that represents real world features. The layer creates a symbol to represent the collection of these features. The features in
-        a layer have the same theme, geometry, and set of attributes.</p>
-        
-        <h2>Local Query</h2>
-        <p>Request for features based on the location and spatial relationship to other features. The three basic components of a location query are the layer
-        containing features to select, the location relationship, and the layer containing the related features.</p>
-        
-        <h2>Metadata</h2>
-        <p>Information that describes the content, quality, condition, origin, and other characteristics of data.</p> 
-        
-        <h2>Raster</h2>
-        <p>A data model that defines surfaces as an array of equally sized cells arranged in rows and columns. Each cell contains an attribute or measurement
-        value. A raster's origin, cell size, and relative cell location are used to determine the location of the cells and raster on the earth.</p>
-        
-        <h2>Scale</h2>
-        <p>Relationship between the size of a feature on a map and the actual size of that feature in the real world. Scales can be expressed as a ratio or
-        an equivalence.</p>
-        
-        <h2>Vector</h2>
-        <p>A data model that represents geographic features as points, polylines, and polygons. Attributes are associated with each vector feature, as
-        opposed to a raster data model, which associates attributes with grid cells. Vector data uses pairs of geographic coordinates to determine the
-        location of the features on the earth.</p>
-        
-        <h2>GIS Terminology to Know</h2> 
-        <p>GIS has a lot of terminologies used. The following are fundamental terminologies to know and be able to define at the end of the lesson</p>. 
-        <h3>Point, Line and Polygon</h3> 
-        <p>Point is a geometric element which is defined by pair of x,y coordinates. Line or polyline define a connection segment between one or more path. A polygon Is a closed shape defined by 
-        a connected sequence of x,y coordinate pairs, where the first and last coordinates pair are the same and all other pairs are unique.</p> 
-        
-      
-        
-            <img src="{%static 'img/pic_1.jpg'%}"   class= 'img-responsive'>
+         
+                      <div class="container">
+                            <small><span class="caps">Book</span></small>
+                            <div class="line-sep"></div>
+                              
+                                {% if item != None %}   
+                                    
+                                <div class="section-title">{{item.name}}</div>
+                                    <hr>
+                      </div>
+                     
+               
                 
-        <p>Figure 1: An image showing example of Points, lines and a polygon</p> 
-        <h3>Attributes tables</h3> 
-        <p>Tabular or textual data describing the geographic characteristics of features.</p> 
-        <img src="{%static 'img/pic_2.jpg'%}" class= 'img-responsive'> 
-        <p>Figure 2: An example of attribute table</p> 
-        <h3>Vectors and raster data</h3> 
-        <p>Vector data is a representation of the geographical features by using points, lines and polygons. Each point feature is represented as a single coordinate pair, while line and polygon 
-        features are represented as ordered lists of vertices.</p> 
-        <p>Raster data a spatial data model that defines space as an array of equally sized cells arranged in rows and columns, and composed of single or multiple bands. Each cell contains an 
-        attribute value and location coordinates.</p> 
-        <img src="{%static 'img/pic_3.jpg'%}" class= 'img-responsive'> 
-        <p>Figure 3: an image showing an example of vector and raster data representation of features on a real word</p> 
-        <h3>Imagery</h3> 
-        <p>Imagery is a type of data that is useful for many GIS applications and is defined as any type of photograph. Photographs used for GIS projects consist of images gathered from a satellite or an aircraft.</p> 
-        <img src="{%static 'img/pic_4.jpg'%}" class= 'img-responsive'> 
-        <p>Figure 4: Satellite imagery of Tanzania</p> 
-        <h3>Geoprocessing tools</h3> 
-        <p>Geoprocessing is a framework and set of tools for processing geographic and related data. Can be used to perform spatial analysis or manage GIS data in an automated way. Example of these tools are buffer, intersect, clip, intersect etc.</p> 
-        <img src="{%static 'img/pic_5.jpg'%}" class= 'img-responsive'> 
-        <p>Figure 5: Basic editing Geoprocessing tools</p> 
-        <h3>Geodatabase</h3> 
-        <p>Is a database or file structure used to store, query and manipulate spatial data. Geodatabase stores geometry, a spatial reference system, attributes and behavior rules for data. Various types of geographic datasets can be collected within geodatabase such as feature classes, attribute tables, raster dataset and many others.</p> 
-        <img src="{%static 'img/pic_6.jpg'%}" class= 'img-responsive'> 
-        <p>Figure 6: Image showing example of geodatabase</p> 
-        <h3>Shapefiles</h3> 
-        <p>Is a non-topological format for storing the attribute information of geographic features, location and shape. A geographic feature in a Shapefiles is represented by points, lines and polygons.</p> 
-        <img src="{%static 'img/pic_7.jpg'%}" class= 'img-responsive'> 
-        <p>Figure 7: Example of how Shapefiles appear in ArcCatalog (source: Esri)</p> 
-        <h3>Layers</h3> 
-        <p>Is a mechanism used to display geographic dataset in any digital map environment. A layer is a slice or stratum of the geographic reality in a particular area, for example, roads, land use, boundaries, elevations and rivers might be considered different layers.</p> 
-        <img src="{%static 'img/pic_8.jpg'%}" class= 'img-responsive'> 
-        <p>Figure 8: example of map layers</p> 
+      <section class="section grey-scale">
+                     <div class="container">
+                                        
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        
+                                    <h3>Cover</h3>
+                                     <div class="line-sep"></div>
+                                        {% if item.image%}
+                                                <img src='{{item.image.url}}' class= 'img-responsive'/>
+                                                <!--<img src="{%static 'img/hasira2.jpg'%}" class="image-responsive" alt=""'>-->
+                                        {%endif%}
+                                      <br><br>
+                                    <h3>Kitabu kwa ufupi</h3>
+                                     <div class="line-sep"></div>
+                                        <p>{{item.description|linebreaks}}</p>
+                                    </div><br>
+                                   
+                                    <div class="col-md-5">
+                                      <!--    <h3>Bei Tsh {{item.price}} </h3>  -->
+                                             <div class="card right-in">
+                                                 <div class="card-icon">
+                                                <br><br>
+                                                    <ul class="tutor-icons">
+                                                   
+                                                    <br><br> 
+                                                     {%if item.subtitle %}
+                                                        <h4><a class="btn btn-follow btn-lg "href="{{item.subtitle}}"> Soma bure.</a></h4></li>
+                                                        <h4><a class="btn btn-success btn-lg "href="{% url 'home:donate' item_id=item.id %}"> Donate.</a></h4></li>
 
-</div>
+                                                <div class="text-center">               
+                                                    {%else%}
 
 
+                                                  <h4>Bei: Tsh {{item.price}} </h4>
+                                                    </div>
+                                            <div class="text-center">
+                                              <h4><a class="btn btn-follow btn-lg "href="{% url 'home:book' item_id=item.id %}"> Nataka kununua.</a></h4></li>
+                                                  </div>
+                                     {%endif%}
+                                                  </ul>
+                                                    <br>
+                                                    
+                                                  <br>
+                                                   <hr>
+                                                  
+                                            </div>
+                                        </div>
+                                    </div>      
+                                {% else %}
+                                                <p>Invalid Item ID.</p>
+                                {% endif %}
+                                                                
+                              </div>
+                    </div>
+</section>
 
-<div id="whatgis" class="tabcontent">
-  <h1>What is GIS</h1>
-        <div class="video-container" style="border:#333333 2px solid; border-radius:12px; overflow:hidden;">
-                <iframe src="https://www.youtube.com/embed/llFLbZ1eV3I?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"
-                        allowfullscreen></iframe>
-       </div>
- <div>   
-<h1>What is GIS?</h1> 
-<h2>Definition</h2> 
-<p>GIS stands for Geographical Information System. The word GIS is a broad term and it has no consistent definition. It can have more than ten
-different definitions from GIS users. Here, GIS is simply defined as a computer based system used to capture, store, retrieve, manipulate, analyze
-and display spatial information. GIS helps people to use spatial(location) information to produce maps and perform spatial(location) analyses for
-decision making and problem solving. </p>
-<h2>History of GIS</h2>
-<p>A GIS (geographic or geospatial information system) is a modern extension of traditional cartography with one fundamental similarity and two
-essential 
-differences. The similarity lies in the fact that both a cartographic document and a GIS contain examples of a map to which additional data can be added. 
-The differences are that there is no limit to the amount of additional data that can be added to a GIS map and secondly the GIS uses analysis and
-statistics 
-to present data in support of particular arguments which a cartographic map cannot do. Cartographic maps are often extremely simplified as there
-are limits to 
-the amount of data that can be physically and meaningfully stored on a small map.</p> 
-
-<p>GIS passed four distinct phases in the development of Geographical Information System.Phase one, was between the early 1960s to mid 1970s where a new discipline being dominated by a few key individuals who were to shape the
-direction of future research and development. Phase two, was from the mid of 1970s to early 1980s where the adoption of technologies by national
-agencies that led to a focus on the development of best practice. Third phase, between 1980 to late 1982 saw the development and exploitation of the
-commercial market places surrounding GIS whilst the final phase since the late 1980s has seen a focus on ways of improving the usability of technology
-by making facilities more user centric.</p>
-
-<h2>Why GIS is Awesome</h2> 
-<p>GIS is not one thing, it is a general set of technologies and a way to think about data in new exciting ways. The following are few of the things that makes why GIS 
-applications awesome.</p> 
-<h3>GIS in mapping</h3> 
-<p>Mapping is a central function of GIS which provides a visual interpretation of data. GIS store data in database and then represent it visually in a mapped format.</p> 
-<h3>Urban planning</h3> 
-<p>The GIS technology is used to analyze the urban growth and its direction of expansion, and to find suitable sites for further urban development.</p> 
-<h3>Infrastructure planning</h3> 
-<p>GIS can be used in managing transportation and logistical problems. It can help in monitoring railway system and roads conditions. The best route for transportation based on 
-the criteria like flattest route, least damage and least disturbance from local people.</p> 
-<h3>Agriculture applications</h3> 
-<p>Can be used to create more effective and efficient farming techniques. It can help in analyzing soil data and to determine the best crop plant, and where they should be planted.</p> 
-<h3>Disaster management and mitigation</h3> 
-<p>GIS are used to protect environment. It has become a well-developed and successful tool in disaster management and mitigation. It can be help by displaying areas that are 
-likely to be prone to natural hazards or man-made disasters.</p> 
-<h3>Navigation</h3> 
-<p>For example using a GPS on the smart phone to get a location of a place. Currently many people in the world are using smart phones to move from one place to another. 
-To know nearby places where they are located and how to get there through google maps e.g. Hospitals, restaurant, shops, banks, ATM and many other things.</p> 
-<h3>Routing problems</h3> 
-
-<p>GIS can also be used to solve problems such as water route which runs from down hills. Therefore data is needed to understand where down hills is located on a landscape scale. 
-Once the information is known it is easy to figure out the common locations where water runs off occur. This information can help in determine where the town location are and 
-flood risks area, as well as to figure out how much water is needed for an area.</p> 
-
-<h2>Summary of this Lesson</h2> 
-<h3>GIS definition</h3> 
-<h3>History of GIS</h3> 
-<h3>Why GIS is awesome</h3> 
-<h4>GIS in mapping</h4> 
-<h4>Urban planning</h4> 
-<h4>Infrastructure planning</h4> 
-<h4>Agriculture applications</h4> 
-<h4>Disaster management and mitigation</h4> 
-<h4>Navigation</h4> 
-<h4>Routing problems</h4> 
-<h3>GIS terminology to know</h3> 
-<h4>Point, Line and Polygon</h4> 
-<h4>Attributes tables</h4> 
-<h4>Vectors and raster data </h4> 
-<h4>Imagery</h4> 
-<h4>Geoprocessing tools</h4> 
-<h4>Geodatabase</h4> 
-<h4>Shapefiles</h4> 
-<h4>Layers</h4>
-
-
-
-
-<br><br><br><br><br><br>
- </div>   
-</div>
-
-
-
-<div id="gisdo" class="tabcontent">  
-  <h1>What can you do with GIS</h1>
-        <p>As previously discussed, a GIS uses geographic information to help users answer questions and make decisions. One of the most common GIS
-        formats is a map. Shown here are real-world examples of GIS maps that have been formatted to analyze trends, find relationships, and assist with
-        future decisions.</p>  <br>               
-        
-        <h4><span>Map location</span></h4>
-        <p>We can map the spatial location of real-world features and visualize the spatial relationships among them.  Example one:
-        The map below illustrates the location of countries, rivers, and cities within the continent of Africa. Locational maps can be used to determine where
-        things are situated in relation to each other and are often used with navigation.
-        Map quantities. People map quantities, such as where the most and least are, to find places that meet their criteria or to see the
-        relationships between places. 
-        Example: below is a map of cemetery locations in Wisconsin.  The map shows the cemetery locations as dots (dot density) and each
-        county is color coded to show where the most and least are (lighter blue means fewer cemeteries).</p>
-        
-        <img src="{%static 'img/intro1.jpg'%}"   class= 'img-responsive'>
-<br><br>
-
-        <h4><span>Map quantities</span></h4>
-        <p>People map quantities, such as where the most and least are, to find places that meet their criteria or to see the relationships between places.
-        Example: below is a map of cemetery locations in Wisconsin.  The map shows the cemetery locations as dots (dot density) and each county is color
-        coded to show where the most and least are (lighter blue means fewer cemeteries)</p>.<br>
-        <img src="{%static 'img/intro2.jpg'%}"   class= 'img-responsive'>
-        <br><br>
-        
-        <h4><span>Map what is inside</span></h4>
-        We can use GIS to determine what is happening or what features are located inside a specific area/region. We can determine the characteristics of "inside"
-        by creating specific criteria to define an area of interest (AOI).<br>
-        This map illustrates school locations in relation to crime areas. Mapping what is inside can assist with monitoring and assessment. According to this map, schools
-        located in Miami may be more at risk, because Miami has the highest number of crime reports.
-        <br>
-        <img src="{%static 'img/intro3.jpg'%}"   class= 'img-responsive'>
-        
-           <br><br>
-           
-         <h4><span> Map densities</span></h4> 
-  
-        <p>Sometimes it is more important to map concentrations, or a quantity normalized by area or total number.
-      This map illustrates a higher population density in the southeast portion of Canada. Density maps can be used to condense large amounts of data
-      analyzed for correlations and trends. Further analysis could be completed to determine if the denser population is related to the proximity of the
-      border or the proximity of water bodies.</p><br>
-      
-        <img src="{%static 'img/intro4.jpg'%}"   class= 'img-responsive'>
-        
-        
-        <br><br>
-        
-        
-        <h4><span> What is nearby.</span></h4>
-        <p>We can find out what is happening within a set distance of a feature or event by mapping what is nearby using geoprocessing tools like BUFFER</p>
-        <br>
-         <img src="{%static 'img/intro5.jpg'%}"   class= 'img-responsive'>
+               
+                
+      <br>
+                
+                <div class="container"
+        <section class="section">
             
-        <br>
-        <p>This map illustrates the proximity of JMill retail stores to county spending potential. Mapping what is nearby is often used in risk
-        assessment and predictions. JMill predicts higher revenue in the Massachusetts, Connecticut, and Rhode Island stores, because they are located
-        within 20 miles of a higher potential spending index.</p>
-        <br><br>
-        
-      <h4><span>Map change</span></h4> 
-         <p>We can map the change in a specific geographic area to anticipate future conditions, decide on a course of action, or to evaluate the results
-         of an action or policy. The map below illustrates population change over the past 10 years. The largest population changes occurred in the
-         western and southeastern states. This can be used to assess future trends in urban sprawl and market demands.
-      </p>
-         <br>
-         <img src="{%static 'img/intro6.jpg'%}"   class= 'img-responsive'>
-            <br><br>  
-</div>
-<div id="gisworks" class="tabcontent">
-        <h1>How GIS works</h1>
-        <p>Whether you search a location on the Internet or map car routes, you can use a GIS to get the information you need.
-        
-        GIS provides tools to find, use, create, and share geographic information with others. For example, you can locate location for each
-        of your customers, share this information with your coworkers, and work together to build a customer profile. The functionality and
-        versatility of a GIS depends on the system itself. A GIS integrates hardware, software, data, people, and workflows
-        into its comprehensive package.</p>
-        
-        <h3>Data</h3>
-        <p>Data has spatial and attribute information to explain where something is and
-        what something is.</p>
-        
-        
-        <h3>Software</h3>
-        <p>Software is to store, analyze, and display geographical data.</p>
-        
-        <h3>Hardware</h3>
-        <p>Data and software run off hardware, which can range from centralized computer servers to desktops to handheld devices
-        . Geographic Information can be created, shared, and used from each of these hardware devices.</p>
-        
-        <h3>People</h3>
-        <p>People use GIS sotware to perform GIS task on geographic data. People create and follow workflow to
-        order GIS tast and make their work more efficient.</p>
-        
-        <br>
-</div>
-
-
-
-
-
-
-
-
-
-
-<div id="longlat" class="tabcontent">
-    <div class="container">
-  <nav class="navbar navbar-default">
-      <h1>Longitude and Latitude</h1>   
-  </nav>
-    </div>
- 
-    <div class="video-container" style="border:#333333 2px solid; border-radius:12px; overflow:hidden;">
-  <iframe src="https://www.youtube.com/embed/r4W86ORpk1Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
-    </div><br><br>
-      <div class="container">
-        <nav class="navbar navbar-default">
-    <div class="container-fluid"> 
-    <h2 class="display-3"><span>Latitude?</span></h2>
-    </div>
-        </nav>
-      </div>
-  
-        <p>Latitude is defined as a measurement of distance in degrees north and south of the equator. The word latitude is derived from the latin word, "latus", mearning "wide"</p>            
-        <img src="{%static 'img/lat1.jpg'%}"   class= 'img-responsive'>
-        <p>There are 90 degrees of latitude from the equator to each of the poles, north and south. Latitude lines are parallel, that is they are the same distance apart. These lines are sometimes refered to as parallels.</p>
-        <img src="{%static 'img/lat2.jpg'%}"   class= 'img-responsive'>
-        <br>       
-        <h3 class="display-3"><span>The equator</span></h3>         
-        <p>The equator is the longest of all lines of latitude. It divides the earth in alf and is measured as 0 (Zero degrees)</p>        
-        <br>
-  <img src="{%static 'img/lat3.jpg'%}"   class= 'img-responsive'>         
-        <h3 class="display-3"><span>North and South Latitudes</span></h3>        
-  <p>Positions on latitude lines above the equator are called "north" and are in the northern hemisphere.  Positions on latitude lines below the equator are called "south" and are in the southern hemisphere.</p>
-        <img src="{%static 'img/lat5.jpg'%}"   class= 'img-responsive'>
-        <br><br> 
-    <div class="container">
-      <nav class="navbar navbar-default">
-  <div class="container-fluid"> 
-      <h2 class="display-3"><span>Longitude</span></h2>
-  </div>
-      </nav>
-    </div>
-         <p>Longitude is defined as measurement of distance in degrees east or west of the prime meridian. The word longitude is derived from the Latin word, "longus", meaning "length"</p>.
-          <img src="{%static 'img/lat6.jpg'%}"   class= 'img-responsive'>
+                 <small><span class="caps">Author</span></small>
+                            <div class="line-sep"></div>
+                
+                 <div class="col-md-12">
             
-        <p>The Prime Meridian, as do all other lines of longitude, pass through the north and south pole. They make the earth look like a peeled orange.</p>
-    <img src="{%static 'img/lat7.jpg'%}"   class= 'img-responsive'>
-    
-    
-    <h3 class="display-3"><span>The Prime Meridian </span></h3>
-   
-    <p>The Prime meridian divides the earth in half too. It is also 0 degree. It passes through the community of Greenwich, England.</p>
-    <img src="{%static 'img/lat8.jpg'%}"   class= 'img-responsive'>
-    <br><br> 
-     
-    <div class="container">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">  
-    <h3 class="display-3"><span>The International Date Line </span></h3>
-    </div>
-      </nav>
+                                                <div class="row">
+                                                    <h1>Kuhusu Muandishi</h1>
+              <!--<div class="col-md-5">-->
+                                                            
+                <div class="tutor">
+                                                                    
+                  <div class="tutor-image">
+                    {% if item.image%}
+                    <img src='{{item.image_author.url}}' />
+                                                                                 {%endif%}
+                  </div>
+
+                  
+                                                                        
+                                                                        <div class="text-center">
+                    <h4>
+                      {{item.author}}
+                    </h4>
+                    
+                                                                                <hr>
+                  </div>
+
+                  
+                      
+                </div>
+              </div>
+                                                        
+                                                        <!--<div class="col-md-6">-->
+                                                           
+                  
+
+                  <div class="text-left">
+                    <p>
+                    {{item.author_description}}
+                      
+                                                                                        
+                    </p>
+                    
+                                                                             
+                  </div>
+
+                  
+              </div>
+
+
+        </section>
         
-      <p>There are 180 lines of longitude on each side of the prime meridian.  But on the opposite side, the primer meridian is not
-      zero degrees but 180 degree.  It is called the International Date Line.</p>
-      <img src="{%static 'img/lat9.jpg'%}"   class= 'img-responsive'>
-     
-     
-       
-    <h3 class="display-3"><span>East and West Longitudes</span></h3>
-   
-    <p>Longitude lines to the left of the prime meridian give locations west, in the western hemisphere. Longitude lines to the right of the
-    primer meridian give locations east, in the eastern hemisphere.</p>
-    <img src="{%static 'img/lat10.jpg'%}"   class= 'img-responsive'>
-    <br>
-    <img src="{%static 'img/lat11.jpg'%}"   class= 'img-responsive'>
-      </div><br>  
-      <div class="container">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-      <h3 class="display-3"><span>Using Latitude and Longitude</span></h3>
       </div>
-      </nav>
-         
-      
-        <p>To fine your exact location on a map, you need to determine which latitude line and which longitude line meet where you are standing.
-      When writing locations, the latitude is given first.
-      For example <br>
-      Miami, Florida, has a location of 25 degree North and 80 degree West.<br>
-      This is usually written in a short form as 25 degree N 80 degree W </p>
-      </div>
-</div>
-
-<div id="coord" class="tabcontent">
-  <h3>Coordinate system</h3>
-  <div class="video-container" style="border:#333333 2px solid; border-radius:12px; overflow:hidden;">
-    <iframe src="https://www.youtube.com/embed/DSOGG-AGVd0?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"
-            allowfullscreen></iframe>
- </div>
-</div>
-
-<div id="data" class="tabcontent">
-  <h3>Coordinate system</h3>
-  <div class="video-container" style="border:#333333 2px solid; border-radius:12px; overflow:hidden;">
-    <iframe src="" frameborder="0" allow="autoplay; encrypted-media"
-            allowfullscreen></iframe>
- </div>
-    <h1>Data</h1>
-  <p>Data is any information that has been translated into a form that is efficient for movement or processing. It can also be defined as a resource held on paper or in digital format that serves to record or administer some facts and description of phenomena of interest.</p>
-  <h2>Types of Data</h2>
-  <p>Data types can be categorized in two broad types and values such as qualitative and quantitative (or numeric) variables. Quantitative data is referred to interval and ratio data, while nominal and ordinal data are a qualitative data. </p> 
-  <h3>Nominal data</h3> 
-  <p>Nominal data is involving identifying and naming of geological units, they cannot be computed (calculated). This data are also called categorical data when the values are assigned and sorted according to a set of non-overlapping categories. A common example of nominal data is gender; male and female. </p> 
-  <h3>Ordinal data</h3> 
-  <p>These are data which have natural sequence, order categories and they do not allow any other type of computation (calculation). Ordinal data exist on an ordinal scale. Salary income for example, cab be classified as being either high, average or low</p>.
-  <h3>Interval data</h3> 
-  <p>These are data that are in the form of a numerical value, and allow forms of computation (calculation) for example additions and subtractions. The interval data have no arithmetic zero value, and they do not support multiplication or division. For example, temperature (C) of 20 degree Centgrade cannot be twice as hot as 10 degree Centgrade. </p>
-  <h3>Ratio data</h3> 
-  <p>It is a numerical data that allow most if not all forms of arithmetic computation (calculation). They have natural zero value, division and multiplication of values are possible operators. For example of ratio data are distance measured in meters. </p> 
-  
-  <h2>Data Representation in GIS</h2>
-  <p>A geographic information system (GIS) is a system designed to capture, store, manage, manipulate, analyse and present geographic or spatial (location) data. Data in GIS is a mathematical theory that represents a geographic surfaces or objects as data. </p> 
-  <p>In GIS there are two primary types of spatial (location) data know as vector and raster data. Vector data have three basic symbol type such as points, lines and polygons (area) while raster data uses regularly spaced grid cells in specific sequence. An element of the grid cell is called a pixel which contains a single value of attributes. </p>
-  
-  
-  
-  <h2>Data Sources and file formats</h2> 
-  <h3>Data Sources</h3>
-  <p>A data source is the primary location from where data comes. It can provide the ability to use data sources from the currently active data frame to populate a table of any format. The data source can be a database, a dataset or a spreadsheet data. A common type of database is an SQL database. </p>
-  <p>There are two types of data sources which are Primary and Secondary data sources: </p>
-  <p>Primary data sources are data that are not pre-existing and are collected by the evaluator using methods such as observations, surveys or interviews, in other words are data that are captured directly from the environment. Example of these data in GIS are raster data such as Digital remote sensing images and Digital aerial photographs, while vector data are GPS measurements and Survey measurements. </p> 
-  <p>Secondary data sources are Information that has already been collected, processed and reported out by another researcher/entity. This includes data derived by scanning existing printed maps, data digitized from a satellite image, processed data purchased from data-captured forms or international agencies and so on. Example of these are raster data such as Scanned maps and DEMs from maps, while vector data are Topographic surveys and Taxonomy data sets from atlases. </p>
-  
-  
-  <p>Below is list of some common GIS data sources for both global raster and vector datasets, where one can download from: </p>
-  
-  <h4>-ESRI Open data</h4>
-  <p>Data types: Download formats are in spreadsheet, KML, shapefile</p>
-  <h4>Natural Earth Data</h4>
-  <p>Data types: Base map data</p>
-  <h4>USGS Earth Explorer</h4>
-  <p>Data types: Remote sensing data e.g. Landsat, global land cover etc. </p>
-  <h4>OpenStreetMap</h4>
-  <p>Data types: High spatial resolution cultural vector data. (Buildings, land use, railroads, roads, waterways) </p>
-  <h4>NASA Earth Observation (NEO)</h4>
-  <p>Data types: All raster grids: atmosphere, energy, land, life and ocean GIS data. </p>
-  <h4>NASAs Socioeconomic Data and Applications Centre (SEDAC)</h4>
-  <p>Data types: Socioeconomic data (agriculture, climate, conservation, governance, hazards, health, infrastructure, land use, marine and coastal, population, poverty, remote sensing, sustainability, urban and water). </p>
-  <h4>UNEP Environmental Data Explorer</h4>
-  <p>Data types: Freshwater, population, forests, emissions, climate, disasters, health and GDP spatial and non-spatial data. </p>
-  <h4>Sentinel Satellite Data</h4>
-
-
-  <p>Data types: Raster data  11 channels from Sentinel 2</p>
-  <h4>Terra Populus</h4>
-  <p>Data types: Area level, micro data & environmental data describing land cover, land use, and climate. </p>
-  <h4>FAO GeoNetwork</h4>
-  <p>Data types: Agriculture, fisheries, land resource GIS data. </p>
-  <h4>ISCGM Global Map</h4>
-  <p>Data types: Boundaries, drainage, transportation, population centres, elevation, land cover, land use and vegetation. </p>
-  
-  <h3>File formats</h3>
-  <p>A file formats defines in which way the geographical features are stored, for example raster and vector data are stored in different formats. </p> 
-  <p>There are several formats available for GIS data (raster and vector data). It is important to consider the format of GIS data because software programs rarely support all file types. If a GIS data saved in a particular format is not supported by a GIS program, the data will need to be transformed to another format or using another GIS program. All GIS programs have their own file format, and most of them are designed to support other formats by import and export datasets. </p>
-  <p>Below is list of some common GIS file formats: </p>
-  <h4>Shapefiles</h4> 
-  <p>The Shape file (.shp), there is a file to handle attributes (.dbf) and an index file (.shx). Nearly all other GIS programs can import this format. </p>
-  <h4>ASCII</h4> 
-  <p>The format which can handle point and line data</p>
-  <h4>Geography Markup Language</h4>
-  <p>XML standard for exchanging and saving geographical vector data</p>
-  <h4>Digital Elevation Model</h4>
-  <p>.dem, .hdr are raster format created by the USGS (US Geological Survey) for saving elevation data. </p>
-  <h4>GeoTIFF</h4>
-  <p>Is a form of TIFF (Tag Image File Format) format for georeferenced raster data. </p>
-  <h4>TIFF (Tagged Image File Format) </h4>
-  <p>Is a common raster format produced by drawing programs and scanners. They handle big data file and compresses data without loss the information. </p>
-
-  <h2>Data collection</h2>
-  <p>Data collection can be defined as a systematic approach used to gathering and measuring information from a variety of sources in order to get a complete and accurate picture of an area of interest. It allows one to answer a relevant questions, evaluating results and to predict about future probabilities and trends. </p>
-  <p>Data collection is split into data capture (direct data input) and data transfer (input of data from other systems). Two main types of data capture are: </p>
-  <p>-Primary data sources are those collected in digital format specifically for use in a GIS project. </p>
-  <p>-Secondary sources are digital and analogue datasets that were originally captured for another purpose and need to be converted into a suitable digital format for use in a GIS project. </p>
-  <h2>Data entry</h2>
-  <p>Data entry is the operation of encoding data for inclusion into a database. The creation of accurate databases is a very important part of GIS. </p>
-  <p>There are several approaches used for entering spatial data into a GIS, including: </p> 
-  <p>-manual digitising and scanning of analogue maps</p>
-  <p>-image data input and conversion to a GIS</p>
-  <p>-direct data entry including global positioning systems (GPS) </p>
-  <p>-transfer of data from existing digital sources</p>
-  <p>-maps: scale, resolution, accuracy</p>
-  <p>At each stage of data entry there should be data verification to ensure that the resulting database is as error free as possible. </p>
-  <h2>Data retrieval</h2>
-  <p>Data retrieval is the process of identifying and extracting data from a database, based on a query provided by the user or application. In order to retrieve the desired data the user present a set of criteria by a query. A query language, such as Structured Query Language (SQL), is used to prepare the queries. Through the use of SQL, GIS software can interface to a variety of different Data Base Management System (DBMS) packages. This approach provides the user with the flexibility to select their own DBMS. </p>
-  <h2>Data quality</h2>
-  <p>Data quality is a pillar in any GIS application and implementation as reliable data are crucial to allow the user obtaining meaningful results. Spatial data quality can be categorized into data completeness, precision, accuracy and consistency.</p>
-  <h3>Accuracy</h3> 
-  <p>Defined as the degree or closeness to which the information on a map matches the values in the real world. Therefore, when we refer to accuracy, we are talking about quality of data and about number of errors contained in a certain dataset. In GIS data, accuracy can be referred to a geographic position, but it can be referred also to attribute, or conceptual accuracy.</p>
-
-  <h3>Precision</h3>
-  <p>Refers to how exact is the description of data. Precise data may be inaccurate, because it may be exactly described but inaccurately gathered. (Maybe the surveyor made a mistake, or the data was recorded wrongly into the database). </p>
-  <h3>Completeness</h3>
-  <p>Is the measure of totality of features.  A data set with minimal amount of missing features can be termed as Complete-Data. It is also referred to whether there are data lacking in the database compared to what exists in the real world. </p> 
-  <h3>Consistency</h3>
-  <p>Consistency refers to: </p>
-  <p>-the absence of any conflict or contradiction within a data set</p>
-  <p>-the topological consistency of the data set</p> 
-  <p>-the compatibility of data with other data in a data set and</p>
-  <p>-the allowed attribute value ranges, as well as combinations of attributes. </p>
-  <p>Absence of any inconsistencies does not imply that the data are accurate. </p>
-  <h3>Source of data error</h3>
-  <h4>Human errors in measurement</h4>
-  <p>Referred to as blunders or gross errors, for example reading errors. They are large errors resulting from carelessness, which could have been avoided through careful observation. </p>
-  <h4>Instrumental errors</h4>
-  <p>This leads to errors that vary systematically in magnitude, but can go undetected by repeating the measurement with the same instrument. They are dangerous as they tend to accumulate. </p>
-  <h4>Random errors</h4>
-  <p>They are caused by a natural variations in the quantity being measured. They are effectively the errors that remain after blunders and systematic errors have been removed. </p>
-  <h2>Data Management</h2>  
-  <p>Before understanding what data management is, the following are basic terminology used under data management: </p>
-  <p>Data is any information that has been translated into a form that is efficient for movement or processing. It can also be defined as a resource held on paper or in digital format that serves to record or administer some facts and description of phenomena of interest. </p>
-  <p>Data set (or dataset) a homogeneous collection of data normally describing a single kind of phenomenon or a collection of related sets of information that is composed of separate elements but can be manipulated as a unit by a computer.</p>
-  
-  <h3>Overview concept of data management</h3>
-  <p>Data management encompasses the way data are acquiring, validating, storing, protecting, and processing required data to ensure the accessibility, reliability, and timeliness of the data for its users. Data management can make data processing, validation and other essential functions simpler and less time consuming.</p>
-  <p>Data management also include the creation of data governance policies, analysis and architecture; database management system (DMS) integration; data security and data source identification, segregation and storage. </p>
-  <p>Advantages of data management includes enhanced compliance, greater security, and improved data governance to reduce organizational risk. </p>
-  
-  
-  
-  <h2>Database and Data Structures</h2>
-  <h3>Databases (DB) </h3>
-  <p>Is a collection of information that is organized so that it can be easily accessed, managed and updated or a collection of interrelated data sets properly structured by means of, and stored through a data base management system. </p>
-  <h4>Data Base Management System (DBMS)</h4>
-  <p>A software package designed for the purpose of manipulate, retrieve and manage data in a database. This implies that, data base management system allows to set-up, maintain and exploit one or more databases. </p>
-  <p>A data base management system has the following advantages: </p>
-  <p>-Controlling Redundancy - in file system, each application has its own private files, which cannot be shared between multiple applications. </p>
-  <p>-Integrity can be enforced - integrity of data means that data in database is always accurate, such that incorrect information cannot be stored in database. </p>
-  <p>-Inconsistency can be avoided - when the same data is duplicated and changes are made at one site, which is not propagated to the other site, it gives rise to inconsistency and the two entries regarding the same data will not agree. </p>
-  <p>-Data can be shared - supports the concurrent use of the same data set by many users. </p>
-  <p>-Restricting unauthorized access - when multiple users share a database, it is likely that some users will not be authorized to access all information in the database. </p>
-  <p>-Providing Backup and Recovery - a DBMS must provide facilities for recovering from hardware or software failures. The backup and recovery subsystem of the DBMS is responsible for recovery. </p>
-  <p>-Cost of developing and maintaining system is lower - it is much easier to respond to unanticipated requests when data is centralized in a database than when it is stored in a conventional file system. </p>
-  <p>-Concurrency Control - DBMS systems provide mechanisms to provide concurrent access of data to multiple users. </p>
-  <p>-Supports the storage and manipulation of very large data sets. </p>
-  <p>-Can be instructed to guard over data correctness. </p>
-  <p>-Provides a high-level, declarative query language. </p>
-  <p>-Supports the use of data model. </p>
-  
-  
-  
-  <h4>What is a data model? </h4>
-  <p>A relational data model was first invented in 1970 by Edgar F. Codd Ted, a computer scientist who while working for IBM.
-  He invented the relational model for database management, the theoretical basis for relational databases and relational database management systems.
-  Is considered as the most important event in the history of the database field. </p>
-  <p>A data base management system supports the use of a data model. A data model define how data is connected to each other and how they are manipulated,
-  processed and stored inside the database system. Is an integrated collection of;</p>
-  <p>Data structuring primitives,</p>
-  <p>Rules of how to structure, and</p>
-  <p>Mechanisms to handle the data in a database. </p>
-  
-  <p>In GIS most of used DBMS makes the use of relational data model. A relational data model is based on</p> 
-  <p>Predicate logic and set theory</p>
-  <p>It is based on simple and uniform data structure (the relation) </p>
-  <p>Structured Query Language</p>
-  
-  <img src="{%static 'img/dat_1.jpg'%}"   class= 'img-responsive'>
-  
-  <img src="{%static 'img/dat_2.jpg'%}"   class= 'img-responsive'>
-  
-  <p>Figure 1 and Figure 2 shows DBMS makes the use of relational data model</p>
-  <h3>Data Structures</h3>
-  <p>A data structure can simply be defined as a specialized format for organizing and storing data. Data structure is part of relational data model which integrated collection of attributes, tuples, and relations. In relational data model, relations are saved in the format of tables, a table has rows and columns. </p> 
-  <h4>Relation</h4> 
-  <p>Is at times used to refer to a table in a relational database but is more commonly used to describe the relationships that can be created between those tables in a relational database. </p>
-  <h4>Attributes</h4>
-  <p>In the relational data model, we represent real-world objects by attributes stored in relations, where rows represents records and columns represent the attributes. Each object in the real world has particular properties, i.e., attributes that describe it. Every attribute has some pre-defined value scope, known as attribute domain. </p>
-  <h4>Tuples</h4>
-  <p>Tuple is a single row of a table, which contains a single record for that relation is called a tuple. Tuple can be viewed as a list of attribute values. </p>
-  
-  <img src="{%static 'img/dat_3.jpg'%}"   class= 'img-responsive'>
-  
-  <p>Figure 3: Figure showing attribute, tuple and relation </p>
-  3.9 Supplemental: Intro to SQLite Databases
-  3.10 Quiz: Data
-
-
-</div>
-
-
-<div id="vectrast" class="tabcontent">
-  <h3>Coordinate system</h3>
-  <div class="video-container" style="border:#333333 2px solid; border-radius:12px; overflow:hidden;">
-    <iframe src="" frameborder="0" allow="autoplay; encrypted-media"
-            allowfullscreen></iframe>
- </div>
-   
-    <h1>Vector and Raster data</h1>
-  <h2>What is vector?</h2>
-        <p>Vector is a data structure, used to store spatial data. Vector data is arguably the most common kind of data find in the daily use of GIS. It describes geographic data in terms of points that may be connected into lines and polygons. Every object in a vector dataset is called a feature, and is associated with data that describes that feature.</p>
-        <p>A feature is anything you can see on the landscape. When standing on the top of a hill, looking down you can see houses, roads, trees, rivers, and so on. Each one of these things would be a feature when we represent them in a GIS Application. Vector features have attributes, which consist of text or numerical information that describe the features. </p>  
-    
-      <h3>Vector Data Concepts</h3>
-        <p>In GIS there are two common data models to represent reality which are vector data and raster data. There are three types of geometric vector data which are points, lines or polylines and polygons. </p> 
-      <img src="{%static 'img/vec_1.jpg'%}"   class= 'img-responsive'>
-      
-        <p>Figure 1: Illustration between real world, vector and raster features. (Source: Defense Mapping School National Imagery and Mapping Agency. </p>
-        <h4>Vector points features</h4>
-        <p>Points are zero-dimensional objects that contain only a single coordinate pair. Points are typically used to model singular, discrete features such as buildings, wells, power poles, sample locations, and so forth. Points have only the property of location. Other types of point features include the node and the vertex. Specifically, a point is a stand-alone feature, while a node is a topological junction representing a common X, Y coordinate pair between intersecting lines and/or polygons.</p>
-        <img src="{%static 'img/vec_2.jpg'%}"   class= 'img-responsive'>
-      
-        <p>Figure 2: Point geometry indicates the X,Y and Z position of the feature. </p>
-         <img src="{%static 'img/vec_3.jpg'%}"   class= 'img-responsive'>
-      
-        <p>Table 1: Vector point feature attribute table</p>
-        <p>As shown in illustration figure geometry point feature has an X, Y and optionally, Z value. The X and Y values will depend on the Coordinate Reference System being used. As shown on Table 1 is the illustration of point feature attribute Id has number: 1 and 2, Name: Tree (Green point) and Light (Red point) and Description: outside the house (green point) and light post along the road (red point). </p> 
-    <h4>Vector lines or polylines features</h4>
-        <p>Points can be spatially linked to form more complex features. Lines are one-dimensional features composed of multiple, explicitly connected points. Lines are used to represent linear features such as roads, streams, faults, boundaries, and so forth. Lines have the property of length. Lines that directly connect two nodes are sometimes referred to as chains, edges, segments, or arcs. </p>
-        <img src="{%static 'img/vec_4.jpg'%}"   class= 'img-responsive'>
-      
-        <p>Figure 3: Polyline geometry as a series of connected vertices that do not form an enclosed shape</p>
-        <img src="{%static 'img/vec_5.jpg'%}"   class= 'img-responsive'>
-      
-        <p>Table 2: Vector polyline feature attribute table</p>
-        <p>As shown in illustration figure geometry polyline feature has nodes connected with vertices. As shown on Table 2 is the
-        illustration of polyline feature attribute Id has number: 1 and 2, Name: Road 1 (Green points connected with vertices) and Road 2
-        (Red points connected with vertices) and Description:  from one street side to the other street side (Green points connected with
-        vertices) and from one town to the other town (Red points connected with vertices). </p>
-    <h4>Vector polygons features</h4>
-        <p>Polygons are two dimensional features created by multiple lines that loop back to create a closed feature. In the case of
-        polygons, the first coordinate pair (point) on the first line segment is the same as the last coordinate pair on the last line
-        segment. Polygons are used to represent features such as city boundaries, geologic formations, lakes, soil associations,
-        vegetation communities, and so forth. Polygons have the properties of area and boundary. Polygons are also called areas. </p>
-        <img src="{%static 'img/vec_6.jpg'%}"   class= 'img-responsive'>
-      
-        <p>Figure 4: Polygon geometry as a series of connected vertices that do not form an enclosed shape</p>
-        <img src="{%static 'img/vec_7.jpg'%}"   class= 'img-responsive'>
-      
-        <p>Table 2: Vector polygon feature attribute table</p>
-  <h2>Vector data structures</h2>
-        <p>Vector data models can be structured many different ways. The following are the two of the more common data structures. </p>
-      <h3>Spaghetti data model</h3>
-        <p>Dangermond, J. 1982. A Classification of Software Components Commonly Used in Geographic Information Systems.
-        In the spaghetti model, each point, line, and/or polygon feature is represented as a string of X, Y coordinate pairs
-        (or as a single X, Y coordinate pair in the case of a vector image with a single point) with no inherent structure.
-        One could envision each line in this model to be a single strand of spaghetti that is formed into complex shapes by
-        the addition of more and more strands of spaghetti. It is notable that in this model, any polygons that lie adjacent to
-        each other must be made up of their own lines, or stands of spaghetti. In other words, each polygon must be uniquely defined by
-        its own set of X, Y coordinate pairs, even if the adjacent polygons share the exact same boundary information. This creates some
-        redundancies within the data model and therefore reduces efficiency. </p>
-        <img src="{%static 'img/vec_27.jpg'%}"   class= 'img-responsive'>
-      
-        <p>Figure 5: Spaghetti Data Model (Source: saylordotorg.github.io) </p>
-      
-<h3>Topological data model</h3>
-        <p>Is characterized by the inclusion of topological information within the dataset, as the name implies.
-        Topology is a set of rules that model the relationships between neighboring points, lines, and polygons and determines
-        how they share geometry. </p> 
-        <p>Three basic topological principles that are necessary to understand the topological data model are as follows: </p>
-    <h4>Connectivity</h4>
-        <p>Describes the arc node topology for the feature dataset. As discussed previously, nodes are more than simple points.
-        In the topological data model, nodes are the intersection points where two or more arcs meet. In the case of arc node topology,
-        arcs have both a from node (i.e., starting node) indicating where the arc begins and a to node (i.e., ending node) indicating
-        where the arc ends. Between each node pair is a line segment, sometimes called a link, which has its own identification number
-        and references both its from node and to node. </p>
-        <img src="{%static 'img/vec_28.jpg'%}"   class= 'img-responsive'>
-      
-        <p>Figure 6: Arc Node Topology (Source: saylordotorg.github.io) </p>
-    <h4>Area definition</h4>
-        <p>Area definition states that an arc that connects to surround an area defines a polygon, also called polygon arc topology.
-        In the case of polygon arc topology, arcs are used to construct polygons, and each arc is stored only once. This results in a
-        reduction in the amount of data stored and ensures that adjacent polygon boundaries do not overlap. </p>
-        <img src="{%static 'img/vec_29.jpg'%}"   class= 'img-responsive'>
-  
-<p>Figure 7: Polygon Arc Topology (Source: desktop.arcgis.com) </p>
-    <h4>Contiguity</h4>
-        <p>Is based on the concept that polygons that share a boundary are deemed adjacent. Specifically, polygon topology requires that all
-        arcs in a polygon have a direction (a from node and a to node), which allows adjacency information to be determined. Polygons that
-        share an arc are deemed adjacent, or contiguous, and therefore the left and right side of each arc can be defined. This left and
-        right polygon information is stored explicitly within the attribute information of the topological data model. </p>
-        <img src="{%static 'img/vec_30.jpg'%}"   class= 'img-responsive'>
-      
-        <p>Figure 8: Polygon Topology (Source: tankonyvtar.hu) </p>
-    <h2>Topological common errors</h2>
-        <p>Topological information is important because it allows for efficient error detection within a vector dataset. In the case of
-        polygon
-        features, open or unclosed polygons, which occur when an arc does not completely loop back upon itself, and unlabeled polygons,
-        which occur
-        when an area does not contain any attribute information, violate polygon arc topology rules. Another topological error found with
-        polygon features
-        is the sliver. Slivers occur when the shared boundary of two polygons do not meet exactly. </p>
-      
-        <p>In the case of line features, topological errors occur when two lines do not meet perfectly at a node.
-        This error is called undershoot when the lines do not extend far enough to meet each other and an overshoot when the lines extends
-        beyond the features it should connect to. The result of overtshoots and undershoot is a dangling
-        node at the end of the line. Dangling nodes are not always an error, however, as they occur in the case of dead end streets on the map. </p>
-        
-        
-        
-        
-        
-        <img src="{%static 'img/vec_31.jpg'%}"   class= 'img-responsive'>
-      
-        <p>Figure 9: Topological common errors (Source: saylordotorg.github.io) </p>
-  
-<h2>Advantage and disadvantage of vector data</h2>
-      <h3>Advantages</h3>
-        <p>Vector data has the following advantages: </p>
-        <p>-It provides a more compact data structure than the raster model, so file sizes are typically much smaller than their raster counterparts. </p>
-        <p>-It provides efficiently encoding of topology and as result more efficiently implementation of operations that require topological information, such as network analysis. </p>
-        <p>-The vector model is better suited to supporting graphics that closely approximate Hand-drawn maps. </p>
-      <h3>Disadvantages</h3>
-        <p>Vector data has the following disadvantages: </p>
-        <p>-It is a more complex data structure than the simple raster data model. </p>
-        <p>-implementation of spatial analysis can also be relatively complicated due to minor differences in accuracy and precision between the input datasets. </p> 
-        <p>-The representation of high spatial variability is inefficient. </p>
-        <p>-Manipulation and enhancement of digital images cannot be effectively done in vector domain. </p>
-  
-  
-        
-<h2>Vector analysis</h2>
-      <p>Vector data can also be analyzed to reveal how different features interact with each other in space. There are many different analysis-related functions in GIS. The following are basic spatial analysis techniques for vector datasets: </p>
-      <h3>Buffering</h3>
-      <p>Is the process of creating an output polygon layer containing a zone (or zones) of a specified width around an input point, line, or polygon feature. Buffers are particularly suited for determining the area of influence around features of interest. Buffers are common vector analysis tools used to address questions of proximity in a GIS and can be used on points, lines, or polygons. </p>
-      <img src="{%static 'img/vec_8.jpg'%}"   class= 'img-responsive'>
-      
-      <p>Figure 10: Buffers around Red Point, Line, and Polygon Features (Source: saylordotorg.github.io) </p>
-      <h3>Geoprocessing operations</h3>
-      <p>Is a suite of tools provided by many geographic information system (GIS) software packages that allow the user to automate many of the mundane tasks associated with manipulating GIS data. Geoprocessing usually involves the input of one or more feature datasets, followed by a spatially explicit analysis, and resulting in an output feature dataset. </p>
-      <h4>Dissolve</h4>
-      <p>The dissolve operation combines adjacent polygon features in a single feature dataset based on a single predetermined attribute. The dissolve tool automatically combines all adjacent features with the same attribute values. The result is an output layer with the same extent as the original but without all of the unnecessary, intervening line segments. The dissolved output layer is much easier to visually interpret when the map is classified according to the dissolved field. </p>
-      <img src="{%static 'img/vec_9.jpg'%}"   class= 'img-responsive'>
-      
-      <p>Figure 11: Figure illustrate dissolve process as a Geoprocessing Function (Source: Desktop.arcgis.com) </p>
-      <h4>Append</h4>
-      <p>The append operation creates an output polygon layer by combining the spatial extent of two or more layers. For use with point, line, and polygon datasets, the output layer will be the same feature type as the input layers (which must each be the same feature type as well). Unlike the dissolve tool, append does not remove the boundary lines between appended layers (in the case of lines and polygons). Therefore, it is often useful to perform a dissolve after the use of the append tool to remove these potentially unnecessary dividing lines. Append is frequently used to mosaic data layers, such as digital US Geological Survey (USGS) 7.5-minute topographic maps, to create a single map for analysis and/or display. </p>
-      <img src="{%static 'img/vec_10.jpg'%}"   class= 'img-responsive'>
-      
-      <p>Figure 12: Figure illustrate append process as a Geoprocessing Function (Source: Desktop.arcgis.com) </p>
-      <h4>Select</h4>
-      <p>The select operation creates an output layer based on a user-defined query that selects particular features from the input layer. The output layer contains only those features that are selected during the query. </p>
-      <img src="{%static 'img/vec_11.jpg'%}"   class= 'img-responsive'>
-      
-     
-<p>Figure 13: Figure illustrate select process as a Geoprocessing Function (Source: saylordotorg.github.io) </p>
-      <h4>Merge</h4>
-      <p>The merge operation combines features within a point, line, or polygon layer into a single feature with identical attribute information. Often, the original features will have different values for a given attribute. In this case, the first attribute encountered is carried over into the attribute table, and the remaining attributes are lost. This operation is particularly useful when polygons are found to be unintentionally overlapping. Merge will conveniently combine these features into a single entity. </p>
-      <img src="{%static 'img/vec_12.jpg'%}"   class= 'img-responsive'>
-      
-      <p>Figure 14: Figure illustrate merge process as a Geoprocessing Function (Source: Desktop.arcgis.com) </p>
-      <h3>Overlay</h3>
-      <p>Among the most powerful and commonly used tools in a geographic information system (GIS) is the overlay of cartographic information. In a GIS, an overlay is the process of taking two or more different thematic maps of the same area and placing them on top of one another to form a new map. The overlay function combines not only the spatial features of the dataset but also the attribute information as well. </p>
-      <img src="{%static 'img/vec_13.jpg'%}"   class= 'img-responsive'>
-      <p>Figure 15: A Map Overlay Combining Information from Point, Line, and Polygon Vector Layers, as Well as Raster Layers. </p>
-      <p>Several basic overlay processes are available in a GIS for vector datasets: point-in-polygon, polygon-on-point, line-on-line, line-in-polygon, polygon-on-line, and polygon-on-polygon. As you may be able to divine from the names, one of the overlay dataset must always be a line or polygon layer, while the second may be point, line, or polygon. The new layer produced following the overlay operation is termed the output layer. </p>
-      <h4>Point in polygon overlay</h4>
-      <p>The operation requires a point input layer and a polygon overlay layer. Upon performing this operation, a new output point layer is returned that includes all the points that occur within the spatial extent of the overlay. All the points in the output layer contain their original attribute information as well as the attribute information from the overlay. </p>
-      <img src="{%static 'img/vec_14.jpg'%}"   class= 'img-responsive'>
-      <p>Figure 16: Point in polygon overlay (Source: polyu.edu.hk) </p>
-      <h4>Polygon on point overlay</h4>
-      <p>The operation is the opposite of the point-in-polygon operation. In this case, the polygon layer is the input, while the point layer is the overlay. The polygon features that overlay these points are selected and subsequently preserved in the output layer. </p>
-      <img src="{%static 'img/vec_15.jpg'%}"   class= 'img-responsive'>
-      <p>Figure 17: polygon on point overlay (Source: saylordotorg.github.io) </p>
-      
-     
-      <h4>Line on line overlay</h4>
-      <p>The operation requires line features for both the input and overlay layer. The output from this operation is a point or points located
-      
-      precisely at the intersection of the two linear datasets. For example, a linear feature dataset containing railroad tracks may be
-    
-     overlain on linear road network. The resulting point dataset contains all the locales of the railroad crossings over a towns road network.
-     The attribute table for this railroad crossing point dataset would contain information on both the railroad and the road over which it
-      passed. </p>
-     
-     
-     
-      <img src="{%static 'img/vec_16.jpg'%}"   class= 'img-responsive'>
-      <p>Figure 18: Line on line overlay (Source: saylordotorg.github.io) </p>
-      <h4>Line in polygon overlay</h4>
-      <p>The operation is similar to the point-in-polygon overlay, with that obvious exception that a line input layer is used instead of a point
-      input layer. In this case, each line that has any part of its extent within the overlay polygon layer will be included in the output line
-      layer, although these lines will be truncated at the boundary of the overlay. For example, a line in polygon overlay can take an input
-      layer of interstate line segments and a polygon overlay representing city boundaries and produce a linear output layer of highway segments
-      that fall within the city boundary. The attribute table for the output interstate line segment will contain information on the interstate
-      name as well as the city through which they pass. </p>
-      <img src="{%static 'img/vec_17.jpg'%}"   class= 'img-responsive'>
-      <p>Figure 19: Line in polygon overlay (Source: saylordotorg.github.io) </p>
-      <h4>Polygon on line overlay</h4>
-      
-     <p>The operation is the opposite of the line-in-polygon operation. In this case, the polygon layer is the input, while the line layer is the overlay. The polygon features that overlay these lines are selected and subsequently preserved in the output layer. For example, given a layer containing the path of a series of telephone poles/wires and a polygon map contain city parcels, a polygon-on-line overlay operation would allow a land assessor to select those parcels containing overhead telephone wires. </p>
-      <img src="{%static 'img/vec_18.jpg'%}"   class= 'img-responsive'>
-      <p>Figure 20: Polygon on line overlay (Source: polyu.edu.hk) </p>
-      <h4>Polygon in polygon overlay</h4>
-      <p>The operation employs a polygon input and a polygon overlay. This is the most commonly used overlay operation. Using this method, the
-      polygon input and overlay layers are combined to create an output polygon layer with the extent of the overlay. The attribute table will
-      contain spatial data and attribute information from both the input and overlay layers. </p>
-      <img src="{%static 'img/vec_19.jpg'%}"   class= 'img-responsive'>
-      <p>Figure 21: Polygon in polygon overlay</p>
-      <p>The overlay operations discussed previously assume that the user desires the overlain layers to be combined. This is not always the case.
-      Overlay methods can be more complex than that and therefore employ the basic Boolean operators: AND, OR, and XOR.
-      Depending on which operator(s) are utilized, the overlay method employed will result in an intersection, union, symmetrical difference, or
-      identity. </p>
-      <h4>Union overlay method</h4>
-      <p>The union overlay method employs the OR operator. A union can be used only in the case of two polygon input layers. It preserves all
-      features, attribute information, and spatial extents from both input layers. This overlay method is based on the polygon-in-polygon
-      operation described in buffering. </p>
-      <img src="{%static 'img/vec_20.jpg'%}"   class= 'img-responsive'>
-      <p>Figure 22: Illustration of union overlay method (Source: pro.arcgis.com) </p>
-      <h4>Intersection overlay method</h4>
-      <p>The intersection overlay method employs the AND operator. An intersection requires a polygon overlay, but can accept a point, line,
-      or polygon input. The output layer covers the spatial extent of the overlay and contains features and attributes from both the input and
-      overlay. </p>
-      <img src="{%static 'img/vec_21.jpg'%}"   class= 'img-responsive'>
-      <p>Figure 23: Illustration of intersection overlay method (Source: pro.arcgis.com) </p>
-      <h4>Symmetrical difference overlay method</h4>
-      <p>The symmetrical difference overlay method employs the XOR operator, which results in the opposite output as an intersection.
-      This method requires both input layers to be polygons. The output polygon layer produced by the symmetrical difference method represents
-      those areas common to only one of the feature datasets. </p>
-      <img src="{%static 'img/vec_22.jpg'%}"   class= 'img-responsive'>
-      <p>Figure 24: Illustration of symmetrical difference overlay method (Source: pro.arcgis.com) </p>
-      <h4>Clip overlay method</h4>
-      <p>Is a geoprocessing operation is used to extract those features from an input point, line, or polygon layer that falls within the
-      spatial extent of the clip layer. Following the clip, all attributes from the preserved portion of the input layer are included in the
-      output. If any features are selected during this process, only those selected features within the clip boundary will be included in the
-      output. </p>
-      <img src="{%static 'img/vec_23.jpg'%}"   class= 'img-responsive'>
-      <p>Figure 25: Illustration of clip overlay method (Source: pro.arcgis.com) </p>
-      <h4>Erase overlay method</h4>
-      <p>Is a geoprocessing operation is essentially the opposite of a clip. Whereas the clip tool preserves areas within an input layer,
-      the erase tool preserves only those areas outside the extent of the analogous erase layer. While the input layer can be a point, line,
-      or polygon dataset, the erase layer must be a polygon dataset. </p> 
-      <img src="{%static 'img/vec_24.jpg'%}"   class= 'img-responsive'>
-      <p>Figure 26: Illustration of erase overlay method (Source: pro.arcgis.com) </p>
-      <h4>Split overlay method</h4>
-      <p>Is a geoprocessing operation is used to divide an input layer into two or more layers based on a split layer. The split layer must be a
-      polygon, while the input layers can be point, line, or polygon. </p>
-      <img src="{%static 'img/vec_25.jpg'%}"   class= 'img-responsive'>
-      <p>Figure 27: Illustration of split overlay method (Source: pro.arcgis.com) </p>
-      <h3>Spatial join</h3>
-      <p>A spatial join is a hybrid between an attribute operation and a vector overlay operation. A spatial join results in the combination of
-      two feature dataset tables by a common attribute field. Unlike the attribute operation, a spatial join determines which fields from a source
-      layers attribute table are appended to the destination layers attribute table based on the relative locations of selected features. </p>
-      <img src="{%static 'img/vec_26.jpg'%}"   class= 'img-responsive'>
-      <p>Figure 28: illustration of spatial join geoprocessing operation (Source: gis.stackexchange.com) </p>
-           
-        
-         
-        
+           <hr>
+            
+            <br><br>
 
 
 
 
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<script>
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
-
-
-</script>
-     
-</body>
-</html> 
+   {% endblock %}

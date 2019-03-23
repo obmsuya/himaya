@@ -80,6 +80,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -103,17 +104,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # }
 
 
-
-
-
-
-
 #local/mysql(og)
 
 # DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.mysql',
-#        'NAME':'oamsuy06',
+#        'NAME':'obmsuya',
 #        'USER': 'gis4life',
 #        'PASSWORD': 'Savioury9',
 #        'OPTIONS': {
@@ -242,18 +238,18 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 
-AWS_ACCESS_KEY_ID = 'AKIAIGCRUOY6E5QWAXDQ'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'www.obgmycompany.com'
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# AWS_ACCESS_KEY_ID = 'AKIAIGCRUOY6E5QWAXDQ'
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_STORAGE_BUCKET_NAME = 'www.obgmycompany.com'
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL = None
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-AWS_S3_REGION_NAME = 'eu-west-2'
-AWS_S3_SIGNATURE_VERSION = "s3v4"
-AWS_S3_FILE_OVERWRITE = True
-AWS_FILE_EXPIRE = 200
+# AWS_S3_REGION_NAME = 'eu-west-2'
+# AWS_S3_SIGNATURE_VERSION = "s3v4"
+# AWS_S3_FILE_OVERWRITE = True
+# AWS_FILE_EXPIRE = 200
 
 
 

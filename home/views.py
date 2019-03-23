@@ -95,6 +95,10 @@ def category(request, category_id):
     }
     return render(request, 'home/category.html', context)
 
+
+
+
+
 #This view is for class registration- 
 def register(request):
         form = ClassRegistration(request.POST or None)

@@ -36,59 +36,135 @@
                      <div class="container">
                                         
                                 <div class="row">
-                                    <div class="col-md-7">
+                                  <!-- moja -->
+                        <div class="col-md-7">
                                         
                                     <h3>Cover</h3>
                                      <div class="line-sep"></div>
                                         {% if item.image%}
                                                 <img src='{{item.image.url}}' class= 'img-responsive'/>
-                                                <!--<img src="{%static 'img/hasira2.jpg'%}" class="image-responsive" alt=""'>-->
+                                                
                                         {%endif%}
                                       <br><br>
                                     <h3>Kitabu kwa ufupi</h3>
                                      <div class="line-sep"></div>
                                         <p>{{item.description|linebreaks}}</p>
                                     </div><br>
-                                   
+                                  <!-- moja -->
+                                  
                                     <div class="col-md-5">
-                                      <!--    <h3>Bei Tsh {{item.price}} </h3>  -->
-                                             <div class="card right-in">
-                                                 <div class="card-icon">
-                                                <br><br>
-                                                    <ul class="tutor-icons">
-                                                   
-                                                    <br><br> 
+                                           
+                                                     
                                                      {%if item.subtitle %}
-                                                        <h4><a class="btn btn-follow btn-lg "href="{{item.subtitle}}"> Soma bure.</a></h4></li>
-                                                        <h4><a class="btn btn-success btn-lg "href="{% url 'home:donate' item_id=item.id %}"> Donate.</a></h4></li>
 
-                                                <div class="text-center">               
+
+                                    <h3>Msikilize Muandishi</h3>
+                                    <div class="line-sep"></div>
+                                      <div class="embed-responsive embed-responsive-16by9">                                            
+                                        <video class ="video-hoder" controls>
+
+                                              <source src="{{item.videofile.url}}"> 
+
+                                        </video>
+                                          
+                                        </div>
+<br><br>
+
+
+                                            <div class="card right-in">
+                                                 <div class="card-icon">
+                                                        <br>
+                                                    <ul class="tutor-icons">
+                                                        <h4><a class="btn btn-follow btn-lg "href="{{item.subtitle}}"> Soma bure.</a></h4>
+                                                        
+                                                        <h4><a class="btn btn-success btn-lg "href="{% url 'home:donate' item_id=item.id %}"> Donate.</a></h4>
+
+                                                        <!-- mbili -->
+                                                      </ul>
+                                                      <br>
+                                                   <hr>
+
+                                                   
+
+                                                  </div>
+                                                  
+
+                                              </div>
+
+
+                                            
+
                                                     {%else%}
 
 
-                                                  <h4>Bei: Tsh {{item.price}} </h4>
-                                                    </div>
+
+
+ <div class="col-md-14">
+  <hr>
+
+<h3>Msikilize Muandishi</h3>
+<div class="line-sep"></div>
+<div class="embed-responsive embed-responsive-16by9">                                            
+<video class ="video-hoder" controls>
+
+<source src="{{item.videofile.url}}"> 
+
+</video>
+
+</div>
+<br><br>
+
+</div>
+
+<!-- 
+                                   <div class="text-center">
+
+                                                 
+                                    </div>
+ -->
+                                 
+                                  <div class="card right-in">
+                                    <br>
+                                <h4>Bei: Tsh {{item.price}} </h4>
+
+                                        <div class="card-icon">
+                                                <br>
                                             <div class="text-center">
-                                              <h4><a class="btn btn-follow btn-lg "href="{% url 'home:book' item_id=item.id %}"> Nataka kununua.</a></h4></li>
-                                                  </div>
-                                     {%endif%}
-                                                  </ul>
-                                                    <br>
-                                                    
-                                                  <br>
-                                                   <hr>
+                                                  <ul class="tutor-icons">
                                                   
-                                            </div>
+                                                    <h4><a class="btn btn-follow btn-lg "href="{% url 'home:book' item_id=item.id %}"> Nataka kununua.</a></h4>
+                                                  
+                                    
+                                                  </ul>
+
+                                              </div> 
+                                         
                                         </div>
-                                    </div>      
+
+
+                                    </div>
+                                  </div>
+                                  <br>
+
+               
+                                        
+        </div>
+
+              {%endif%} 
+                                
+
+
+
                                 {% else %}
                                                 <p>Invalid Item ID.</p>
                                 {% endif %}
-                                                                
-                              </div>
-                    </div>
-                 
-        </section>
+                                       
+
+</div>
+                  
+</section>
+
+  <section>            
                 
       <br>
                 
@@ -109,12 +185,11 @@
                   <div class="tutor-image">
                     {% if item.image%}
                     <img src='{{item.image_author.url}}' />
-                                                                                 {%endif%}
+                    {%endif%}
                   </div>
 
                   
-                                                                        
-                                                                        <div class="text-center">
+                                                                         <div class="text-center">
                     <h4>
                       {{item.author}}
                     </h4>
@@ -126,10 +201,8 @@
                       
                 </div>
               </div>
-                                                        
-                                                        <!--<div class="col-md-6">-->
-                                                           
-                  
+        
+           
 
                   <div class="text-left">
                     <p>
@@ -142,12 +215,16 @@
                   </div>
 
                   
+
+
+
+
               </div>
 
 
         </section>
         
-      </div>
+      
            <hr>
             
             <br><br>
