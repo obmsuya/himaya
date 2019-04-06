@@ -37,10 +37,8 @@ urlpatterns = [
     url(r'^bitcoin/$', views.bitcoin, name = "bitcoin"),
     url(r'^matangazo/$', views.matangazo, name = "matangazo"),
     url(r'^mahesabu/$', views.mahesabu, name = "mahesabu"),
+    url(r'^english/$', views.english, name = "english"),
     
-
-
-
 
     url(r'^register/$', views.register, name = "register"),
     url(r'^class/$', views.classes_home, name = "class"),

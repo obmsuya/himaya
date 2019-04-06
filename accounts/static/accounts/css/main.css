@@ -31,6 +31,9 @@ body.has-overlap{
 
 ::-webkit-scrollbar {
     width: 10px;
+
+
+
 }
 ::-webkit-scrollbar-track {
 	border-radius: 10px;
@@ -796,7 +799,7 @@ hr.white{
 	padding-left: 120px;
 }
 .topic-title{
-	padding: 30px 0px;
+	padding: 10px 0px;
 	font-weight: 700;
 	font-size: 2rem;
 	text-align: center; 
@@ -955,7 +958,7 @@ table {
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 4px;
 }
 
 tr:nth-child(even) {

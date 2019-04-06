@@ -157,7 +157,9 @@ def matangazo(request):
     return render (request, "home/matangazo.html", {})
 def mahesabu(request):
     return render (request, "home/matangazo.html", {})
-
+@login_required
+def english(request):
+    return render (request, "home/english_intro.html", {})
 
 
 
