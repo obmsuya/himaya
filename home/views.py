@@ -145,7 +145,7 @@ def hasira(request):
     return render (request, "home/hasira.html", {})
 def gis(request):
     return render (request, "home/gis.html", {})
-@login_required
+
 def gispay(request):
     return render (request, "home/gispay.html", {})
 def makala(request):
@@ -157,7 +157,7 @@ def matangazo(request):
     return render (request, "home/matangazo.html", {})
 def mahesabu(request):
     return render (request, "home/matangazo.html", {})
-@login_required
+# @login_required
 def english(request):
     return render (request, "home/english_intro.html", {})
 

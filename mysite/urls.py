@@ -20,13 +20,19 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-#from django.views.static import serve
+from django.contrib.sitemaps.views import sitemap
+from home.sitemaps import StaticViewSitemap, ItemSitemap
+
+sitemaps = {
+    'static': StaticViewSitemap,
+    'snippet': ItemSitemap
+}
 
 
 
 urlpatterns = [
     url(r'^$', views.login_redirect, name='login_redirect'),
-    
+    url(r'^sitemap\.xml/$', sitemap, {'sitemaps':sitemaps}),
     url(r'^admin/', admin.site.urls),
     url(r'^account/', include ('accounts.urls',namespace='accounts')),
     url(r'^home/', include ('home.urls', namespace='home')),
