@@ -6,6 +6,7 @@ from django.utils import timezone
 # Create your models here.
 class Post(models.Model):
     post = models.CharField(max_length=200)
+    book = models.CharField (max_length=120, default='', blank=True)
     user = models.ForeignKey(User)
     image = models.ImageField(null=True, blank=True,
             width_field="width_field",

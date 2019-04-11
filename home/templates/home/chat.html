@@ -16,7 +16,7 @@
 			<div class="page-conten container mt-50">
                             <p>Hi {{ user.first_name }}!</p>
      <div class="line-sep"></div>
-		<div class="intro mb-8"><span>LIPA KUPATA HUDUMA</span></div>
+		<div class="intro mb-8"><span>LIPA KUONA KITABU</span></div>
               <hr><hr>
 				<div class="row">
 					<div class="col-md-7">
@@ -25,16 +25,16 @@
                                                    {% for post in posts%}                  
                                                       {%if post.user in friends%}
                                                                    
-                                                                 <h2>VITABU</<h2>
-                                                                     <div class="line-sep"></div>
-                                                                  <p>Soma: <a href="{{post.post}}">Mbinu ya kudhubiti Hasira</a></p>
+                                                                 
+                                                                     
+                                                                  <h3>Soma: <a href="{{post.post}}">{{post.book}}</a></h3>
                                                                  
                                                                  <br>
                                                                  
                                                                  
                                                                  {%endif%}
                                                                  
-                                                              {%endfor%}
+                                                    {%endfor%}
                                                               
                                                               
                                         </div>
