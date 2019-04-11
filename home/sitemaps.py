@@ -1,21 +1,23 @@
 
+
 from django.contrib.sitemaps import Sitemap
 from django.shortcuts import reverse
 from .models import Item
 
 
-class StaticViewSitemap(Sitemap):
+class ViewSitemap(Sitemap):
 
-	def item(self):
-		return ['gispay',]
+	def items(self):
+		return ['gispay','hasira']
 
 	def location(self, item):
-		return reverse(item)
+		return (item)
 
 class ItemSitemap(Sitemap):
+	changefreq="daily"
+	priority = 1.0
 
-	def item(self):
+	def items(self):
 		return Item.objects.all()
 
-	def get_absolute_url(self):
-		return {self.item_id}
+	

@@ -64,6 +64,8 @@ class Item(models.Model):
     
     def __str__(self):
         return self.name + ": " + str(self.videofile)
+    def get_absolute_url(self):
+        return "/item/%i/" % self.pk
   
 
 
