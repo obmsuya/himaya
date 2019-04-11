@@ -8,7 +8,7 @@ from .models import Item
 class ViewSitemap(Sitemap):
 
 	def items(self):
-		return ['gispay','hasira']
+		return ['/gispay','/hasira']
 
 	def location(self, item):
 		return (item)

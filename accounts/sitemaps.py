@@ -8,7 +8,7 @@ from django.shortcuts import reverse
 class StaticViewSitemap(Sitemap):
 
 	def items(self):
-		return ['logout','profile']
+		return ['/logout','/profile']
 
 	def location(self, item):
 		return (item)
