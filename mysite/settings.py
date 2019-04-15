@@ -106,25 +106,25 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 #local/mysql(og)
 
-DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.mysql',
-       'NAME':'obmsuya',
-       'USER': 'gis4life',
-       'PASSWORD': 'Savioury9',
-       'OPTIONS': {
-           'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-           #Tell mysql to connect with 'utf8mb4' character set
-           'charset':'utf8mb4',
-           },
-       #Tell django to build the test database with 'utf8mb4'character set
-       'TEST': {
-           'CHARSET': 'utf8mb4',
-           'COLLATION': 'utf8mb4_unicode_ci',
-       },
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME':'obmsuya',
+#        'USER': 'gis4life',
+#        'PASSWORD': 'Savioury9',
+#        'OPTIONS': {
+#            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#            #Tell mysql to connect with 'utf8mb4' character set
+#            'charset':'utf8mb4',
+#            },
+#        #Tell django to build the test database with 'utf8mb4'character set
+#        'TEST': {
+#            'CHARSET': 'utf8mb4',
+#            'COLLATION': 'utf8mb4_unicode_ci',
+#        },
        
-   }
-}
+#    }
+# }
 
 
 
