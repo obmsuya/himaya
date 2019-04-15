@@ -46,7 +46,7 @@
                                                 
                                         {%endif%}
                                       <br><br>
-                                    <h3>Kitabu kwa ufupi</h3>
+                                    <h3>Book Description</h3>
                                      <div class="line-sep"></div>
                                         <p>{{item.description|linebreaks}}</p>
                                     </div><br>
@@ -58,7 +58,7 @@
                                                      {%if item.subtitle %}
 
 
-                                    <h3>Msikilize Muandishi</h3>
+                                    <h3>Listen the Author</h3>
                                     <div class="line-sep"></div>
                                       <div class="embed-responsive embed-responsive-16by9">                                            
                                         <video class ="video-hoder" controls>
@@ -75,7 +75,7 @@
                                                  <div class="card-icon">
                                                         <br>
                                                     <ul class="tutor-icons">
-                                                        <h4><a class="btn btn-follow btn-lg "href="{{item.subtitle}}"> Soma bure.</a></h4>
+                                                        <h4><a class="btn btn-follow btn-lg "href="{{item.subtitle}}"> Read for free</a></h4>
                                                         
                                                         <h4><a class="btn btn-success btn-lg "href="{% url 'home:donate' item_id=item.id %}"> Donate.</a></h4>
 
@@ -102,7 +102,7 @@
  <div class="col-md-14">
   <hr>
 
-<h3>Msikilize Muandishi</h3>
+<h3>Listen the Author</h3>
 <div class="line-sep"></div>
 <div class="embed-responsive embed-responsive-16by9">                                            
 <video class ="video-hoder" controls>
@@ -116,30 +116,33 @@
 
 </div>
 
-<!-- 
-                                   <div class="text-center">
 
-                                                 
-                                    </div>
- -->
                                  
                                   <div class="card right-in">
                                     <br>
-                                <h4>Bei: Tsh {{item.price}} </h4>
+
+
+
+
+
+                                <h4>Price: Tsh {{item.price}} </h4>
 
                                         <div class="card-icon">
                                                 <br>
                                             <div class="text-center">
                                                   <ul class="tutor-icons">
                                                   
-                                                    <h4><a class="btn btn-follow btn-lg "href="{% url 'home:book' item_id=item.id %}"> Nataka kununua.</a></h4>
+                                                    <h4><a class="btn btn-follow btn-lg "href="{% url 'home:book' item_id=item.id %}"> BUY NOW.</a></h4>
                                                   
                                     
                                                   </ul>
 
                                               </div> 
-                                         
                                         </div>
+
+
+
+
 
 
                                     </div>
@@ -177,7 +180,7 @@
                  <div class="col-md-12">
             
                                                 <div class="row">
-                                                    <h1>Kuhusu Muandishi</h1>
+                                                    <h1>About the Author</h1>
               <!--<div class="col-md-5">-->
                                                             
                 <div class="tutor">

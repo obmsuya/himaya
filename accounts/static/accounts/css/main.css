@@ -1032,3 +1032,31 @@ spanb {
 }
 
 
+.sticky {
+  position: fixed;
+  bottom: 0;
+  /*width: 100%;*/
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#navbar {
+  overflow: hidden;
+  
+}
+
+#navbar a {
+  float: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
