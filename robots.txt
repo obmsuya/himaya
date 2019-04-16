@@ -1,0 +1,4 @@
+user-agent Googlebot
+Disallow:
+
+sitemap:https://www.vitabutanzania.com/sitemap.xml
