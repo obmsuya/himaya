@@ -1060,3 +1060,7 @@ spanb {
   font-size: 17px;
 }
 
+video {
+  width: 100%;
+  height: auto;
+}

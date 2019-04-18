@@ -15,89 +15,103 @@
 
    {% block body %}
 
-
- <a href="{% url 'home:index' %}">&lt; Back to the list</a>
-               
+ 
+    
       
          
-                      <div class="container">
-                            <small><span class="caps">Book</span></small>
-                            <div class="line-sep"></div>
-                              
-                                {% if item != None %}   
-                                    
-                                <div class="section-title">
-                                <h2>{{item.name}}</h2>
+   <div class="container">
+    <br>
+<a href="{% url 'home:index' %}">&lt; Back to the list</a>
+      <br> <br>    
 
-                              </div>
+
+     <div class="text-center">                        
+       {% if item != None %}   
+                                    
+     <div class="section-title">
+        <h1>{{item.name}}</h1>
+
+       </div>
+     </div>
                                     <hr>
                       </div>
                      
                
                 
-      <section class="section grey-scale">
-                     <div class="container">
-                                        
-                                <div class="row">
-                                  <!-- moja -->
-                        <div class="col-md-7">
-                                        
-                                    <h3>Cover</h3>
-                                     <div class="line-sep"></div>
-                                        {% if item.image%}
-                                                <img src='{{item.image.url}}' class= 'img-responsive'/>
-                                                
-                                        {%endif%}
-                                      <br><br>
-                                    <h3>Book Description</h3>
-                                     <div class="line-sep"></div>
-                                        <p>{{item.description|linebreaks}}</p>
-                                    </div><br>
+<section class="section grey-scale">
+   <div class="container">
+       <div class="row">
+            <div class="col-md-5">
+<hr>
+
+<h3>Video</h3>
+  
+  
+
+<video width="400" controls>
+  <source src="{{item.videofile.url}}"> 
+  Your browser does not support HTML5 video.
+</video>
+
+
+
+
+              
+        <br><br>
+
+ <h3>Book Description</h3>
+ <div class="line-sep"></div>
+<p>{{item.description|linebreaks}}</p>
+   </div><br>
                                   <!-- moja -->
                                   
-                                    <div class="col-md-5">
+ <div class="col-md-5">
                                            
                                                      
-                                                     {%if item.subtitle %}
+      {%if item.subtitle %}
 
 
-                                    <h3>Listen the Author</h3>
-                                    <div class="line-sep"></div>
-                                      <div class="embed-responsive embed-responsive-16by9">                                            
-                                        <video class ="video-hoder" controls>
 
-                                              <source src="{{item.videofile.url}}"> 
 
-                                        </video>
-                                          
-                                        </div>
+<h3>Book Cover</h3><div class="line-sep"></div>
+  
+  {% if item.image%}
+ <img src='{{item.image.url}}' class= 'img-responsive'/>                                         
+       {%endif%}
+
+
+      
+
+
+
+
+
+
+
+
 <br><br>
 
 
-                                            <div class="card right-in">
-                                                 <div class="card-icon">
-                                                        <br>
-                                                    <ul class="tutor-icons">
-                                                        <h4><a class="btn btn-follow btn-lg "href="{{item.subtitle}}"> Read for free</a></h4>
+        <div class="card right-in">
+        <div class="card-icon">
+                        <br>
+<u<h4><a class="btn btn-follow btn-lg "href="{{item.subtitle}}"> Read for free</a></h4>
                                                         
-                                                        <h4><a class="btn btn-success btn-lg "href="{% url 'home:donate' item_id=item.id %}"> Donate.</a></h4>
+ <h4><a class="btn btn-success btn-lg "href="{% url 'home:donate' item_id=item.id %}"> Donate.</a></h4>
 
-                                                        <!-- mbili -->
-                                                      </ul>
-                                                      <br>
-                                                   <hr>
+                                                        
+    </ul>
+    <br>
+   <hr>
 
                                                    
-
-                                                  </div>
+ </div>
                                                   
-
-                                              </div>
+</div>
 
 
                                             
-
-                                                    {%else%}
+ {%else%}
 
 
 
@@ -105,51 +119,44 @@
  <div class="col-md-14">
   <hr>
 
-<h3>Listen to the Author</h3>
-<div class="line-sep"></div>
-<div class="embed-responsive embed-responsive-16by9">                                            
-<video class ="video-hoder" controls>
-
-<source src="{{item.videofile.url}}"> 
-
-</video>
-
-</div>
+<h3>Book Cover</h3><div class="line-sep"></div>
+  
+  {% if item.image%}
+ <img src='{{item.image.url}}' class= 'img-responsive'/>                                         
+       {%endif%}
 <br><br>
 
 </div>
 
 
                                  
-                                  <div class="card right-in">
+<div class="card right-in">
                                     <br>
 
 
 
 
 
-                                <h4>Price: Tsh {{item.price}} </h4>
+ <h4>Price: Tsh {{item.price}} </h4>
 
-                                        <div class="card-icon">
+   <div class="card-icon">
                                                 <br>
-                                            <div class="text-center">
-                                                  <ul class="tutor-icons">
+ <div class="text-center">
+<ul class="tutor-icons">
                                                   
-                                                    <h4><a class="btn btn-follow btn-lg "href="{% url 'home:book' item_id=item.id %}"> BUY NOW.</a></h4>
+   <h4><a class="btn btn-follow btn-lg "href="{% url 'home:book' item_id=item.id %}"> BUY NOW.</a></h4>
                                                   
                                     
-                                                  </ul>
-
-                                              </div> 
-                                        </div>
-
+ </ul>
+   </div> 
+</div>
 
 
 
 
 
-                                    </div>
-                                  </div>
+</div>
+  </div>
                                   <br>
 
                
@@ -162,7 +169,7 @@
 
 
                                 {% else %}
-                                                <p>Invalid Item ID.</p>
+       <p>Invalid Item ID.</p>
                                 {% endif %}
                                        
 
@@ -182,22 +189,22 @@
                 
                  <div class="col-md-12">
             
-                                                <div class="row">
-                                                    <h1>About the Author</h1>
+   <div class="row">
+<h1>About the Author</h1>
               
                                                             
-                <div class="tutor">
+    <div class="tutor">
                                                                     
-                  <div class="tutor-image">
-                    {% if item.image%}
-                    <img src='{{item.image_author.url}}' />
+    <div class="tutor-image">
+{% if item.image%}
+   <img src='{{item.image_author.url}}' />
                     {%endif%}
-                  </div>
+    </div>
 
                   
-                                                                         <div class="text-center">
-                    <h4>
-                      {{item.author}}
+   <div class="text-center">
+       <h4>
+   {{item.author}}
                     </h4>
                     
                                                                                 <hr>
