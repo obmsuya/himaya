@@ -38,6 +38,7 @@ urlpatterns = [
     url(r'^matangazo/$', views.matangazo, name = "matangazo"),
     url(r'^mahesabu/$', views.mahesabu, name = "mahesabu"),
     url(r'^english/$', views.english, name = "english"),
+    url(r'^lulu_book/$', views.lulu_book, name = "lulu_book"),
     
 
     url(r'^register/$', views.register, name = "register"),

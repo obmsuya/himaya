@@ -157,11 +157,12 @@ def matangazo(request):
     return render (request, "home/matangazo.html", {})
 def mahesabu(request):
     return render (request, "home/matangazo.html", {})
-# @login_required
+@login_required
 def english(request):
     return render (request, "home/english_intro.html", {})
-
-
+@login_required
+def lulu_book(request):
+    return render (request, "home/lulu_book.html", {})
 
 
 
