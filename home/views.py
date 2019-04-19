@@ -164,7 +164,8 @@ def english(request):
 def lulu_book(request):
     return render (request, "home/lulu_book.html", {})
 
-
+def gis_project(request):
+    return render (request, "home/gis_project.html", {})
 
 
 
