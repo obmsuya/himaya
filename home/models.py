@@ -5,14 +5,11 @@ from django.utils import timezone
 
 # Create your models here.
 class Post(models.Model):
+
     post = models.CharField(max_length=200)
-    book = models.CharField (max_length=120, default='', blank=True)
+    bookname = models.CharField (max_length=220, default='', blank=True)
+    booklink = models.CharField (max_length=220, default='', blank=True)
     user = models.ForeignKey(User)
-    image = models.ImageField(null=True, blank=True,
-            width_field="width_field",
-            height_field="height_field")
-    height_field = models.IntegerField(default=0)
-    width_field = models.IntegerField(default=0)
     created = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated = models.DateTimeField(auto_now=True)
     
@@ -75,7 +72,6 @@ class Item(models.Model):
 
 class Friend(models.Model):
     users = models.ManyToManyField(User)
-    post = models.CharField(max_length=200, default= "")
     current_user = models.ForeignKey(User, related_name='owner', null=True, on_delete=models.CASCADE)
     
     
@@ -88,12 +84,12 @@ class Friend(models.Model):
         friend.users.add(new_friend)
     
     
-    @classmethod
-    def lose_friend(cls, current_user, new_friend):
-        friend, created = cls.objects.get_or_create(
-            current_user=current_user
-        )
-        friend.users.remove(new_friend)
+    # @classmethod
+    # def lose_friend(cls, current_user, new_friend):
+    #     friend, created = cls.objects.get_or_create(
+    #         current_user=current_user
+    #     )
+    #     friend.users.remove(new_friend)
     
 
      

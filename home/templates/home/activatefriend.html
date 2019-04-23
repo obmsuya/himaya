@@ -1,0 +1,98 @@
+
+
+
+{% extends 'base2.html' %}
+
+{% load staticfiles %}
+<br><br>
+
+   {% block body %}
+     <br><br>
+      
+      
+      
+      
+       <main class="page-wrapper">
+		
+			<div class= "container">
+				
+
+					
+                                        
+           
+                <div class="text-center">
+                <h1>ACTIVATE NEW USER</h1> 
+                                                  
+                  </div>   
+        
+                                                 
+						 <hr>	    
+		
+                                       
+                                       <br>
+                   <div class="text-center">                     
+             <p><span>CUSTOMER BOUGHT A BOOK FROM THIS SITE BEFORE?</span></p>
+											</div>
+											<hr>
+				<div class="row">
+							
+
+								
+<div class="col-md-5">
+
+								<div class="alert alert-danger">
+<button class="collapsible">NO</button>
+
+<div class="content">
+<br>
+									<div class="form">
+                                                                        
+		<form method="POST" action ='' enctype='multipart/form-data'>
+                               {% csrf_token%}
+                               {{form.as_p}}
+                             <button type="submit" class="btn btn-follow block btn-login">
+							submit </button>
+                      </form>                                                    
+					</div>
+							</div>
+						
+					</div>
+	
+</div>
+
+
+
+<div class="col-md-5">
+<div class="alert alert-danger">
+
+<h2 class="collapsible" ><span><a href="{% url 'home:chat'%}" style="color:#fff;text-decoration:none;">YES</a></span></h2> 
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+	</main>
+
+
+
+	<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+   {% endblock %}

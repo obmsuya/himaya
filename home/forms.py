@@ -1,7 +1,7 @@
 from django import forms
 from home.models import Post
 from home.models import Post4
-from home.models import Downliner
+from home.models import Downliner, Friend
 
 
 
@@ -10,14 +10,18 @@ class HomeForm(forms.ModelForm):
     post= forms.CharField(widget=forms.TextInput(
         attrs={
             'class':'form-control',
-            'placeholder': 'write a post....'
+            'placeholder': 'Put book link....'
         }
     ))
     class Meta:
         model = Post
-        fields=('post',)
+        fields=('user','post', 'bookname')
         
-        
+class FriendForm(forms.ModelForm):
+    
+    class Meta:
+        model = Friend
+        fields=('users', 'current_user')        
         
         
 class ClassRegistration(forms.ModelForm):

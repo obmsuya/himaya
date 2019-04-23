@@ -7,7 +7,7 @@ from django.shortcuts import render, get_object_or_404
 from django.template import loader
 
 
-from home.forms import HomeForm, ClassRegistration, PostForm2, Images
+from home.forms import HomeForm, ClassRegistration, PostForm2, Images, FriendForm
 from home.models import Post,Item, Category,Post4, Downliner, Friend, Paymentdetail
 from django.contrib.auth.decorators import login_required
 
@@ -44,6 +44,31 @@ class HomeView(TemplateView):
             
         args = {'form': form, 'text':text}
         return render(request, self.template_name, args)
+
+
+def activate(request):
+        form = HomeForm(request.POST or None, request.FILES or None)
+        if form.is_valid():
+            create = form.save()
+            create.save
+            
+            return redirect('home:activatefriend')
+            
+        args = {'form': form}
+        return render(request, 'home/activate.html', args)
+
+def activatefriend(request):
+        form = FriendForm(request.POST or None, request.FILES or None)
+        if form.is_valid():
+            create = form.save()
+            create.save
+            
+            return redirect('home:chat')
+            
+        args = {'form': form}
+        return render(request, 'home/activatefriend.html', args)
+
+
 
 def home(request):
     context = {
