@@ -83,7 +83,8 @@ class Friend(models.Model):
         )
         friend.users.add(new_friend)
     
-    
+    def __str__(self):
+        return self.current_user
     # @classmethod
     # def lose_friend(cls, current_user, new_friend):
     #     friend, created = cls.objects.get_or_create(
