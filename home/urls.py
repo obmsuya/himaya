@@ -34,6 +34,7 @@ urlpatterns = [
 
     url(r'^hasira/$', views.hasira, name = "hasira"),
     url(r'^gis/$', views.gis, name = "gis"),
+    url(r'^myrefference/$', views.myrefference, name = "myrefference"),
 
     url(r'^gispay/$', views.gispay, name = "gispay"),
     url(r'^bitcoin/$', views.bitcoin, name = "bitcoin"),

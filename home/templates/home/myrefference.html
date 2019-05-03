@@ -1,0 +1,312 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% load staticfiles %}
+
+
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  <title>JQUERY</title>
+
+  <!-- icons and fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins" rel="stylesheet"> 
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Niramit|Open+Sans|Varela+Round" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Niramit" rel="stylesheet">
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
+
+    
+        <script src="{% static "accounts/js/bootstrap.min.js" %}" type="text/javascript"></script>
+         <script src="{% static "accounts/js/scrollreveal.min.js" %}" type="text/javascript"></script>
+         <script src="{% static "accounts/js/app2.js" %}" type="text/javascript"></script>
+      
+  
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+
+
+
+    
+  
+
+  <link rel="stylesheet" href="{% static 'accounts/css/font-awesome.min.css' %}"> 
+  <link rel="stylesheet" href="{% static 'accounts/css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'accounts/css/animate.css' %}">  
+  
+<!-- <link rel="stylesheet" href="{% static 'accounts/css/main3.css' %}">  -->
+  
+ <style>
+   
+.special{
+  color: Blue;
+   }
+.tab-panels ul{
+  margin: 0;
+  padding: 0;
+
+}
+.tab-panel ul li{
+  list-style-type: none;
+  display: inline-block;
+  background: #999;
+  margin: 0;
+  padding: 3px 10px;
+  border-radius: 10px 10px 0 0;
+  color:#fff;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.tab-panels ul li:hover{
+  color: #fff;
+  background: #666;
+}
+
+.tab-panel ul li.active{
+  color: #fff;
+  background: #666;
+}
+.tab-panels .panel{
+  display: none;
+  background: #c9c9c9;
+  padding: 30px;
+  border-radius: 0 0 10px 10px;
+}
+.tab-panels .panel.active{
+  display: block;
+}
+
+ </style>
+}
+}
+   
+
+    
+</head>
+
+<body>
+
+
+  
+                                                                
+<main class="page-wrapper">
+  <div class="page-conten container mt-50">
+       
+    <h1>Lets have fun</h1>
+
+<div class="jumbotron">
+  <button class="panel-button" data-panelid="panel1">button 1</button>
+  <button class="panel-button" data-panelid="panel2">button 2</button>
+  <button class="panel-button" data-panelid="panel3">button 3</button>
+  <button class="panel-button" data-panelid="panel4">button 4</button>
+</div>
+
+<div class="row">
+  <div class="col-xs-3">
+    <div id="panel1" class="panel panel-primary">
+        <div class="panel-heading">
+            panel 1
+        </div>
+        <div class="panel-body">
+          Content
+        </div>
+    </div>
+  </div>
+
+  <div class="col-xs-3">
+    <div id="panel2" class="panel panel-primary">
+      <div class="panel-heading">
+        panel 2
+      </div>
+      <div class="panel-body">
+          Content
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-3">
+    <div id="panel3" class="panel panel-primary">
+      <div class="panel-heading">
+        panel 3
+      </div>
+      <div class="panel-body">
+          Content
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-3">
+    <div id="panel4" class="panel panel-primary">
+        <div class="panel-heading">
+          panel 4
+        </div>
+        <div class="panel-body">
+          Content
+        </div>
+    </div>
+  </div>
+
+
+</div>
+
+<ul class="list">
+  <li>one</li>
+  <li class="special">two</li>
+  <li>three</li>
+  <li>
+    <ul class="sublist">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </li>
+</ul>
+
+  </li>
+
+</ul>
+
+
+<div class="tab-panels">
+  <ul class="tabs">
+    <li class="active">panel1</li>
+    <li>panel2</li>
+    <li>panel3</li>
+    <li>panel4</li>
+  </ul>
+
+  <div id="panel1" class="panel active">
+    content1<br/>
+    content1<br/>
+    content1<br/>
+    content1<br/>
+    content1<br/>
+  </div>
+  <div id="panel2" class="panel">
+    content2<br/>
+    content2<br/>
+    content2<br/>
+    content2<br/>
+    content2<br/>
+  </div>
+  <div id="panel3" class="panel">
+    content3<br/>
+    content3<br/>
+    content3<br/>
+    content3<br/>
+    content3<br/>
+  </div>
+  <div id="panel4" class="panel">
+    content4<br/>
+    content4<br/>
+    content4<br/>
+    content4<br/>
+    content4<br/>
+  </div>
+
+
+
+
+</div>
+
+
+
+         </div>
+
+  </main>
+ 
+<script>
+    $(function() {
+
+      var content= "my content wipi";
+
+      $('.panel-button').on('click', function() {       
+        var panelId = $(this).attr('data-panelid')
+
+        // $('#'+ panelId).toggle();
+
+        $("#"+panelId+' .panel-body').html(content);
+
+        // $('#'+ $(this).attr('data-panelid')).toggle();
+
+      console.log(this)
+    
+      });
+
+
+      // $('#btn1').on('click', function(){$('#panel1').hide();}); 
+      // $('#btn2').on('click', function(){$('#panel2').hide();}); 
+      // $('#btn3').on('click', function(){$('#panel3').hide();}); 
+      // $('#btn4').on('click', function(){$('#panel4').hide();});
+
+
+
+    });
+
+  </script>
+
+<script>
+$(function() {
+ $('li').on('click', function(){
+  $(this).removeClass('special');
+  $(this).addClass('special');
+
+ });
+ console.log()
+
+});
+
+  </script>
+
+</html>
+
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+  
+
+   
+        
+       
+        
+
+

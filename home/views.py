@@ -192,7 +192,8 @@ def lulu_book(request):
 def gis_project(request):
     return render (request, "home/gis_project.html", {})
 
-
+def myrefference(request):
+    return render (request, "home/myrefference.html", {})
 
 
 
