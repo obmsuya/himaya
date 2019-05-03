@@ -22,7 +22,7 @@ class HomeView(TemplateView):
         users = User.objects.all()
         #exclude(id=request.user.id)
     
-        friend, created = Friend.objects.get_or_create(current_user=request.user)
+        friend = Friend.objects.get(current_user=request.user)
     
         friends = friend.users.all()
       

@@ -82,6 +82,8 @@ class Friend(models.Model):
             current_user=current_user
         )
         friend.users.add(new_friend)
+
+        
     
     # def __str__(self):
     #     return self.current_user
