@@ -40,6 +40,7 @@ urlpatterns = [
     url(r'^bitcoin/$', views.bitcoin, name = "bitcoin"),
     url(r'^matangazo/$', views.matangazo, name = "matangazo"),
     url(r'^mahesabu/$', views.mahesabu, name = "mahesabu"),
+    url(r'^uaminifu/$', views.uaminifu, name = "uaminifu"),
     url(r'^english/$', views.english, name = "english"),
     url(r'^lulu_book/$', views.lulu_book, name = "lulu_book"),
     url(r'^gis_project/$', views.gis_project, name = "gis_project"),

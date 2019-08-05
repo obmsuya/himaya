@@ -178,10 +178,14 @@ def makala(request):
 @login_required
 def bitcoin(request):
     return render (request, "home/bitcoin.html", {})
+
 def matangazo(request):
     return render (request, "home/matangazo.html", {})
 def mahesabu(request):
-    return render (request, "home/matangazo.html", {})
+    return render (request, "home/mahesabu.html", {})
+
+def uaminifu(request):
+    return render (request, "home/uaminifu.html", {})
 @login_required
 def english(request):
     return render (request, "home/english_intro.html", {})
