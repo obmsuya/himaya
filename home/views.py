@@ -190,7 +190,7 @@ def uaminifu(request):
 def wito(request):
     return render (request, "home/wito.html", {})
 @login_required
-def english(request):
+def english_book(request):
     return render (request, "home/english_intro.html", {})
 @login_required
 def lulu_book(request):
