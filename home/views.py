@@ -187,6 +187,9 @@ def mahesabu(request):
 def uaminifu(request):
     return render (request, "home/uaminifu.html", {})
 @login_required
+def wito(request):
+    return render (request, "home/wito.html", {})
+@login_required
 def english(request):
     return render (request, "home/english_intro.html", {})
 @login_required
