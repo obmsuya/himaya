@@ -32,7 +32,7 @@
             <div class="side-bar">
               <div class="sb-title">
                 <p>
-                  Categories
+                  <!-- AINA ZA VITABU -->
                 </p>
               </div>
 
@@ -41,7 +41,7 @@
               <ul class="cat-lists">
                 <li>
                   <a href="{% url 'home:index' %}">
-                    ALL CATEGORIES
+                    VITABU VYOTE
                   </a>
                 </li>
                 {% for category in categories %}
@@ -69,7 +69,7 @@
                 </h2>
                 <div class="mp-books-count">
                   <span>
-                    Book {{ count }} 
+                    Idadi {{ count }} 
                   </span>
                 </div>
                 <hr>
@@ -90,19 +90,7 @@
                         </div>
 
                               
-                              <!-- <p> <a href="{% url 'home:item' item_id=item.id %}"> </a></p> -->
                               
-
-                        <!-- <div class="book-desc">
-                          <p class="book-name">
-                            <a href="{% url 'home:item' item_id=item.id %}">
-                               {{item.name}}
-                           </a>
-                          </p>
-                          <span class="book-auth-name">
-                            {{item.author}}
-                          </span>
-                        </div> -->
                       </div>
                     </div>
                   </div>
