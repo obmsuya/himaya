@@ -45,6 +45,10 @@ urlpatterns = [
     url(r'^lulu_book/$', views.lulu_book, name = "lulu_book"),
     url(r'^gis_project/$', views.gis_project, name = "gis_project"),
     url(r'^wito/$', views.wito, name = "wito"),
+    url(r'^nisome_kabla/$', views.nisome_kabla, name = "nisome_kabla"),
+    
+
+
     url(r'^register/$', views.register, name = "register"),
     
       
