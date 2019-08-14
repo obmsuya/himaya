@@ -16,30 +16,13 @@
 
           <div class="sidebar">
             <div class="side-bar">
-              <div class="sb-title">
-                <p>
-                  <!-- Aina za vitabu -->
-                </p>
-              </div>
-
-              <!-- category lists -->
-
               <ul class="cat-lists">
-                <li>
-                  <a href="{% url 'home:index' %}" class="active">
-                    VITABU VYOTE
-                  </a>
-                </li>
+                <li><a href="{% url 'home:index' %}" class="active">Vitabu Vyote</a> </li>
 
                 {% for category in categories %}
-                <li>
-                  <a href="{% url 'home:category' category_id=category.id %}">
-                    {{category.name}}
-                  </a>
-                </li>
-                {% endfor %}
-
-                
+                <li><a href="{% url 'home:category' category_id=category.id %}">
+                    {{category.name}}</a></li>
+                {% endfor %} 
               </ul>
             </div>
           </div> 

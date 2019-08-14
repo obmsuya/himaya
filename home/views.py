@@ -222,72 +222,7 @@ def myrefference(request):
 
 
 #post_list      
-def classes_home(request):
-    queryset = Classes.objects.all()
-    context = {
-        "object_list":queryset
-    }
-    return render(request, "home/class_index.html", context)
 
-#post_detail    
-def classes_detail(request,id):
-    try:
-        itm = Classes.objects.get(id=id)
-    except Classes.DoesNotExist:
-        itm = None
-        
-    context = {
-        'detail': itm,
-        "title":itm.title,
-        "itm":itm,   
-    }
-            
-    return render(request, "home/class_detail.html", context)   
-
-#post create 
-
-
-def classes_create(request):
-    form = PostForm2(request.POST or None, request.FILES or None)
-   
-    if form.is_valid():
-        create = form.save(commit=False)
-        create.save()
-            
-        return redirect('home:class')
-            
-    args = {'form': form}
-        
-    return render(request, 'home/class_create.html', args)
-   
-#post_update
-def classes_update(request,id):
-    try:
-        instance = Classes.objects.get(id=id)
-    except Classes.DoesNotExist:
-        instance = None
-    
-    form = PostForm(request.POST or None, instance=instance)
-   
-    if form.is_valid():
-        instance = form.save(commit=False)
-        instance.save()
-        return redirect (reverse('home:class'))
-        
-    context = {
-        "title":instance.title,
-        "instance":instance,
-        'form': form,
-    }
-    return render(request, "home/class_update.html", context)
-
-def classes_delete(request,id):
-    try:
-        itm = Classes.objects.get(id=id)
-    except Classes.DoesNotExist:
-        itm = None
-    itm.delete()
-    return redirect (reverse('home:class'))
      
 
 
