@@ -37,6 +37,8 @@ SECRET_KEY = 'mob_we*$0e2cpfq^0jey+wakxnzl&46%6v=tov)0p+&0!4(4!b'
 
 
 
+# DEBUG = True
+
 DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'oamsuy06.pythonanywhere.com','www.obgmycompany.com', 'www.vitabutanzania.com']
@@ -88,22 +90,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
-
-
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-
 #local/mysql(og)
 
 # DATABASES = {
@@ -125,18 +111,6 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
        
 #    }
 # }
-
-
-
-# CORS_REPLACE_HTTPS_REFERER = False
-# SECURE_PROXY_SSL_HEADER = None
-# SECURE_SSL_REDIRECT = False
-# SESSION_COOKIE_SECURE=False
-# CRSF_COOKIE_SECURE = False
-# SECURE_HSTS_SECONDS = None
-# SECURE_HSTS_INCLUDE_SUBDOMAINS = False
-# SECURE_FRAME_DENY = False
-
 
 
 #live
@@ -176,11 +150,6 @@ DATABASES = {
 
 
 
-
-
-
-
-
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
@@ -214,8 +183,6 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 LOGIN_REDIRECT_URL = '/home/'
 LOGIN_URL = '/account/login/'
