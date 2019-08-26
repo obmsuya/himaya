@@ -90,7 +90,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-#local/mysql(og)
+# local/mysql(og)
 
 # DATABASES = {
 #    'default': {
