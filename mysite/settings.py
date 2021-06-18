@@ -35,11 +35,11 @@ SECRET_KEY = 'mob_we*$0e2cpfq^0jey+wakxnzl&46%6v=tov)0p+&0!4(4!b'
 #     ALLOWED_HOSTS = ["localhost", "127.0.0.1",]
 
 
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
+# DEBUG = True
 
-DEBUG = True
-
-# DEBUG = False
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'oamsuy06.pythonanywhere.com','www.obgmycompany.com', 'www.vitabutanzania.com']
 
@@ -95,8 +95,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.mysql',
-#        'NAME':'obmsuya',
-#        'USER': 'gis4life',
+#        'NAME':'sitaki',
+#        'USER': 'obmsuya',
 #        'PASSWORD': 'Savioury9',
 #        'OPTIONS': {
 #            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
@@ -113,7 +113,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # }
 
 
-#live
+#LIVE
 
 DATABASES = {
     'default': {
@@ -182,24 +182,25 @@ USE_L10N = True
 
 USE_TZ = True
 
+# changed
 
+LOGIN_REDIRECT_URL = '/home/authors'
 
-LOGIN_REDIRECT_URL = '/home/'
-LOGIN_URL = '/account/login/'
+LOGOUT_REDIRECT_URL = '/account/entry/'
 
 
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_root')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_root')
 
 
-# STATICFILES_DIRS = (
-#   os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_dirs'),
+STATICFILES_DIRS = (
+  os.path.join(os.path.dirname(BASE_DIR), 'static', 'static_dirs'),
 
-# )
+)
 
-# #MEDIA_ROOT =  os.path.join(BASE_DIR, 'mysite/media')
-# MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'media')
+#MEDIA_ROOT =  os.path.join(BASE_DIR, 'mysite/media')
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'media')
 
 
 MEDIA_URL = '/media/'
@@ -222,15 +223,15 @@ AWS_FILE_EXPIRE = 200
 
 
 
-LOGIN_EXEMPT_URLS = (
-    r'^account/logout/$',
-    r'^account/register/$'
-    r'^account/reset-password/$',
-    r'^account/reset-password/done/$',
-    r'^account/password_reset_confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$',
-    r'^account/reset-password/complete/$',
+# LOGIN_EXEMPT_URLS = (
+#     r'^account/logout/$',
+#     r'^account/register/$'
+#     r'^account/reset-password/$',
+#     r'^account/reset-password/done/$',
+#     r'^account/password_reset_confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$',
+#     r'^account/reset-password/complete/$',
 
-)
+# )
 
 
 
