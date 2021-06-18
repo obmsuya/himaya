@@ -1,7 +1,9 @@
 
+
+
 {% extends 'base2.html' %}
 
-{% load staticfiles %}
+{% load static %}
 
 {%block head%}
      
@@ -72,7 +74,7 @@
 										<hr>
 										<p>
 											Have an account? 
-										<small><span class="caps"><a class="btn btn-clear "href="{% url 'accounts:login'%}" role="button">LogIn &raquo;</a></span></small>
+										<small><span class="caps"><a class="btn btn-clear "href="{% url 'accounts:index'%}" role="button">LogIn &raquo;</a></span></small>
 										</p>
 									</div>
 								</div>

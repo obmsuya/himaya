@@ -1,0 +1,1382 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+{% extends 'base3.html' %}
+{% load staticfiles %}
+
+{%block head%}
+     
+    
+    
+    {%endblock%}
+
+
+
+ {% block body %}
+
+ <div id="navbar">
+  <a class="active" href="#yaliyomo">Yaliyomo</a>
+
+</div>
+
+	<main class="main-wrapper">
+		
+		
+		
+
+
+
+
+
+	<div class="main-section">
+		<div class="container">
+			<div id="test" onmousedown='return false;' onselectstart='return false;'>
+
+<a href="{% url 'home:index'%}">Items</a>
+<a href="{% url 'accounts:logout'%}">Home</a>
+<hr>
+				<h1 class="topic-title">FAHAMU WITO ALIOKUITIA BWANA YESU</h1>
+
+</div>
+      <hr>                      
+<div class="text-center">
+      <h3><span>ISBN 978-9976-5592-1-7</span></h3>
+     </div>                       	 
+<br>
+
+			
+<div class="text-center">
+<img src="{%static 'accounts/img/wito_cover.jpg'%}" class="img-responsive" alt=""'>
+
+		</div>	
+
+<hr>
+
+<h3>MUANDISHI.</h3>
+				 <div class="line-sep"></div>
+
+
+<p>Mchungaji Boniface Evarist Mwakisalu ni Mtumishi wa Mungu ambaye anachunga kundi la wana wa Mungu katika Huduma ya Efatha na anaongoza Mkoa wa Njombe. Amemuoa Mchungaji (mke)Vaileth Boniface, ambaye amekuwa msaada mkubwa katika utumishi wake.
+</p>
+<p>Ana digirii ya Kompyuta Sayansi kutoka chuo kikuu cha Mtakatifu Joseph nchini Tanzania, amesoma Diploma ya Uongozi wa kichungaji katika shule ya Huduma ya Efatha, Tanzania na anasoma Digirii ya huduma ya utawala katika chuo kikuu cha Oral Roberts, USA. Awali alikuwa Mwalimu wa sekondari ya Mtande-mkoa wa Mbeya, nchini Tanzania.</p>
+<p>Ni Mtumishi ambaye amejazwa Roho Mtakatifu na anatenda katika neema ya Roho Mtakatifu, Lengo lake kubwa ni kueneza anjili ya Yesu Kristo mpaka miisho ya dunia akidhihirisha nguvu ya Mungu.</p>
+	        
+
+<hr>
+
+<div class="col-md-10">
+<div class="text-center">
+
+
+<br>
+
+<p>© Mch. Boniface Evarist Mwakisalu, 2019</p>
+
+
+<p><a href="http://www.pastorbon.org" target="_blank">http://pastorbon.org</a> </p>
+
+<p>Facebook:<a href="http://www.facebook.com/pastorbon" target="_blank"> www.facebook.com/pastorbon</a> </p>
+<p>Instagram:<a href="http://www.instagram/pastorbon" target="_blank"> www.instagram/pastorbon</a> </p>						
+<p>Twitter:<a href="http://www.twiter.com/pastorbon" target="_blank"> www.twiter.com/pastorbon</a> </p>	
+
+<p>WhatsApp: +255 752 122744.</p>
+
+<p>Haki zote zimehifadhiwa. Kibali cha maandishi lazima kiombwe kutoka kwa mhusika ili kutumia au kunakili sehemu yeyote ya kitabu hiki, isipokuwa kwa matumizi ya dondoo fupi fupi tu.</p>
+</div>
+<hr>
+<p>ISBN 978-9976-5592-1-7</p>
+<br>
+<p>Gamba (Mpangilio wa Maandishi)</p>
+<p><span>Boniface Evarist Mwakisalu</span></p>
+
+
+
+<p>Kimechapishwa na BONVIO PRINTING, Tanzania</p>
+<div class="text-center">
+<p>Katika maisha ya wokovu kuna hatua ambazo hatuna budi kuzitambua kwa maana Mungu alituchagua kabla hatujazaliwa ili tuweze kumtumikia huku duniani. Wokovu ni maisha mapya yanayo tupa kibali cha kumtumikia Mungu. Ni zawadi ambayo tukiitunza Inatupa neema ya kupata urithi mwema kupitia wito ambao tumepewa kuwa watendakazi pamoja na Mungu. </p>
+<p>Kwa kila kiongozi anayetamani kutenda makuu. Kwa mamilioni ya watu ambao wanatamani kutimiza ndoto zao katika kutumikia wengine. Nimekuandikia mambo ambayo huna budi kulipa gharama ili uweze kutumiwa na Mungu.</p>
+<p>Kwa mamilioni ya wanaume na wanawake wakuu ambao sasa wako tumboni mwa mama zao, watoto waliokusudiwa kubadilisha ulimwengu huu na kuja kuonesha uwezo wa kipekee kufikia hatma zao. </i>
+</p>
+</div>
+
+
+
+<a name="shukran"></a></h3>
+			
+
+<div class="text-center">
+<img src="{%static 'accounts/img/without.jpg'%}" class="img-responsive" alt=""'>
+		</div>	
+
+<h3><a name="yaliyomo"></a></h3>
+
+
+
+
+<hr>
+
+
+
+
+<button class="collapsible">YALIYOMO</button><div class="content">
+	<ul>
+			<p><span><a href="#shukuru">SHUKRANI</a></span></p>
+			<p><span><a href="#ufupi">UTANGULIZI</a></span></p>
+
+		<p><span>Sura Ya Kwanza</span></p>
+			<ul>
+			<p><span><a href="#utangulizi">MAISHA MAPYA</a></span></p>
+			<p><span><a href="#utangulizi">MUUJIZA MKUU</a></span></p>
+			<p><span><a href="#mnpe">MUNGU NI PENDO</a></span></p>
+
+			</ul>
+
+		
+			
+<p><span>SURA YA PILI:</span> </p>
+<ul>
+	<p><span><a href="#madhara">ZAWADI YA AJABU</a></span></p>
+	<p><span><a href="#hzikayna">HII ZAWADI ILITOLEWA KWA AJILI YA NANI?</a></span></p>
+	<p><span><a href="#mmp">MWANZO MPYA</a></span></p>
+	<p><span><a href="#nknup">NITAJUAJE KWAMBA NIMEZALIWA UPYA?</a></span></p>
+	<p><span><a href="#kknykr">KUKUA KIROHO NA YESU KRISTO.</a></span></p>
+</ul>
+<p><span>SURA YA TATU:</span><p> 
+	<ul>
+		
+	<p><span><a href="#sayahasira">WITO</a></span></P>
+	<p><span><a href="#wat">WATEULE</a></span></P>
+	<p><span><a href="#klku">KUSUDI LA KUITWA</a></span></P>
+	<p><span><a href="#mnna">MTUMISHI NI NANI</a></span></P>
+	<p><span><a href="#ngmawwwmu">NAMNA GANI MTU ANASIKIA WITO WA MUNGU?</a></span></P>
+	<p><span><a href="#tyanan">TABIA YA ANAYEITA NA ANAYEITWA</a></span></P>
+	<p><span><a href="#aywnip">ASILI YA WITO NI IPI?</a></span></P>
+	<p><span><a href="#nnni">NEEMA NI NINI?</a></span></P>
+	<p><span><a href="#tyne">TABIA YA NEEMA</a></span></P>
+
+	</ul>
+
+<p><span>SURA YA NNE:</span></p>
+<ul>
+
+	<p><span>
+		<a href="#sayamsukumo">GHARAMA YA KULIPA KWA UTUMISHI.</a>
+	</span></p>
+</ul>
+
+
+
+<p><span>SURA YA TANO:</span> </p>
+<ul>
+<p><span><a href="#ugonjwa">MTU ANAYETUMIWA NA MUNGU.</a></span></p>
+<p><span><a href="#knwwhnzmu">KWA NINI WAKRISTO WENGI HAWAONI NGUVU ZA MUNGU?.</a></span></p>
+<p><span><a href="#lumi">LAZIMA USHINDE MTIHANI.</a></span></p>
+<p><span><a href="#nkja">NINAWEZAJE KUSHINDA JARIBU?.</a></span></p>
+</ul>
+
+<p><span>SURA YA SITA:</span></p>
+<ul> 
+	<p><span><a href="#vyanzo">SILAHA YA USHINDI</a></span></p>
+	<p><span><a href="#hit">HITIMISHO</a></span></p>
+</ul>
+
+
+</div>
+
+<hr>						
+
+
+
+
+<div class="text-center">
+				 <h3><a name="shukuru"></a></h3>
+
+				 <h3>SHUKRANI</h3>
+		</div>	
+
+<p>Kwanza kabisa napenda kumshukuru Mungu aliyenipa kibali cha kuwa Mtumishi wake kwa neema kubwa ambayo hailezeki.
+<p>Pili namshukuru mke wangu Vaileth kwa kusimama nami bega kwa bega katika wito huu ambao nimepewa na Mungu. Amekuwa akinishauri, akiniombea na kunitia moyo sana wa kuongeza bidii na amekuwa mstari wa mbele kuhakikisha ninafanya vizuri kazi ya Mungu. Mungu akuzidishie neema na hekima yake.
+<p>Kipekee nawashukuru sana baba na mama wa kiroho, Mtume na Nabii Josephat Elias Mwingira na Eliakunda Mwingira kwa malezi mnayonipa kama mtoto wa kiroho. Najisikia raha sana kuwa na wazazi kama ninyi, baba umekuwa mlezi, kocha, Mwalimu na Mchungaji wa pekee sana. Mungu azidi kuwatumia na kuwalinda, kwa Utukufu wake.
+<p>Shukrani za pekee ziwaendee watenda kazi pamoja nami shambani mwa Bwana walioshiriki katika uandaaji na ukamilishaji wa kitabu hiki; ambao ni Watumishi Alfredy J. Mdemu, Janeth Paulo, Advera Bagoka, Minza Joseph, Martha Nambulaja, na Fridah Nyiti.  Mungu awabariki na kuwazidisha kwa Utukufu wa Bwana.  
+<p>Shukrani za mwisho ni kwako wewe mpendwa msomaji wa kitabu hiki.  Baraka za Mungu zikufikie na kukupata usomapo na kukielewa vema. 
+</p>
+
+
+<hr><hr><br> 
+				 
+<div class="text-center">
+				 <h3><a name="ufupi"></a></h3>
+
+				 <h2>UTANGULIZI.</h2>
+		</div>		 
+				 
+				
+
+
+				<p>Kwanza kabisa naomba Mungu aweze kukutumia wewe, nitakuandaa ili upako uweze kuja juu ya maisha yako, na ninatambua pindi utakapomaliza kusoma kitabu hiki upako utakuwa umekujilia na utatenda mambo makuu. Ninatambua Mungu anakutumia na ataendelea kukutumia, Utumishi wa kipindi hiki unatakiwa kuwa wa viwango vya juu, hiki ni kipindi cha kutembea na nguvu za Mungu na kuachilia nguvu za Mungu katika maisha yako na ya wangine.
+<p>Maisha ya wokovu yanahitaji KUZINGATIA sana kwenye Neno la Mungu ili tuweze kuwa Nuru kwa ulimwengu huu. Kila aliye mwana wa Mungu amebarikiwa kuwa na mahusiano na Mungu anayeujua mwisho wetu tangu mwanzo. Kinachotakiwa ni kutega sikio na kuzingatia kile Roho Mtakatifu anasema na wewe kupitia Ujumbe huu. 
+<p>Ni muhimu kuzingatia sana mambo yahusuyo wokovu, uwajibikaji ndani ya Kristo – utumishi na huduma. Huwezi kutoa huduma nzuri kwa Mungu pasipo kuwa mwanafunzi na bila kuwekwa wakfu. Mambo ambayo nitakufundisha katika kitabu hiki ni mambo ambayo nimekuwa nikifundishwa tangu mwanzo wa wito wangu na utumishi.
+<p><span>Mchungaji Boniface Evarist Mwakisalu.</span></p> 
+</p>
+
+	<hr>
+
+
+
+
+			<h3><a name="utangulizi"></a></h3>
+
+<div class="text-center">
+<h3>Sura ya kwanza</h3>
+
+<h2>MAISHA MAPYA</h2>
+					</div>
+					<br>	
+			<h3>MUUJIZA MKUU</h3>	
+<p>Hakuna muujiza uliowahi kutokea kama huu wa kubadilisha maisha ya mtu unaotokea wakati wa wokovu. Yaani moyo muasi wa mtu aliyerejea kwa Mwenyezi Mungu unasafishwa dhambi zote kupitia toba na anapatanishwa huyo mtu, anakuwa na uhusiano mzuri na Mungu kupitia Yesu Kristo, Mwanaye. Mtu aliye kata tamaa za maisha anafika mahali pa kuona pendo la Mungu, anafanyika mtoto wa Mungu, anaanza kumuomba Mungu, anaomba rehema na anamlilia Mungu aweze kumsamehe dhambi zake. Kila mtu mme au mke anapotubu, muujiza mkubwa unaofanyika kwenye maisha yake ni ‘kusafishwa’ dhambi zote na ‘kuzaliwa mara ya pili’.
+<p>Cha ajabu zaidi kuliko matukio yote yaonekanayo, ni kwamba tukio hili linatendeka katika ulimwengu wa roho, na linashughulika na hatma ya umilele wa mtu. Biblia inatuweka wazi kwa maneno ambayo Yesu aliyasema, aliposema, <i><span>“..., akamwambia, Amin, amin, nakuambia, Mtu asipozaliwa mara ya pili, hawezi kuuona ufalme wa Mungu.”</i></span>  (Yohana 3:3). Ili mtu aweze kumfurahia Mungu maishani mwake, lazima azaliwe mara ya pili. Sio hiari ni jambo la lazima:<i><span> “Hamna budi kuzaliwa mara ya pili.”</span></i> (Yohana 3:7).
+<p>Zawadi ya wokovu ni bure na inatolewa kwa kila mtu ambaye atakubali kutubu dhambi zake, atamwamini na kukiri ya kwamba Yesu Kristo ni Bwana na Mwokozi wa maisha yake basi ataipokea zawadi ya wokovu.</p>
+<div class="text-center">
+<p><i><span>“Kwa maana jinsi hii Mungu aliupenda ulimwengu, hata akamtoa Mwanawe pekee, ili kila mtu amwaminiye asipotee, bali awe na uzima wa milele. Maana Mungu hakumtuma Mwana ulimwenguni ili auhukumu ulimwengu, bali ulimwengu uokolewe katika yeye.”</i></span> (Yohana 3:16-17)
+<p><i><span>“Bali Mungu aonyesha pendo lake yeye mwenyewe kwetu sisi, kwa kuwa Kristo alikufa kwa ajili yetu, tulipokuwa tungali wenye dhambi.” </span></i>(Warumi 5:8).
+</div>
+<p>Biblia inaweka wazi kuwa wote wametenda dhambi. Hii inakujumlisha na wewe, na kila mwanaume, mwanamke ambaye anaishi huku duniani.
+<div class="text-center">
+<p><i><span>
+“kwa sababu wote wamefanya dhambi, na kupungukiwa na utukufu wa Mungu.” (Warumi 3:23)
+“Tukisema kwamba hatuna dhambi, twajidanganya wenyewe, wala kweli haimo mwetu. Tukiziungama dhambi zetu, Yeye ni mwaminifu na wa haki hata atuondolee dhambi zetu, na kutusafisha na udhalimu wote. Tukisema kwamba hatukutenda dhambi, twamfanya Yeye kuwa mwongo wala neno lake halimo mwetu.”</span></i> (1 Yohana 1:8-10)</p></div>
+<p>Kila mmoja ana hatia ya dhambi na uasi dhidi ya sheria za Mungu. Hii ina maanisha tunawajibika na kila kosa na uovu, kwa sababu wote wamefanya dhambi.</p> 
+<p>Hakuna jambo jema au tendo la wema liwezalo kuondoa dhambi au kubadilisha hali ya moyo wa mtu. Njia pekee iwezayo kutuondoa katika hukumu ya milele kwa dhambi zetu na makosa ni kwa kuzaliwa mara ya pili tunapotubu dhambi zetu.
+</p>
+<div class="text-center">
+<p><i><span>
+“Nawaambia, Sivyo; lakini msipotubu, ninyi nyote mtaangamia vivyo hivyo.”  (Luka 13:3)
+“Yesu akajibu, akamwambia, Amin, amin, nakuambia, Mtu asipozaliwa mara ya pili, hawezi kuuona ufalme wa Mungu.” </span></i>(Yohana 3:3)</p>
+</div>
+
+
+
+
+
+
+<h3>MSHAHARA WA DHAMBI</h3>
+<p>Neno la Mungu linasema, adhabu au mshahara wa dhambi ni mauti, ikimaanisha kifo cha kiroho au kutenganishwa na Mungu. Kwa kuwa kila mmoja amefanya dhambi, hivyo kila mmoja anastahili hiyo adhabu.</p>
+<div class="text-center">
+<p><i><span>
+“Kwa maana mshahara wa dhambi ni mauti; bali karama ya Mungu ni uzima wa milele katika Kristo Yesu Bwana wetu.” (Warumi 6:23)
+“Aaminiye na kubatizwa ataokoka; asiyeamini, atahukumiwa.” (Marko 16:16).
+</span></i></p>
+
+</div>
+
+<h3><a name="mnpe"></a></h3>
+<h3>MUNGU NI PENDO</h3>
+<p>Mungu ni Pendo, ambaye upendo wake ni Mkamilifu na kamwe haubadiliki. 
+<p>Ni mtu yaani Adam ambaye alitenda dhambi dhidi ya Mungu na kuvunja uhusiano wa upendo uliokuwepo tangu mwanzo wa uumbaji. Kupitia kukosa utii mtu aliharibu Uhusiano wake na Mungu ambao hapo awali aliufurahia sana. Licha ya hayo bado Mungu alitupenda watu wake, akatoa njia ambayo mtu ataweza kutengeneza na Mungu kupitia Mwanae, Yesu Kristo.
+<p>Ili kujenga daraja la kuwaunganisha Mungu na mtu, Yesu alijinyenyekeza na akachukua umbo yaani mwili wa utu. Alikuwa na Mungu mbinguni na akawa ni mtu huku duniani, akaja duniani makusudi kabisa kwa ajili ya kulipa deni la dhambi zetu na kuchukua makosa yetu yote.
+<div class="text-center">
+<p><i><span>
+“Bali Mungu aonyesha pendo lake yeye mwenyewe kwetu sisi, kwa kuwa Kristo alikufa kwa ajili yetu, tulipokuwa tungali wenye dhambi.” </span>(Warumi 5:8)</i></p>
+<p><i><span>“Maana Mungu hakumtuma Mwana ulimwenguni ili auhukumu ulimwengu, bali ulimwengu uokolewe katika yeye.”</span></i> (Yohana 3:17)</p>
+<p><i><span>“Sikuja kuwaita wenye haki, bali wenye dhambi, wapate kutubu.”</span></i> Luka 5:32.</p>
+</div>
+<p>Baada ya anguko la mwanadamu katika bustani ya Edeni, dhambi ilimtenga mtu mbali kabisa na Mungu aliye Mtakatifu. Kutokana na kukosa utii, mtu alistahili ‘kifo cha kiroho’, yaani kupoteza neema ya kufanana na Mungu katika utendaji na neema ya kubeba sura au tabia ya Mungu ndani yetu.
+<p>Hata hivyo, Mungu hakuwa tayari kupoteza ule mpango wake juu yako na uumbaji wake duniani. Hivyo, akamtuma Mwanae wa pekee ikiwa ni hatua ya kwanza ya marejesho ya mahusiano yetu na Mungu. Yesu Kristo alikuwa mwema na akaja duniani kuyatoa maisha yake bure kabisa kwa ajili ya mtu mwenye hatia.
+<p><i><span>
+“Bwana hakawii kuitimiza ahadi yake, kama wengine wanavyokudhani kukawia, bali huvumilia kwenu, maana hapendi mtu ye yote apotee, bali wote wafikilie toba.” 2 Petro 3:9</span></i></p>
+<p><i><span>
+
+“Kwa kuwa Mwana wa Adamu alikuja kutafuta na kuokoa kile kilichopotea.”</span></i> (Luka 19:10)</p>
+<p>Mungu hajawahi kufanya jambo pasipo kusudi au sababu. Hafanyi jambo lolote pasipo kusudi au mpango. Ili kuokoa watu wake aliamua kumtuma Mwanaye wa pekee – Yesu Kristo ili tuweze kuifikia toba itakayotupa uhalali wa sisi kufanyika watoto wake na wajenzi wa ufalme wa Mungu huku duniani.</p>
+
+<h3>YESU KRISTO; NI NJIA, KWELI NA UZIMA</h3>
+<p>Yesu Kristo alikuwa ni mtu pekee asiyewahi kutenda dhambi ambaye aliiishi na kutembea huku duniani. Kwa kuwa hakuwa na dhambi yoyote, alikuwa ni dhabihu toshelevu. Kwa hiari yake alifanyika kuwa mbadala na akatoa uhai wake katika msalaba wa Kalvari, akamwaga damu yake kuisafisha dhambi. Alimuwezesha kila mtu kuwa huru – mbali na mshahara wa dhambi, ambao ni mauti au kutengana na Mungu.
+<p>Yesu pekee ndiye njia iwezayo kumuokoa mtu, hakuna njia iwezayo kukuokoa kwenye maisha ya dhambi isipokuwa Yesu Kristo, maana alisema 
+<p><i><span>
+	“Mimi ndimi njia, na kweli, na uzima; mtu haji kwa Baba, ila kwa njia ya mimi.”</span></i> Yohana 14:6</p>
+<p>Bwana wetu Yesu Kristo ana majina na vyeo vingi. Lengo la majina na vyeo hivi ni kuyapa nuru macho yetu juu ya uhalisia wa utu wake. Moja ya hayo majina ni njia. Yesu mwenyewe alifunua siri hii katika Yohana 14:6 akisema:
+	<div class="text-center">
+	<p><i><span>
+“Yesu akamwambia, Mimi ndimi njia, na kweli, na uzima; mtu haji kwa Baba, ila kwa njia ya mimi.”
+</span></i></p></div>
+<p>Ana maana gani anaposema Mimi ndimi njia? Kama unataka kufika mahali fulani na huelewi vema njia ya kufika huko ni vema ukauliza watu njia ya kukufikisha ambapo umekusudia kufika.
+Yesu Kristo ndiyo NJIA ya kukutoa katika hali mbaya uliyo nayo hapo ulipo sasa. Na pia ndiye njia ya kukupeleka mahali pengine pazuri ukiichagua hii njia. Biblia inafunua wazi siri kuwa Yesu Kristo ndiyo njia ya kukutoa katika magonjwa unayoteseka nayo. Tunasoma katika 1 Petro 2:24,
+<div class="text-center">
+	<p><i><span>
+“Yeye mwenyewe alizichukua dhambi zetu katika mwili wake juu ya mti, tukiwa wafu kwa mambo ya dhambi, tuwe hai kwa mambo ya haki; na kwa kupigwa kwake mliponywa.”
+</span></i></p></div>
+<p>Katika Matendo Ya Mitume 9:32-35, 
+<p><i><span>Hata Petro akawatelemkia na watakatifu waliokaa Lida. Akamwona mtu mmoja huko, jina lake Ainea, mtu huyo amelala kitandani miaka minane; maana alikuwa amepooza. Petro akamwambia, Ainea, Yesu Kristo akuponya; ondoka, ujitandikie. Mara akaondoka. Na watu wote waliokaa Lida na Sharoni wakamwona, wakamgeukia Bwana. </span></i></p>
+<p>Ainea alipoifuata njia akapokea Uponyaji wake.
+<p>Jina la Yesu pia ni NJIA ya kukutoa katika kifo au mauti. Hata maiti na wenye ukoma walifuata NJIA na wakapona. Tunaona katika Matendo ya Matendo ya Mitume 4:10,
+
+	<p><i><span>
+ “jueni ninyi nyote na watu wote wa Israeli ya kuwa kwa jina la Yesu Kristo wa Nazareti, ambaye ninyi mlimsulibisha, na Mungu akamfufua katika wafu, kwa jina hilo mtu huyu anasimama ali mzima mbele yenu”. </span></i></p>
+<p>Kila mtu ambaye anajua anakaribia kufa kabla ya wakati, biashara yake inakaribia kufa, ndoa yake inakaribia kufa kufa, kazi yake inakaribia kufa, anaweza kuifuata hii NJIA ya uzima na akarejeshewa uhai wake. Katika mambo yote haya, Yesu ndiye NJIA pekee ya kukutoa.  Kumbuka, Mungu ametupa amri ya kuliamini Jina mwanae ili tuweze kukaa ndani yake na yeye ndani yetu katika mambo yote.
+<p>1 Yohana 3:23 <i><span>Na hii ndiyo amri yake, kwamba tuliamini jina la Mwana wake Yesu Kristo, na kupendana sisi kwa sisi, kama alivyotupa amri.</span></i></p>
+
+<h3>KWA NINI YESU ALITOLEWA?</h3>
+<div class="text-center">
+  <p><i><span>
+Amin, amin, nawaambia, Yeye aaminiye yuna uzima wa milele.</span></i> Yohana 6:47</p></div>
+
+<p>Uzima ni kinyume cha mauti. Mfano kama utasafiri kwenda nchi ya mbali kwa mfano mwaka mmoja tu. Utajikuta unatengwa na ndugu au watu uliowazoea, vitu ulivyo vizoea na Mazingira uliyoyazoea. Lakini kifo kinapotokea kinakutenga na hayo yote moja kwa moja.
+<p>Mungu alimtoa Yesu awe njia ya kutupatia sisi uzima, na kumharibu yule aliye na nguvu ya kutupatia sisi kifo. Kama anavyosema katika Waebrania 2:14: -
+
+<div class="text-center">
+  <p><i><span>	
+“Basi, kwa kuwa watoto wameshiriki damu na mwili, yeye naye vivyo hivyo alishiriki yayo hayo, ili kwa njia ya mauti amharibu yeye aliyekuwa na nguvu za mauti, yaani, Ibilisi.”</span></i></p>
+<p><span>Yohana 10:10 <i>“Mwivi haji ila aibe na kuchinja na kuharibu; mimi nalikuja ili wawe na uzima, kisha wawe nao tele”.</i></span></p></div>
+<p>Kwa jinsi hii, mchakato wowote wa mauti ambao ibilisi aliupanga juu yako Yesu anao uwezo wa kuharibu huo mpango. Unaona anajitambulisha kuwa mimi ni ufufuo na uzima, Ukisoma Katika Yohana 11:25 
+	<div class="text-center">
+  <p><i><span>
+Yesu akamwambia, Mimi ndimi huo ufufuo, na uzima. Yeye aniaminiye mimi, ajapokufa, atakuwa anaishi; 26 naye kila aishiye na kuniamini hatakufa kabisa hata milele. Je! Unayasadiki hayo?</span></i></p></div>
+<p>
+Hapo ndipo tunapoona kuwa Mungu anatupenda sana kwa kiasi cha kutupatia mwanaye ambaye ni uhai wake kwetu.. Katika Yohana 3:16 Biblia inasema;</p>
+<div class="text-center">
+  <p><i><span>
+Kwa maana jinsi hii Mungu aliupenda ulimwengu, hata akamtoa Mwanawe pekee, ili kila mtu amwaminiye asipotee, bali awe na uzima wa milele.</span></i></p></div>
+
+<p>Kwa hii NJIA yaani Yesu mauti haina mamlaka ya kukushikilia hata kidogo. <i><span>1 Wakorintho 15:54 “Basi huu uharibikao utakapovaa kutokuharibika, na huu wa kufa utakapovaa kutokufa, hapo ndipo litakapokuwa lile neno lililoandikwa, Mauti imemezwa kwa kushinda.”</span></i></p>
+
+<p>Pia, Yesu alikuja ili tusife kiuchumi. Kufa kiuchumi ina maanisha kufilisika kiuchumi. Je, umewahi kuonja hali ya kufirisika katika biashara yako. Bwana Yesu ndiye njia ya kurejesha uchumi wako kwenye uzima. Yesu alikuwa masikini ili tuwe matajiri. 
+<p>Tunasoma <i><span>2 Wakorintho 8:9 “Maana mmejua neema ya Bwana wetu Yesu Kristo, jinsi alivyokuwa maskini kwa ajili yenu, ingawa alikuwa tajiri, ili kwamba ninyi mpate kuwa matajiri kwa umaskini wake.”</span></i>
+<p>Kwa sababu ya gharama za kiuchumi ambazo Yesu alilipa basi tambua wazi kuwa uhuru wa kiuchumi ni wako. Yesu ni Mchungaji mwema ili tusipungukiwe na chochote kizuri kutoka kwake (Zaburi 23:1)
+<p>Kwa kuongeza, Yesu alikuja ili tusife kiakili. Mtu aliyekufa kiakili ni mtu ambaye hawezi kuongoza akili zake. Tunasoma;
+<p><i><span>Luka 24:45 Ndipo akawafunulia akili zao wapate kuelewa na maandiko.</span></i></p>
+<p>Hata wale wanaoumwa kiakili Yesu anaweza kuwaponya. Anaweza kurejesha akili ya mtu iliyoharibika ikwa kawaida. Chochote kinachochanganya akili yako, Bwana Yesu atakuweka sawa pale utakapoamua katika Jina la Yesu.
+<p>Zaidi sana Yesu alitolewa ili tuwe na ushirika wa kudumu na Mungu Baba. Kupitia Yesu unaweza kuandaa nyumba yako ya mbinguni. Hii ndiyo sababu itakayokufanya usiharibu mahusiano yako na NJIA ambaye ni Yesu Kristo. 
+<i><span>Warumi 8:39 “wala yaliyo juu, wala yaliyo chini, wala kiumbe kinginecho chote hakitaweza kututenga na upendo wa Mungu ulio katika Kristo Yesu Bwana wetu”.</span></i>
+<p>Hakuna cha kukutenga na Kristo hapa duniani. Alitolewa kwa ajili ya kila mmoja hasa hasa wewe. Hakikisha unaitikia wito wa Mungu katika maisha yako ili uweze kuishi maisha ya ushindi kila siku. Ni salama kwako!</p>
+<p>OMBI: </p>
+<p><span>Baba, nipe kibali cha kubaki katika neema yako mpaka mwana wa mungu atakarudi kunichukua kwenda mbinguni, katika Jina la Yesu Kristo.</span></p>
+
+
+
+
+
+
+<hr>
+
+<h3><a name="madhara"></a></h3>
+
+<div class="text-center">
+<h3>Sura Ya Pili</h3>
+
+			<h2>ZAWADI YA AJABU</h2>
+			
+	</div>		
+<p>Wokovu ni zawadi ya ajabu sana tuliyopewa na Mungu. Ni hazina isiyo na gharama na ipo kwa ajili ya wote. Wewe na mimi tunaweza kuyaona mambo makubwa sana maishani kwa sababu ya huu muujiza wa ajabu ambao ni wokovu - jambo linalofurahisha zaidi ni kwamba zawadi hii inaleta amani.
+
+<p>Bwana Yesu alichagua kufa kwa ajili yetu, alimwaga damu yake na kutoa uzima na maisha kwa niaba ya mwanadamu mwenye dhambi. Kupitia Yesu Kristo na damu yake iliyomwagika msalabani tumepata mambo makuu saba:
+<ul>
+<p>i.	Pendo la Mungu
+<p>ii.	Huruma na rehema za Mungu
+<p>iii.	Msamaha wa Mungu
+<p>iv.	Neema ya Mungu
+<p>v.	Nguvu ya Mungu
+<p>vi.	Uwepo wa Mungu (Upako)
+<p>vii.	Utukufu wa Mungu 
+</ul>
+<div class="text-center">
+  <p><i><span>“Katika yeye huyo, kwa damu yake, tunao ukombozi wetu, masamaha ya dhambi, sawasawa na wingi wa neema yake.”</span></i> Waefeso 1:7</p></div>
+
+<p>Tunapohesabiwa haki kuwa watakatifu si kwamba dhambi zetu hazitajwi, hapana. Muujiza mkubwa sana unatokea ambao unaotuingiza katika msamaha wa dhambi zote na tunahesabiwa haki, kuwa tu watoto wa Mungu, na hatimaye tunaitwa watakatifu wa Mungu.
+
+
+  <p><i><span>“Bali Mungu aonyesha pendo lake yeye mwenyewe kwetu sisi, kwa kuwa Kristo alikufa kwa ajili yetu, tulipokuwa tungali wenye dhambi. 9 Basi zaidi sana tukiisha kuhesabiwa haki katika damu yake, tutaokolewa na ghadhabu kwa yeye. 10 Kwa maana ikiwa tulipokuwa adui tulipatanishwa na Mungu kwa mauti ya Mwana wake; zaidi sana baada ya kupatanishwa tutaokolewa katika uzima wake.”</span></i> Warumi 5:8-10</p>
+
+  <p><i><span>“si kwa sababu ya matendo ya haki tuliyoyatenda sisi; bali kwa rehema yake, kwa kuoshwa kwa kuzaliwa kwa pili na kufanywa upya na Roho Mtakatifu.”</span></i> Tito 3:5</p>
+
+  <p><i><span>“Haya, njoni, tusemezane, asema Bwana. Dhambi zenu zijapokuwa nyekundu sana, zitakuwa nyeupe kama theluji; zijapokuwa nyekundu kama bendera, zitakuwa kama sufu.”</span></i> Isaya 1:18</p>
+
+<h3><a name="hzikayna"></a></h3>
+<h3>HII ZAWADI ILITOLEWA KWA AJILI YA NANI?</h3>
+<p>Neno la Mungu limeweka wazi kuwa hii zawadi ya wokovu ilitolewa kwa ajili ya kila mtu ama mtoto ambaye atamwamini na kumkiri Yesu Kristo, mwana wa pekee wa Mungu. Ukiwemo wewe msomaji wa kitabu hiki.
+
+  <p><i><span>
+“Kwa maana jinsi hii Mungu aliupenda ulimwengu, hata akamtoa Mwanawe pekee, ili kila mtu amwaminiye asipotee, bali awe na uzima wa milele.”</span></i> Yohana 3:16</p>
+<p>Mungu alikupenda wewe na kila mmoja aliyeko duniani mpaka akatoa mwanawe wa pekee, Yesu Kristo, ili kwamba kila amwaminiye asipotee (au asitengwe na Mungu milele), badala yake awe na uzima wa milele, aishi katika uwepo wake daima. 
+<p><span>Tazama alichokifanya Mungu:</span></p>
+<ul>
+<p>1.	Mungu aliupenda ulimwengu
+<p>2.	Mungu akamtoa Mwanawe wa pekee
+</ul>
+<p><span>Matokeo ya alichokifanya Mungu:</span></p>
+<ul>
+<p>1.	Ni kwamba “kila mtu amwaminiye” – ni yeyote na kila mtu, ukiwemo wewe.
+<p>2.	Asipotee – asije akatengwa na Mungu na akafa kiroho.
+<p>3.	Na awe na uzima wa milele – aishi na kuambatana na uwepo wa Mungu milele.
+</ul>
+<p><span><i>
+“Maana Mungu hakumtuma Mwana ulimwenguni ili auhukumu ulimwengu, bali ulimwengu uokolewe katika yeye. 18 Amwaminiye yeye hahukumiwi; asiyeamini amekwisha kuhukumiwa; kwa sababu hakuliamini jina la Mwana pekee wa Mungu.”</i></span> (Yohana 3:17-18).</p>
+<p><span><i>“Hata imekuwa, mtu akiwa ndani ya Kristo amekuwa kiumbe kipya; ya kale yamepita tazama! Yamekuwa mapya”</i></span> (2 Wakorintho 5:17).</p>
+<p>Mungu alikupenda sana wewe hata akaamua kumtoa Mwanawe wa pekee, Yesu Kristo kwa ajili yako. Yote haya yamefanyika ili kufanya malipo ya kusamehewa dhambi zako zote. Umefanyika kuwa kiumbe kipya, yaani kwa ndani umetakaswa kabisa hakuna uchafu wala alama yoyote ya ouvu moyoni mwako. 
+<p>Mfano: Kwa watumiaji wa simu au kompyuta, kuna wakati vifaa hivi vinaingiliwa na virusi na kusababisha mafaili yote kutofanya kazi ipasavyo au au kompyuta kuwa nzito. Ili kuirejesha katika ubora wake inalazimika kufuta kila kitu – yaani kufomati. Na baada ya hapo unakuta kompyuta au simu imekuwa mpya na nyepesi kutumia. 
+<p>Ndivyo inavyokuwa kwa mtu anapo okoka anafanyika mpya na mfumo wake wa ndani unaanza kwa upya kabisa. Unachotakiwa kufanya ni kumwamini Mungu na Mwanaye Yesu Kristo, kwa kufuata hatua hizi:
+<p><span>1.	Kiri dhambi zako</span></p>
+<p>Biblia inatueleza kwamba wote wametenda dhambi. Chukua maamuzi kwa matendo yako mabaya, kukosa utii kwako, uasi wako na dhambi zako. Usichelewe! Kubali kuwa umetenda dhambi na umuombe Yesu Kristo akusamehe na kukusafisha dhambi zako zote ili tuwe wapya.
+<p>Neno la Mungu limetuahidi kuwa kama tutakiri dhambi zetu, si tu kwamba atatusamehe dhambi, bali pia atatutakasa na uchafu wote.
+	<p><span><i>
+“Tukiziungama dhambi zetu, Yeye ni mwaminifu na wa haki hata atuondolee dhambi zetu, na kutusafisha na udhalimu wote.”</i></span> (I Yohana 1:9)</p>
+<p>Endapo tutafanya jambo moja: kuziungama dhambi zetu, Mungu ameahidi kututendea mambo mawili: atatuondolea dhambi zetu na kutusafisha na kila udhalimu (uchafu).
+	<p><span><i>
+“Afichaye dhambi zake hatafanikiwa; Bali yeye aziungamaye na kuziacha atapata rehema.”</i></span> (Mithali 28:13).</p>
+<p><span><i>
+“Kwa sababu, ukimkiri Yesu kwa kinywa chako ya kuwa ni Bwana, na kuamini moyoni mwako ya kuwa Mungu alimfufua katika wafu, utaokoka. 10 Kwa maana kwa moyo mtu huamini hata kupata haki, na kwa kinywa hukiri hata kupata wokovu.” </i></span>(Warumi 10:9-10).</p>
+
+<p><span>2.	Mwalike Yeye</span></p>
+<p>Omba kwa kumaanisha, ukimuomba Yesu akusamehe na kukusafisha dhambi zote. Acha kuenenda kwa njia zako, mualike Yesu maishani mwako sasa. Chagua kumfanya Yesu awe sehemu ya kila kitu unachokifanya.
+<p>Neno la Mungu linatuahidi kuwa unapofungua mlango wa moyo wako na maisha yako kwake, atakuja kwako na atafanya ushirika nawe. Unapofanya haya mambo, muujiza hutokea: Yesu Kristo anafanyika Mwokozi wako na unakuwa umezaliwa mara ya pili.
+	<p><span><i>
+“Tazama, nasimama mlangoni, nabisha; mtu akiisikia sauti yangu, na kuufungua mlango, nitaingia kwake, nami nitakula pamoja naye, na yeye pamoja nami.” </i></span>(Ufunuo 3:20)</p>
+<p><span><i>
+“Kwa maana kwa moyo mtu huamini hata kupata haki, na kwa kinywa hukiri hata kupata wokovu.” </i></span>(Warumi 10:10).</p>
+
+<p><span>3.	Tunza muujiza wa wokovu</span></p>
+<p>Wokovu umeahidiwa kwa kila mtu atakaye amini kwa moyo wake na kukiri kwa kinywa chake kuwa Yesu ni Bwana, na kuamini moyoni mwake kuwa Mungu alimfufua katika wafu. Haitoshi kuamini kuwa Yesu aliwahi kuishi na alitembea duniani. Ni kifo chake na kuzikwa kwake na ufufuo wake kutoka kaburini ndivyo vilivyo tuhakikishia kuwa alikuwa Mwana wa Mungu na Mungu alimpatia nguvu na mamalaka juu ya dhambi na mauti.
+	<p><span><i>
+“Basi, ndugu zangu, nawaarifu ile injili niliyowahubiri; ambayo ndiyo mliyoipokea, na katika hiyo mnasimama, 2 na kwa hiyo mnaokolewa; ikiwa mnayashika sana maneno niliyowahubiri isipokuwa mliamini bure. 3 Kwa maana naliwatolea ninyi hapo mwanzo yale niliyoyapokea mimi mwenyewe, ya kuwa Kristo alikufa kwa ajili ya dhambi zetu, kama yanenavyo maandiko; 4 na ya kuwa alizikwa; na ya kuwa alifufuka siku ya tatu, kama yanenavyo maandiko;  5 na ya kuwa alimtokea Kefa; tena na wale Thenashara; 6 baadaye aliwatokea ndugu zaidi ya mia tano pamoja; katika hao wengi wanaishi hata sasa, ila baadhi yao wamelala;” </i></span>(1 Wakorintho 15:1-6).</p>
+<p>Muujiza wa wokovu unapotokea ndipo mtu anazaliwa mara ya pili, Neno la Mungu linatangaza kwamba dhambi zetu hazikumbukwi tena dhidi yetu. Ni kama vile hazijawahi kutokea, hivyo tunza sana huo wokovu wako kwa kutokujihukumu wala kukumbuka uliyopitia siku za nyuma.
+	<p><span><i>
+“Kwa sababu nitawasamehe maovu yao, Na dhambi zao sitazikumbuka tena.”</i></span> (Waebrania 8:12)</p>
+
+<p><span>4.	Tembea katika njia zake</span></p>
+<p>Mabadiliko yanayotokea katika maisha ya mtu ambaye ametubu dhambi zake na amemfanya Yesu Kristo kuwa Bwana na Mwokozi wa maisha yake yanatokea ndani yake, na ushahidi au udhihilisho wake unaonekana nje. Kwa kadri tunavyojifunza kutembea katika njia zake, mambo mengi ya kidunia yaliyokuwa yanaonekana kuwa ya maana maishani mwetu yanaanza kupotea. Kwa jinsi unavyotembea katika njia zake kwa utii wa kila siku, unaanza kupenda vitu ambavyo Mungu anavipenda na unaanza kuchukia vitu ambavyo Mungu anavichukia.
+	<p><span><i>
+“Sasa, basi, hakuna hukumu ya adhabu juu yao walio katika Kristo Yesu.” </i></span>(Warumi 8:1).</p>
+<p><span><i>
+“mkaenende katika upendo, kama Kristo naye alivyowapenda ninyi tena akajitoa kwa ajili yetu, sadaka na dhabihu kwa Mungu, kuwa harufu ya manukato.” </i></span>(Waefeso 5:2).</p>
+<p>Upendo ni kutoa, ni jambo pekee linaloufurahisha moyo wa Mungu. Ukisha okoka ni vema sana ukajifunza kujitoa maisha yako kwa kuwaendea wengine ili na wao pia waweze kumjua Mungu kama wewe. Na hii ndiyo inaitwa kumzalia BWANA matunda. Ukianza kuonesha upendo wa Mungu kwa kuwashuhudia wengine ndipo Mungu huanza kukutimizia mahitaji yako yote ya kila siku. 
+
+<h3><a name="mmp"></a></h3>
+<h3>MWANZO MPYA</h3>
+<p>Tangu unapozaliwa mara pili, maisha mapya yanaanza.
+<p>Kila kitu ni kipya! Kwa kuwa umeomba kwa kumaanisha, ukimuomba Mungu akusamehe na kukusafisha dhambi zako, Biblia inatuahidi kusamehewa makosa yote uliyowahi kuyatenda. Ni kama vile kuanza maisha mapya. Neno la Mungu linakiri wazi kuwa Mungu hatakumbuka dhambi za jana dhidi yako. Zimeondoka milele, na ni kama vile hujawahi kutenda dhambi.
+<p><span><i>
+“Mtu mbaya na aache njia yake, Na mtu asiye haki aache mawazo yake; Na amrudie Bwana, Naye atamrehemu; Na arejee kwa Mungu wetu, Naye atamsamehe kabisa.”</i></span> Isaya 55:7
+</p>
+<p><span><i>“…na damu yake Yesu, Mwana wake, yatusafisha dhambi yote.”</i></span> (I Yohana 1:7)</p>
+<p><span><i>
+“Kama mashariki ilivyo mbali na magharibi, Ndivyo alivyoweka dhambi zetu mbali nasi.”</i></span> Zaburi 103:12</p>
+<p><span><i>
+“Bali wote waliompokea aliwapa uwezo wa kufanyika watoto wa Mungu, ndio wale waliaminio jina lake;”</i></span> Yohana 1:12</p>
+<p><span><i>
+“wanahesabiwa haki bure kwa neema yake, kwa njia ya ukombozi ulio katika Kristo Yesu; 25 ambaye Mungu amekwisha kumweka awe upatanisho kwa njia ya imani katika damu yake, ili aonyeshe haki yake, kwa sababu ya kuziachilia katika ustahimili wa MUNGU dhambi zote zilizotangulia kufanywa. 26 apate kuonyesha haki yake wakati huu, ili awe mwenye haki na mwenye kumhesabu haki yeye amwaminiye Yesu.” </i></span>(Warumi 3:24-26).</p>
+<h3><a name="nknup"></a></h3>
+<h3>NITAJUAJE KWAMBA NIMEZALIWA UPYA?</h3>
+<p>Mtu ambaye amezaliwa upya anapenda vitu ambavyo Mungu anavipenda na anachukia vitu ambavyo Mungu anavichukia. Na hili liko wazi sana ndani ya Biblia. Mkristo wa kweli atatamani kutii Neno la Mungu na kufuata kile Biblia imesema. Kwa kadri unavyo tumia zile kanuni za Biblia, utakua na kukomaa kiroho haimaye kuwa Mkristo mkamilifu.
+	<p><span><i>
+“Na huu ndio ushuhuda, ya kwamba Mungu alitupa uzima wa milele; na uzima huu umo katika Mwanawe. 12 Yeye aliye naye Mwana, anao huo uzima; asiye naye Mwana wa Mungu hana huo uzima. 13 Nimewaandikia ninyi mambo hayo, ili mjue ya kuwa mna uzima wa milele, ninyi mnaoliamini Jina la Mwana wa Mungu.” </i></span>(I Yohana 5:11-13).</p>
+<p>Yesu alisema mtawatambua kwa matunda au matendo yao (kwa namna wanavyoishi maisha yao).
+	<p><span><i>
+“Mtawatambua kwa matunda yao.”</i></span> Mathayo 7:16</p>
+<p>Ili kumjua mtu aliye okoka kinachoangaliwa sana ni maneno yake, tabia yake, uwajibikaji wake, na jinsi ambavyo huyu mtu anaweza kukabiliana na mazingira pasipo kumtia aibu Yesu kupitia maisha yake hasa kwa jamii inayomzunguka.
+<p>Ili jambo jipya litokee, la zamani lazima liondoke. Katika Kitabu cha Mwanzo 32:24-28, malaika alimwambia Yakobo kuanzia leo hutaitwa tena Yakobo bali utaitwa Israeli – jina la zamani lazima lipishe njia ya jina jipya. Mungu alifanya hivi pia kwa babu na bibi yake Ibrahimu na Sara ambao majina yao yalibadirika kutoka Abramu na Sarai. Kuanzia Ulipoamua kuokoka majina ya zamani yote ambayo ulipewa kutokana na kushindwa, kuugua sana, umaskini lazima yapishe utukufu mpya unaoenda kuanza mara baada ya kuokoka. Kuanzia sasa tambua Bwana wako ni Yesu Kristo na siyo yule wa zamani tena. Tabia zako lazima zizaliwe mpya zinazompendeza Bwana wako wa sasa ambate ni Yesu. 
+	<p><span><i>
+“Hata imekuwa, mtu akiwa ndani ya Kristo amekuwa kiumbe kipya; ya kale yamepita tazama! Yamekuwa mapya”</i></span></p>
+<p>Ina maanisha kwamba kwa kuwa umekuja kwa Yesu Kristo ile hai ya asili ya dhambi imeondoka kwako, kwa sababu si tu kwamba Umesamehewa bali pia ile nguvu ya kukufanya utende dhambi imeshaondoka kwako.
+<p><span>Angalizo:</span> kama bado hujamkubali Yesu kuwa Bwana na Mwokozi wako, chukua hatua ya dhati ya kumkubali na kumfanya awe Bwana na mwokozi wa maisha yako, utashngaa jinsi atakavyokufanyia mabadiriko makubwa sana maishani mwako – endapo utaamua kuokoka. Biblia inasema:
+	<p><span><i>
+“Kwa maana asema, Wakati uliokubalika nalikusikia, Siku ya wokovu nalikusaidia; tazama, wakati uliokubalika ndiyo sasa; tazama siku ya wokovu ni sasa”</i></span> 2 Wakorintho 6:2</p>
+<p>Amua leo, iwe ni siku yako ya kubadilishwa, maajabu ya kiumbe kipya ndipo yaanze kujitokeza kwako.
+<p><span>OMBI: Baba, ninasimamia ahadi zako za kuona utukufu wa mambo mapya maishani mwangu. Ninakuomba unizidishie furaha ya maisha mapya niliyoyaanza, Katika Jina la Yesu Kristo</span></p>
+<h3><a name="kknykr"></a></h3>
+<h3>KUKUA KIROHO NA YESU KRISTO.</h3>
+<p><span><i>
+“Lakini, kueni katika neema, na katika kumjua Bwana wetu na Mwokozi Yesu Kristo.” </i></span>(2 Petro 3:18).</p>
+<p>Ili uhusiano wako mpya na Bwana Yesu uweze kukomaa na kushamiri, ni muhimu sana kwako kutekeleza haya:
+
+<p><span>1.	Soma sehemu ndogo ya Biblia kila siku.</span></p>
+<ul>
+<p>Anza na injili ya Yohana. Inayopatikana katika Agano Jipya. Kabla hujaanza muombe Bwana Yesu akusaidie kuelewa kile usomacho ili uweze kumjua Yeye vizuri, na umpende vizuri na ukue ukiimarika kwa kadri unavyotembea naye. Kumbuka, ni muhimu kukielewa kile unachosoma ndani ya Neno la Mungu kwa maana ni kweli iliyo ndani ya Neno lake itakayoleta uhai kwako na kukusaidia ukue kiroho. Ni kama vile chakula kinavyokusaidia kujenga mwili wako kwa ukuaji na kuupa nguvu, ndivyo Neno la Mungu likupavyo ustawi wa kiroho kwako.
+	<p><span><i>
+“Kama watoto wachanga waliozaliwa sasa yatamanini maziwa ya akili yasiyoghoshiwa, ili kwa hayo mpate kuukulia wokovu”</i></span> (I Petro 2:2).</p>
+<p><span><i>
+“Unifumbue macho yangu niyatazame Maajabu yatokayo katika sheria yako.” (Zaburi 119:18).
+“Moyoni mwangu nimeliweka neno lako, Nisije nikakutenda dhambi.” </i></span>(Zaburi 119:11).</p>
+<p><span><i>
+“Jitahidi kujionyesha kuwa umekubaliwa na Mungu, mtenda kazi asiye na sababu ya kutahayari, ukitumia kwa halali neno la kweli.” </i></span>(2 Timotheo 2:15).</p>
+<p><span><i>
+“Nimewaandikia ninyi mambo hayo, ili mjue ya kuwa mna uzima wa milele, ninyi mnaoliamini Jina la Mwana wa Mungu.”</i></span> (1 Yohana 5:13)</p>
+</ul>
+<p><span>2.	Tumia muda fulani kuomba na kumwabudu Bwana kila siku</span></p>.
+<ul>
+<p>Maombi ni kuongea kwa dhati na umakini na Mungu. Unaboresha uhusiano wako na marafiki kwa kuongea nao, na kuzidi kuwafahamu.
+<p>Kwa sasa Yesu amekuwa rafiki yako wa milele na unaboresha uhusiano naye kwa kuongea naye katika maombi. Tenga muda wa maombi ili uongee naye kila siku ili upate muda wa kuongea naye kama ambavyo ungeweza kuongea na rafiki katika maisha ya kawaida.
+<p><span><i>
+“ombeni bila kukoma; 18 shukuruni kwa kila jambo; maana hayo ni mapenzi ya Mungu kwenu katika Kristo Yesu” </i></span>(1 Wathesalonike 5:17-18).</p>
+<p><span><i>
+“bali wao wamngojeao Bwana watapata nguvu mpya; watapanda juu kwa mbawa kama tai; watapiga mbio, wala hawatachoka; watakwenda kwa miguu, wala hawatazimia.” </i></span>(Isaya 40:31)</p>
+<p>
+Luka 18: 1 <span><i>“Akawaambia mfano, ya kwamba imewapasa kumwomba Mungu sikuzote, wala wasikate tamaa.”</i></span></p>
+</ul>
+
+<p><span>3.	Tafuta kanisa linalofundisha Biblia kama Neno la Mungu, hili litakusaidia kuumba uhusiano wako na Yesu Kristo.</span></p>
+<p>Kwa kadri unavyoenda kanisani kama desturi ya watakatifu ndipo unapoanza kuishi na wengine ambao pia wanampenda Yesu, utatiwa moyo katika Mtembeo wako na Bwana Yesu Kristo kila siku na utakuwa katika maarifa ya njia zake.
+<p><span><i> 
+“wala tusiache kukusanyika pamoja, kama ilivyo desturi ya wengine; bali tuonyane; na kuzidi kufanya hivyo, kwa kadiri mwonavyo siku ile kuwa inakaribia.” </i></span>(Waebrania 10:25)</p>
+<p><span><i>
+“Waliopandwa katika nyumba ya Bwana Watasitawi katika nyua za Mungu wetu.” </i></span>(Zaburi 92:13).</p>
+
+<p><span>4.	Waambie wengine Kuhusu uhusiano wako na Yesu Kristo.</span></p>
+<p>Ni kitu cha kawaida sana kwetu kuongea juu ya mambo yanayojitokeza kwenye maisha ya kawaida ya maisha yetu. Unatakiwa uwe wa kwanza kuwaambia ndugu zako na marafiki zako Kuhusu kile Yesu ametenda maishani mwako. Siku moja Yesu alisema kwa mwamini mpya,
+<p><span><i> “…Enenda zako nyumbani kwako, kwa watu wa kwenu, kawahubiri ni mambo gani makuu aliyokutendea Bwana, na jinsi alivyokurehemu.”</i></span> (Marko 5:19).</p>
+<p><span><i>
+“Kwa maana kwa moyo mtu huamini hata kupata haki, na kwa kinywa hukiri hata kupata wokovu.” </i></span>(Warumi 10:10).</p>
+
+<p><span>5.	Shirikiana na marafiki ambao watakusaidia ukue kama Mkristo.</span></p>
+<p>Tumia muda na marafiki wanaomjua na kumpenda Bwana Yesu kama wewe umpendavyo Yesu. Kwa kushinda na marafiki wanaofanya vitu vinavyo mpendeza Mungu na njia zake, Mtembeo wako na Mwokozi utaimarishwa sana. Ndipo utaanza kuelewa na kumjua sana Mungu na Mwanaye Yesu Kristo na utaanza kuona mapenzi ya dhati kati yako na Yesu Kristo.
+	<p><span><i>
+“Msifungiwe nira pamoja na wasioamini, kwa jinsi isivyo sawasawa; kwa maana pana urafiki gani kati ya haki na uasi? Tena pana shirika gani kati ya nuru na giza?” </i></span>(2 Wakorintho 6:14).</p>
+<p><span><i>
+“Na katika hili twajua ya kuwa tumemjua yeye, ikiwa tunashika amri zake.”</i></span> (1 Yohana 2:3).</p>
+<p>Kuna Makundi matatu ambayo unatakiwa kuyakwepa sana katika maisha yako ili uweze kumpendeza Mungu.
+	<p>
+Zaburi 1:1 <span><i>“1 Heri mtu yule asiyekwenda Katika shauri la wasio haki; Wala hakusimama katika njia ya wakosaji; Wala hakuketi barazani pa wenye mizaha.”</i></span>
+1.	Wasio haki. 
+Hawa ni watu wasiojua kuhusu Mungu wala hawaelewi habari zake.
+
+<p><span>2.	Wakosaji.
+<p>Wanaweza kumjua Mungu lakini hawafahamu kuhusu Mungu. Hivyo wanafanya tofauti na mapenzi ya Mungu.
+
+<p><span>3.	Wenye mizaha.
+<p>Ni wale wanaokuja kanisani lakini hawaenendi katika kweli.
+
+<p>Sio jambo rahisi kujitenga na makundi hayo, maana tumefungana na maisha ya namna hiyo katika dunia hii.
+<p>Katika kichwa cha mwanadamu kuna ngome fulani isiyokupa kuamua mambo katika BWANA, lakini kama unataka kufika katika hatua ya juu, pale unapoamua kujitenga na makundi hayo matatu utasikia hali fulani ya kuumia; maana kuna vitu vinaondoka kwako, vile vinavyotokana na kuzaliwa kwako.
+<p><span><i> 
+“(maana silaha za vita vyetu si za mwili, bali zina uwezo katika Mungu hata kuangusha ngome;) 5 tukiangusha mawazo na kila kitu kilichoinuka, kijiinuacho juu ya elimu ya Mungu; na tukiteka nyara kila fikira ipate kumtii Kristo; 6 tena tukiwa tayari kupatiliza maasi yote, kutii kwenu kutakapotimia.”</i></span> – 2 Wakorintho 10:4-6</p>
+<P>Kuna tabia ipo ndani yako ambayo inatokana na kuzaliwa kwako na baba yako na mama yako, na ili kuondokana nayo inakugharimu. Ni kitu kizuri kutoka ili utakapofika mahali pa kuamua kumpendeza ili mambo yapate kuwa.
+	<p><span><i>
+"Basi, ndugu zangu, nawasihi, kwa huruma zake Mungu, itoeni miili yenu iwe dhabihu iliyo hai, takatifu, ya kumpendeza Mungu, ndiyo ibada yenu yenye maana."</i></span> Warumi 12:1</p>
+<P>Ukifikia hatua ya aina hii, mahusiano yako na wanadamu na mazingira yanapotea. Mahusiano yako halisi na viumbe vinavyotembea huku duniani, yanapotea, maana BWANA anachukua maisha yako na kuanza kutembea na wewe.
+<P>Unapoona hali hii isikusumbue, maana utakapofuata hii njia watu wengi watakucheka, watakubeza lakini hii ndiyo inampa furaha Mungu kuwa kweli umeamua kumpendeza Bwana.
+
+
+<p><span>6.	Amua kuishi maisha ya utii kwa Roho Mtakatifu.</span></p>
+<P>Katika mtazamo wako wa kila siku kwa Mungu akuongoze katika mwenendo wako, Utamwona Mungu akisema nawe kupitia Neno lake usomapo.
+<p><span><i> 
+ “Hatimaye, ndugu zangu, mambo yo yote yaliyo ya kweli, yo yote yaliyo ya staha, yo yote yaliyo ya haki, yo yote yaliyo safi; yo yote yenye kupendeza; yo yote yenye sifa njema; ukiwapo wema wowote; ikiwapo sifa yoyote; yatafakarini hayo”. </i></span> Wafilipi 4:8</p>
+<P>Kuhukumiwa kutoka ndani kutakuwa ndani yako kwamba jambo fulani ni kweli. Tii hali hii ya kuhukumiwa maana hivi ndivyo Roho Mtakatifu anavyokufundisha na kukuongoza kwa njia zake. Roho Mtakatifu hawezi kukuambia ufanye dhambi au kitu ambacho kitamfanya mtu mwingine aumie au ufanye jambo ambalo ni kinyume na Biblia. Unapokutwa na jambo ambalo unatakiwa kuamua kati ya mambo mawili ya tabia, chagua njia ya juu zaidi; nzuri zaidi; safi zaidi; karimu zaidi na ya uaminifu zaidi. 
+<p><span>7.	Amua kujitoa kufanya kazi ya Mungu.</span></p>
+<p>Mungu anataka kukufanikisha na kukutana na mahitaji yako. Jambo unalotakiwa kufanya sasa ni kumheshimu Mungu kwa kumpa pesa na muda wako kujitoa kwa kazi ya Bwana Mungu. Hii ni sehemu ya ibada na inakusaidia kuendeleza ufalme wake. Kwa namna hii, wengine watapata nafasi kama tulivyoipata; kusikia habari njema.
+		
+
+
+
+
+<hr>
+
+
+<h3><a name="sayahasira"></a></h3>
+
+<div class="text-center">
+<h3>Sura Ya Tatu</h3>
+
+			<h2>WITO</h>
+			
+	</div>
+			
+<p>Kila Mkristo ameitwa kwa ajili ya kusudi fulani. Na kila wito una mahitaji yake, na haitakiwi kuutekeleza wito pasipo maombi, mashauri na mitihani ya kiroho. Tunasoma katika 2 Timotheo 1:9
+
+<p><i><span>“ambaye alituokoa akatuita kwa mwito mtakatifu, si kwa kadiri ya matendo yetu sisi, bali kwa kadiri ya makusudi yake yeye na neema yake. Neema hiyo tulipewa katika Kristo Yesu tangu milele.”</span></i></p>
+<p>Hapo tunabaini kuwa tulikuwa mbali au nje ya mapenzi ya Mungu. Hivyo, Mungu aliona kusudi lake chini ya jua linahitaji watu wa kulisimamia ukiwemo wewe. Tulikuwa mikononi mwa ibilisi, hivyo kwa upendo wake akaamua kutuokoa na kutuita tuje kwake. Huu wito ukasababisha tuwe watakatifu. Mtu yeyote ambaye ameitwa na Mungu ni wazi kwamba haijalishi alikuwa na dhambi kiasi gani, alitakaswa kwa kusudi la Mungu kabla hajatoka tumboni mwa mama yake (Yeremia 1:5). 
+<p>Ukisoma hapo juu anasema si kwa kadri ya matendo yetu sisi, bali kwa kadri ya makusudi yake kwetu na ile neema yake. Na anasema neema hii tulipewa tangu milele na Yesu Kristo. Hivyo elewa kuwa Mungu anapokuita ana kusudi maalumu na wewe na hilo kusudi ndilo lililokufanya uzaliwe na uwe hai mpaka leo. Kamwe usijaribu kukataa wito wa Mungu hata kama mazingira yanaumiza kiasi gani. Hivyo katika kila hali unayopitia jifunze kwanza kutambua Mungu ana kusudi na hakuna kitu kinaitwa bahati mbaya, ila kila unachopitia ni kusudi la Mungu kwako, katika majira hayo.
+<p>Ieleweke kwamba katika kila Kijiji, mji, jiji au nchi kuna falme mbili zinazotenda kazi: ufalme wa Nuru na ufalme wa giza. Wakolosai 1:13 inasema,
+<p><i><span>“Naye alituokoa katika nguvu za giza, akatuhamisha na kutuingiza katika ufalme wa Mwana wa pendo lake”</span></i></p>
+<p>Hili Neno linatuonesha kuwa kila mwana wa Mungu amehamishwa kutoka ufalme wa giza na kuletwa ufalme wa Nuru. Kama kweli umeokolewa ina maanisha hauko tena gizani bali katika ufalme wa Mungu. Wewe kama Nuru kamwe usiwaogope wale watendao kazi katika ufalme wa giza, kama vile wachawi, wapiga ramli maana aliye ndani yako ni mkuu sana (1 Yohana 4:4). Endapo utakuwa unawaogopa hawa hii inamaanisha kwamba kuna jambo haliko sawa katika maisha yako ya wokovu. Inawezekana unajikanyaga mwenyewe na lazima dhambi imekutawala. Chochote kinachoingilia utakatifu wako, tambua kina haribu ulinzi wa kiungu. Hawa watendaji wa ufalme wa giza wakigundua nuru yako inawaka sana, watajitoa ila wataweka majaribu na mitego kwako. Ukifeli tu watakushambulia sana.
+<p>Cha kutaka kuelewa, ni sababu ya kwa nini Mungu alituhamisha sisi kutoka ufalme wa giza na kutuingiza katika ufalme wa Mwana wa pendo lake, ni kwa sababu anataka kuona mapenzi yake yanafanyika Mbinguni na duniani. Bado kuna mapambano ya kujenga mapenzi ya Mungu hapa duniani, kwa kuwa mtu alikabidhi utawala wa dunia hii kwa ufalme wa giza katika bustani ya Edeni (Luka 4:5-6).
+<p>Kama mwana wa Mungu, ni wakili ambaye popote uwapo hakikisha unafanya mapenzi ya Mungu, kwenye kona yoyote hapa duniani unapojikuta upo. Kama unataka kuanzisha na kutimiza mapenzi ya Mungu unatakiwa usifanye uongo wa namna yoyote ile, dhambi na unafiki. Kati ya wana wa Mungu walioko duniani leo, utapata mshituko kujua ni wangapi wanaotafuta kufanya mapenzi ya Mungu kikamilifu katika maeneo yote ya maisha yao. Wengi wetu tunataka Mungu abadilishe mipango yake na njia zake ili afuate ya kwetu, lakini hayo ni matarajio yasiyowezekana kutimizwa. Mungu habadiliki: ni yule yule milele (Malaki 3:6). 
+<p>Mungu anatenda kihafidhina, teknolojia yake huko mbinguni imetupita zaidi ya mabilioni ya miaka ukilinganisha na teknolojia yetu huku duniani. Kiuhalisia ni Yeye atupaye sisi watafiti, wanaofikiri sana, wawekezaji na kila ugunduzi wa kisasa tulio nao. Kila ugunduzi wa kisayansi wanaofanya hapa duniani ni mpya kwetu lakini kwa walioko huko mbinguni hakuna jipya tumefanya. Kwa wao, kile sisi tunaona kama tumefakifanya kwa ubora sana kwao ni habari zilizopendwa. Mbinguni hakuna ujanja ujanja au mbinu za kilaghai, kila kitu kinaendeshwa na mapenzi ya Mungu. Na anaendesha mapenzi yake kwa majira na nyakati maalum, hivyo Mungu akikupa jambo la kufanya<p><span> ana matarajio yanayohusu lini, wapi na namna gani yatatekelezwa</span></p>. Ukishindwa kutekeleza hilo jukumu ndani ya muda au wakati wake hapo utabaki ukifanya wewe mwenyewe. Ni kwa kiwango gani unafanya mapenzi ya Mungu?
+
+<h3>UKISHINDWA MUNGU ATASHINDA</h3>
+<p>Kusudi la Mungu kwenye maisha yako ni kubwa kuliko wewe. Ni la zamani kuliko wewe kwa sababu lilikuwepo kabla dunia haijaanza. Ni sehemu ya mpango mkubwa wa Mungu. Ukishindwa kulifanya, Mungu atalifanya kwa namna nyingine na mtu mwingine. Kama alitaka kukufanya uwe mfalme na umeshindwa, atakutumia wewe kufundisha mwingine juu ya nini kifanyike ili awe mfalme.
+
+<p>Mungu alimchagua Sauli na hili liliandaliwa kabla misingi ya ulimwengu haijawekwa. Sauli alikuwa mnyenyekevu, alifundishwa vizuri, mtiifu na mwenye bidii, alikuwa ni aina ya mtu ambaye Mungu alimtaka. Hata siku ya kupewa ufalme alienda kujificha, ilibidi atafutwe. Hata hivyo, alipokuwa mfalme alifika mahali akamsahau Mungu. Kwa sababu hiyo, Mungu akamfanya kuwa ni mfalme ambaye wafalme wengine watajifunza toka kwake. Kusudi la Mungu ni kubwa kuliko mtu yeyote. Mungu anatamani usishindwe hilo kusudi ili hapo baadaye aweze kukuvisha taji kichwani kwako. Aliandaa taji kabla ya kuwekwa misingi ya ulimwengu, Taji linakusubiri. Mhubiri 3:1 inasema:
+<p><i><span>
+“Kwa kila jambo kuna majira yake, Na wakati kwa kila kusudi chini ya mbingu.”</span></i></p>
+<p>Katika jambo ambalo Mungu anataka kukutumia lina wakati maalum, ukichelewa kusudi linakoma. Nikuombe msomaji wa kitabu hiki, muombe Mungu akusaidie usife kabla hujatambua na hujakamilisha kusudi la kuumbwa kwako.
+
+	<h3><a name="wat"></a></h3>
+<p><span>WATEULE</span></p></p>
+Marko 3:13-19:
+<p><i><span>
+13 Akapanda mlimani, akawaita aliowataka mwenyewe; wakamwendea. 14 Akaweka watu kumi na wawili, wapate kuwa pamoja naye, na kwamba awatume kuhubiri, 15 tena wawe na amri ya kutoa pepo. 16 Akawaweka wale Thenashara; na Simoni akampa jina la Petro; 17 na Yakobo, mwana wa Zebedayo, na Yohana nduguye Yakobo, akawapa jina la Boanerge, maana yake, wana wa ngurumo; 18 na Andrea, na Filipo, na Bartholomayo, na Mathayo, na Tomaso, na Yakobo wa Alfayo, na Thadayo, na Simoni Mkananayo, 19 na Yuda Iskariote, ndiye aliyemsaliti. Kisha akaingia nyumbani.</span></i></p>
+
+<p>Hapo tunaona kuwa Yesu alipanda juu ya mlima na hawa watu wengine walikuwa chini au bondeni, ndipo akaanza kuwaita aliowataka. Maana alikuwa anawaambia “njoo huku juu, ungana Nami”. Watu wengi walikuwepo pale lakini aliwachagua wachache. Mathayo 20:14:
+	<p><i><span>
+“Kwa maana waitwao ni wengi, bali wateule ni wachache.”</span></i></p>
+<p>Ilikuwa raha sana kuitwa na Bwana Yesu, chukulia jinsi ilivyo raha siku za leo waziri anapoteuliwa na Rais wa nchi. Wakati ambao Bwana Yesu aliwaita watu hawa aliwaita kama alivyo penda mwenyewe. 
+<p>Yesu Kristo aliwaweka wakfu watu hawa aliowaita. Aliwatenga kwa ajili ya utumishi – wapate kuutangaza uzuri wa Bwana.
+<p><i><span> 
+“Bali ninyi ni mzao mteule, ukuhani wa kifalme, taifa takatifu, watu wa milki ya Mungu, mpate kuzitangaza fadhili zake yeye aliyewaita mtoke gizani mkaingie katika nuru yake ya ajabu” </span></i>– 1   Petro 2:9</p>
+
+<h3><a name="klku"></a></h3>
+<p><span>KUSUDI LA KUITWA</span></p>
+<p>Katika Biblia tunaona wazi sababu ya Yesu kuwaita na kuwaweka wakfu wachache ambao aliwateua. Mungu anataka ushirika na wewe. Anakutaka wewe utumie muda mwingi na YEYE. Utakapokuwa Naye ndipo atafunua siri zake ambazo wewe utamwakilisha kwa hizo huku duniani. 
+<p>Yesu aliwaita ili awatume waende kuhubiri. Anataka wewe uwe balozi wake. Anataka watu wamuone Yesu ndani yako. Pia aliwapa nguvu ya kuponya, kukomboa na kuwaweka huru waliosetwa. Mtu yeyote aliyeitwa na Mungu ana jina moja linaloubeba ule wito, pasipo kujali cheo chake, nafasi yake, umri wake, au upako wake. Jina lenyewe ni hili “Mtumishi”.
+
+<h3><a name="mnna"></a></h3>
+<p><span>MTUMISHI NI NANI?</span></p>
+1.	Mtumishi ni mtu yeyote ambaye <span>amechaguliwa</span> na Mungu. Hakuna hata mmoja ambaye anajichagua mwenyewe kumtumikia Mungu. Hakuna kitu kinaitwa kujitolea kwa Mungu, kwa Mungu lazima uchaguliwe na ukubali kujitoa kwake. Mungu ndiye anayechagua nani awe mtumishi Wake. Wala siyo Eliya aliyemchagua Elisha awe msaidizi wake; ni Mungu ndiye aliyemchagua Elisha aambatane na Eliya. Kama Mungu hajakuchagua uwe mtumishi wake na ukajichagua mwenyewe, lazima ushindwe. Tunasoma katika Ayubu 1:8: 
+<i><span>“Kisha Bwana akamwuliza Shetani, Je! Umemwangalia huyo mtumishi wangu Ayubu? Kwa kuwa hapana mmoja aliye kama yeye duniani, mtu mkamilifu na mwelekevu, mwenye kumcha Mungu na kuepukana na uovu. </span></i>
+<p>2.	Mungu akishakuchagua, ndipo <span>atakuita / kukuteua</span>. Wito ni tangazo la Mungu linakujia mara baada ya kuchaguliwa au baadaye sana tangu siku uliyochaguliwa, na hili tangazo linakutambulisha kuwa wewe ni Mtumishi wa Mungu.
+<p>3.	Mtumishi wa Mungu, <span>anafundishwa</span>. Fundisho hilo linakusababisha ujue Mungu yukoje, mapenzi yake ni yapi. Na hilo fundisho linakuandaa ili uujue ufalme wako, utayarishwe kwa kila kazi njema ya Mungu.
+<p>4.	Mtumishi wa Mungu <span>anawekwa wakfu (kutengwa)</span>. Tunasoma katika Marko 3:14 Biblia inasema Yesu aliwatenga wale wanafunzi ili wapate kuwa Naye. Kazi ya msingi ya Mtumishi wa Mungu ni kuwa pamoja na Mungu, Mungu anajikuta anakuwa mpweke. Kwa kadri unavyopanda viwango kumsogelea Mungu, ndivyo unavyozidi kuwa mpweke. Siku moja alipokuja katika bustani ya Edeni (Mwanzo 3:8-9), hakuwakuta watumishi wake, Mungu aliita “…Adamu uko wapi?” Leo, Mungu bado anaita “Mtumishi wangu, uko wapi?” Mungu Anataka atumie muda wake na wewe. Hakuna kinachompendeza Mungu kama vile unavyojitenga kwa ajili ya kuwa naye.
+<p>5.	Mtumishi wa Mungu <span>anawezeshwa</span>. Kabla hajaanza kukutumia Mungu anakupa uwezo au nguvu kwa ajili ya kutimiza kusudi lake. Tunaona katika Marko 3:15 anawapa ile amri au nguvu dhidi ya magonjwa, mapepo na pia Luka 24:49 anasema <i><span>“Na tazama, nawaletea juu yenu ahadi ya Baba yangu; lakini kaeni humu mjini, hata mvikwe uwezo utokao juu.”</span></i> Huwezi kufanya kazi ya Mungu pasipo nguvu itokayo Kwake.
+<p>6.	Mtumishi <span>anatumwa</span> kuwa mwakilishi wa Mungu. Katika injili ya Luka 10:1 tunasoma kuwa Yesu akawatuma wawili wawili wamtangulie kwenda kila mji na kila mahali alipokusudia kwenda mwenyewe.  Siku hizi nimeona watu wengi wakiokoka tu wanakimbilia kuhubiri hata pasipo kutumwa. Hili ni kosa kubwa sana katika itifaki ya Mungu. Mtume Paulo aliweka wazi kabisa katika Warumi 10:15 anaposema <i><span>“Tena wahubirije, wasipopelekwa?"</span></i> Ukisoma Biblia ya kiingereza inasema <i><span>“and how shall they preach unless they are sent?”</span></i> Kwa sababu kumtumikia Mungu hasa kwenye idara ya kuhubiri kunataka lazima utumwa.
+<p>Ninaomba wewe usomaye kitabu hiki tamani kutulia chini ya Mchungaji wako ufundishwe kwanza maana Mungu anataka kukutumia ila hataki umpangie muda. Subiri hachelewi. <i><span>2 Petro 3:9 “Bwana hakawii kuitimiza ahadi yake, kama wengine wanavyokudhani kukawia, bali huvumilia kwenu, maana hapendi mtu ye yote apotee, bali wote wafikilie toba.”</span></i> Kwa kuwa umefika mahali pa kuitwa na sasa uko hapo unatumika. Tulia wakati wako unakuja.
+<p>7.	Mtumishi wa Mungu ni <span>mtendaji (Mtenda kazi)</span>. Mungu ameweka wazi juu ya kazi yake aliyokuitia, unapokuwa mtendaji wa kile alichokutuma daima utauona uwepo wake. Biblia inasema:
+	<ul>
+		<p><i><span>
+“habari za Yesu wa Nazareti, jinsi Mungu alivyomtia mafuta kwa Roho Mtakatifu na nguvu naye akazunguka huko na huko, akitenda kazi njema na kuponya wote walioonewa na Ibilisi; kwa maana Mungu alikuwa pamoja naye.”</span></i> Matendo ya Mitume 10:38.</p>
+<p>Marko 16:20 inasema <i><span>“Nao wale wakatoka, wakahubiri kotekote, Bwana akitenda kazi pamoja nao, na kulithibitisha lile neno kwa ishara zilizofuatana nalo.”</span></i></p>
+</ul>
+<p>Amesema hivi Warumi 8:28 <i><span>“…Mungu hufanya kazi pamoja na wale wampendao katika kuwapatia mema, yaani, wale walioitwa kwa kusudi lake.”</span></i> Kama unafanya kazi ya Mungu kama inavyotakiwa, tambua kuwa hakuna hata mmoja ambaye anaweza kukulipa mshahara kama Mungu, ukilinganisha na kazi yako. Je utamlipa kiasi gani mtu anayefufua maiti? Au mtu ambaye anamfanya aliye tasa azae? Je utamlipa kiasi gani mtu ambaye anafunga wiki nzima ili tatizo la mtu mwingine litatuliwe? Kusudi la Mungu kwako, linamfanya akuite na huo wito unakuumbia pendo la Mungu la kuifanya kazi yake. Ukiwa unaitekeleza hiyo kazi ndipo Mungu anakubariki kwa mambo yote ikiwemo afya, amani, utajiri, ulinzi na utukufu wake,</p>
+<p>8.	Mtumishi wa Mungu <span>anakamilishwa</span>. Mathayo 5: 48 <i><span>“Basi ninyi mtakuwa wakamilifu, kama Baba yenu wa mbinguni alivyo mkamilifu.”</span></i> Hii ni hatua ya juu sana ambayo Mungu anatamani sisi watumishi wake tuweze kuifikia. Hatua hii ni daraja la juu sana la upendo uliopo kati ya Mtumishi na Mungu.  Anakuona kama mtu yule aliyemtarajia mwanzo wa uumbaji wake, tunasoma katika Mwanzo 1:26 </p>
+<ul>
+	<p><i><span>
+"Mungu akasema, Na tumfanye mtu kwa mfano wetu, kwa sura yetu; wakatawale samaki wa baharini, na ndege wa angani, na wanyama, na nchi yote pia, na kila chenye kutambaa kitambaacho juu ya nchi." </span></i></p></ul>
+<p>Unapofikia hatua hii ya ukamilifu unakuwa na uwezo wa kutenda chochote hapa duniani pasipo kuomba na Mungu akatenda, maana ule uovu uliokuwa unazuia utendaji wa kiungu unaondoka, utendaji wako unakuwa ni mfano wa utendaji wa Mungu, na ukionekana watu wanamuona Yesu ndani yako (Yohana 17:23).
+<p><i><span>Waefeso 4: 13 “hata na sisi sote tutakapoufikia umoja wa imani na kumfahamu sana Mwana wa Mungu, hata kuwa mtu mkamilifu, hata kufika kwenye cheo cha kimo cha utimilifu wa Kristo”</span></i>
+<p>Kazi kubwa uliyonayo ni kuzidi kujifunza, kutenda sawasawa na maagizo unayopewa na Mungu pamoja na kiongozi wako. Ukiweza hilo utakuwa umefaulu kuinuliwa mpaka kwenye cheo cha kimo cha utimilifu wa Kristo. Kazi yetu sisi watumishi ni kutenda sawasawa na maagizo, Mungu akiona hilo anatukamilisha. Na ukisha kamilishwa ndipo unapokuwa na uwezo wa kiungu wa kutenda mambo makuu. Kama Danieli 11:32b asemavyo:
+	<ul>
+		<p><i><span>
+“lakini watu wamjuao Mungu wao watakuwa hodari, na kutenda mambo makuu.”</span></i></p></ul>
+<p>Na Yesu mwenyewe alifungua mlango wa ukamilifu katika utendaji wetu, akisisitiza kila mwenye kumwamini yeye atatenda mambo makuu. Yohana 14:12;
+<ul>
+<p><i><span>“Amin, amin, nawaambieni, Yeye aniaminiye mimi, kazi nizifanyazo mimi, yeye naye atazifanya; naam, na kubwa kuliko hizo atafanya, kwa kuwa mimi naenda kwa Baba”</span></i></p></ul>
+
+<p>Mungu ana mipango mingi kwa ajili yako ni kazi yako kuijua hiyo mipango, na ukiijua ndipo unapoweza kuanza kuifanyia kazi hadi kujikuta unafikia ukuu, lakini usipojua hutaweza kufikia ukuu. Biblia inasema kuwa, Mungu ana mpango wa kukuokoa na baada ya kuokoka, ukafanya mapenzi yake na kumzalia matunda.  <span>Yesu alisema “si ninyi mlionichagua bali ni mimi niliye wachague”.</span> Ana mpango wa kukusamehe na kukuokoa, kukurehemu na kukupa neema yake, kukutunza, kukulisha na kukuonyesha fadhili zake na kukulinda tangu sasa na hata milele. Ana mpango wa kushughulika na adui zako walio kinyume chako, na kuwaharibu; akufanye uwe hakimu wa kuwahukumu walio kinyume chako. Anataka kukutuma mahali popote, ukafanye kazi pamoja naye. Akupe mamlaka yake ili uitumie, apate kukuinua na kukufanya kuwa mtu mkuu. Anakusudia kukubariki wewe na uzao wako na hatimaye, kukuthibitisha na kukuvisha taji baada ya kushinda kwako.
+	<p><span>MAOMBI</span></p>
+<p>1.	Bwana Yesu niumbie moyo wa utumishi ndani yangu, niandae kwa mambo makuu uliyoniitia.
+<p>2.	Kama umetengana na Mungu, fanya mambo haya mawili muhimu sana:
+	<ul>
+<p>i.	Rejea njia zako za awali.</p>
+<p>ii.	Rudi kumwabudu Mungu.
+
+</p></ul>
+
+<h3><a name="ngmawwwmu"></a></h3>
+<p><span>NAMNA GANI MTU ANASIKIA WITO WA MUNGU?</span></p>
+<p>Baadhi ya watu, walisikia sauti ya Mungu waziwazi kwa masikio yao ya kawaida au yale ya kiroho. Mfano katika kitabu cha Mwanzo 12:1-3, Mungu alimwita Ibrahimu na akamwambia kuwa atambariki na kumfanya kuwa mtu mkuu, Ibrahimu alisikia sauti ya Mungu. Yoshua alikuwa Mtumishi wa Musa kwa miaka mingi lakini ukisoma katika Yoshua 1:1-8, utaona kuwa Mungu alimwambia Yoshua kuwa, kwa kuwa Musa amekufa, aondoke na kuanza kuliongoza kundi la wana wa Mungu kulielekeza nchi ya Ahadi. Yoshua alitetemeka lakini Mungu alimtia hamasa mara tatu akimwambia <span>“Uwe hodari na moyo wa ushujaa” </span>
+<p>Mtu mwingine ni Samweli. Katika kitabu cha 1 Samweli 3:1-11, akiwa kijana mdogo alisikia sauti ya Mungu kwa sauti kabisa Mungu akimwita.
+
+<h3><a name="tyanan"></a></h3>
+<h3>TABIA YA ANAYEITA NA ANAYEITWA</h3>
+<p>Kwa kawaida, Mungu huita mara moja (Zaburi 62:11). Mungu anapoita mara moja na wewe unaposikia hiyo ndiyo mara ya pili, ni mwangwi ndiyo unaosikika. Kwa neema anaweza kuita mara mbili. Luka 5:1-11 inatueleza jinsi Petro alivyoitwa mara ya kwanza. Aliacha vyote akamfuata Yesu Kristo. Mambo hayakuenda kama alivyokuwa amefikiri, hivyo, katika Yohana 21:1-19, alirudi tena kwenye uvuvi. Hakupata hata samaki mmoja, kwa mara nyingine na hii ikawa ni mara ya pili Yesu kumuita Petro. Katika Mazingira adimu sana Mungu anaweza kuita mara tatu kama alivyomuita Yoshua (Yoshua 1:1-8). Mara ya tatu alionesha aina fulani ya hasira kwenye sauti Yake. Mungu akikuita na wewe huitiki, atakuacha peke yako (Hosea 4:17), na anaweza kubadilisha alichokuwa anakuitia akampa mwingine.
+<p>Katika Matendo ya Mitume 10:9-48, Mungu alimwita Petro awe mtume kwa mataifa. Lakini hakujitoa sawasawa. Hivyo, katika Wagalatia 2:7-8, Paulo anasema ile huduma ya Petro ilikabidhiwa kwake.
+<p>Anayeita ndiye anayemtunza yule aliyeitwa. Mungu akikuita, atakutunza kwa yote, japo inaweza kuwa sivyo vile unavyotegemea wewe. Ukweli atakujali na kukutunza, Warumi 8:31-33 inaweka wazi hili na 1 Wafalme 19:1-8 tunaona mfano mwingine. Wakati ambao Eliya alisema amechoka na aliombea kufa, Mungu alikataa. Mungu Akampa maji na chakula ili ale kwa sababu safari ilikuwa bado ndefu. Mungu kamwe hatawaacha wale aliowaita. Haijalishi una misukosuko gani leo, jitie nguvu kwa Bwana. Kamwe hatakuacha au kukusahau wewe.
+<p>Kwa kuwa Mungu ndiye anayeita, ana haki ya kukuita mara ya pili akitaka. Mungu akimuita Mtumishi mara ya pili inaweza kuwa ni safari ya kwenda mbinguni kwa sababu ya kushindwa, mara nyingi hurudi nyumbani – yaani mbinguni na familia yake. Siku Eli alipokufa, na wanawe wawili walikufa (1 Samweli 2:30-34). Siku mfalme Sauli alipokufa ndiyo siku pia ambayo wanawe watatu walikufa (1 Samweli 31:1-6). Kama unajaribiwa kushindwa kumtumikia Mungu, tafadhari tazama familia yako.
+<p>Kiongozi wako, kama mwakilishi wa Mungu aketiye mahali pa juu, anaweza kutumiwa na Mungu kukuhamisha wewe. Akikuambia hama, tafadhari hama. Kama Mungu amekuagiza kupitia Mtumishi wake uhame na ukishindwa kutii kuhama, tambua kuwa tangu siku hiyo upo kivyako. Kuliko uwe peke yako na tayari ulishaanza kuonja msaada wa Mungu, ni bora kufa. Kitu kibaya sana ambacho chaweza kutokea ni Mungu kusema “mwache peke yake”. Ni bora kufa.
+
+<h3><a name="aywnip"></a></h3>
+<h3>ASILI YA WITO NI IPI?</h3>
+<p>Wito wa mtu kwa Mungu unaanza lini hasa? Katika Wagalatia 1:15-16 Paulo alisema:
+<ul>
+	<p><i><span>
+“Lakini Mungu, aliyenitenga tangu tumboni mwa mama yangu, akaniita kwa neema yake, 16 alipoona vema kumdhihirisha Mwanawe ndani yangu, ili niwahubiri Mataifa habari zake; mara sikufanya shauri na watu wenye mwili na damu.”</span></i></p></ul>
+<p>Na katika Yeremia 1:4-5 alimwambia Yeremia kuwa:
+	<ul>
+	<p><i><span>
+“Kabla sijakuumba katika tumbo nalikujua, na kabla hujatoka tumboni, nalikutakasa; nimekuweka kuwa nabii wa mataifa.”</span></i>
+<p>•	Mungu <span>anakujua</span> kabla hajakuumba, hivyo asili ya wito wako ni Yeye mwenyewe, usisite kumtumikia kwa namna yoyote ile, anaweza kukutumia kutenda mambo ambayo hata watu wenye umri mkubwa kuliko wewe hawajawahi kuyatenda. 
+<p>•	Na <span>amekutakasa</span> – umeoshwa, kama umezaliwa mara ya pili huhitaji kuwa na mashaka na utakatifu wako. Unapotubu, amini kwamba umesamehewa wala usirudie tena kutubia dhambi ambayo Mungu alishakusamehe na ndivyo ilivyo katika wokovu wako, kwani hatumpokei Yesu kila siku. Bali endelea kumshukuru kila siku.
+<p>•	Tena <span>amekuchagua, ili uwe nabii wake</span>. Unahitaji kulitambua hili na kuifanya kazi ya kuwafanya watu wamrudie Mungu bila mashaka. Tambua kuwa umechaguliwa ufanye kile ambacho anataka ufanye – yaani kutafuta na kuokoa kilichopotea.</p>
+</ul>
+
+<p>Waefeso 1:3-6 inasema:
+<ul>
+	<p><i><span>
+
+“Atukuzwe Mungu, Baba wa Bwana wetu Yesu Kristo, aliyetubariki kwa baraka zote za rohoni, katika ulimwengu wa roho, ndani yake Kristo; 4 kama vile alivyotuchagua katika yeye kabla ya kuwekwa misingi ya ulimwengu, ili tuwe watakatifu, watu wasio na hatia mbele zake katika pendo. 5 Kwa kuwa alitangulia kutuchagua, ili tufanywe wanawe kwa njia ya Yesu Kristo, sawasawa na uradhi wa mapenzi yake. 6 Na usifiwe utukufu wa neema yake, ambayo ametuneemesha katika huyo Mpendwa.”</span></i></p></ul>
+<p>Kama Mungu alikuchagua wewe kabla ya kuwekwa misingi ya ulimwengu. Haijalishi kwa namna au njia gani unajitahidi kukwepa kuwekwa wakfu, itakuja kutimia tu. Na wakati ukifika mambo yatakapotimia kila kitu kwako kitabadilika kabisa.
+<p>Tambua kuwa kuna kazi Yesu aliianza kuifanya huku duniani, alionesha njia ili wewe na mimi tuweze kuiendeleza ile kazi yake mpaka lile kusudi la Mungu kuwapata walio wake litimie.  Umeumbwa na Mungu kwa ajili yake, usianze yako wakati Unasikia msukumo wa kufanya mapenzi ya Mungu ndani yako, kumbuka huwezi kustawi kama hujafanya anachotaka ufanye.
+
+	<h3><a name="nnni"></a></h3>
+<h3>NEEMA NI NINI?</h3>
+<p>Neema ni msukumo wa kiungu ndani ya moyo wa mtu na unaonekana au kuoneshwa kwa nje. Kwa maneno mengine, naweza kusema neema ni kibali ambacho hukustahili. Neema inaleta uzuri “Mithali 4:9 <i><span>Atakupa neema kuwa kilemba kichwani; Na kukukirimia taji ya uzuri.”</span></i></p>
+<p>Kuongezeka katika neema, yaani kukua kunatokana na pale tunapokuwa na kumjua sana Bwana wetu. Usiwe kinyume na neema inayoonekana ndani ya watu wengine; tambua neema yao, heshimu na saidia kuikuza unapoona inaonekana ndani ya mtu aliye karibu nawe. <span>Kwa maana mmeokolewa kwa neema, kwa njia ya imani; ambayo hiyo haikutokana na nafsi zenu, ni kipawa cha Mungu; 9 wala si kwa matendo, mtu awaye yote asije akajisifu.</span> Waefeso 2:8-9.</p>
+
+<p>Yohana 15: 5 <span>Mimi ni mzabibu; ninyi ni matawi, akaaye ndani yangu nami ndani yake, huyo huzaa sana; maana pasipo mimi ninyi hamwezi kufanya neno lo lote.</span></p>
+<p>Isaya 41:13 <i><span>Kwa maana mimi, Bwana, Mungu wako, nitakushika mkono wako wa kuume, nikikuambia, Usiogope; mimi nitakusaidia.</span></i></p>
+<p>Yohana 10: 28 <i><span>Nami nawapa uzima wa milele; wala hawatapotea kamwe; wala hakuna mtu atakayewapokonya katika mkono wangu. 29 Baba yangu aliyenipa hao ni mkuu kuliko wote; wala hakuna mtu awezaye kuwapokonya katika mkono wa Baba yangu.</span></i></p>
+
+<h3><a name="tyne"></a></h3>
+<h3>TABIA YA NEEMA</h3>
+<ul>
+
+<p>2 Petro 3:18” <span>Lakini, kueni katika neema, na katika kumjua Bwana wetu na Mwokozi Yesu Kristo. Utukufu una yeye sasa na hata milele.</span></p>
+<p>Neema ina kawaida ya kuanza kama mtoto mchanga ndani ya mtu, kwa kadri unavyokuwa na kiu ya kumjua Mungu na kutaka uyafanye mapenzi yake, ndipo ile neema inaanza kukua hatua kwa hatua, hata kukufikisha mahali pa kutenda mambo makuu yaani utukufu.</p></ul>
+
+<p><span>KAZI ZA NEEMA</span></p>
+<p>Neema ya Mungu inaonekana katika kile inazalisha; inajidhihirisha yenyewe kwa nje ya mtu aliye nayo kwa namna mbalimbali:
+	<ul>
+<p><span>1.	KIBALI:</span> Neema inaleta KIBALI. Mambo mema yanakuja kwa mtu mwenye neema na msamaha wa Mungu muda wote uko juu yake. Hata kama mtu anaonekana alifanya makosa makubwa, ile neema ya Mungu inanena kwa niaba yake. Kutembea katika neema maana yake ni kutembea na ushawishi wa Kimungu. Inakufanya utembee na ufahamu huu “kwamba kama nataka kitu nitakipata”. Maana Mungu anataka kuonesha ulimwengu kwamba kila mtu ajue kuwa wewe unapendwa na Mungu. Hakuna tena kuhangaika sana na mashaka yanasinyaa. Neema ipo kwa ajili ya kukupa kibali wewe.  Anachotaka Mungu ni ujitoe kwake.</p>
+<p><span>2.	MVUTO:</span> Mtu mwenye neema daima anavutia watu kwake. Neema inakuweka mpendwa, na watu wanakuwa hawaelewi kwanini wanavutiwa na wewe! Neema haiangalii cheo cha mtu, ujuzi au jinsia. Unaweza kuingia katika neema ya Mungu maishani mwako. Mungu anakuongezea neema hasa pale anapoona ile neema uliyonayo sasa, unaitumia. Neema husababisha Mazingira kuitikia au kukubaliana na wewe. Na kuna viwango vingi vya neema. Ninatamani uwe mmoja wa watu ambao watatembelea kiwango cha juu cha Neema.</p>
+<p><span>3.	FAIDA:</span> Neema inakuletea na inakupa wewe faida. Wewe Mkristo unatakiwa DAIMA uwe na ufahamu wa neema ya Mungu juu ya maisha yako, ndipo itakapofanya kazi kwako. Huhitaji kuhangaika na chochote katika maisha yako kama utaifanya neema iwe kazini, itakuletea kile utakacho. Mfano kama una neema ya kuimba utakuta Mungu anakupa kujenga, kusomesha na kufungua hata shule ya kufundisha wengine kuimba, na hao watalipa ada kwako.</p>
+<p><span>4.	FURAHA:</span> Neema huleta furaha; furaha isiyoelezeka wala kupimika. Kwa yule anayetembea katika neema, furaha inajaa maisha yake yote. Hii pia ni faida ya neema ambayo inakufanya usione kile wengine wanazungumza wakilalamikia Serikali, mazingira na magonjwa pia. Pale wengine wanapokuletea huzuni na mambo ya kusikitisha, wanaanza kushangaa wewe umejawa na furaha. Ukishakuwa na neema katika maisha yako hakuna magumu kwako hata kama upo katika matatizo makubwa. Pale changamoto zinapokuja kwako, angalia ndani yako ili upate suluhisho, kwa kuwa Unajua kwamba:TATIZO LIKIWA KUBWA, NDIVYO USHUHUDA UNAKUWA MKUBWA.</p>
+
+<p><span>5.	UKARIMU.</span> Tambua kuwa mtu yeyote mwenye neema anakuwa mkarimu sana. Neema hufungua njia mbili yaani njia ya kutoa na njia ya kupokea. Tambua kuwa kutoa ni neema. Neema ikishafungua mlango wa kutoa; pia inafungua UWEZO wako wa kupokea.</p>
+<p><span>6.	PENDEZA:</span> Neema inaleta kumpendeza Mungu na mtu mwingine. Neema ndiyo inayokupa kumpendeza katika yale yote ambayo Mungu ameumba. Maisha yako yote yapo kwa ajili ya Mungu; ukitambua hili tu unaanza kushangaa maisha yako ni ya kupendeza sana na bado yanampendeza Mungu.  Kwa kawaida mtu mwenye neema mapungufu yake na udhaifu wake hufichwa machoni pa Mungu na wanadamu.</p>
+<p><span>7.	ZAWADI:</span> Ni neema inayokuletea KARAMA au zawadi za Roho Mtakatifu maishani mwako. Neema inaleta uwezo wa kufanya kile ambacho wengine hawawezi kufanya. Hii itatokea tu pale unapoanza kutambua ujuzi, ubora na ufahamu wa mambo fulani. Ni vema sana ukatambua kipawa cha Mungu ndani yako na ukaanza kukitumia. Inasababisha nguvu ya Mungu kuja juu ya kile kipawa.
+<p>Kwa kifupi karama ni ujuzi ambao Mungu anakupa kuyatimiza mapenzi yake. Ujuzi huu unategemea sana jinsi wewe unavyoshirikiana na Roho Mtakatifu katika maisha yako.
+<p><span>8.	KUONA YASIYOONEKANA:</span> Mtu ana utatu. 1 Wathesalonike 5:23 inasema mtu ana roho, mwili na nafsi. Mtu ana macho ya aina tatu ambayo ni “macho ya kimwili (Yohana 9:1-7)”, macho ya nafsini (Waefeso 1:18) na macho ya Kiroho (2 Wafalme 2:9-12).
+
+<p>Watumishi wengi siku za leo wapo hapo walipo kwa sababu ya kukosa macho ya kiroho. Kupitia neema tunaweza kuona katika roho, maana wenye macho ya rohoni hawapotezi muda wao Kuongea na mapepo. 
+
+<p>Kuna faida nyingi za kuona katika roho, ikiwemo kukuwezesha kuona yaliyopita na kukusaidia kutatua matatizo makubwa. Ukisoma Danieli 2:19-47 utaona jinsi ndoto ya mfalme ambayo alishaisahau ikishughulikiwa lakini kwa neema Mungu akaifunua ndoto kwa Danieli pamoja na tafsiri yake. Macho ya rohoni yatakupa kuona ubadaye wako na kutuhakikishia usalama. Zaidi sana macho ya rohoni hutupa kuona mambo ya kimbingu, kama unavyosoma katika 2 Wakorintho 12:1-4, Mtume Paulo anasema kama alivyoona mambo ya mbingu ya tatu. 
+
+
+ 
+
+<hr>
+
+
+<h3><a name="sayamsukumo"></a></h3>
+<div class="text-center">
+<h3>Sura Ya Nne</h3>
+
+<h2>GHARAMA YA KULIPA</h2>
+			
+	</div>
+
+
+<h3>GHARAMA YA KULIPA KWA UTUMISHI.</h3>
+<p><i><span>“Ambaye alituokoa akatuita kwa mwito mtakatifu, si kwa kadiri ya matendo yetu sisi, bali kwa kadiri ya makusudi yake yeye na neema yake. Neema hiyo tulipewa katika Kristo Yesu tangu milele”</span></i> 2 TIMOTHEO 1:9.</p>
+<p>Wito una gharama kubwa sana ya kulipa, na kuna watu wachache sana ambao wanaelewa gharama ya kulipia huu wito tulioitiwa. Hata watu wanaokuwa pamoja nasi katika wito huu kuna gharama wanatakiwa kulipa kama hawatambui hili kuna siku watakusaliti tu. Wewe unatakiwa kuwa makini sana na uwaambie wazi wasaidizi wako juu ya huduma ya wito huu, maana huduma siyo mchezo.
+<p>Kama ningetambua gharama za utumishi huu nisingeweza kukubali wito wa Mungu. Lakini bahati mbaya sana nimechelewa sana kufanya uamuzi wa kukataa, ninasema nimechelewa kwa sababu tayari nimeonja utukufu wa Mungu kwa kiasi kikubwa. Watu wengi sana wanakuja kwa Mungu lakini inafika mahali wanapoteza dira kwa kuvunja uaminifu kutokana na kushindwa kulipa gharama za wito wa Mungu.
+<p>Kamwe usianze huduma ya wito wako ukitegemea mteremko, shetani atafanya kila ujanja na hila juu yako ili akuangamize kabisa. Lazima ukubali kulipa gharama ili uweze kupata Nguvu ya Mungu.
+	<ul>
+<p>i.	Kila mmoja wetu ameitwa lakini si wote wamechaguliwa: Biblia iko wazi sana juu ya hili jambo. Maana Mungu atakuita na kukuangalia kwa kiwango gani umekuwa mwaminifu kwake? Wengi sana wanaitwa lakini wachache sana wanachaguliwa maana katika safari ya wito wengi wanakwama na wanafukuzwa kwenye kazi ya Mungu.
+<p>ii.	Waliochaguliwa ndiyo wanaopewa nguvu ya Mungu: Maana wengi wanaondolewa kwenye utumishi kwa sababu ya kushindwa, ujinga na kukosa uaminifu.
+<p>iii.	Nyakati hizi wanafundisha namna ya kuulisha mwili na si kuua: Nilijifunza juu ya kujitoa wenyewe, kuyaweka yote msalabani, kufa dhidi ya tamaa, kufa kwenye mapenzi yangu, kufa kwenye matarajio yangu. Hapo ndipo nikaona upako ukija juu yangu kwa ajili ya kazi.
+</ul>
+<p><i><span>“Kwa hiyo ndugu, jitahidini zaidi kufanya imara kuitwa kwenu na uteule wenu; maana mkitenda hayo hamtajikwaa kamwe.” 2 Petro 1:10</span></i></p>
+<p>Mungu atakuweka katika mlolongo wa majaribio, kabla hujashinda kungia katika kusudi lake. Jambo la kwanza ambalo unatakiwa ulielewe ni Mithali 23:26 <i><span>“Mwanangu, nipe moyo wako; Macho yako yapendezwe na njia zangu.”</span></i> Hili ni la kwanza kabisa katika maisha ya utumishi. Hii inamanisha unaanza kutoa matamanio yako, hisia zako, mapenzi yako, wakati nabii Elia alipomuita Elisha, aliamua kuacha biashara yake ili tu aweze kufuzu wito, aliharibu vifaa vya kilimo ili kujionesha kuwa amekubali maana alikuwa mkulima. Leo hii kuna watu hawako tayari kuacha kazi kwa ajili ya Yesu. Aliharibu vitendea kazi vyote vya Elisha ili tu amuone anaitikiaje wito au ana unyenyevu kiasi gani kwa wito.</p>
+<p>Ukiona mtu ni wa muhimu sana na kuna mahali unaona ameinuliwa sana. Kuna gharama amelipa huyu mtu, maana bila hivyo, haiwezekani Mungu akaruhusu ufike mahali pa juu. Kuna mmoja Yesu alimwambia nifuate, yeye akaanza kuomba ruhusa ya kwenda kumzika baba yake, akamwambia nimekuita unifuate, achana na wafu wazikane wenyewe (Luka 9:60).
+Wito ni jambo zito sana. Pale tu unapoitikia wito hapo ndipo utaona kujaribiwa kunaanza. 
+<p>Saa ile unasema ndiyo nimeamua, Mungu ataupima moyo wako: Biblia inasema: -
+<p>Kumbukumbu la Torati 8:2 <p><span>“Nawe utaikumbuka njia ile yote Bwana, Mungu wako aliyokuongoza miaka hii arobaini katika jangwa, ili akutweze, kukujaribu kuyajua yaliyo moyoni mwako, kwamba utashika amri zake, au sivyo.”</span></p>
+<p>Yeremia 17: 10<i><span> “Mimi, Bwana, nauchunguza moyo, navijaribu viuno, hata kumpa kila mtu kiasi cha njia zake, kiasi cha matunda ya matendo yake.”</span></i></p>
+<p>Mithali 21:2 <i><span>“Kila njia ya mtu ni sawa machoni pake mwenyewe; Bali Bwana huipima mioyo.”</span></i></p>
+<p>Yesu aliwapima wanafunzi wake. Mfano: Tunaona Yesu anawaambia wanafunzi wake na tuvuke mpaka ng’ambo na wanapoendelea na safari akaamua kuwapima kiwango cha imani yao.  Luka 4: 37 <i><span>“Ikatokea dhoruba kuu ya upepo, mawimbi yakakipiga chombo hata kikaanza kujaa maji. 38 Naye mwenyewe alikuwapo katika shetri, amelala juu ya mto; wakamwamsha, wakamwambia, Mwalimu, si kitu kwako kuwa tunaangamia? 39 Akaamka, akaukemea upepo, akaiambia bahari, Nyamaza, utulie. Upepo ukakoma, kukawa shwari kuu. 40 Akawaambia, Mbona mmekuwa waoga? Hamna imani bado?”</span></i> Hapo alilenga kuipima imani yao.
+<p>Mungu akikuita ataupima moyo wako kila saa, atataka kujua huyu mtu ni wangu kweli, je moyo wake amenipa kweli? Ili tu aweze kukutumia katika mambo makubwa. Mungu atatumia vipimo vingi kujiridhisha na wewe, kama vifuatavyo: -
+<ul> 
+<p><span>i.	Kipimo cha usafi:</span> Mungu atakuweka katika kioo chake akuangalie jinsi unavyovaa, unavyotunza mwili wako na mazingira yako. Biblia imeweka kumbukumbu ya hatari sana iliyowekwa na nabii Zekaria, tunasoma
+<p><i><span> 
+Zekaria 3:1-7 “1 Kisha akanionyesha Yoshua, kuhani mkuu, amesimama mbele ya malaika wa Bwana, na Shetani amesimama mkono wake wa kuume ili kushindana naye.  2 Bwana akamwambia Shetani, Bwana na akukemee Ewe Shetani; naam, Bwana, aliyechagua Yerusalemu, na akukemee; je! Hiki si kinga kilichotolewa motoni? 3 Basi, Yoshua alikuwa amevaa nguo chafu sana, naye alikuwa akisimama mbele ya malaika.  4 Naye huyo akajibu, akawaambia wale waliosimama mbele yake, akisema, Mvueni nguo hizi zenye uchafu. Kisha akamwambia yeye, Tazama, nimekuondolea uovu wako, nami nitakuvika mavazi ya thamani nyingi.  5 Nikasema, Na wampige kilemba kizuri kichwani pake. Basi, wakampiga kilemba kizuri kichwani pake, wakamvika mavazi; naye malaika wa Bwana akasimama karibu.  6 Kisha malaika wa Bwana akamshuhudia Yoshua, akisema, 7 Bwana wa majeshi asema hivi, Kama ukienda katika njia zangu, na kama ukishika maagizo yangu, ndipo utakapoihukumu nyumba yangu, nawe utazilinda nyua zangu, nami nitakupa nafasi ya kunikaribia kati yao wasimamao karibu.”</span></i></p>
+<p>Kuhani mkuu Yoshua (Sio Yoshua aliye chukua nafasi ya Musa, mpiganaji na kiongozi wa Israeli), huyu alikuwa ni mwakilishi na Mtumishi wa Mungu lakini alikuwa amevaa nguo chafu sana. Jambo hili linachanganya sana. Tunaona kulia kwake alikuwepo Shetani mpinzani mkuu wa Mungu na mtu, akisimama pembeni kajiweka tayari kupambana na Yoshua. Kulikuwa na watu wengine wakitazama pia, lakini hawakufanya chochote. Mwishowe tunaona mavazi yenye uchafu ya Mtumishi wa Mungu Yoshua yakibadilishwa na akivishwa mavazi mapya na safi.
+<p>Mungu anapendezwa sana na mavazi tuvaayo. Wengi wetu tunadhani Mungu anapendezwa na kilichoko ndani yetu tu, na hasumbuliwi na mavazi yetu. Mungu anaangalia sana kama mavazi yetu ni machafu au masafi. Ukisoma vizuri hapo utagundua kuwa kuhani mkuu alisimama tu wala hakusema neno lolote wala hakufanya chochote, mawazo yake yote yalikuwa kwenye uchafu wa vazi lake. Maana alijua kuwa Mungu anatazama sana tuvaacho. 
+<p>Ufunuo 19:5-8 <i><span>“Sauti ikatoka katika kile kiti cha enzi ikisema, Msifuni Mungu wetu, enyi watumwa wake wote, ninyi mnaomcha, wadogo kwa wakuu. 6 Nikasikia sauti kama sauti ya makutano mengi, na kama sauti ya maji mengi, na kama sauti ya radi yenye nguvu, ikisema, Haleluya; kwa kuwa Bwana Mungu wetu, Mwenyezi, amemiliki. 7 Na tufurahi, tukashangilie, tukampe utukufu wake; kwa kuwa arusi ya Mwana-Kondoo imekuja, na mkewe amejiweka tayari. 8 Naye amepewa kuvikwa kitani nzuri, ing'arayo, safi; kwa maana kitani nzuri hiyo ni matendo ya haki ya watakatifu.”</span></i></p>
+<p>Tunaona Neno linaweka wazi vazi la Bwana harusi atakalovaa siku ya mwisho litakuwa kitani nzuri, ing’arayo, na safi. Tambua kuwa vazi linahusika sana katika utumishi wako. Ndiyo maana Biblia inaendelea kusema<span>“13 Naye amevikwa vazi lililochovywa katika damu, na jina lake aitwa, Neno la Mungu. 14 Na majeshi yaliyo mbinguni wakamfuata, wamepanda farasi weupe na kuvikwa kitani nzuri, nyeupe, safi.”</span> Ufunuo 19:13-14.</p>
+<p>Ukisoma <span>2 Wafalme 1:1-8,</span> utabaini kuwa mfalme alitambua kuwa watu wake walikuwa wanamuongelea nabii Elia kwa maelezo ya mavazi waliyotoa. Hii pia utaona katika <span>Mathayo 3:1-4</span> anavyoelezewa Yohana Mbatizaji, tunaambiwa mavazi yake yanayoelekeana na ya Elia. Kwa lugha nyepesi nikuambie kuwa Mungu atasubiri mpaka vazi lako la ndani na nje limekuwa safi na linang’aa kabla hajaamua kukutumia kwa viwango vya ushindi. 
+<p>Usipojifunza kuvaa vizuri itakuchukua muda sana kutumiwa na Mungu katika kiwango ambacho kinampa Mungu utukufu. Kumbuka kuwa Mkutano ulikuwa unamwangalia Yoshua akiwa amevaa mavazi machafu, lakini hawakusema wala kutenda lolote. Kuna watu wengi sana wanakuangalia wewe Mtumishi wa Mungu, wanaona hata vitu ambavyo wewe huvioni kwako. Kwa wewe Mchungaji au kiongozi washirika wanakuona na wanashangaa kwa nini umekuwa na mavazi machafu hivyo. 
+<p>Tumaini kubwa tulilonalo ni kwamba ukiwa Mtumishi zidi kuomba Mungu akutakase kwa damu ya Mwanakondoo na akupe kumjua Yeye vema maana ipo siku atakuja atume watu wake au malaika wake wakuvue vazi chafu na uvalishwe vazi safi. Katika Zaburi 128:1-8 inasema kama Bwana asingekuwa upande wetu, tungekuwaje?
+<p>Jifunze namna ya kuvaa ukiwa nyumbani, au kazini ila ukiwa madhabahuni kwa Bwana hakikisha unatenda bora zaidi.
+<p>ii.	<span>Kipimo cha muda wa ukimya:</span> Atakuweka katika kabati yake, atafunga kila kitu katika maisha yako na anakuacha peke yako. Hapo utakuta kila mlango wa maisha yako unakuwa umefungwa, unajikuta unaanza kulia, kuomba, unamwambia Baba nakupenda, nikumbuke. Yeye anatulia tu mpaka muda aliokusudia kukupima upite. Utajiuliza kwa nini anafanya hivi? Ni rahisi sana, anaangalia tabia yako. Wakati huu ndipo anaanza kukusafisha tabia ndani yako. Sasa utatakiwa usubiri kupita huu mtihani na akigundua umedumu sana katika kipindi chote cha maumivu hayo, anaruhusu imani yako ikue. Mungu alimuita Ibrahimu akiwa na miaka sabini na tano, lakini kipindi alichompatia Isaka ni baada ya miaka ishirini na tano ya kusubiri. Ni kipindi kirefu sana hiki japo baada ya kutimiza miaka 25, imani ya Ibrahimu ikakua, imani yake ilitakaswa, na hapo Ibrahimu alibadilika na akaanza kumpendeza Mungu. Katika kipindi hiki unakuwa mtu usiyetambulikana, mtu unayedharauliwa na wengi (Mwanzo 12:4).
+<p>Miaka kumi baadaye Ibarahimu akamzaa Ishmaili ambaye hakuwa wa Ahadi, hapo unaona hata Mungu alikasirika akamwambia acha Ishmaili akutoshe. Lakini anapofikisha miaka mia Mungu akatimiza Ahadi yake ya kumpatia Isaka.
+<p>Mwanzo 17:16 <i><span>“Nami nitambariki, na tena nitakupa mwana kwake, naam, nitambariki, naye atakuwa mama wa mataifa, na wafalme wa kabila za watu watatoka kwake. 17 Ndipo Ibrahimu akaanguka kifudifudi akacheka, akasema moyoni, Je! Mtu wa umri wa miaka mia, kwake atazaliwa mtoto? Naye Sara mwenye umri wa miaka tisini atazaa?  18 Ibrahimu akamwambia Mungu, Lau kwamba Ishmaeli angeishi mbele yako.19 Mungu akasema, Sivyo, lakini Sara mkeo atakuzalia mwana wa kiume, nawe utamwita jina lake Isaka. Nami nitafanya agano langu imara kwake kuwa agano la milele kwa ajili ya uzao wake baada yake”.</span></i></p>
+<p>Hiki kipindi chote ambacho Mungu anatumia kukupima kinaitwa ‘majira ya subira’. Usikimbilie kuhudumu, lipa kwanza gharama.
+<p>iii.<i><span>	Mungu atapima ufahamu wa Neno.</span> Anapima wingi wa Neno lake ndani yako. Utakutana na majaribu, mateso, maumivu. Unachotakiwa hapo ni kuzingatia Ahadi zake juu ya kila hali uliyo nayo. Unaweza kuokoka na familia yako, ndugu, marafiki wakakutenga kwa sababu tu umeitwa, na hapo jua wazi kuwa Mungu anakupima kama utageuka nyuma kwa ndugu zako au utabaki na Mungu licha ya ugumu unaokutana nao. Kupitia kipimo cha Neno la Mungu ni lazima ujaribiwe, unaweza kujikuta unasalitiwa, unatukanwa, unasahauliwa, unadharauliwa na pengine kufukuzwa. Pia tunaona mfano wa Yusufu jinsi ambavyo alijaribiwa na Ahadi ya Bwana:</i></p>
+<p>Zaburi 105:17-19 <i><span>“Alimpeleka mtu mbele yao, Yusufu aliuzwa utumwani. 18 Walimwumiza miguu yake kwa pingu, Akatiwa katika minyororo ya chuma. 19 Hata wakati wa kuwadia neno lake, Ahadi ya Bwana ilimjaribu.” </span></i></p>
+<p>Tunaona hapo kuwa Neno la Mungu lilimjaribu Yusufu kama anafaa kuchaguliwa ama la, japo kuwa tayari alikuwa ameitwa. Kisa kingine tunakiona kwa Adam ambaye Mungu alimpa ofisi ya kutendea kazi na baadaye Mungu anampatia Hawa ushawishi dhidi ya ofisi ya Adam. Kuna Kipimo cha utii tunakiona hapa maana Mungu alisema “Mwanzo 2:17 <i><span>walakini matunda ya mti wa ujuzi wa mema na mabaya usile, kwa maana siku utakapokula matunda ya mti huo utakufa hakika.”</span></i> na hapo hapo tunaona Hawa anamwambia Adam kuwa “Mwanzo 3:6<i><span>Mwanamke alipoona ya kuwa ule mti wafaa kwa chakula, wapendeza macho, nao ni mti wa kutamanika kwa maarifa, basi alitwaa katika matunda yake akala, akampa na mumewe, naye akala”.</span></i> Ndipo tunapoona kuwa Adam anamtii mke wake badala ya Mungu tayari kile kipimo cha Mungu kimebaini kushindwa kwa Adam. Kwa sababu kitu ambacho Mungu amewapa wanawake ni silaha yenye nguvu sana kwa kujenga ufalme au kubomoa ufalme wa Mungu. 
+<p>Wahubiri wakubwa wanao wake ambao wanawasaidia sana kwa kazi. Ikifika mahali mke moyo wake umekufa jua kabisa huyo Mhubiri lazima ushuke kiroho. Mfano: Mwanamke anayejenga ufalme ni yule ambaye anakubali asimuone mume wake hata mwezi mzima maana yuko kuhubiri injili na yeye anaendelea kulea watoto, au anasema tunaenda wote hata kama ni wiki mbili acha tukamtumikie Mungu. Hii ina maanisha mwanamke anatakiwa kutumia ushawishi aliopewa na Mungu kuiinua huduma ya mumewe, au kumtangaza Yesu. 
+<p>Wewe kijana ambaye bado hujaoa, <span>hakikisha kabla hujatafuta mke wa kuoa kwanza tafuta wito wako, baada ya kuujua wito wako kisha tafuta mke anayeendana na huo wito ulioitiwa</span>. Usikimbilie kuoa kwa sababu ni mzuri, au anavutia, au kwa sababu tu unataka kuoa. Siku hizi kuna talaka nyingi sana kwa sababu hakuna mtu anayefikiri kwanza gharama wanazotakiwa kulipa kumuoa yule binti au gharama ya kulipa kwa kuolewa na huyo kijana. Wengi hawaelewi kuwa kuoa na kuolewa kuna ambatana na wito na kusudi la Mungu katika maisha yako. Hivyo nakushauri wewe kijana tafadhari usioe au kuolewa mpaka umepata uhakika wa wito wako kwa Mungu.</p>
+<p><span>iv.	Uwezo wa kuhudumu (Ability to serve):</span> Hiki ni kipimo cha watumishi. Mungu atakuweka katika kipimo cha kujua kama uko tayari kumtumikia mtu mwingine? Je uko tayari kumtumikia Mchungaji mwingine? Uko tayari kuwa chini ya huduma nyingine? Kabla haja kuchagua wewe lazima kwanza akupime. Elisha alimtumikia Eliya. Biblia inaweka wazi katika 2 Wafalme 3:11 <i><span>“Lakini Yehoshafati akasema, Je! Hapana hapa nabii wa Bwana, ili tumwulize Bwana kwa yeye? Akajibu mtumishi mmoja wa mfalme wa Israeli, akasema, Yupo hapa Elisha mwana wa Shafati, aliyekuwa akimimina maji juu ya mikono yake Eliya”.</span></i>  Huyu aliitwa Mtumishi wa Eliya. Lazima uwe tayari kumtumikia Mtumishi wa Mungu. Mfano: - Mtumishi wa Mungu akisema nakuhitaji muda huu na mkeo au mmeo akisema nakuhitaji muda huo huo, unatakiwa uende kwa Mtumishi wa Mungu. Wito unakuja kwanza, una mitihani migumu sana, Mungu anataka kukutumia lakini kabla hajakuinua kwanza anakuweka mahali ambapo utajifunza na utatumika sawasawa na huyo kiongozi wako. Labda nikuulize, Je uko tayari kumtumikia Mungu? Kama jibu lako ni ndiyo! Nikuulize tena uko tayari kulipa gharama za namna hii?
+<p>Elisha alimtumikia Eliya na Eliya aliyafanya maisha ya Elisha kuwa magumu sana. Si tu kwamba Mungu alimjaribu Elisha, hata Eliya alimjaribu Elisha, kwa kumfukuza mara tatu. Kama unatamani kumtumikia Mungu jitahidi sana kulielewa hili maana atakuweka chini ya mtu ambaye hatabiriki kabisa, unaweza kuchoka na kugeuka hapohapo, kwa sababu Mtumishi anaweza kukasirika sana kwa sababu ya ule wivu wa Mungu ndani yake. Mtumishi wa Mungu ni hatari sana, maana hujui kama amefurahi au amekasirika wakati gani. Hivyo Mtumishi wa Mungu kwanza kabisa hatabiriki, pili wakati mwingine anajivuta mbali na wewe. Hivyo kazi yako kubwa ni kumsaidia huyo Mtumishi wa Mungu pasipo kuangalia kama unapata nini kwake.
+<p>Wito wa Mungu ni wa kuzingatia sana kuliko hali na mazingira tunayokuwa tunapitia, Biblia inatuambia kuwa <i><span>“Mwingine katika wanafunzi wake akamwambia, Bwana, nipe ruhusa kwanza, niende nikamzike baba yangu. 22 Lakini Yesu akamwambia, Nifuate; waache wafu wazike wafu wao.” </span></i>– Mathayo 8:21-22. Katika hali ya kawaida kabisa hili jambo ni gumu sana, lakini tunajifunza kwa Bwana Yesu kuwa kutumikia ni kuacha vitu vingi vya kwako na kuamua kujitoa kwa ajili ya unayemtumikia. Tunaona hapo mwanafunzi ananyimwa hata ruhusa ya kumzika babaye.
+<p><span>v.	Kipimo cha Jangwani:</span> Wakati Musa ameenda jangwani aliacha maisha ya Misri, Miaka arobaini alikuwa jangwani akitengwa na zile tabia za Kimisri. Tunaona katika kitabu cha Kutoka sura ya pili tunaona Musa anatoka Misri na kuelekeza kwenye jangwa lake. Na kitabu cha Matendo ya Mitume 7: “29 <i><span>Musa akakimbia kwa neno hilo, akakaa hali ya ugeni katika nchi ya Midiani, akazaa wana wawili huko. 30 Hata miaka arobaini ilipotimia, malaika wa Bwana akamtokea katika jangwa la mlima wa Sinai katika mwali wa moto, kijitini. 31 Musa alipouona, akastaajabia maono yale, na alipokaribia ili atazame, sauti ya Bwana ikamjia, 32 Mimi ni Mungu wa baba zako, Mungu wa Ibrahimu, na Mungu wa Isaka, na Mungu wa Yakobo. Musa akatetemeka, asithubutu kutazama. 33 Bwana akamwambia, Vua viatu miguuni mwako, kwa maana mahali hapa unaposimama ni nchi takatifu. 34 Yakini nimeona mateso ya watu wangu waliomo Misri, nimesikia kuugua kwao, nami nimeshuka niwatoe. Basi sasa, nitakutuma mpaka Misri. 35 Musa huyo waliyemkataa, wakisema, Ni nani aliyekuweka kuwa mkuu na mwamuzi? Ndiye aliyetumwa na Mungu kuwa mkuu na mkombozi, kwa mkono wa yule malaika aliyemtokea katika kile kijiti.”</span></i></p>
+<p>Mungu atakutoa anapokupeleka jangwani yaani kipindi cha mateso na unakuta kila mtu anakukataa kwa sababu tu anataka akutakase, uachane na tabia za kidunia. Maana hizi tabia za kidunia zinasababisha usiweze kuendana na Mungu. Jangwa lako wewe ni mapito yasiyo na ukomo, madeni, kuonewa, magonjwa na kila namna ya hali usiyoitamani maishani mwako. Kipimo cha jangwani ndicho kipimo pekee ambacho kitakusababisha ujilazimishe kuomba, hata kama hutaki maombi, lakini mazingira yanayokuzunguka yanakulazimisha lazima uombe. Hiki ni kipimo cha muhimu sana na lazima ujiandae kupitia. Unaanza kupoteza marafiki, unapoteza mahusiano yako na familia, na hivyo unajikuta una kazi kubwa sana.
+<p>Jagwani ni mahali pa majaribu, Mungu atakukujaribu kwa kiasi cha juu sana ili ajue moyo wako. Majaribu hutengeneza umakini wetu kwa roho wa Mungu. Unapojaribiwa Mungu anaruhusu shetani akujaribu dhidi ya kiongozi wako. Maana unajua tabia yake, Unajua madhaifu na ubora wake, sasa shetani analeta mawazo ndani yako unaanza kuona kama wewe unapoteza muda na huyo mtu, au wewe ni bora kuliko yeye. Mungu atakuwa anakuangalia dhidi ya hayo yote, na mtu ambaye kweli ameitwa atasema shetani rudi nyuma yangu, atakataa mawazo hayo mabaya.
+<p>Kwa kadri pale mwili wako unapozidi kufa kwa ajili ya BWANA ndipo Mtembeo wa Roho wa Mungu unaanza ndani yako, na hapo ndipo unaanza kujifunza njia za Roho Mtakatifu.
+<p><span>vi.	Kipindi cha uvumilivu.</span> Unatakiwa kuendelea kuwa chini ya mtu hadi pale kipindi chako kitakapokuja. Maana hapa utaanza kujiuliza nimetoa muda wangu wa miaka kumi au zaidi, nimeiacha familia yangu, sasa mimi lini nitainuka kimaisha? Tunaona kipindi kile cha Yesu wanafunzi wake walipokaa naye kwa muda wa miaka mitatu Petro akavunja ukimya kwa kuuliza swali kama hili, akasema; 
+<p><i><span>Mathayo 19: 27 Ndipo Petro akajibu, akamwambia, Tazama, sisi tumeacha vyote tukakufuata; tutapata nini basi?</span></i></p> 
+<p>Yesu akajibu <span>“Amin, nawaambia ya kwamba ninyi mlionifuata mimi, katika ulimwengu mpya, atakapoketi Mwana wa Adamu katika kiti cha utukufu wake, ninyi nanyi mtaketi katika viti kumi na viwili, mkiwahukumu kabila kumi na mbili za Israeli.  29 Na kila mtu aliyeacha nyumba, au ndugu wa kiume au wa kike, au baba, au mama, au watoto, au mashamba, kwa ajili ya jina langu, atapokea mara mia, na kuurithi uzima wa milele.” Mathayo 19:28-29</span></p>
+<p>Kabla hujapata baraka na uzima wa milele kutoka kwa Mungu, kwanza utapimwa namna gani uko tayari kuvumilia ili upokee mema ya Mungu yaliyoko duniani na mbinguni.
+<p><span>vii.	Kipindi cha kuchanganyikiwa.</span> Hiki ni kipindi ambacho unajikuta unachanganyikiwa zaidi kwa maana umetoa miaka yako kumi, kumi na tano ukimsaidia Mtumishi wa Mungu, unakuta akili yako inachoka sana. Unajikuta unachanganyikiwa na Mungu anaona namna unavyo hangaika. Mtume Paulo alifika mahali akasema <i><span>“tusiviangalie vinavyoonekana, bali visivyoonekana. Kwa maana vinavyoonekana ni vya muda tu; bali visivyoonekana ni vya milele.”</span></i> 2 Wakorintho 4:18</p>
+viii.	Kipindi cha kukata tamaa. Unaweza kutamani kuacha wito, unafika mahali unasema ni bora tu niende nikafanye jambo lingine au unajikuta ni muda mwingi unaweza ona kila kitu kimeharibika. Mungu anaruhusu ufike mahali pa kukata tamaa ili uweze kutazama upya wito wa Mungu
+<p><span>ix.	Jaribu la vita:</span> Kabla Mungu hajakuchagua ibilisi atapewa nafasi ya kupigana nawe, hivyo utajikuta upo katika kipimo cha mapambano. Kwa nini Mungu anaruhusu upitie vita? Anataka kukujengea uwezo wa kuvaa silaha za kiroho, maana anakuandaa kuwa rungu lake la vita ili kuzivunja kazi za ibilisi kupitia wewe. 
+<span>Yeremia 51:20 “Wewe u rungu langu na silaha zangu za vita; kwa wewe nitawavunja-vunja mataifa; na kwa wewe nitaharibu falme”</span></p>
+<p><span>x.	Kupimwa juu ya maono yako.</span> Mungu atayajaribu maono yako, Mungu atarudi kwenye maono ya maisha yako. <span>Nehemia 1:1-11, Nehemia 2:1-6.</span>  Tunaona maono yake yalikuwa ni kujenga upya hekalu, lakini maono yake yalijaribiwa. Maadui walijiinua wakijaribu kumzuia kujenga, hivyo ikambidi mkono mmoja apigane na mkono mmoja na ajenge.  Hatua hii utakuta ndugu, marafiki, na hata Serikali inaweza kuinuka dhidi ya maono yako, maana maono yako lazima yapimwe. 
+<p>Habakuki 2:1-3 <i><span>“Mimi nitasimama katika zamu yangu, nitajiweka juu ya mnara, nitaangalia ili nione atakaloniambia, na jinsi nitakavyojibu katika habari ya kulalamika kwangu.  2 Bwana akanijibu, akasema, Iandike njozi ukaifanye iwe wazi sana katika vibao, ili aisomaye apate kuisoma kama maji. 3 Maana njozi hii bado ni kwa wakati ulioamriwa, inafanya haraka ili kuufikilia mwisho wake, wala haitasema uongo; ijapokawia, ingojee; kwa kuwa haina budi kuja, haitakawia.”</span></i></p>
+<p>Jambo la kwanza utakapokuwa unaona unapigwa vita dhidi ya maono yako ni kuandika upya maono yako maana ulizaliwa kuyatimiza hayo hata kama ulianza kumsaidia mtu mwingine. Jambo la pili, anaposema iwe wazi sana maana yake ifanyie mazoezi mara kwa mara ili uielewe zaidi ndoto yako. Jambo la tatu ni kwenda kuitimiza hiyo ndoto. 
+<p><span>xi.	Jaribu la kuinuliwa:</span> Mungu hapa anaangalia sana kama unaweza kustahimili kuinuliwa, mfano unapanda madhabahuni kuhubiri watu wanakushangalia na kukupigia makofi. Mungu anaangalia huyu mtu anaweza kustahimili hili kweli? Anataka kuona kama utaanza kujisifu, utaonesha kiburi, je anaweza kujiona kwamba aah naweza kumzidi baba yangu wa kiroho sasa! Mungu Anataka kukuona namna ambavyo unaweza kunyenyekea licha ya uwezo mkubwa ambao atauachilia ndani yako. Mfano huu utakusaidia kuelewa hili, unaweza kwenda mahali hukupangiwa kuhubiri ghafla na alipangiwa Mtumishi mwingine, kwa kuwa umetokea hapo unakuta unakaribishwa uchukue kipaza sauti na kuhubiri wewe badala ya aliyekusudiwa. Hapo unatakiwa kusalimia tu na kumpisha mwenye ratiba endapo wewe utaamua kusimamia hiyo ratiba ina maana kwamba unajikweza na kujiona bora kuliko huyo aliyetakiwa kuhudumu. Hili jaribu Mungu analiangalia sana, usithubutu hata kidogo kumdharau Mtumishi mwingine hata kama unajua neema yako ni kubwa kuliko yeye. Hata Elisha hakuweza kuchukua vazi la Elia wakati yupo wala hakuomba lile vazi kwamba nipatie hilo vazi kabla hujaondoka na hata alipoondoka lile vazi hakulichukua yeye bali lilimdondokea lenyewe. Usije thubutu kuchukua nafasi kwa kuinua mabega. 
+<p>Hii ndiyo sababu kuu ya kwa nini Mungu hakuinui haraka, anataka akuandae kwanza kwa ajili ya makuu yaliyoko mbele yako. Hayo yote anayaangalia ili tu akutengenezee Mazingira ya kufahamu watu ili ukifika juu usije ukawaangamiza watakao kuwa chini yako.  
+<p><span>xii.	Jipange kabla ya kuanza kazi.</span> Mithali 24:27 <<i><span>“Tengeneza kazi yako huko nje, Jifanyizie kazi yako tayari shambani, Ukiisha, jenga nyumba yako.” </span></i></p>
+<p>Huwezi kuijenga huduma kama hujajipanga kabla, na Mungu atakupeleka kwenye mchakato wa majaribu kabla hajaanza kukutumia wewe. Kwanza kabisa utakuacha pekee kwa kitambo ambapo kupitia hicho kitambo ili kuijenga imani yako. Maana imani ni matokeo ya muda. Jambo la pili ni kipimo cha Neno, mpaka ifike mahali Neno la Mungu liwe chanzo chako cha kila kitu. Mungu anataka kukutumia kwa kiwango cha juu sana. Mimi hata kabla sijaokoka nilianza kusikia wito, nikiwa nasali kanisa la Lutherani, lakini nilianza kusikia msukomo wa kumpenda sana Mwalimu Christopher Mwakasege, nilianza kutazama Televisheni ya TRENET na Emmanuel TV. Nilikuwa naandika kila somo, nasikiliza huku nalia kwa ujumbe ule ambao nilikuwa nasikiliza kwa watumishi hao. Hapa nilikuwa najiandaa mwenyewe maana tayari wito ulishaanza kunipeleka kwenye vipimo vya Mungu. Lengo kubwa hapa ni kujizoeza mambo ambayo nitayafanya hapo nitakapokuwa tayari kwa ajili ya huduma.
+<p>Mungu akikuita ataruhusu upitie majaribu, na haya majaribu yatampa Mungu kujua kama unastahili kuchaguliwa. 
+<p><span>xiii.	Mke wa kuoa ili kutimiza wito wako lazima awe na sifa tatu zifuatazo:-</span></p>
+<ul> 
+<p>1.	Lazima atoke kwenye udongo mzuri. Hii ina maanisha familia yenye hofu ya Mungu. Usioe msichana anayetoka familia yenye magomvi.
+<p>2.	Mama mwenye hofu ya Mungu. Msichana atakuwa kama mama yake, huu ndiyo ukweli wa maisha. Hivyo kama humpendi mama yake usimguse huyo msichana.
+<p>3.	Hakikisha urithi wa pande zote mbili za baba na mama wawe na maisha mazuri. Hakuna msichana wa kikristo ambaye hatamtii mwanaume anayempenda, hivyo tafuta mwanamke ambaye familia yao wanawake wanawatii wanaume. Waefeso 5:25 <i><span>Enyi waume, wapendeni wake zenu, kama Kristo naye alivyolipenda Kanisa, akajitoa kwa ajili yake</span></i>. Hivyo ukiweza tu kumpenda mkeo atakuwa mtii kwako kama ilivyoandikwa “Waefeso 5:22 <i><span>Enyi wake, watiini waume zenu kama kumtii Bwana wetu”</span></i> Hapa anaposema kutii hana maana kupiga magoti, na kunyenyekea sana. Hii ina maana anakubali kutii kwako kwa ajili ya ulinzi. Unatakiwa umtii ili awe rafiki yako, akulinde na una kuwa mpenzi na siyo kuwa mtumwa wake.
+<p>Mkeo lazima awe na moyo wa kumpenda Mungu pengine kuliko wewe.</ul>
+</ul>
+
+Kwa nini unahitaji kujiandaa kulipa gharama za kuwatumikia watumishi wa Mungu?
+a.	Watumishi wa Mungu hawatabiriki. Muda wowote wanaweza kuwa wakali au wanaweza kunyamaza, wanaweza kubadilisha uelekeo sawasawa na maongozi ya Mungu kwao.
+
+b.	Wanajivuta mbali nawe kwa sababu ya majukumu yanayowatinga au wakati mwingine Mungu anawafanya wakusukumie mbali ili aweze kupata nafasi ya kuwa karibu na Mtumishi wake: 
+
+Kwa sababu Mungu anawahitaji wawe kando ili Mungu aweze kusema nao. Na bado wakiwa katika hali hiyo unatakiwa kuwasaidia majukumu yao. Wakati huohuo watumishi wa Mungu wanamhitaji Yesu lakini bado wanahitaji sana wasaidizi wa kuwainua. Yesu aliwahitaji akina Petro, Yakobo na wengineo na Musa aliwahitaji akina Huri na Haruni.
+
+
+
+
+
+<hr>
+<h3><a name="ugonjwa"></a></h3>
+<div class="text-center">
+						<h3>Sura Ya Tano</h3>
+
+	<h2>MTU ANAYETUMIWA NA MUNGU</h2>
+									
+							</div>
+
+<h3>MTU ANAYETUMIWA NA MUNGU</h3>
+“Lakini msingi wa Mungu ulio imara umesimama, wenye muhuri hii, Bwana awajua walio wake.  Na tena, Kila alitajaye jina la Bwana na auache uovu.” (2 Timotheo 2:19).
+Mungu yupo kazini kila siku kumtafuta mtu atakayefanya kazi Yake kwa bidii na mwenye moyo wa kutaka kumjua sana Bwana. Ili Mungu akutumie lazima aone una kiu ya moyo, akili na nia yako ni kutekeleza mapenzi ya Mungu pekee. Yaani uwe mtu anayewaza sana habari za Mungu na ufalme wake. 
+“Na Mungu aweza kuwajaza kila neema kwa wingi, ili ninyi, mkiwa na riziki za kila namna siku zote, mpate kuzidi sana katika kila tendo jema” (2 Wakorintho 9:8).
+ Wakristo wengi hawafanyi kile wamekusudiwa kwa sababu hawataki kujifunza kwa bidii. Unapojifunza kwa bidii ndipo unapoweza kubaini sifa zinazoweza kumfanya Mungu aweze kukutumia katika utumishi wake. Maana kuokoka ni swala lingine na kutumika ni jambo linalofuatia baada ya mtu kuamua kuenenda sawasawa na mapenzi yake. Nimefika mahali naelewa kuwa mtu yeyote ambaye yuko tayari kulipa ghrama atatumiwa na Mungu licha ya utofauti wa vipawa na karama baina ya mtu mmoja na mwingine.</p>
+
+<p><span>Ushuhuda kwa ufupi:</span></p>
+<ul>
+	<i>
+Nakumbuka nilipookoka tu wiki ya pili niliamua kufunga mwezi mzima na kuanza kumuomba Mungu anitumie nikisema<span>“Eeh Mungu, mimi nilikuwa mdhambi, umenisamehe ili nikutumikie, nakupa moyo wangu na maisha yangu naomba unitumie, haijalishi itanigharimu kiasi gani, niko tayari Bwana. Nitalipa gharama endapo tu utaamua kunitumia!”.</span> Pia nikawa namuombea Mchungaji wangu ili Mungu amtumie kwa neema kubwa. Kilichotokea ni kwamba kupitia kuomba kila siku saa nane hadi saa kumi alfajiri nikapokea kunena kwa lugha mpya na nikaanza kutumiwa na Mungu kanisani kama mwenyekiti wa vijana, nikapewa uongozi wa eneo dogo na pia ukatibu wa kikundi cha Wasomi ngazi ya mkoa. Na baada ya miezi mitatu tu nikapewa uchungaji na nilipomaliza miaka mitano ya uchungaji nikapewa kuwa Mchungaji kiongozi wa mkoa.</i></p>
+</ul>
+
+<p>Mtu anayetumiwa na Mungu lazima akubali kulipa gharama ambayo wakati mwingine ndugu, jamaa na marafiki wanafika mahali wanashindwa kumuelewa huyu mtu. Kwa mfano nilipopewa uchungaji tu mama yangu mzazi alininiambia mwanangu umemaliza Digrii yako ya Kompyuta Sayansi inakuwaje unaenda kuanzisha kanisa badala ya kuajiriwa ili upate hela usaidie na wenzio? Nikamwambia mama, hakuna ajira kubwa huku duniani kama kuajiriwa na Mungu na kuwa Mtumishi wa Mungu. Ukweli mama yangu alinikasirikia sana kiasi cha kuacha hata kuwasiliana nami, ila niliona acha nimtumikie Mungu ipo siku mama ataelewa, baada ya muda mfupi mama yangu akanipigia simu ya kuomba msamaha na kusema mwanangu endelea na wito wako. Leo hii na yeye ni Mtumishi mzuri sana kanisani – kule nyumbani kwetu.
+
+<p>Luka 12:51-53 <i><span>“Je! Mwadhani ya kwamba nimekuja kuleta amani duniani? Nawaambia, La, sivyo, bali mafarakano. 52 Kwa kuwa tokea sasa katika nyumba moja watakuwamo watu watano wamefarakana, watatu kwa wawili, wawili kwa watatu. 53 Watafarakana baba na mwanawe, na mwana na babaye; mama na binti yake, na binti na mamaye; mkwe mtu na mkwewe, mkwe na mkwe mtu.”</span></i></p>
+
+<p><span>Mtu anayetumiwa na Mungu ana Sifa hizi:</span></p>
+
+<ul>
+<p><span>1.	Mtu anayetumiwa na Mungu ni mwaminifu na mkweli</span></p>
+<p>Mtu anayetumiwa na Mungu ana sifa mbili zinazoenda pamoja;
+a.	Uaminifu: Biblia inasema; “Hapo tena inayohitajiwa katika mawakili, ndiyo mtu aonekane kuwa mwaminifu” I Wakorintho 4:2 Mungu ni mwaminifu na anataka nasi tufanane naye katika tabia ya uaminifu. Uwe mwaminifu katika kutumia vipawa ulivyopokea, uwe mwaminifu katika matoleo yako kama vile zaka, malimbuko na kutimiza wajibu wako.
+Ndugu, Mungu anatamani kukuinua wewe. Uhalisia ni kwamba nafasi yako imecheleweshwa mno. Ninayo furaha kukutangazia kwamba huu ndiyo wakati wako. Je! Unafanya nini wakati huu? Danieli alikuwa mwaminifu sana ndiyo maana aliweza kuhudumia vipindi vya wafalme wanne.
+Zaburi 119:30 “Nimeichagua njia ya uaminifu, Na kuziweka hukumu zako mbele yangu”.
+Zaburi 145:18 “Bwana yu karibu na wote wamwitao, Wote wamwitao kwa uaminifu”
+b.	Ukweli: hii ni tabia iliyomo ndani ya mtu aliyeshiba mausia ya Neno la Mungu.
+“Ni mtu aendaye kwa ukamilifu, Na kutenda haki. Asemaye kweli kwa moyo wake” Zaburi 15:2.
+Kweli ni Mungu, maana uongo ni shetani. Hivyo yeyote anayetaka kutumiwa na Mungu lazima aamue kusoma Neno kwa bidii sana na kuishi sawasawa na sheria ya Mungu ili atakaswe kwa ajili ya ufalme wa Mungu. Yesu alisema; “Uwatakase kwa ile kweli; neno lako ndiyo kweli” Yohana. 17:17.
+Kweli ya Mungu inasababisha utakaso kwako. Hatua hii ya kutakaswa na Neno ni hatua ya juu sana ya utakatifu maana wakati Neno linakujia lina angamiza vitu vingi ndani yako. Majini na mapepo yanatoka ndani yako bila kuombewa kwa sababu ya wewe kuwa mkweli. Biblia inasema;
+“Umependa mabaya kuliko mema, Na uongo kuliko kusema kweli” Zaburi. 52:3.
+Nami kwa ajili ya huo naliwekwa niwe mhubiri na mtume, (nasema kweli, sisemi uongo), Mwalimu wa Mataifa katika imani na kweli. 1 Timotheo. 2:7
+Ukiri: Nitasoma Neno sana, nitaishi sawasawa na hilo Neno, Nitaomba na nitasimamia kweli daima ili Mungu ajitukuze katika maisha yangu.</p>
+
+<P><span>2.	Mtu anayetumiwa na Mungu ana tabia ya unyenyekevu.</span></P>
+<p>Kunyenyekea ni ile hali ya kutii, unamtii Mungu, kiongozi aliye mbele yako.  Ni sifa ya ndani aliyo nayo mtu ambaye hajioni kuwa bora kuliko wengine. Unapokuwa mnyenyekevu unasababisha pendo la Mungu kujaa ndani yako, kwa sababu ya hilo pendo linakusukuma usiwe mtu wa mashindano au mabishano. Na kila sentensi inayotoka mdomoni mwakao haina majivuno hata kama kila mtu anajua wewe ni bora kuliko wao. 
+ <p><i><span>“Msitende neno lo lote kwa kushindana wala kwa majivuno; bali kwa unyenyekevu, kila mtu na amhesabu mwenziwe kuwa bora kuliko nafsi yake.”</span></i> Wafilipi 2:3</p>
+<p>Mtu mnyenyekevu anakubali kukemewa hata anapokuwa amekosea au hata akionewa hatafuti haki kwa kiongozi yeye ananyenyekea tu. Unapomkeamea anaona kama kukemewa ni kuoneshwa kosa, anaoneshwa wapi ana haribikiwa, ili asije akapoteza mwelekeo. Hili la kukemewa ndilo linaloonesha una moyo safi. Hili likiwepo basi, tayari unaonekana wewe umekomaa na unafaa kubarikiwa na kustawi. Ukiona unakemewa jua kabisa hapo ni Mungu anakupenda sana. Na ukiona hukemewi jua shetani anakupamba ili upoteze mwelekeo.</p>
+<p>Kinachowasumbua wengi wasiweze kufanikiwa katika jambo lolote maishani mwao ni tunaanza kwa hofu nyingi ya upendo baada ya muda kidogo mazoea yanaanza na lile pendo likishapoa unakuta uchovu na adabu inaondoka. 
+<p>Swali: Je, siku ile ulipokemewa na mzazi, kiongozi, bosi, mwalimu, au hata mtu aliyekuzidi umri au mamlaka wewe ulijisikiaje moyoni mwako?</p>
+<p><span>3.	Mtu anayetumiwa na Mungu ana kusudi moja kubwa katika maisha yake.</span></p>
+<p>Mtu mwenye tamaa ya kufanya mambo mengi sana kamwe hawezi kufanikiwa kwa sababu kama atafanikiwa katika moja ni lile ambalo atalipa muda mwingi na mawazo mengi juu ya hilo. Na yale mengine ambayo hajayapata nafasi ya kutosha yatachelewa au utayakosa kabisa. Mtu anaye ugawa muda wake lazima ashindwe. Kwa mfano, kama mwanaume ameugawanya upendo wake kwa mke na kwa mwanamke mwingine lazima ndoa hiyo iishie matatani. 
+Vivyo hivyo, mtu anayeweza kutumiwa na Mungu sharti achague kazi moja ambayo atafika nayo katika daraja la juu sana la utumishi. Kazi hiyo lazima imchukue umakini wake wote, ndani yake kusiwe na nafasi ya kazi nyingine. Mtume Paulo alifika mahali akasema <<span>“ila natenda neno moja tu”</span> (Wafilipi 3:13-14), na hii ilikuwa ndiyo siri ya mafanikio yake. Alikuwa na kiu kubwa sana ya kuhakikisha injili inafika kwa watu wote na alitaabika kwa kazi hii usiku na mchana na hata alipokuwa anamwamrisha mwanae wa kiroho – 1 Timotheo 4:15-16 alimwambia <span>“ukae katika hayo; dumu katika hayo”.</span></p>
+<p>Tatizo ni kwamba watu wengi wanataka kila kitu wafanye wao ili waweze kutumiwa na Mungu vizuri. Nawafahamu baadhi ya wanafunzi wenzangu shuleni waliokuwa wanataka wao wasome na kujihusisha na wasichana kwa wakati mmoja. Ninataka kusema hivi, hakuna mtu ambaye anatumia muda wake wa asubuhi, mchana na jioni kwa wanawake na akatumiwa katika mambo makuu na Mungu.</p>
+<p>Sikuzuii kufanya kazi mbalimbali, ila ninachotaka ujue ni kwamba mtu anayeweza kutumiwa kwa utukufu mkuu wa Mungu lazima kazi ya Mungu aipe kipaumbele cha kutosha haya mengine afanye endapo nafasi itapatikana tu.</p>
+<p><span>4.	Mtu anayetumiwa na Mungu ni yule ambaye kwa neema ya Mungu ameondoa kila vikwazo katika maisha yake.</span></p>
+<p>Hapa nina maanisha huhitaji kusema kuna kitu kina nizuia kutumika, yaani kila aina ya dhambi umeiondoa maishani mwako, umefika mahali umebadilika na kuwa kiumbe kipya, ya zamani yote umeyaacha na huyatamani, huwazi wala huna usemi juu ya hayo. Inawezekana ni mawazo mabaya, maneno mabaya au matendo mabaya, pengine ulikuwa na kiburi, wivu, hasira, wizi, tamaa mbaya, uuaji, ukorofi, matukano, uzinzi, masengenyo na uvutaji wa sigara na ulevi. Haijalishi ni kipi kinakuzia, lazima kiondolewe kabla Mungu hajaanza kukutumia.</p>
+<p>Isaya 59:1-2 <i><span>“Tazama, mkono wa Bwana haukupunguka, hata usiweze kuokoa wala sikio lake si zito, hata lisiweze kusikia; 2 lakini maovu yenu yamewafarikisha ninyi na Mungu wenu, na dhambi zenu zimeuficha uso wake msiuone, hata hataki kusikia.”</span></i></p>
+<p>Watu wanakuamini sana vile wanavyokuona, swali ni je hata Mungu anakuona kama watu wakuonavyo? Na je uko vile watu wanavyo kuona? Ili Mungu akutumie lazima utende kwa haki na kweli, yaani Mungu anatazama sana uadilifu wako.<p>
+
+<p><span>5.	Mtu anayetumiwa na Mungu lazima ajisalimishe kabisa katika utaratibu wa Mungu.</span></p>
+<p>Mungu tunayemtumikia ni wa utaratibu hakulazimishi umtumikie bali anataka wewe ukubali. Hebu jiulize mfano huu: mfinyanzi kama udongo ungemkatalia angefanya nini?  Je daktari atafanyaje endapo mgonjwa amekataa kumwamini? Hivi askari asiyejali ana thamani gani?</p>
+<p>Sasa basi, wewe umejitoa? Umeamua kuacha vyote? Umefika mahali pa kuacha mapenzi yako na umeruhusu mapenzi ya Mungu yatimizwe kwako? Utaenda popote anapotaka uende, utakuwa pale anapotaka uwe? Uko tayari kuimba tenzi namba 67?</p>
+<div class="text-center">
+
+<i><p>
+“Hata leo wawataka watakatifu wako,
+nawe wauliza tena ni nani aliyeko,
+atakaye nimtume afundishe vijana?”</p>
+
+<p>"Ni tayari, Bwana wangu, nitume mimi Bwana."
+Nitume na mimi Bwana kama ulivyotumwa,
+habari ya msamaha na dhambi kutubiwa,
+niwahubiri wakosa na waliopotea,
+wokovu u wake Bwana aliyewafilia.</p>
+
+</i></div>
+
+<p><i><span>
+6.	Mtu anayetumiwa na Mungu ni aliyejifunza namna ya kushinda katika maombi</span></i></p>
+<p>Watu wote waliowahi kutumiwa kwa mambo makuu na Mungu walikuwa na uwezo mkubwa wa kuomba. Kwa kadri usomavyo wasifu wao utagundua kuwa roho ya maombi iliwatawala. Biblia inaweka wazi kuwa Yakobo alisema <span><i>“...Sikuachi, usiponibariki. Akamwuliza, Jina lako n'nani? Akasema, Yakobo. Akamwambia, Jina lako hutaitwa tena Yakobo, ila Israeli, maana umeshindana na Mungu, na watu, nawe umeshinda.”</i></span> Mwanzo 32:26-28</p>
+<p>Yesu wakati mwingine katikati ya shughuli na watu akawaacha akaenda kuomba, mara nyingine aliomba usiku kucha peke yake kwa Baba yake, na kuna wakati aliwakemea wanafunzi wake kwa kuwa hawakuweza kuomba hata kwa lisaa limoja. Na hii ndo habari ya kila mtu ambaye amewahi kutumiwa na Mungu.</p> 
+<p>Inawezekana kabisa una neema na karama kwa ajili ya utumishi lakini kama hujajifunza namna ya kushinda kupitia maombi kamwe hutaona baraka za Mungu ndani yako. Lazima uombe bila kukoma mpaka upate majibu ya hicho unachoomba.</p>
+<p><span>7.	Mtu anayetumiwa na Mungu ni yule ambaye ni mwanafunzi wa Neno.</span></p>
+<p>Neno la Mungu ni taa inayomulika mbele unakoenda linakuonesha kilichoko mbele. Ni silaha ya ushindi kwa kila jambo. Ndicho chanzo cha taarifa zako. Neno linatakiwa liwe kama maziwa kwa wachanga, nyama kwa vijana na asali kwa wazee wa imani. Unaposoma kila siku Neno na kila sehemu inayohusu maisha yako siku kwa siku unafika mahali pa kulitumia kama Yeye anavyolitumia. Na ufike mahali pa kuamini kwamba Ujumbe unaohubiri na kuutangaza ni uhai - Neno lililohuishwa na Mungu. Unapolitoa lazima utambue kama kamwe halitarudi bure. Mungu kamwe hatamtumia mtu mwenye mashaka juu ya Neno lake.</p>
+<p><span>8.	Mtu anayetumiwa na Mungu ni yule mwenye Ujumbe muhimu kwa ulimwengu uliopotea.</span></p>
+<p>Mungu anataka kujua unaenda kuwaambia nini watu huko unakoenda? Lazima ujue una Ujumbe gani na kwa nini unaenda huko? Kama lengo lako ni jambo la kijamii, la kutoa elimu au mapinduzi ya kisiasa ni bora uache maana wapo watu waliosomea mambo ya kitaaluma na ya kijamii.</p>
+<p>Kuna Ujumbe ambao lazima uuelewe maana ndiyo unaotutoa sisi katika raha za nyumbani kwetu unatufanya twende tukawe mashahidi wake kwa majirani, tunavuka mipaka na hata miisho ya nchi. Na Ujumbe huu mara nyingi unatuweka katika mazingira ya kutukanwa, mshituko, upweke na hata kujidhabihu. Na huu ni Ujumbe wa “Yesu alikufa kwa ajili ya dhambi zetu” Ujumbe usemao “Mungu aliupenda ulimwengu, hata akamtoa Mwanawe pekee, ili kila mtu amwaminiye asipotee, bali awe na uzima wa milele”. Ujumbe wa msalaba, Ujumbe usemao “Enendeni mkaihubiri Injili” Ujumbe wa “Ufalme wa Mungu umekaribia”.</p>
+<p>Hivyo lazima utambue kwa nini unaingia katika utumishi. Wito tulionao ni mkuu mno ambao Mungu mwenyewe amekuagiza wewe kutoa Ujumbe wa uzima na mauti na utautolea hesabu utumishi wako. Hakikisha Unapotoa Ujumbe watu hawaisifii ibada yako, bali waseme Yesu mzuri, ni Mwokozi wa ajabu! Maana yake watu wasikuone wewe bali waone ukimfunua Yesu kwao.</p>
+<p>Kumbuka Yesu alikuja kutafuta na kuokoa kilichopotea. Watu wote wametenda dhambi, wewe nenda haraka kawahubirie msamaha wa dhambi na kwamba Yesu Kristo pekee ndiye anayeweza kuwaponya. Nenda kwa kasi kushuhudia habari za Yesu, nami nakutangazia kuwa huduma yako itakuwa ya utukufu wa ajabu sana.</p>
+<p>Hakikisha Ujumbe wako hautokani na wanadamu bali unatoka kwa Roho Mtakatifu. Ujumbe unaotoa unamfanya mwenye dhambi atuhumiwe? Je roho zinaokolewa na waamini wanarekebishwa? Maana kama Ujumbe wako umepewa na Roho Mtakatifu kamwe hutaaibika. Nenda kaongee ujasiri tulionao juu ya nguvu zake! Hakuna cha kuogopa, Mungu atakutumia.</p>
+
+
+<p><span>9.	Mtu anayetumiwa na Mungu ni mtu wa imani – anayetarajia matokeo.</span></p>
+<p>Tatizo lingine kubwa la watu wengi ni kwamba hawatarajii kipi kitatokea.  Hatuangalii matokeo. Hii ni imani inayoamini kuwa Mungu ni chanzo cha kila kitu, anaamini kuwa Mungu anaweza kufanya chochote kile. Sijazoea kuona vitu katika hali ya kawaida na kama jambo halijatokea najua kabisa kuwa hapo nimeshindwa. Nimezoea kutarajia kuwa mambo yasiyo ya kawaida Mungu atatenda na sijawahi kuaibishwa katika hili.</p>
+<p>Sijawahi kuona wanariadha wanaokimbia mbio uwanja mzima! Wana kitu cha kuangalia, na wanakimbia kwa kufuata alama fulani. Na sisi pia tuko katika mbio, lakini mbio zetu, ashukuriwe Mungu, kwa mbio za kuokoa roho za watu.</p>
+<p><i><span>“Lakini iweni watendaji wa neno, wala si wasikiaji tu, hali mkijidanganya nafsi zenu.”</span></i> (Yakobo 1:22)</p>
+<p>Mungu alifunua kwangu kuwa kumwamini Yeye ni sawa na kufuata maelekezo fulani ili uweze kufika mahali fulani.</p>
+<p><span>Kiri ukisema Mimi Nina tendea Kazi Neno la Mungu, Nina pokea maarifa mapya katika Neno, Nasikia Neno lake na ninatenda kama nilivyosikia. Nimejaa matarajio kwa kila tendo kupitia NENO.</span></p>
+
+<p><span>10.	Mtu anayetumiwa na Mungu ni yule aliye na Upendo.</span></p>
+<p><i><span>“Hakuna aliye na upendo mwingi kuliko huu, wa mtu kuutoa uhai wake kwa ajili ya rafiki zake” </span></i>(Yohana 15:13).</p>
+<p>Biblia inatufundisha kumpenda Mungu na upendo unaoneshwa katika ibada na matendo – kwa kujitoa. Kama unampenda Mungu hakika utakuwa mtu wa kujitoa. Kujitoa kwa mtu unayempenda si mzigo ni raha. Yakobo alimpenda Raheli aliona miaka saba kama Siku saba na hata akaongezewa miaka saba tena hakuona tabu kutumika tena ili ampate Raheli kwa sababu ya upendo aliokuwa nao.</p>
+<p><span>11.	Mtu anayetumiwa na Mungu ni yule anayejigharimu kwa kupanda Mbegu: </span></p>
+<p><i><span>“Na yeye ampaye mbegu mwenye kupanda, na mkate uwe chakula, atawapa mbegu za kupanda na kuzizidisha, naye atayaongeza mazao ya haki yenu” </span></i>(2 Wakorintho 9:10).</p>
+<p>Unapojigharimu unamfanya Mungu akuamini. Unaweza sema ‘mimi sina fedha ningetoa’, hapo unakuwa umekosea. Kama huna pesa unaweza kuwa na kitu kikubwa sana zaidi ya pesa, ambavyo ni pamoja na mikono yako, akili yako, moyo, elimu, kipawa, muda wako, ulicho nacho nyumbani kwako, unaweza kuwa ni uwezo wako wa kuhubiria wengine. Hakuna asiye na mbegu hata mmoja. Fedha uliyo nayo ni matunda ya ulichopanda hapo awali sasa ukipata mshahara wako toa fungu la kumi, sadaka, mbegu, shukrani, malimbuko na hata zawadi kwa kufanya hivyo utavuna zaidi. Ili Mungu akutumie lazima aione mbegu ya namna unavyolipa gharama kuyatimza mapenzi yake.</p>
+<p><span>Ombi: Baba naomba Neema ya kutenda sawasawa na kanuni zako ili niweze kupokea baraka zako.</span></p>
+
+<p><span>12.	Mtu anayetumiwa na Mungu ni yule anayeongozwa na Roho Mtakatifu</span></p>
+<p>1 Wakorintho 2:4-‬5 <i><span>“Na neno langu na kuhubiri kwangu hakukuwa kwa maneno ya hekima yenye kushawishi akili za watu, bali kwa dalili za Roho na za nguvu, ili imani yenu isiwe katika hekima ya wanadamu, bali katika nguvu za Mungu”.‬</span></i></p> ‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬‬
+<p>Pasipo na nguvu za Mungu imani yetu ni bure. Mungu si nadharia ni halisi, amejaa uhai na nguvu. Tunasoma katika Matendo ya Mitume 1:8:</p>
+<p><i><span>“Lakini mtapokea nguvu, akiisha kuwajilia juu yenu Roho Mtakatifu; nanyi mtakuwa mashahidi wangu katika Yerusalemu, na katika Uyahudi wote, na Samaria, na hata mwisho wa nchi.”</span></i></p>
+<p>Nguvu ya Mungu lazima iwe ndiyo msingi wa Imani yetu (The power of God must be the foundation for our faith). Tunawaona hawa walitulia bila kuanza utumishi mpaka Roho Mtakatifu alipokuja na nguvu kwao.</p>
+<p>Ili tufike mahali pa kufanya mambo makubwa na tuhesabike kama vyombo vya thamani mbele za Mungu sharti tuwe na utendaji unaoonesha dalili na nguvu za Mungu.</p>
+
+<p><span>Nguvu ya Mungu ina Kazi hizi.</span></p>
+<p><span>i.	Kugusa (Touch):</span> Tazama Marko 8:22-26. Katika mwili wa mwandamu hakuna mlango wa fahamu wenye nguvu kama mlango wa kugusa. Hapo tunaona wanamsihi Bwana amguse kipofu. Hata yule mwanamke mwenye kutokwa na damu aling'ang'ana kumgusa Yesu. Kupitia kugusa tunapata utakaso, uponyaji na Ukombozi kutokana na nguvu ya Mungu. Hapo tunaona kabisa kuwa mguso wa Mungu ni Dawa ya afya, macho na akili za mtu.</p>
+<p><span>Omba: Mungu baba, naomba uje katika uhalisia wako Leo. Nifundishe na unisaidie. Niguse na uniponye. Nitumie Mimi niguse maisha ya ninaokutana nao.</span></p>
+<p><span>ii.	Kubadilisha mambo (Transformation):</span></p> Ukikutana na Mungu kila kitu kinabadilika katika maisha yako. Hakuna kizuizi cha kile umeamini kutenda. Mungu anataka kila kitu kwako kibadilike, anataka tuone faraja katika mambo yote aliyotubarikia (yaani kuzaa, kuongezeka, kujaza, kutiisha na kutawala). Kubadilika huku kunahusu kuinuliwa kutoka chini kunda juu.</p>
+<p>Mabadiliko yanavutia wengine kumsogelea Mungu wako. Aliyekuwa anapokea maagizo anabadilishwa kuwa mtoa maagizo. Aliyekuwa anajiendesha mwenyewe anabadilishwa na kuwa na dereva wake, kwa kuwa nguvu ya Mungu imebadilisha cheo au nafasi yake. Kuanzia sasa Mungu anakwenda kukushangaza sana na maadui zako watashangaa sana kwa kile atakachofanya maishani mwako. Ndiyo maana sasa hakuna kitakachokuzuia kumpenda Mungu na mtu wa Mungu maana Upendo ni nguvu. Hakuna kusuasua tena ukikutana na hili badiliko la Mungu.</p>
+<p>Mungu alipowatoa wana wa Israel mikononi mwa wamisri hili lilikuwa ni badiliko la kutoka utumwa kwenda kwenye Uhuru wao. <span>Naongea na wewe saa hii, huu ni muda wa badiliko lako chanya</span>. Hili badiliko linabadilisha kila kitu kwenye maisha yako wenye kuleta baraka kubwa sana kwenye kazi yako, ndoa yako, biashara yako na huduma yako.</p>
+
+<p><span>Tangaza: Ni wakati wangu wa kukubalika na kuona kile Mungu anatarajia kwangu. Badiliko lipo katika maamuzi yangu na sasa nimeamua kutembea katika nguvu ya mabadiliko.</span></p>
+<p>Kwa sababu hizo mbili tunapokuja mbele zake hatutaki maneno matupu, Tunajua wote kuwa Mungu yupo, anatupenda, na anataka kutuokoa.</p>
+<p>Hizo sifa zote za mtu anayetumiwa na Mungu kama utahakikisha unaziishi maana inawezekana kuwa nazo. Hapo utumishi wako utakuwa ni wa utukufu mkuu mno na wito wako haitakuwa na majuto kwako na familia yako na jamii inayokuzunguka.</p>
+</ul>
+<h3><a name="knwwhnzmu"></a></h3>
+<h3>KWA NINI WAKRISTO WENGI HAWAONI NGUVU ZA MUNGU?</h3>
+<p>'Wakristo wengi wanaufahamu msalaba wa YESU, unaowapa msamaha wa dhambi. Lakini wengi hawajawahi kuchukua hatua ya UFUFUO wa Yesu Kristo. Maana Msalaba ni Upendo wa Mungu na Ufufuo ni nguvu ya Mungu.</p>
+<p>Tunapochukua hatua ya kuhamia katika msamaha wa dhambi na nguvu ya ufufuo wa Yesu Kristo. Ndipo anapodhirisha ushindi wake katika maisha yetu na ya wengine’, Tunahitaji vyote (upendo na nguvu). Bila Upendo Nguvu zake zitatuharibu au tutaharibu wengine. Na bila ya nguvu Upendo wake hauna kazi. Wakristo wengi wana upendo kwa Mungu lakini hawana nguvu ya kushinda magonjwa, nguvu za giza, uovu, na nguvu za kipepo – hujitukuta wakishindwa vita.</p>
+
+
+
+<h3>BAADHI YA CHANGAMOTO ZA MTUMISHI</h3>
+<p>Mtumishi wa Mungu lazima awe makini sana na baadhi ya vitu, ili mwishowe asije akaangukia mikononi mwa ibilisi. Changamoto kubwa ni hizi zifuatazo: -  
+	<ul>
+<p><span>1.	Nguvu</span></p>
+<p><i><span>a.	Nguvu inaweza kuua</span></i></p>
+<p>Nguvu inasidia sana kwenye ulinzi. Tunaona 2 Wafalme 1:9-12, ambapo tunaona maaskari waligeuzwa majivu palepale. Hii ndiyo nguvu. Mungu wa Eliya ndiye Mungu wako, ile nguvu bado ipo hata sasa kama ilivyokuwa wakati ule wa Elia. Ukiwa na nguvu ya Mungu unaweza kumshughulikia adui. Nguvu ni nzuri lakini lazima idhibitiwe.</p>
+
+<p>Kama Mungu ataweka nguvu kubwa kwa mtu ambaye hawezi kuitawala, kutatokea uharibifu mwingi sana. Mungu hawezi kuachilia nguvu zake kwa mtu ambaye hawezi kuitumia vizuri. Hebu fikiri mtu kichaa akipewa bomu nini kitatokea? Kama bado una hasira sahau kupata nguvu ya Mungu.</p>
+
+<p><i><span>b.	Nguvu inaweza kukuharibu</span></i></p>
+<p>2 Samweli 11:1-27, hapo tunaona nguvu ikimharibu Mfalme Daudi, alipopata cheo akiwa matembezini akaona mke wa mtu akioga, kama mfalme akatoa amri kuwa yule mwanamke apelekwe kwake. Yule mwanamke akapata ujauzito wake na alitumia nguvu zake kupanga mauaji ya mme wa yule mwanamke.</p>
+
+<p><i><span>c.	Nguvu inaweza kumwangamiza aliye ibeba.</span></i></p>
+<p>Kwa kuwa nguvu za Mungu zinaweza kupelekea mtu kiburi. Katika Waamuzi 16, tunaona habari za Samsoni. Wazazi wake walimuonya asioe mwanamke ambaye hajaokoka, lakini hakuwasikiliza. Samsoni akaishia kuangamia. </p>
+
+<p><i><span>d.	Nguvu inaweza kuwa chanzo kikubwa cha majaribu.</span></i></p>
+<p>Ukisoma Mathayo 3:16-17 na ukilinganisha na Mathayo 4:1-11, utagundua kuwa ghafla Yesu alipobatizwa ubatizo na Roho Mtakatifu ndipo ibilisi akampeleka katika majaribu mazito. Ibilisi alimuomba Yesu kutumia nguvu zake kubadili jiwe liwe mkate. Ibilisi alitaka Yesu atumie zile nguvu kujishibisha. Tambua kuwa ibilisi anaweza kukushawishi utumie nguvu ulizo nazo kujilimbikizia mali. Mungu akikupa kanisa la kuchunga usiligeuze kuwa chanzo chako cha kujipatia chakula. Haimaanishi kuwa ni kosa kanisa kukupa chakula bali nina maanisha wewe zingatia kufanya ya Bwana na Bwana atafanya yanayokuhusu.</p>
+
+<p><span>2.	Kukosa uzoefu</span></p>
+<p>Uzoefu ni mwalimu bora sana. Kuna faida kubwa sana za kujifunza kutokana na uzoefu wa watumishi waliotutangulia ili ujue namna gani ya kushinda. Maana uzoefu unaweza kujifunza kwa kutazama wengine au kwa kupitia mwenyewe. </p>
+
+<p>Samweli alijifunza kwa Eli. Alitambua kwamba ni kwa sababu watoto wa Eli walikuwa wakicheza na sadaka za Mungu, walikosa nidhamu na kufanya uzinzi na kuchafua nyumba ya Mungu, ilipelekea Mungu kusema katika 1 Samweli 2:30:</p>
+<p><i><span>“Kwa sababu hiyo, Bwana, Mungu wa Israeli, asema, Ni kweli, nalisema ya kuwa nyumba yako, na nyumba ya baba yako itakwenda mbele zangu milele; lakini sasa Bwana asema, Jambo hili na liwe mbali nami; kwa maana wao wanaoniheshimu nitawaheshimu, na wao wanaonidharau watahesabiwa kuwa si kitu.”</span></i></p>
+
+<p>Samweli akalipata hili somo. Maisha yake yote na watoto wake walijizuia kabisa kuichafua madhabahu ya Mungu (1 Samweli 12:1-5).</p>
+
+<p>Daudi alipata uzoefu kwa mfalme Sauli. Ndiyo maana katika 2 Samweli 6:14-22, alicheza mbele za Bwana kwa uwezo wake wote.</p> 
+
+<p>Mfalme Nebukadreza alijifunza kutokana na aliyoyapitia mwenyewe katika Danieli 4, Mungu alimuonya kupitia ndoto. Mungu akamwandalia na mpango wa kutafsiriwa ndoto, lakini akapuuzia onyo. Kwa miaka saba alikula majani kama mnyama ndipo akapata ufahamu na kutambua kuwa mfalme wa kweli ni Mungu.</p>
+
+<p>Kama kuna somo moja kubwa la kujifunza kwa Farao, ni kwamba haiwezekani kupigana na Mungu na ukashinda. Maana Biblia inasema:</p>
+
+<p>Warumi 9:17 <i><span>“Kwa maana maandiko yasema juu ya Farao, ya kwamba, Nilikusimamisha kwa kusudi hili, ili nionyeshe nguvu zangu kwako, jina langu likatangazwe katika nchi yote.”</span></i></p>
+
+
+<p><span>3.	Uwezo wako.</span></p>
+<p>Changamoto kubwa hapa ni kwamba Mungu ana vitu vingi sana na hata anapotupa anatoa kwa kadri ya wingi wa utajiri wake, lakini tatizo kubwa ni uwezo wa Mtumishi kuchukua kutoka kwa Mungu.</p>
+
+<p>Zaburi 23:5 inasema:</p>
+<p><i><span>“Waandaa meza mbele yangu, Machoni pa watesi wangu. Umenipaka mafuta kichwani pangu, Na kikombe changu kinafurika”</span></i></p>
+
+<p>Wakati wote Mungu anapotoa, anatoa mpaka mpokeaji anachanganyikiwa (Malaki 3:10, Mithali 3:9-10). Katika Yohana 2:1-11, katika harusi ya Kana, kilichotakiwa ilikuwa ni divai ili sherehe iishe salama. Lakini alitoa zaidi ya walichohitaji na ilikuwa divai bora sana. Mungu anasema endapo utayatenda mapenzi yake atakubariki kiasi kwamba baraka zitakuwa zikikukimbiza na kukupata.</p>
+
+<p>Kama Mungu anajitosheleza kwa nini Mtumishi unakosa upako wa kutosha? Kwa nini unapungukiwa fedha? Kwa nini uko upande wa moto na bado umeoza? Kwa nini uko kwenye ukingo wa mto na bado una kiu?</p>
+
+<p><span>i.	Inawezekana unatamani vitu visivyo, pengine unatamani utajiri.</span> Mithali 23:5 <i><span>“Je! Utavikazia macho vile ambavyo si kitu? Maana bila shaka mali hujifanyia mabawa, Kama tai arukaye mbinguni.”</span></i> Maana mara nyingi wanaotamani mali hunaswa katika mtego.</p>
+
+<p><span>ii.	Pengine unaomba Mungu akupe kutambulika.</span> Yeremia 45:5 inasema <p><i><span> “Je! Unajitafutia mambo makuu? Usiyatafute; kwa maana tazama, nitaleta mabaya juu ya wote wenye mwili, asema Bwana; lakini roho yako nitakupa iwe nyara, katika mahali pote utakapokwenda.”</span></i></p>
+
+<p><span>iii.	Pengine unatafuta mamlaka.</span> Mamlaka au nguvu inaua. Katika 2 Mambo ya Nyakati 26 mfalme Uzia alimlingana Bwana na akawa tajiri sana. baadaye akamkosea Mungu na akaangamizwa. Vivyo hivyo kwa Samsoni katika Waamuzi 14:1-3, Samsoni alisisitiza kwamba ataoa mahali ambapo si sahihi, kwa kutumia nguvu zake licha ya maonyo ya wazazi wake.</p>
+
+<p>Una kiu kiasi gani kwa ajili ya mambo ya Mungu? Katika Mathayo 5:6 Biblia inasema:<i><span>
+“Heri wenye njaa na kiu ya haki; Maana hao watashibishwa.”</span></i></p>
+
+<p>iv.	Sababu ya kwa nini huna kitu <span>inawezekana wewe bado ni bahili.</span> Maana mtu bahili atazidi kuusogelea uhitaji daima. Mithali 11:24-25, inathibitisha hili:
+<i><span>“Kuna atawanyaye, lakini huongezewa zaidi; Kuna azuiaye isivyo haki, lakini huelekea uhitaji. Nafsi ya mtu mkarimu itawandishwa; Anyweshaye atanyweshwa mwenyewe.”</span></i></p>
+<p>Unachotoa kinaamua upate nini. Luka 6:38 inasema;</p>
+<p><i><span>“Wapeni watu vitu, nanyi mtapewa; kipimo cha kujaa na kushindiliwa, na kusukwa-sukwa hata kumwagika, ndicho watu watakachowapa vifuani mwenu. Kwa kuwa kipimo kile kile mpimacho ndicho mtakachopimiwa”</span></i></p>
+<p>Ukuu unategemea sana kiasi gani unatoa na si muhimu sana kwamba una nini. Katika 2 Wafalme 4:8-17, mwanamke Mshunami aliitwa ‘mkuu’ si kwa sababu ya utajiri wake, ila kwa sababu alikuwa mtoaji sana. umewahi kutoa bila kuombwa? Je umewahi kujitoa kuomba kwa ajili ya mkubwa wako bila yeye kukuagiza?</p>
+<p>Mwamba wa upako ni huduma ya kujichotea tu. Mungu akiona kwamba una hiari ya kutoa muda wako na nguvu kwa ajili ya wengine, upako utakujilia. Je uko tayari kufa ili wengine waishi? Kama kweli basi tambua Mungu atakuagiza umpelekee vyombo vyako tu ili yeye aweze kuvijaza mpaka vifurike na upako. Kama unatamani kutumia, kubali kutumiwa, ataleta upako kwako.</p>
+
+<p><span>4.	Kujiongoza.</span></p>
+<p>Hali ya kujiongoza inaanza pale ambapo unaona kama unabanwa, unaanza kuona kama umekua na unazuiliwa kupaa kama utakavyo. Unapoanza kuona hali ya kutofurahia utumishi wa kuwa chini ya mtu unatakiwa kuwa makini sana, inawezekana unataka kuanza kujiongoza.</p>
+
+<p>Mwana mpotevu alikuwa na wazo la kutaka uhuru ili ajiongoze mwenyewe na akaanza kudai urithi wake.</p>
+
+<p><i><span>Isaya 30:1-3 “Ole wa watoto waasi; asema Bwana; watakao mashauri lakini hawayataki kwangu mimi; wajifunikao kifuniko lakini si cha roho yangu; wapate kuongeza dhambi juu ya dhambi; 2 waendao kutelemkia Misri wala hawakuuliza kinywani mwangu; ili wajitie nguvu kwa nguvu za Farao, na kutumainia kivuli cha Misri. 3 Basi, nguvu za Farao zitakuwa aibu yenu, na kutumainia kivuli cha Misri kutakuwa kufadhaika kwenu.”</span></i></p>
+<p>Baada ya Mwana mpotevu kuupata uhuru alioutaka zikaanza starehe, akaanza kujifurahisha. Akaanza kuishi atakavyo, alienda kwenye starehe kila siku. Lakini ikumbukwe kuwa uhuru ukizidi unasababisha kupoteza na kuharibikiwa. Na ukisha poteza ulichokuwa unajivunia ndipo aibu inakufuata. Unajua kuwa tawi la mti likikatwa toka kwenye shina, kwa kitambo fulani bado linaendelea kuwa majani yenye rangi ya kijani. Hii ni kwa sababu kunakuwa bado kuna virutubisho vimetunzwa kwenye tawi. Lakini vile virutubisho vya chakula vikiisha kinachofuata ni majani kukauka.</p>
+<p>Watumishi wengi sana wanaojitafutia uhuru kwa matakwa yao wamejikuta wakiishia katika aibu kubwa baada ya kushindwa katika utumishi wao. </p>
+
+<p><span>5.	Roho za mazoea.</span></p>
+<p>Roho za mazoea zipo kwenye jamii nyingi na ni rahisi kuua kazi ya Mtumishi. Zinatokana na mwingiliano kati ya mtumishi na anaowaongoza, hali inayowapa nafasi ya kufahamu mambo mengi kuhusu Mtumishi wao. Anavyoweka watu karibu naye wanaingiwa na roho ya mazoea. Hata Bwana Yesu alipokutana na watu wa namna hii, aliwaombea na kuponya wachache tu kutokana na kuwa watu wa dharau. 
+<p>Luka 4:24, 28-29 <i><span>“Yesu Akasema, Amini, nawaambia ya kwamba, hakuna Nabii mwenye kukubaliwa katika nchi yake mwenyewe. 
+Wakajaa ghadhabu wote waliokuwa katika Sinagogi walipoyasikia hayo. Wakaondoka wakamtoa nje ya mji, wakampeleka mpaka ukingo wa kilima ambacho mji wao umejengwa juu yake, wapate kumtupa chini.”</span></i></p>
+</ul>
+
+<h3><a name="lumi"></a></h3>
+<h3>LAZIMA USHINDE MTIHANI</h3>
+<p>2 Wafalme 2:1-8 <i><span>“Ikawa, hapo Bwana alipopenda kumpandisha Eliya mbinguni kwa upepo wa kisulisuli, Eliya alitoka Gilgali pamoja na Elisha. 2 Eliya akamwambia Elisha, Tafadhali, kaa hapa; maana Bwana amenituma niende mpaka Betheli. 3 Elisha akasema, Kama Bwana aishivyo, na roho yako iishivyo, sitakuacha, Basi wakashuka mpaka Betheli. Basi wana wa manabii, waliokuwako Betheli, wakatoka kuonana na Elisha, wakamwambia, Je! Unajua ya kuwa Bwana atamwondoa bwana wako leo, asiwe mkubwa wako? Akasema, Naam, najua; nyamazeni. 4 Eliya akamwambia, Tafadhali, kaa hapa, Elisha; maana Bwana amenituma niende mpaka Yeriko. Akasema, Kama Bwana aishivyo, na roho yako iishivyo, sitakuacha. Nao wakafika Yeriko. 5 Basi wana wa manabii, waliokuwako Yeriko, wakamkaribia Elisha, wakamwambia, Je! Unajua ya kuwa Bwana atamwondoa bwana wako leo, asiwe mkubwa wako? Akajibu, Naam, najua, nyamazeni. 6 Eliya akamwambia, Tafadhali kaa hapa; maana Bwana amenituma niende mpaka Yordani. Akasema, Kama Bwana aishivyo, na roho yako iishivyo, sitakuacha. Wakaendelea mbele wote wawili. 7 Basi watu hamsini wa wale wana wa manabii wakaenda wakasimama, kuwakabili kwa mbali; na hao wawili wakasimama karibu na Yordani. 8 Eliya akalitwaa vazi lake la juu, akalikunja, akayapiga maji, yakagawanyika huku na huku, na hao wawili wakavuka pakavu.”</span></i></p>
+<p>Mara baada ya kuokoka au kitambo kidogo katika maisha yako, utaanza kuona mitihani. Kutakuwa na majaribio na mateso. Mitihani ni ya muhimu sana kumuonesha mwalimu kwa kiwango gani mwanafunzi ameelewa. Pasipo mitihani, kwa kawaida huwezi kupanda nafasi mbalimbali. Kama unataka kuinuliwa sana jipange kwa ajili ya kupitia mitihani.</p>
+<p>Mtihani unaweza usiwe mzuri lakini ukawa wa maana sana. Majaribu yanaweza kukufunulia marafiki wa kweli. Huwezi kuwajua rafiki zako wa kweli mpaka uwe katika hali ya uhitaji na pia huwezi kuwajua rafiki wa kweli mpaka matatizo yamekuja ambayo yatawafanya watu wakukimbie. Haijalishi utapitia mtihani wa aina gani, ila kuna rafiki ambaye bado atabaki na wewe, lakini humjui atakuwa yupi. Kwa bahati nzuri sisi Wakristo tunamjua na huyo ni Yesu Kristo.</p>
+<p>Yakobo 1:2-4 <i><span>“inatuambia kuwa tufurahie kuwa ni furaha tupu tukiangukia katika majaribu.”</span></i> Pale majaribu na mitihani inapobisha hodi mlangoni, ujue huenda kuinuliwa au kupandishwa daraja kupo nyuma ya huo mlango. Kama hujawahi kujaribiwa, jiandae kujaribiwa. Kwa mambo mengi utajaribiwa, yakiwemo yafuatayo: - </p>
+<p><span>a.	Uaminifu:</span> Elisha alikuwa mwaminifu sana kwa Eliya mpaka mwisho. Tunasoma katika Ruthu 1:8-18 pia tunaona uaminifu wa Ruthu. Akafika mahali pa kuwa bibi wa Daudi, babaye Yesu Kristo. Hata Ufunuo 2:10 inasema:</p>
+<p><i><span>
+“Usiogope mambo yatakayokupata; tazama, huyo Ibilisi atawatupa baadhi yenu gerezani ili mjaribiwe, nanyi mtakuwa na dhiki siku kumi. Uwe mwaminifu hata kufa, nami nitakupa taji ya uzima.”</span></i></p>
+<p>Endapo utasimama kwa kuishi au kufa lazima usimame kwa ajili ya Yesu. Utavikwa taji ya uzima.</p>
+<p><span>b.	Upendo kwa Mungu:</span> Mungu atataka kuona kwa kiasi gani unampenda yeye. Katika Biblia tunaona jinsi alivyompa mtihani Ibrahimu alipomuomba amtoe mwanae wa pekee Isaka (Mwanzo 22:1-18). Mtihani uli ulilenga kumuona kama Ibrahimu alimpenda sana mwanaye kuliko Mungu ama la. Ibrahimu alifaulu jaribu hilo. Katika Yohana 21:15-19, tunaona Yesu akimuuuliza Petro mara tatu – akitaka kuona kama anampenda. Atakuuliza nawe swali kama hili iwe hivi karibuni au hapo baadaye. Mungu atataka kuona kama unampenda sana Yeye kuliko pesa. Mungu atataka kujua kama unampenda sana yeye kuliko mchumba wako, mkeo au watoto.</p>
+<p><span>c.	Msingi:</span> Msingi gani ambao unao? Mathayo 7:24-27 inatuambia hadithi ya nyumba. Mmoja akajenga juu ya mwamba na mwingine juu ya mchanga. Zote zilipendeza mpaka siku ngurumo ilipokuja, ndipo ikajulikana tofauti kati ya hizo nyumba mbili. Hivi punde au badaye kidogo ngurumo itakuja kukujaribu ijue kama umejengwa katika msingi gani. Jiandae. </p>
+
+<p><span>d.	Hamu</span> ya chakula, pesa na ngono n.k: Katika kitabu cha Mwanzo 25:29-34, tunaona haikuwa kwa ajali kwa kitendo cha Esau kusikia njaa wakati Yakobo alipoandaa chakula. Ilipangwa ili kuangalia kama Esau anaweza kuizuia njaa yake? Angalia sana njaa yako, usipende pesa kuliko Mungu, mpende sana Mungu na ndipo utakapopata kibali cha kuwa na pesa unayoweza kuitawala.</p>
+<p><span>e.	Imani:</span> Imani ya Ayubu ilijaribiwa na alifaulu jaribu (Ayubu 19:25). Katika Mathayo 15:21-28 wakati mwanamke alipokuja kwa Yesu kwa ajili ya uponyaji wa mtoto wake, imani yake ilijaribiwa. Mungu anataka kuona kama unaamini kuwa yuko hai na anajibu maombi.</p>
+<p><span>f.	Kumtegemea Mungu:</span> Kumtegemea Mungu ni jambo zito kuliko kumwamini. Kumtegemea ni sawa na kusema wewe ni mali yake pasipo kujali kwamba anajibu maombi yako au la.</p>
+<p><span>g.	Kujitoa kwenye maombi, Uinjilisti, utoaji, usomaji wa Neno:</span> Mungu anaangalia kuwa ni kwa kiwango gani umejitoa kwake. Katika Danieli 6, Danieli alitahiniwa (alipimwa). Alikataa kuinuliwa na akamuabudu Mungu wake pekee.</p>
+<p><span>h.	Utakaso:</span> Tunaposoma kitabu cha Mwanzo 39:7-12, tunaona kwamba utakaso wa Yusufu ulijaribiwa.</p>
+<p><span>i.	Uvumilivu,</span> (Waebrania 10:36). Unahitaji uvumilivu wa hali ya juu sana kuifanya kazi ya Mungu. Uvumilivu wako pia utapimwa. </p>
+
+
+<h3><a name="nkja"></a></h3>
+<h3>NINAWEZAJE KUSHINDA JARIBU?</h3>
+<p>Luka 19:17 <i><span>“Akamwambia, Vema, mtumwa mwema; kwa vile ulivyokuwa mwaminifu katika neno lililo dogo, uwe na mamlaka juu ya miji kumi.”</span></i></p>
+<p>Unashinda au unashindwa kwa namna unavyotimiza mambo madogo madogo ya kila siku kama vile, kujali muda, matoleo, zaka, malimbuko na maombi. Uwe mwaminifu kwa siku moja kwa wakati, na utabaki mwaminifu kwa kila siku za maisha yako. Fuata maagizo mepesi siku moja kwa wakati, pale yanapokujia maagizo makubwa na mazito, itakuwa rahisi kwako kuyatii, kwa sababu utii utakuwa umeshaumbika maishani mwako.</p>
+ <p>Unashindwa kwa sababu unakuwa si mwamifu kwa mambo madogo. Wimbo ulio bora 2:15 </p>
+<p><span>“Tukamatie mbweha, Wale mbweha wadogo, Waiharibuo mizabibu, Maana mizabibu yetu yachanua.”</span></p>
+<p>Kama utamtii Mungu muda wote katika mambo madogo, kuinuliwa kwako kunaweza kuja hata pasipo na jaribu. Biblia inasema:</p>
+<p><span>“Lakini yeye aijua njia niendeayo; Akisha kunijaribu, nitatoka kama dhahabu.”</span> Ayubu 23:10.</p>
+<p><i><span>Je, kama mtihani unakuja leo au kesho, utafaulu?</span></i></p>
+
+
+
+<hr>
+<h3><a name="vyanzo"></a></h3>	
+<div class="text-center">
+						<h2>Sura Ya Sita</h2>
+
+<h3>SILAHA YA USHINDI</h3>
+									
+							</div>
+
+<p>Katika safari ya wokovu kuna mambo mengi unapaswa kuyatambua ili yawe silaha za kukulinda dhidi ya kila hila za adui, katika kitabu hiki ninapenda nimalizie kwa kukufahamisha kuwa ili utimize vema wito ambao Bwana Yesu amekuitia na umalize salama lazima uitambue silaha ya ushindi – ambayo ni Neno. </p>
+<p><i><span>“Kwa sababu hiyo twaeni silaha zote za Mungu, mpate kuweza kushindana siku ya uovu, na mkiisha kuyatimiza yote, kusimama. 14 Basi simameni, hali mmejifunga kweli viunoni, na kuvaa dirii ya haki kifuani, 15 na kufungiwa miguu utayari tupatao kwa Injili ya amani; 16 zaidi ya yote mkiitwaa ngao ya imani, ambayo kwa hiyo mtaweza kuizima mishale yote yenye moto ya yule mwovu, 17 Tena ipokeeni chapeo ya wokovu, na upanga wa Roho ambao ni neno la Mungu;”</span></i> Waefeso 6:13-17
+Ukisoma hapo juu utabaini kuwa zimetajwa silaha nyingi sana kama vile kujifunga kweli kiunoni, kuvaa dirii ya haki, kufungiwa Utayari miguuni na kuitwaa ngao ya imani. Ukitazama kwa umakini sana hapo utabaini kuwa Silaha kubwa imetamkwa katika mstari wa kumi na saba, anasema: -</p>
+<p><i><span>“Tena ipokeeni chapeo ya wokovu, na upanga wa Roho ambao ni neno la Mungu”</span></i></p>
+<p>Ndipo tunabainishiwa kuwa chapeo ya wokovu na upanga wa Roho ni <span>Neno la Mungu.</span></p>
+
+<h3>IPOKEE CHAPEO YA WOKOVU</h3>
+<p>Chapeo ni kifaa kinachovaliwa na waendesha pikipiki na wachimbaji wa migodini kinacholinda kichwa kisiumie endapo kuna ajali itatokea. Tunajua kuwa kichwa ndiyo kinabeba mambo yote makuu na kuyafanyia maamuzi sahihi kwa wakati, ibilisi naye anakiwinda sana kichwa cha Mtumishi wa Mungu maana anajua akifanikiwa kurusha silaha zake kichwani atakuwa ameweza kummaliza kabisa huyo Mtumishi. </p>
+<p>Mtume Paulo alikuwa anawaambia watu waliokuwa wamezaliwa mara ya pili kuwa waipokee chapeo ya wokovu wao – yaani kitu cha kulinda adui asije akaingiza hofu na mashaka ndani ya akili zao. Ni wazi kuwa ibilisi anarusha mishale yake mingi sana katika kichwa cha Mtumishi wa Mungu ili tu kusababisha huyo mtumishi avurugikiwe na ashindwe kutimiza kusudi la wito ambao ameitiwa na Bwana Yesu.</p>
+<p>Mishale ya adui inalenga sana kutusababisha tuweze kupata hofu na mashaka juu ya Mungu wetu na hivyo kupelekea Mtumishi kupoteza mwelekeo. Kuna wakati ambapo ibilisi anaweza kumtumia mtu mwingine akuletee maneno ambayo yanakatisha tamaa ya wewe kuendelea kumwamini Mungu, ukishindwa kuendelea kumwamini hata baba yako wa kiroho – ambaye anaweza kuwa Mchungaji wako, au mtu aliyekulea mpaka ukamjua Mungu na ukaaminiwa ili uwe Mtumishi wa Bwana.</p>
+<p>Anapotutia hofu au kutukatisha tamaa analenga kuhakikisha tunakuwa masikini, tunakuwa wahitaji, tunapungukiwa ulinzi wa Mungu na kupelekea kurudi katika maisha ya dhambi, magonjwa na kila mahangaiko. Kwa ufupi. anataka tupoteze ujasiri wa kutegemea upendo na uzuri wa Baba yetu wa mbinguni.</p>
+<p>Shetani anaweza kutuma mishale ya maneno kwako na ukaamini kabisa kuwa umepotea kwa kuamua kuishi maisha ya wokovu. Uwe makini sana na hili maana hata Mtume Petro kuna wakati alimpa Yesu maswali akisema “sisi tumeacha vyote tukakufuata; tutapata nini basi? (Mathayo 19:27)” Hili swali ukilitazama kwa umakini utagundua kuwa tayari kuna mshale wa hofu na mashaka ulikuwa umempata Petro, hasa ukizingatia kuwa alikuwa na desturi ya kupata mashaka, kumbuka kuwa ni huyu huyu ambaye alifika mahali alitaka kuzama wakati Bwana Yesu alimwamuru atembee juu ya maji. Ni mara nyingi sana utakuta kuna Mawazo yanakuja kichwani mwako wewe uliye Mtumishi yanakushawishi uache kufuata maelekezo na amri za Mungu. Kama hutazingatia hii silaha ya ushindi si rahisi kwako kumaliza salama wito wa utumishi wako.</p>
+<p>Licha ya kuwa adui anatuma mishale mingi kwa watumishi wa Mungu, kuna uwezekano kabisa wokovu wako ukaingia mashaka na ukapoteza tumaini juu ya ahadi za Mungu kwenye maisha yako. Yesu anatuhakikishia kuwa wokovu wetu utalindwa na hakuna wa kutuondolea zile ahadi endapo tutaipokea chapeo ya wokovu kuwa ulinzi wetu.
+Yohana 6:37-39 <i><span>“Wote anipao Baba watakuja kwangu; wala ye yote ajaye kwangu sitamtupa nje kamwe. 38 Kwa kuwa mimi sikushuka kutoka mbinguni ili niyafanye mapenzi yangu, bali mapenzi yake aliyenipeleka. 39 Na mapenzi yake aliyenipeleka ni haya, ya kwamba katika wote alionipa nisimpoteze hata mmoja, bali nimfufue siku ya mwisho”.</span></i></p>
+<p>Hili linatupa uhakika kuwa hakuna hali, au magonjwa au dhambi ambayo inaweza kumfanya Yesu au Baba yake akampoteza hata mmoja ya aliwachagua. Ukishajua hilo kazana kuyafanya mapenzi ya Mungu neema ya kukufanya ushinde itazidi kukua maishani mwako.</p>
+<p>Chapeo ya wokovu ndilo tumaini kuu la kufikia hatma ya wokovu wetu maana inatupa ujasiri na uhakika kuwa mahangaiko tunayopitia sasa dhidi ya shetani hayatadumu daima na mwishowe sisi tutashinda. Tunatambua kuwa vita ni ya maisha haya tu, na hata kama yatachukua kitambo kirefu huku duniani lakini hayafanani na raha kuu tutakayoipata na Bwana wetu milele.<p>
+
+
+<h3>UPANGA WA ROHO</h3>
+<p>Upanga ni silaha pekee ambayo ilianza kutumika tangu zamani za agano la kale, na kila askari alikuwa anatumia silaha ya upanga tu, hivyo Neno la Mungu ndiyo silaha pekee inayohitajika, na ndiyo silaha inayoweza kummaliza shetani kuliko silaha ya aina yoyote. Ni silaha ya ajabu sana yenye uwezo wa kumshinda ibilisi katika hila zake zote, mashambulizi yake na kuharibu mikakati ya ibilisi.</p>
+
+<p>Anaposema “wa roho” ana maanisha kuwa ni upanga unaotenda kwa roho na katika roho. Hivyo tunabaini kuwa Neno ni silaha ya kiroho, linatenda mambo makubwa sana tunapolitumia katika maisha yetu.</p> 
+
+<p>Upanga wa roho ndiyo silaha ya kwanza kuliko zote ya kukusaidia kumshinda ibilisi.  Hii ndiyo silaha ambayo Mtumishi akijua kuishika na akapata ujuzi wa kuitumia basi kamwe hataweza kuaibishwa na ibilisi au kumkosea Mungu.</p>
+
+<p>Yesu alipojaribiwa na ibilisi kule jangwani, ulinzi wake kwa kila jaribu ilikuwa ni kifungu cha Neno ambalo kiukweli lilimchanganya sana ibilisi (Mathayo 4:4, 7 & 10). Mtumishi asiyelijua Neno la Mungu kamwe hawezi kulitumia ipasavyo. Shetani anatafuta eneo usilojua Neno linasemaje na atatumia hilo kukuchanganya.</p> 
+
+<p>Anaposema upanga hapa ana maanisha kuwa ni Neno, na Anaposema roho ana maanisha Roho Mtakatifu. Kwa lugha nyepesi maana yake ni Neno la Mungu linafafanushwa vizuri kwenye fahamu zetu kwa fundisho la Roho Mtakatifu. Tunapobatizwa na Bwana Yesu kwa Roho Mtakatifu anaunguza kila uharibifu ndani ya akili zetu ili tuweze kulielewa Neno la Mungu ambalo linafanyika kuwa silaha ya ushindi kwa kila jambo.</p> 
+
+<p>Silaha mbili zenye nguvu zaidi duniani kwa sasa ni Neno linalotamkwa na Neno linaloandikwa. Hakikisha unashinda kila vita kwa Neno la Mungu. Neno la Mungu lina nguvu za kumhamisha mtu kutoka kwenye hali ya uongo na kufikia hali ya ukweli, kutoka ulimwengu wa giza hadi ulimwengu nuru, na kutoka ulimwengu wa dambi na kifo na kwa kukwama kukua, huzuni kuwa furaha, linatuondoa kwenye uchanga na kutuingiza kwenye ukomavu na kushindwa mpaka kufanikiwa.</p>
+
+<p>Tambua kuwa hakuna mwamini ambaye anayo sababu inayoweza kumfanya asisome Neno, maana Neno ndiyo silaha ya uzima wake, ushindi wake, amani yake na kufanikiwa sana.
+Agenda kubwa ya ibilisi ni kukufanya wewe utende dhambi – yaani umkosee Mungu wako na anahangaika na hili kila siku kuhakikisha kuwa anafanikiwa. Na ipo silaha moja tu kubwa ambayo ukitumia lazima ushinde, Biblia inaeleza kuwa: - </p>
+
+ <p><i><span>“Hamjafanya vita hata kumwagika damu, mkishindana na dhambi”</span></i> Waebrania 12:4</p>
+	
+<p>Kwa maelezo hayo tunamtambua adui mkubwa tunayeshindana naye kuwa ni dhambi. Hivyo ni wazi kuwa ukishinda dhambi tambua kabisa kuwa vita yako imeishia. Tambua kabisa kuwa udanganyifu ndiyo silaha kubwa anayoitumia shetani ili utende dhambi.</p> 
+
+<p>Katika historia ya utumishi tunaona baadhi walioshinda dhambi kwa kumwaga damu, hii ilikuwa ni vita ya aina yake sana. Yesu Kristo alimwaga Damu ili kushinda dhambi ya kila amwaminiye, na kuonesha unamwamini yakupasa ujue namna ya kulinda ule upendo wake kwetu. Stefano ni mtumishi ambaye alikuwa akimtumikia Mungu lakini ilifika mahali vita ya kutaka kumtoa kwenye utumishi ilihamia mwilini, Biblia inasema: -</p>
+
+<p><i><span>“Wakampiga kwa mawe Stefano, naye akiomba, akisema, Bwana Yesu, pokea roho yangu. 60 Akapiga magoti, akalia kwa sauti kuu, Bwana, usiwahesabie dhambi hii. Akiisha kusema haya akalala. Na Sauli alikuwa akiona vema kwa kuuawa kwake”.</span></i> Matendo ya Mitume 7:59-60.</p>
+
+<p>Hii ni hatua ya juu sana ya utumishi, ambayo kama uko tayari kumwaga damu ili Yesu atetewe hakika utaona ushindi wako dhidi ya dhambi na kamwe hutaenda kwenye mateso ya jehanam – maana huko ndiko ambako ibilisi anataka watu wote wamuunge mkono. Hakikisha unamtumikia Mungu kwa moyo wako wote “moyo ulio tayari kufa kwa ajili ya Bwana”, kwa kuwa Neno lake limejaa kwa wingi na limekua ndani yako. Kila uwapo unapumua Neno, unaongea Neno, unawatia wingine wivu wa Bwana Mungu wako kwa namna ambavyo unalishuhudia Neno lililojaa ndani yako.</p> 
+
+<p><i><span>“Nao wakamshinda kwa damu ya Mwana-Kondoo, na kwa neno la ushuhuda wao; ambao hawakupenda maisha yao hata kufa.”</span></i> Ufunuo wa Yohana 12:11</p>
+
+<p>Anasema tunamshinda kwa damu ya mwana kondoo na neno la ushuhuda wetu. Inafika mahali sheria ya Mungu wetu unaipenda mpaka unauachilia moyo wake kwak kiasi cha kuwa tayari kufa kwa ajili yake.</p>
+
+
+<h3>NENO LA MUNGU</h3>
+<p>Neno ni uhai, na sisi tulio na Neno la Mungu tumefanyika kuwa pumzi ya Mungu. Naomba unielewe vema sana hapa maana iko siri nataka kuifunua ambayo itakusaidia kujua namna ya kushinda. Tuanze kwa kusoma Yohana 1:1-5.</p>
+
+<p><i><span>“Hapo mwanzo kulikuwako Neno, naye Neno alikuwako kwa Mungu, naye Neno alikuwa Mungu. 2 Huyo mwanzo alikuwako kwa Mungu. 3 Vyote vilifanyika kwa huyo; wala pasipo yeye hakikufanyika cho chote kilichofanyika. 4 Ndani yake ndimo ulimokuwa uzima, nao ule uzima ulikuwa nuru ya watu. 5 Nayo nuru yang'aa gizani, wala giza halikuiweza.”</span></i></p>
+
+<p>Lugha inavunja kanuni, badala ya kusema Neno lilikuwako kwa Mungu, inasema Neno alikuwako kwa Mungu. Hii ina maana kwamba huyu Neno ni mtu – ambaye ni Yesu Kristo. </p>
+
+<p>Katika Yohana 1:14 anasema <i><span>“Naye Neno alifanyika mwili, akakaa kwetu; nasi tukauona utukufu wake, utukufu kama wa Mwana pekee atokaye kwa Baba; amejaa neema na kweli.”</span></i></p>
+
+<p>Kwa kuwa tumeelezwa tangu mwanzo kuwa alikuwepo – na hiyo ndiyo kweli.  Ikumbukwe kwamba Mungu alitamka tu jambo lakini aliyetekeleza mpaka likatokea ni huyu Neno (Yesu), ndiyo maana tunaambiwa <span>pasipo yeye hakikufanyika cho chote kilichofanyika.</span> Tunalithibitisha hili katika Mithali 8: 22-35</p>
+
+<p>Tunaelezwa wazi kuwa Neno alikuwako mwanzo kabisa wa njia ya Mungu. Anafika mahali anasema “Ndipo nilipokuwa pamoja naye, <span>kama stadi wa kazi;</span> Nikawa furaha yake kila siku; Nikifurahi daima mbele zake (Mithali 8:30)”. Hii ni wazi kuwa Yeye ndiye aliyefanya kazi zote ambazo Mungu alitaka zifanyike.</p>
+
+<p>Yohana ndiye aliyemtambulisha Yesu kwa jina la Neno, na pia alimwita Mwana wa Mungu na tunaona anamwita jina la kipekee sana “Mwana-kondoo”.</p>
+
+<p>Yohana 1:35-37 <i><span>“Tena siku ya pili yake Yohana alikuwa amesimama pamoja na wawili katika wanafunzi wake.36 Akamtazama Yesu akitembea, akasema, Tazama, Mwana-kondoo wa Mungu! 37 Wale wanafunzi wawili wakamsikia akinena, wakamfuata Yesu”.</span></i></p>
+
+<p>Nilitaka ujue kuwa Neno ni Yesu, lakini ujue kuwa Neno huyo huyo ambaye ni Yesu, jina lake ni Mwana-kondoo. Alipewa jina hili kwa sababu ya kujawa na tabia za kondoo katika maisha yake yote. Katika kitabu cha Ufunuo wa Yohana ametajwa mara ishirini na saba kwa jina la Mwana-kondoo. Kama hili umelielewa naomba ukumbuke kuwa watumishi walioko duniani wanamshinda ibilisi kwa damu ya Neno: -</p> 
+
+<p><i><span>“Nao wakamshinda kwa damu ya Mwana-Kondoo, na kwa neno la ushuhuda wao; ambao hawakupenda maisha yao hata kufa.”</span></i> Ufunuo wa Yohana 12:11</p>
+
+<p>Anaposema kwa damu ya Mwana-kondoo anamaanisha kwa damu ya Neno, naamini hutabisha kwa sababu nimekuelewesha kuwa Neno ndiye Yesu pia Neno anaitwa Mwana-kondoo. Tunaambiwa kuwa kinachotufanya kushinda ni silaha ya damu ya Neno (Mwana-Kondoo). Tunaona hata Stefano kilichompelekea ashinde dhambi hata kufikia kufa kwa hilo alikuwa anatoa ushuhuda wa Neno. Kwa sababu Neno alikuwa anakaa ndani ya Stephano, akiwa anaendelea kuongea injili ya kweli mioyo ya wana wa ibilisi ikachomwa, nao wakaanza kumpiga kwa mawe lakini alihakikisha kuwa anaipigania imani yake hata kumwaga damu. Labda nikuulize wewe je, imani yako kwa Yesu Kristo imefikia kiwango cha kufa kwa ajili yake? Kama jibu lako ni ndiyo, ina maanisha sasa wewe umeishinda dhambi, kama jibu lako ni hapana niseme amua leo kuzidi kusoma Neno kama chakula chako cha kila siku mpaka aje afanye makao ndani yako, ili siku ya kujaribiwa ikifika damu ya Neno aliye ndani yako na ule ushuhuda ulioubeba ukushindie.</p>
+
+
+<p>TABIA ZINAZOMFANYA NENO AKAE KWAKO</p>
+
+<p><span>1.	Kutii</span></p>
+ <p>Utii ni kutenda sawasawa na Neno la Mungu (Mapenzi ya Mungu). Neno la Mungu ni dira pekee ambayo tunapaswa kuijua, kuikubali na kuitii. Ukishaokoka na kuanza kumtumikia Mungu unahitaji kuwa mtii kuliko kawaida, ukikosa utii utaumia zaidi. <i><span>“Jinsi gani kijana aisafishe njia yake? Kwa kutii, akilifuata neno lako.”</span></i> Zaburi 119:9</p>
+
+<p>Unapaswa kutii Neno la Mungu, unapaswa kutii maongozi ya Roho Mtakatifu maana yeye ndiye anayejua njia zote za Bwana Yesu. Ukikosa utii anaondoka kwako na unabaki peke yako, tambua kuwa akiondoka kila kitu kinakufa, unaanza kuishi maisha ya majuto, magonjwa, ukata na hata kukosa amani.
+
+
+
+<p><span>2.	Kufanya</span></p>
+<p>Neno la Mungu limebeba ujumbe au maagizo mengi ambayo unatakiwa kuyafanyia kazi, hilo ndilo kusudi la Mungu kwa watu aliowaita – wanapaswa kufanya mapenzi yake ndivyo watakavyoingia kutoka utukufu hadi utukufu. Amesema;</p> 
+
+<p><i><span>“Watoto wadogo, tusipende kwa neno, wala kwa ulimi, bali kwa tendo na kweli.” 1 Yohana 3:18</span></i></p>
+
+<p>Tabia ya upendo inaonekana katika tendo na si katika maneno matupu. Ndiyo maana Yohana anatusisitiza kuonesha upendo wetu kwa tendo. Na njia moja ya kuonesha upendo ni kwa kutoa. Biblia katika Yohana 3:16 inasema kuwa Mungu aliupenda ulimwengu, hata akamtoa Mwanawe pekee, ili watu waweze kuokolewa. </p>
+
+<p>Watu wengi wanajifanya wanampenda Mungu lakini hawako tayari kutoa walivyo navyo kwa Mungu hata kama wanajua mwenye navyo ni Mungu. Mfano, kuna watu hawataki kumpa Mungu zaka na sadaka wakitarajia kuwa Mungu atawaelewa. Tuhakikishe tunatoa hata kwa wanadamu wenzetu, maana inampendeza Mungu.</p>
+
+<p>Yohana 9:31 <i><span>“Twajua ya kuwa Mungu hawasikii wenye dhambi; bali mtu akiwa ni mcha Mungu, na kuyafanya mapenzi yake, humsikia huyo”.</span></i></p>
+
+<p>Usipofanya mapenzi yake ambayo tayari umeshayajua Mungu anakuona wewe ni mjinga na hata unalofanya la kwako utakuta linaishia kufa au biashara inafilisika.</p>
+
+<p><i><span>Basi kila asikiaye hayo maneno yangu, na kuyafanya, atafananishwa na mtu mwenye akili, aliyejenga nyumba yake juu ya mwamba.</span></i> Mathayo 7:24</p>
+<p><span>3.	Kuelekeza</span></p>
+<p>Kuelekeza ni kufundisha wengine kile ambacho Bwana amekufundisha wewe kupitia Neno lake au agizo lake.</p>
+
+<p><i><span>Basi, enendeni, mkawafanye mataifa yote kuwa wanafunzi, mkiwabatiza kwa jina la Baba, na Mwana, na Roho Mtakatifu; na kuwafundisha kuyashika yote niliyowaamuru ninyi; na tazama, mimi nipo pamoja nanyi siku zote, hata ukamilifu wa dahari</span></i> Mathayo 28:19-20</p>
+
+<p>Utakapokuwa unawafundisha hilo Neno, wale watakaolisikia wakilipokea, wakaenenda katika hilo maisha yao yatabadilika pamoja na mazingira yao. Hivyo na wao, pia, wanatakiwa kutoa hayo maneno wasikiayo toka kwako, na kuwaendea wengine nayo yatawabadilisha wengi na kuwabariki, na kuwapa uzima maana, ndani ya hilo neno, kuna pumzi ya MUNGU.</p>
+
+<p><span>4.	Kumtegemea</span></p>
+<p>Mungu akishakuokoa anakufanya kuwa mtoto wake, na kwa kuwa ni Baba anataka wanaye wote wamtegemee yeye katika kila jambo, maana ni Mungu mwenye wivu sana. Akiona unamtegema mwanadamu (iwe tajiri au rais wa nchi ama mtu yeyote kuliko yeye), anakasirika sana maana anajua hujamwamini kuwa anaweza mambo yote kwako.
+<i><span>“Bwana asema hivi, Amelaaniwa mtu yule amtegemeaye mwanadamu, Amfanyaye mwanadamu kuwa kinga yake Na moyoni mwake amemwacha Bwana”. </span></i>Yeremia 17:5</p>
+
+<p>Hii ina maanisha kuwa wanadamu wote ni wadhaifu kuliko yeye, sasa ukiweka utegemezi wako kwa mtu hutaweza kutimiza kusudi la kuumbwa kwako. Katika utawala wa Daudi watu wa Israeli walipata nguvu na kuinuliwa sana kwa sababu kiongozi wao aliwasababisha watu wamheshimu sana Mungu. Lakini wafalme waliofuatia baada yake walifanya kila jitihada kujiinua, hii ilipelekea kujichukulia utukufu wa ufalme, wakisahau kwa kiasi gani wanamhitaji Mungu zaidi. Walijiona kama wana hekima na wanajiweza sana – matokeo yake wakaishia kuharibikiwa, kukosa maadili, na wakaasi dhidi ya Bwana kwa kugeuka na kuanza kuabudu miungu.</p> 
+
+<p>Kosa la kujiona unaweza bila Mungu linaweza kukusababisha ukose utambulisho wako kama mtu wa kipekee, hiki ndicho kilichowapata Israeli, wakapoteza upendo wao wa kwanza na wakaishia kuwa watumwa. Angalia sana unapoongezeka kiwango cha neema na upako usianze kujisahau na kumwacha Bwana, utakwama na kuishia kwenye hukumu ya Mungu.</p>
+
+<p>Nilipoanza utumishi wangu nilipitia upweke sana, nilikuwa nalala chini, nilipanga kachumba kadogo tena penye wapangaji wengi, nilikuwa naabudia mahali ambapo ilikuwa ni darasa na ghala ya kuhifadhia chakula, tulikuwa wachache mno na hata pesa ya kulipa kodi ilikuwa shida sana – lakini tulimtumikia Mungu licha ya hayo mapito. Nilifika mahali pa kulala kujenga kibanda cha mabanzi katika eneo letu ambalo Bwana alitupa na nilikaa humo ndani. Nilikuwa tayari kuibeba aibu na maumivu ya mwanzo wa utumishi wangu. Hatukuweza kuomba pesa mkoani wala makao makuu na kwingineko kokote kwa sababu tulimtazama Yesu, na baada ya miaka mitano imani ilijionesha waziwazi kuwa Mungu yupo nasi.</p>
+
+
+
+<h3>MATOKEO YA KUKAA NA NENO</h3>
+
+<p><span>1.	Unatakaswa</span></p>
+<p>Bwana Yesu alimuomba Mungu kuwa kila atakayekuwa Mtumishi wake atakaswe na Neno. Yesu ni mzuri sana si tu kwamba anatupa amani, furaha, kupandishwa vyeo, ushindi na pumziko, pia hutupatia utakaso. Alisema; </p>
+<p><i><span>
+“Uwatakase kwa ile kweli; neno lako ndiyo kweli”.</span></i> Yohana 17:17</p>
+
+<p>Kitendo cha kukaa na Yesu kina sababisha utakaso wa hali ya juu sana, kila kitu kinachozuia njia yako kinaondoka.</p> 
+
+<p><i><span>“naye ataketi kama asafishaye fedha na kuitakasa, naye atawatakasa wana wa Lawi, atawasafisha kama dhahabu na fedha; nao watamtolea Bwana dhabihu katika haki.”</span></i> Malaki 3:3</p>
+
+<p>Mpendwa, ukikaa ndani ya Yesu, utagundua kitu gani kinapungua katika maisha yako, utaweza kujiona kwa uwazi na kwa undani sana ulivyo. Yesu ni kioo ambacho unaweza kujitazama na kujitambua wewe ni nani.</p>
+
+<p><i><span>“Kwa maana sisi sote tumekuwa kama mtu aliye mchafu, na matendo yetu yote ya haki yamekuwa kama nguo iliyotiwa unajisi; sisi sote twanyauka kama jani, na maovu yetu yatuondoa, kama upepo uondoavyo”.</span></i> Isaya 64:6</p>
+
+<p>Nabii Isaya alipomuona Mungu ndipo alipojitambua kuwa alikuwa anaiita hukumu ya Mungu kwake mwenyewe na watu wake, hakutambua kuwa midomo yake, ambayo alifikiri ilikuwa imewekwa wakfu, pia ilikuwa michafu. Alipoona picha ya kweli ndipo akamlilia Bwana kutaka msaada. Ukimuona Bwana utabadilisha hata maombi yako, na utaanza kuomba kwa ufasaha zaidi (Isaya 6:1-7). Isaya alimlilia Bwana ili amsaidie na Bwana akatuma malaika ambaye alikuwa na kaa la moto lililotoka madhabahuni kugusa midomo yake. </p>
+
+<p>Malaki 3:2-3 anasema atawatakasa wana wa Lawi kwa moto. Hii ndiyo sababu nataka watumishi wa Mungu wasiogope majaribu, maana Mungu ana kusudia kukutakasa. Anataka kutoa kila uchafu na chochote ambacho hakitakuruhusu kudhihirisha nguvu za Mungu maishani mwako. Hivyo, lazima Yesu awepo ndani yako na umuone ili ujue kama kwa kiasi gani wewe ni mchafu au msafi. Kila unapouona uhalisia wako utakushawishi kumwita Yeye akusaidie.</p>
+
+<p><span>2.	Unainuliwa</span></p>
+
+<p><i><span>
+“Maana siko mashariki wala magharibi, Wala nyikani itokako heshima. Bali Mungu ndiye ahukumuye; Humdhili huyu na kumwinua huyu.”.</span></i> Zaburi 75:6-7</p>
+
+<p>Watu wengi sana, wanafanya kazi kwa bidii mno lakini hawapati kitu, lakini wengine wanafanya kazi kidogo sana na wanafanikiwa. Mungu akiwa upande wako, lazima ufanikiwe. Katika Mwanzo 39:1-5, tunaona jinsi ambavyo Yusufu alisababisha mafanikio kwenye nyumba ya Potifa kila alichokigusa kilistawi kwa sababu tu alikuwa na Mungu. Mungu akiwa na wewe, haijalishi unafanyia wapi kazi au unafanya kazi gani, daima utafanikiwa. Mungu wetu ni Mungu wa neema. Anafanya vitu vingi sana kuthibitisha uwezo wake wa kiungu, na hakuna awezaye kuuliza maamuzi yake. Haijalishi upo katika hali gani, Mungu akisema anaenda kufanya jambo jipya maishani mwako, anaweza kukuchukua bondeni na akupandisha juu sana. Anaweza kukutoa kwenye giza totoro na akakuingiza kwenye nuru (Yohana 9:1-7)</p>.
+
+<p>Usithubutu kujiondoa kwenye mstari, ubadaye wako uko mikononi mwa Mungu. Mambo mazuri bado yanaweza kuja kwako haijalishi kwa sasa hali yako ikoje. Kaa karibu na mkono wa Bwana kamwe hutajuta. Inawezekana kuna upinzani mkubwa wa maadui, mpango na kusudi la Mungu utakuja kutimia kwako. Hakuna awezaye kumshusha mtu ambaye Mungu ameamua kumuinua. Mungu anaweza kukufanya ukue kila siku katika maarifa, ufahamu na hekima. Ukisoma habari za Danieli utagundua kuwa aliinuliwa kutoka chini mpaka juu. Aliweza kufanya vitu vya kushangaza katika ardhi ya ugenini na Bwana alimwinua sana.</p>
+
+<p>Jambo kubwa la kujifunza kutoka kwa Danieli ni yale maamuzi aliyoyafanya kwa Bwana (Danieli 1:8). Maamuzi hayo yanatuonesha kuwa mtu yeyote ambaye amefika mahali pa kujitambua na kujitunzia heshima kwa Mungu wake atatenda mambo makuu sana. Moyo wako lazima umtazame Bwana na kukusudia kufanya mapenzi yake wakati wote. Kuinuliwa hakutatokea kwa watu wanaotaka kujinufaisha wenyewe. Lazima uwe na shauku ya kutumia kila kitu ambacho Mungu anakupa kwa utukufu wake – yaani mpaka matamanio yako yaende sawasawa na kusudi la Mungu. Unaweza pia kuinuliwa kama utaamua kukaa karibu na Mungu Mwenyezi, ambaye ni chanzo cha kila ukuu wa kweli.</p>
+
+
+
+<p><span>3.	Unabarikiwa</span></p>
+
+<p>Watu wengi wanatamani kubarikiwa na Mungu na watu pia, lakini hawajawahi kuchukua maamuzi yanayo ruhusu baraka ziwafuate. Wengine wamepokea unabii wa kufurahisha sana ambao walijua ni unabii wao kweli, lakini hawajawahi kuchukua hatua ya kuhakikisha huo unabii unatimia na inakuwa ndoto kamili.</p>
+
+<p><i><span>“Heri aliyesamehewa dhambi, Na kusitiriwa makosa yake”.</span></i> Zaburi 32:1</p>
+
+<p>Wakati ule ambapo Mungu aliwaambia wana wa Israeli kuwa huo ulikuwa ni wakati wao wa kuimiliki nchi ya Ahadi iliyojaa maziwa na asali, kazi ilikuwa ni yao kuhakikisha wanaacha kila tendo ovu kabla hawajaenda kuimiliki nchi (Yoshua 1:11-15).</p>
+
+<p>Neno likikaa ndani ya mtu, linaweza likamfanyia yote anayotaka, maana ndani ya Neno kuna kila kitu anachotaka. Zaburi 1:1-3 inasema mtu aliyefika mahali pa kufurahia Neno la Mungu na analitafakari usiku na mchana. Na kila utakalolianzisha litakuwa na uhai wakati wote na unakuta ustawi unakufuata wenyewe.</p>
+
+<p>Tambua kuwa ili ubarikiwe kuna mambo lazima uyatimize kwa wazazi wako wa kimwili na wa kiroho. Angalia masharti ambayo Esau alitakiwa kuyatimiza kabla hujapata baraka toka kwa baba yake. Hatuwezi kubarikiwa kama hatufanyi chochote kupata baraka zake. Njia moja wapo ya kubarikiwa imeelezwa katika Mithali 3:9-10. Hakikisha unaitumia hii njia.</p>
+
+<p>Wengi siku hizi wana shauku ya kufanikiwa kiuchumi na kivitu, wanatafuta baraka za Mungu lakini hawapati, kwa sababu wameshindwa kubaini kuwa baraka za Mungu zinakutaka utoe ndipo utapokea toka kwake. Ni imani yangu kuwa kila wakati utakuwa na kitu cha kutoa na si tu kwa Mungu bali pia kwa watumishi wake. Unaweza kutumia chungwa moja kuwafurahisha wageni watatu kuliko kuwaacha waondoke bila kula kitu chochote. Maombi yangu kwako ni kwamba katika kila hatua ya maisha yako, usikose chakula na pia usikose mbegu ya kupanda ili uweze kuzichokonoa baraka za kiungu katika Jina la Yesu.</p>
+
+<p><span>4.	Unatengwa (kupakwa mafuta)</span></p>
+
+<p>Ili kufikia kiwango cha utumishi wa daraja la juu lazima ufikie vigezo fulani ambapo Mungu anakutenga.</p>
+
+<p><i><span>“Kwa maana kwangu mimi kuishi ni Kristo, na kufa ni faida” </span></i>– Wafilipi 1:21</p>
+
+<p><i><span>“Nimesulibiwa pamoja na Kristo; lakini ni hai; wala si mimi tena, bali Kristo yu hai ndani yangu; na uhai nilio nao sasa katika mwili, ninao katika imani ya Mwana wa Mungu, ambaye alinipenda, akajitoa nafsi yake kwa ajili yangu.”</span></i> – Wagalatia 2:20</p>
+
+<p>Kwa hili alikuwa anasema, mimi nimetengwa na nimeuzwa kijumla kwa Mungu. Nimeachana na kila mtindo wa maisha ya zamani na kila tamaa ila ninafanya yale tu Yesu anayotaka nifanye.</p>
+
+<p>Unapotengwa maana yake kuna hali fulani ya kuwa wewe sasa unakuwa wa madhabahuni na hilo linakufanya baadhi ya mambo kuwa magumu kuyaishi kama ulivyokuwa umezoea. Ili kuwa dhabihu iliyo hai (Warumi 12:1), lazima utengwe. Ukitengwa kwa ajili ya Bwana, kuna aina fulani ya mtindo wa maisha unabadilishwa. Na ukitengwa unakufa kila siku. Kiwango ambacho utaenda na Mungu na kiwango ambacho Mungu atakutumia kwenye ufalme wake inategemea sana kiwango chako cha kutengwa. Je, umeyaweka maisha yako yote kuwa dhabihu ya kimadhabahu?</p>
+
+<p><span>5.	Unaimarishwa</span></p>
+ <p><i><span>“Hatua za mtu zaimarishwa na Bwana, Naye aipenda njia yake.”</span></i> - Zaburi 37:23</p>
+
+<p>Neno likijaa kwa wingi ndani yako, na hasa pale unapoishi maisha matakatifu huwa Mungu anazidi kukuimarisha katika neema na kibali. Utukufu wa Mungu unaonekana kwako wazi wazi kila mtu anafika mahali pa kutambua kuwa Mungu amekutendea mema.</p>
+
+<p><i><span>“Na Mungu wa neema yote, aliyewaita kuingia katika utukufu wake wa milele katika Kristo, mkiisha kuteswa kwa muda kidogo, yeye mwenyewe atawatengeneza, na kuwathibitisha, na kuwatia nguvu” </span></i>– 1 Petro 5:10.</p>
+
+<p>Huu ni wakati ambao Mungu anajitukuza sana katika maisha yako, huwa unakuwa katika daraja la furaha kuliko wenzako wote, maana umepitia mateso ya kutosha ili ajue kama kweli umeamua kufa kwa ajili yake.</p>.
+
+<p><span>6.	Unafanywa kuwa mtenda muujiza</span></p>
+<p>Neno Limejaa muujiza maana tangu uumbaji lenyewe limekuwa na uzoefu wa kutenda muujiza mingi. Unapozidi kuwa mtii linakutawala na kuanza kukutumia kama chombo cha kutendea muujiza. Kama unataka kuwa mtenda muujiza lazima umwendee Mungu kwa imani (Waebrania 11:6), kama hakuna agizo la Mungu ndani yako au Neno lake kamwe hutaweza kuona muujiza maishani mwako. Kabla Mungu hajatenda muujiza ataangalia kama kuna Neno ndani yako la kuuamsha huo muujiza. Kwa lugha nyingine ni kwamba kama hakuna Neno la kinabii ndani yako, hakuna Neno la ufunuo au Neno la ahadi za Mungu kulingana na hali yako, kutafuta muujiza kwa mazingira hayo utaishia kukata tamaa tu.
+
+<p>Mungu wetu ni Mungu wa mahusiano, kama unataka kuwa mtenda miujiza lazima uamue kuwa na uhusuiano wa dhati naye. Ni rafiki anayekuwa karibu kuliko ndugu</p>
+
+<p><i><span>Mithali 18:24 “Ajifanyiaye rafiki wengi ni kwa uangamivu wake mwenyewe; Lakini yuko rafiki aambatanaye na mtu kuliko ndugu.”</span></i></p>
+
+<p>Anaweza kudumisha uhusiano na vizazi vinavyofuata baada ya wewe kuondoka duniani. Tambua kuwa Mungu ametoa maagizo ambayo lazima uyafuate ili uweze kuona miujiza yake maishani mwako.</p>
+
+
+<h3>KUWA MWANAFUNZI MAISHA YOTE</h3>
+<p>Mithali 1:5<i><span> “mwenye hekima asikie na kuongezewa elimu, na mwenye ufahamu ayafikie mashauri yenye njia.”</span></i></p>
+
+<p>Kutokana na mstari huo hapo napenda kujulishwa msomaji wa kitabu hiki kuwa maarifa ni ya muhimu sana, ingawa sio kila maarifa yanamfaa mwana wa Mungu. Neno linatueleza kuwa ni mwenye hekima tu ndiye ndiye hupata faida kutokana na kile anachokisia. Maana kama umefundishwa jambo fulani na hulifanyii kazi, wewe upo katika hatari kuliko tu ambaye hajawahi kujifunza hilo jambo hata mara moja. Kwa sababu, Yesu alisema siku ile ya mwisho kuwa ni Neno la Mungu ambalo litatuhukumu. Kwa lugha nyingine ina maana kwamba fundisho lolote la Mungu ambalo umewahi kufundishwa litasimama dhidi yako siku ile. Niseme kwamba kama vile Neno liwezavyo kumuweka mtu huru, pia lina uwezo wa kumhukumu. 
+
+<p><i><span>Tangaza Ukisema: Sitahukumiwa na Neno nililowahi kufundishwa, maana kuanzia sasa nitaishi kama Neno au fundisho linavyonitaka niishi.</span></i></p>
+
+<p>Pia Tunajifunza kwamba kama maarifa yakipewa nafasi sahihi katika maisha yako, unachojifunza kitakuhamasisha kutamani maarifa zaidi. Kwa maana nyingine kama una hekima, utatamani kuwa mwanafunzi siku zote za maisha yako, kwa sababu ufunnuo mmoja utokao kwa Mungu utakuhamisisha upate ufunuo mwingine ili uwe na uelewa mpana zaidi.</p> 
+
+<p>Kwa mantiki hii, kila aliyeitwa na Bwana Yesu anatarajiwa kuwa kama wataalamu wanaoongeza maarifa yao kila wakati. Hakikisha unakuwa mtu ambaye mara zote unataka kujua zaidi, tafuta muda zaidi wa kusoma vizuri, vitabu vya walioweza kufanya vema. Kwa Ujumla inasemekana kuwa viongozi ni wasomaji. Kama utashindwa kusoma, na kujifunza kutokana na uzoefu wako na wa wengine, utabaki ulivyo maisha yote.</p>
+
+<p>Kwa hiyo, tangu sasa uwe mtu wa kutafuta maarifa, ili uweze kuongoza kundi lako, familia yako, ofisini kwako, na biashara yako, unatakiwa kuyajua yale ambayo wengine hawayajui. Tukilinganisha na Mhubiri 9:18 inasema <span>“Hekima ndiyo bora kupita silaha za vita; Lakini mkosaji mmoja huharibu mema mengi.”</span>
+
+<p>Maamuzi ni yako kushinda au kushindwa kutimiza kusudi la kuzaliwa kwako.</p>
+
+
+
+
+
+
+<hr>
+
+<h3><a name="hit"></a></h3>
+
+
+		<h2>HITIMISHO</h2>
+									
+							<br>
+	
+<p>KWA WALE AMBAO BADO HAWAJAOKOKA</p>
+<p>Amua kufikia toba ya kweli na umpokee Yesu Kristo katika maisha yako. Sema sala hii <p><i><span>“Ee Bwana Yesu, Nisamehe dhambi, makosa na uovu wangu niliotenda mbele zako. Futa hatia zangu kwa Damu yako. Futa jina langu katika kitabu cha hukumu na niandike katika kitabu cha uzima cha Mwana kondoo wa Mungu. Ninakiri kwa kinywa changu, kuwa wewe ni Bwana na Mwokozi wangu na ninaamini moyoni mwangu; kuwa Mungu alikufufua katika wafu. Ninakukaribisha moyoni mwangu, kuanzia sasa ninakupa maisha yangu uyatawale. Amen.”</span></i></p>
+
+<p>KWA WALE AMBAO WALIORUDI NYUMA KIROHO</p>
+<p>Kama ulirudi nyuma kiroho au umekataa tamaa, au umeshindwa kwenda sawasawa na Neno la Mungu, dawa ni toba ya kweli na mwombe Roho Mtakatifu akuoshe kwa Damu ya Yesu ili upate kuanza upya na kusonga mbele.</p>
+
+<p>KWA WALE WANAOTAKA KUSONGA MBELE</p>.
+<p>Omba kulingana na hayo uliyosoma katika kitabu hiki na Bwana atakuwezesha kushinda.</p>
+<p>Nakushauri nenda mahali ambapo watu wanaabudu katika roho na kweli (waliookoka) ili upate msaada zaidi wa kiroho.</p>
+<p>Ndugu msomaji, nimekuandikia kitabu hiki ili nikutie moyo ili wokovu na utumishi wako uweze kuleta faida huku duniani kwa ajili ya utukufu wa Mungu. Kitabu kinachofuata <i>‘Kukua Kwa Kanisa’</i> nitaelekeza kwa mapana jinsi ya kuukabili upinzani ili kutimiza mapenzi ya Mungu.</p>
+<p>Kila hatua uliyo nayo leo itakusaidia kufika unapotaka kufikia kesho, usirudi nyuma kwa sababu ya kiongozi wako, au ugumu wa mitihani unayokutana nayo. Kwa kuliona hili wazi Yesu alisema <i><span>“Lakini mwenye kuvumilia hata mwisho, ndiye atakayeokoka.”</span></i> Mathayo 24:13.</p>
+<p>Weka nia ya dhati ndani yako kuwa kiongozi bora na Mtumishi mwenye ushindi kwa kila hali. Usiache kutimiza mapenzi ya Mungu maishani mwako kisa hutambuliwi kwa kila unachofanya, au kwa sababu hakuna anayekuunga mkono katika familia yako au marafiki na jamii kwa Ujumla. Inawezekana hayo mazingira ndiyo yanatumiwa kukupima kwa kiwango gani unampenda Mungu – na ukimaliza huo mtihani kwa kushinda ndipo utaona furaha ya wokovu wako na faida ya utumishi wako.</p>
+<p>Ili ukue kufikia kimo cha utimilifu wa Kristo, huna budi kujipanga kushinda kila aina ya vita itakayoinuka mbele yako na neema ya Mungu ipo kwa ajili ya kukuwezesha ushinde.</p>
+<p>Ninakupenda sana ndugu msomaji, amua kujijengea uwezo wa kumshawishi Mungu akutumie, na watu pia wakutumie kumuona Mungu kwa kuamua kuwa bora, zingatia uadilifu, tafuta ujasiri na mabadiliko yako binafsi ili uweze kuwasaidia wengine kufikia walipokusudiwa.</p>
+
+
+
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+						</div>
+						
+			</div>
+
+
+		</div>
+	
+</main>
+    <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+ 
+     
+      {% endblock %}   
+        
+       

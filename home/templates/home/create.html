@@ -1,6 +1,6 @@
 
 {% extends 'base2.html' %}
-{% load staticfiles %}
+{% load static %}
 
    {% block body %}
          
@@ -22,7 +22,7 @@
                                         <div class="col-md-12 col-sm-12">
                                                   <hr>
                                                  
-                                                 <h1><center> Welcome,</center></h1> 
+                                                 <h1><center> Almost Done,</center></h1> 
                                     <h1><center>Let's create an account for you.</center></h1>
                                                  
 						 <hr> <hr> 
@@ -41,11 +41,10 @@
 								<div class="alert alert-danger">
 									<div class="form">
                                                                         <form method="post">
-
-                                                                        {% csrf_token%}
-                                                                        {{form.as_p}}
-                                                                    <P>You have read and agree to the E-Communication Policy,
-                                                                    which provides that this is an online service and that you
+ {% csrf_token%}
+             {{form.as_p}}
+            <P>You have read and agree to the E-Communication Policy,
+                    which provides that this is an online service and that you
                                                                     will receive the account notices and information electronically
                                                                     via your primary email address. You have also read and agree to
                                                                     the User Agreement and Privacy Statement that if you provide your mobile phone number, you give us permission

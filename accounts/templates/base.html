@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% load staticfiles %}
+{% load static %}
 
 <html>
 
@@ -62,13 +62,12 @@
               {%else%}
 
            <ul class="nav navbar-nav navbar-left"> 
-                <li><a href="{% url 'accounts:logout'%}">Home</a></li>
+                <li><a href="{% url 'logout'%}">Home</a></li>
             </ul>
             
             <ul class="nav navbar-nav navbar-right">
-               <li><a href="{% url 'accounts:login'%}">Login</a></li>
-               <!--<li><a href="{% url 'accounts:register'%}">Sign up</a></li>-->
-                <!-- <li><a href="{% url 'accounts:reset_password'%}">Nimesahau neno la siri</a></li> -->
+               <li><a href="{% url 'login'%}">Login</a></li>
+               
             </ul>
             {%endif %}
 

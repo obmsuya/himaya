@@ -3,7 +3,7 @@
 
 {% extends 'base2.html' %}
 
-{% load staticfiles %}
+{% load static %}
 <br><br>
 
    {% block body %}
@@ -42,7 +42,7 @@ go();
                                        
                                        <br>
                    <div class="text-center">                     
-             <p><span>CUSTOMER BOUGHT A BOOK FROM THIS SITE BEFORE?</span></p>
+             <p><span>WHAT TYPE OF A CUSTOMER</span></p>
 											</div>
 											<hr>
 				<div class="row">
@@ -52,7 +52,7 @@ go();
 <div class="col-md-5">
 
 								<div class="alert alert-danger">
-<button class="collapsible">NO</button>
+<button class="collapsible">NEW CUSTOMER</button>
 
 <div class="content">
 <br>
@@ -76,7 +76,7 @@ go();
 <div class="col-md-5">
 <div class="alert alert-danger">
 
-<h2 class="collapsible" ><span><a href="{% url 'home:chat'%}" style="color:#fff;text-decoration:none;">YES</a></span></h2> 
+<h2 class="collapsible" ><span><a href="{% url 'home:chat'%}" style="color:#fff;text-decoration:none;">OLD CUSTOMER</a></span></h2> 
 
 </div>
 </div>

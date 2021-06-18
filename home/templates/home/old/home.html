@@ -1,0 +1,279 @@
+{% extends 'base3.html' %}
+{% load staticfiles %}
+    {%block head%}
+     
+    {% if item != None %}
+        <title>{{item.name}}-Selected Class</title>
+        
+    {% else %}
+        <title>Invalid Item ID- Selected Class</title>
+    {% endif %}
+    
+    {%endblock%}
+
+
+   {% block body %}
+	<!-- Added for Social Sharing -->
+	<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="right:0px; top:147px; background-color: rgb(71, 107, 140);">
+		<p class="share_to" style="font-size: 14px;"><span style="color: white;"><b>Share On</b></span></p>
+		<a class="a2a_button_facebook" style="margin-top: -31px;" title="Share to Facebook"></a>
+		<a class="a2a_button_twitter" title="Share to Twitter"></a>
+		<a class="a2a_button_google_plus" title="Share to Google+"></a>
+		<a class="a2a_button_linkedin" title="Share to Linkedin"></a>
+	</div>
+	<script async src="https://www.ciowhitepapersreview.com/assets/js/social_sharing.js"></script>	
+<header>
+		<nav class="navbar navbar-expand-lg navbar-light">
+
+			<div class="container">
+			  <button class="btn menu-btn d-md-none .d-lg-none"  onclick="openNav()">
+			  	<i class="fa fa-bars"></i>
+			  </button>
+
+			  <a class="navbar-brand" href="#">OBG GLOBAL</a>
+			
+                            <div id="mySidenav" class="asidenav">
+                              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                              <a class="btn btn-follow href="{% url 'accounts:logout'%}" role="button">Logout </a>
+                              <li class="nav-item mr-20"><a href="{% url 'accounts:login'%}">Log In</a></li>  
+			      <a href="{% url 'home:chat'%}" role="button">My Books</a>
+                               <a href="{% url 'accounts:register'%}" role="button">Register</a>
+                              
+                            </div>
+
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav ml-auto">
+			     	  {% if user.is_authenticated %}
+                                
+                                
+                <li class="nav-item mr-20"><a href="{% url 'home:chat'%}">My Books</a></li>
+                
+                <li class="nav-item mr-20"><a class="btn btn-follow href="{% url 'accounts:logout'%}">Logout</a></li>
+			    </ul>
+                            
+                      {%else%}         
+                            
+               <ul class="navbar-nav ml-auto">
+                <!--<li class="nav-item mr-20"><a href="{% url 'home:home'%}">Home</a></li>-->
+                 <li class="nav-item mr-20"><a href="{% url 'home:chat'%}">My Books</a></li>
+                 <li class="nav-item mr-20"><a class="btn btn-follow href="{% url 'accounts:logout'%}">Logout</a></li>
+		<li class="nav-item mr-20"><a href="{% url 'accounts:login'%}">Sign in</a></li>
+                <a href="{% url 'accounts:register'%}" role="button">Register</a>
+                <!--<li class="nav-item mr-20"><a href="{% url 'accounts:reset_password'%}">Reset Password</a></li>-->
+            </ul>
+            {%endif %}            
+                            
+                            
+                            
+                            
+			  </div>
+			</div>
+
+
+		<div class="line"></div>
+		</nav>
+	</header>
+                    
+                
+                    
+                   
+
+	<style>
+.terms-home{
+background: url(https://whatis.ciowhitepapersreview.com/border_diagonal.png) repeat-x 0 bottom;
+}
+.contnthere ul li {
+	list-style-type : disc !important;
+}
+</style>
+ 
+          <br> <br> 
+	
+        
+        <section class="section grey-scale">
+			<div class="container">
+<div class="col-lg-12 col-md-12">
+	<div class="col-lg-12 col-md-12" style="padding-left: 0;padding-right: 0;">
+	
+                 
+ <h2 class="btn btn-follow" ><span><a href="{% url 'home:index'%}" style="color:#fff;text-decoration:none;">Nunua Vitabu</a></span></h2>
+  <h2 class="btn btn-follow" ><span><a href="{% url 'home:authors'%}" style="color:#fff;text-decoration:none;">Kwa Waandishi wa Vitabu</a></span></h2>
+
+  <button type="button" class="btn btn-follow" data-toggle="modal" data-target="#regprocess">Namna ya kununua kitabu
+										</button> 
+						</div>
+					</div>
+				<div class="course-image bottom-in">
+								
+<img src="{%static 'accounts/img/safront4.jpg'%}" class="img-responsive" alt=""'>	
+								
+						</div>
+				
+				
+			</div>
+        
+        </section>
+        
+        
+        
+        
+        <section id="vedio-sec" style="background-color: #fff;">
+      
+          <div class="container">
+          
+                                
+					
+<div class="col-lg-12 col-md-12  col-sm-12 contnthere" style="margin-bottom: 15px;">
+							 <p style="text-align: justify;">
+<p><span>OBG Company Limited</span> 
+
+<p>Website hii inamilikiwa na kufanya kazi chini ya Kampuni ya "OBG Company Limited". Hii ni moja ya website chache maarufu nchini Tanzania ambayo inamuwezesha muandishi wa vitabu kuuza vitabu kwa njia ya mtandao (ebook) na msomaji kusoma vitabu mtandaoni. Website hii inawezesha watu wengi, haswa wale  wanaozungumza lugha ya Kiswahili, kupata vitabu na nakala mbali mbali kwa ajili ya kusoma kwa lengo la kujielimisha na kujiburudisha.</p>
+
+
+
+
+
+
+
+
+
+</div></div></section>
+
+
+
+
+
+							
+
+
+<section class="section">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-12">
+						
+						<!-- <small><span class="caps"><a name="top"></a>Wasiliana nasi</span></small>
+						
+						<div class="line-sep"></div> -->
+						<div class="section-title">
+							<!-- <small><span class="caps"><a class="btn btn-follow "href="{% url 'accounts:login'%}" role="button">LogIn &raquo;</a></span></small> -->
+							<br>
+							<p>Wasiliana Nasi.</p>
+							<div class="line-sep"></div>
+							
+
+						</div>
+					</div>
+					<div class="col-md-7">
+						<!--  <div class="tab">
+		                          <button class="tablinks" onclick="openCity(event, 'contact')" id="defaultOpen">Contact</button>
+		                </div> -->
+                        
+                                           
+		                <div id="contact">
+		                                
+		                
+		                    <div class="video-container">                                   
+	 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5233.185493903763!2d39.27138706048278!3d-6.833484473017059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4ba5bbc1ba7b%3A0x2f4f0a88e2089417!2sKariakoo%2C+Dar+es+Salaam!5e0!3m2!1sen!2stz!4v1538828227060" frameborder="0" style="border:0" allowfullscreen></iframe>
+		                    </div>
+		                    
+		                </div>
+					</div>
+
+<br>
+					<div class="col-md-5">
+						<div class="">
+		<div><p>Tupigie simu <a href="tel:0653397942" class="pull-right">+255653397942</a></p></div>
+                        
+	
+                            <hr>
+        <p class="text-center">Or <br> be classical</p>
+                       
+  <form>
+  	<div class="form-group"><input type="text" class="form-control" name="" value="" placeholder="Name"></div>
+                                                                
+    <div class="form-group"><input type="email" class="form-control" name="" value="" placeholder="E-mail"></div>
+                                                                
+    <div class="form-group"><input type="tel" class="form-control" name="" value="" placeholder="Phone"></div>
+                                                                
+    <div class="form-group"><textarea class="form-control" name="" rows="3" placeholder="Message"></textarea></div>
+                                                                
+     <button class="btn btn-follow pull-right" type="submit" name="button">
+           <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Tuma</button>
+  </form>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</section>
+<br>
+		 
+	</main>
+
+
+
+
+ <div class="modal fade bd-example-modal-lg" id="regprocess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+        <div class="modal-header">
+       <h5 class="modal-title" id="exampleModalLongTitle">Hatua za kununu kitabu</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                
+                                            <!--<div class="modal-body">-->
+                                            
+             <ul class="courses-lists " align="left">
+                                            
+           <li><p>1.Bonyeza nunua vitabu </p></li>
+           <li><p>2. Kutoka kwenye listi ya vitabu, chagua kitabu unachokitaka kisha bonyeza kwenye picha ya kitabu.</p></li>
+                                                
+                                         
+            <li><p>3. Maelezo ya kitabu husika yatafunguka, utaona maelezo ya kitabu kwa ufupi, utapata maelezo kuhusu muandishi, utapata video fupi pamoja na bei ya kitabu husika</p></li> 
+                                                
+          <li><p>5. Bonyeza neno lipa kupata kurasa ya malipo.Kama ni mara yako ya kwanza (haujawahi kusajiliwa) utapelekwa kwenye eneo la kujisajili kisha kujaza fomu kuonyesha kitabu unachokitaka. Kama umeshajisajili awali utapelekwa kwenye fomu kujaza taarifa za kitabu </p></li>
+         <li><p>6.  Baada ya hapa utapatiwa taarifa za malipo kwenda kwa muandishi wa kitabu husika. Fanya malipo kisha subiri kitabu chako kufunguka.</p></li>
+         <li><p>7. Baada ya muda mchache kitabu chako kitafunguka, ili kukiona na kuweza kukisoma utabonyeza neni vitabu vyangu.</p></li>
+         <li><p>7. Kama utasubiri zaidi ya dakika kumi na tano bila kukiona kitabu basi wasiliana na muandishi kwa namba utakayoiona kwenye kurasa ya malipo.</p></li>
+         
+                                                </ul> 
+                                               
+                                                    
+                                                
+                                                    
+                                                    
+                                           
+              
+                            </div>
+                        </div>
+                    </div>
+
+
+	
+
+							
+					
+					
+						
+			</div>
+		</div>
+			
+    </section>
+
+
+
+
+    
+
+	<script>
+			function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+	</script>
+ {% endblock %}

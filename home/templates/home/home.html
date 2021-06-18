@@ -1,5 +1,5 @@
 {% extends 'base3.html' %}
-{% load staticfiles %}
+{% load static %}
     {%block head%}
      
     {% if item != None %}
@@ -34,8 +34,8 @@
 			
                             <div id="mySidenav" class="asidenav">
                               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                              <a class="btn btn-follow href="{% url 'accounts:logout'%}" role="button">Logout </a>
-                              <li class="nav-item mr-20"><a href="{% url 'accounts:login'%}">Log In</a></li>  
+                              <a class="btn btn-follow href="{% url 'logout'%}" role="button">Logout </a>
+                              <li class="nav-item mr-20"><a href="{% url 'login'%}">Log In</a></li>  
 			      <a href="{% url 'home:chat'%}" role="button">My Books</a>
                                <a href="{% url 'accounts:register'%}" role="button">Register</a>
                               
@@ -48,7 +48,7 @@
                                 
                 <li class="nav-item mr-20"><a href="{% url 'home:chat'%}">My Books</a></li>
                 
-                <li class="nav-item mr-20"><a class="btn btn-follow href="{% url 'accounts:logout'%}">Logout</a></li>
+                <li class="nav-item mr-20"><a class="btn btn-follow href="{% url 'logout'%}">Logout</a></li>
 			    </ul>
                             
                       {%else%}         
@@ -56,8 +56,8 @@
                <ul class="navbar-nav ml-auto">
                 <!--<li class="nav-item mr-20"><a href="{% url 'home:home'%}">Home</a></li>-->
                  <li class="nav-item mr-20"><a href="{% url 'home:chat'%}">My Books</a></li>
-                 <li class="nav-item mr-20"><a class="btn btn-follow href="{% url 'accounts:logout'%}">Logout</a></li>
-		<li class="nav-item mr-20"><a href="{% url 'accounts:login'%}">Sign in</a></li>
+                 <li class="nav-item mr-20"><a class="btn btn-follow href="{% url 'logout'%}">Logout</a></li>
+		<li class="nav-item mr-20"><a href="{% url 'login'%}">Sign in</a></li>
                 <a href="{% url 'accounts:register'%}" role="button">Register</a>
                 <!--<li class="nav-item mr-20"><a href="{% url 'accounts:reset_password'%}">Reset Password</a></li>-->
             </ul>
@@ -156,7 +156,7 @@ background: url(https://whatis.ciowhitepapersreview.com/border_diagonal.png) rep
 						
 						<div class="line-sep"></div> -->
 						<div class="section-title">
-							<!-- <small><span class="caps"><a class="btn btn-follow "href="{% url 'accounts:login'%}" role="button">LogIn &raquo;</a></span></small> -->
+							
 							<br>
 							<p>Wasiliana Nasi.</p>
 							<div class="line-sep"></div>

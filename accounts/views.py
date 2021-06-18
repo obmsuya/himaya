@@ -1,5 +1,6 @@
 
 from django.shortcuts import render, redirect,reverse
+from django.http import HttpResponse, HttpResponseRedirect
 from .forms import (
     RegistrationForm,
     EditProfileForm,
@@ -10,6 +11,26 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm, PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
+
+
+def signup(request):
+    if request.method =='POST':
+      form = UserCreationForm(request.POST)
+      if form.is_valid():
+        form.save()
+        return redirect (reverse('accounts:entry'))
+    else:
+      form = UserCreationForm()
+    return render (request, 'accounts/signup.html', {'form':form})
+
+def index(request):
+    return render (request, "accounts/gis.html", {})
+
+
+def entry(request):
+    template = 'accounts/entry.html'
+    context = {}
+    return render (request, template, context)
 
 def register(request):
     if request.method == 'POST':
@@ -47,21 +68,21 @@ def edit_profile(request):
         return render(request, 'accounts/edit_profile.html', args)
 
 
-def change_password(request):
-    if request.method == 'POST':
-        form = PasswordChangeForm(data=request.POST, user=request.user)
+# def change_password(request):
+#     if request.method == 'POST':
+#         form = PasswordChangeForm(data=request.POST, user=request.user)
 
-        if form.is_valid():
-            form.save()
-            update_session_auth_hash(request, form.user)
-            return redirect(reverse('accounts:view_profile'))
+#         if form.is_valid():
+#             form.save()
+#             update_session_auth_hash(request, form.user)
+#             return redirect(reverse('accounts:view_profile'))
 
-        else:
-            return redirect (reverse('accounts:change_password'))
-    else:
-        form = PasswordChangeForm(user=request.user)
-        args = {'form': form}
-        return render(request, 'accounts/change_password.html', args)
+#         else:
+#             return redirect (reverse('accounts:change_password'))
+#     else:
+#         form = PasswordChangeForm(user=request.user)
+#         args = {'form': form}
+#         return render(request, 'accounts/change_password.html', args)
 
 
     

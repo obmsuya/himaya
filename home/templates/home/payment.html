@@ -2,7 +2,7 @@
 <html lang="en">
     
 {% extends 'base2.html' %}
-{% load staticfiles %}
+{% load static %}
 
 {%block head%}
      
@@ -27,11 +27,17 @@
         <div class="container">
 
 
-                                              <h2>Payment Options</h2>
-                                                <div class="line-sep"></div>
+                                              <h2>Namna ya kulipa</h2>
+                                              <div class="line-sep"></div>
+<p>Bonyeza nchi husika hapo chini upate namba ya kulipia. <span>Malipo yote yanatumwa moja kwa moja kwa Muandishi wa Kitabu Husika. Waandishi wote ni wa ukweli, waaminifu na wamehakikiwa na kampuni ya Vitabu Tanzania. Ukishafanya malipo utapata kitabu ndani ya nusu saa. Kama haujafanikiwa kupata kitabu chako ndani ya nusu saa wasiliana na Muandishi kwa namba yake hapo chini, ikishindikana wasiliana nasi kwa namba 0653397942 nasi tutakupatia kitabu chako.</span></p>
+<br>
+<p>Baada ya kulipa, subiri nusu saa, kisha bonyeza   
+                                   <a class=class="btn btn-follow" href="{% url 'home:chat'%}"> Kitabu changu</a> kuanza kusoma. </p>
+
+                                                
                                                 <hr>
 
-                                                <p><span>Bofya nchi uliyopo kupata options za malipo</span></h2>
+                                                <p><span>Bofya nchi uliyopo kupata namba Muandishi kwa ajili ya kutuma pesa.</span></h2>
 
                                               <ol>                        
                                 <li><a href="" id="link1">Tanzania</a></li>         
@@ -51,7 +57,7 @@
 
             
                                                 <div id="link1data" class="animated fadeIn">
-                                                        <p><span>Tanzania</p></span>
+                                                        <p><span>Namba za kulipia</p></span>
                                                         <div class="line-sep"></div>
                         <br>
                                                         <div class="col-md-12"> 
@@ -92,7 +98,7 @@
 
 
                                         <div id="link2data" class="animated fadeIn">
-                                                        <h3>Kenya</h3>
+                                                        <h3>Namba za kulipia</h3>
                                                                 <div class="line-sep"></div>
                                                 <div class="col-md-12"> 
                                                         <div class="row">    
@@ -126,7 +132,7 @@
 
                                         <div id="link3data" class="animated fadeIn">
                                                         <h3>
-                                                                Abroad
+                                                                PAY VIA
                                                                 <div class="line-sep"></div>
                                                         </h3>
                                  <div class="col-md-12"> 
@@ -148,8 +154,8 @@
                                                          <p><div class="menuItem"><a class="level2"href= "" target="sites"> Accounts Holder: {{item.author}}.</a></p></div> 
 
 <br>
-                                                <p><span>NOTE: </span>Baada ya kulipa, subiri nusu saa, kisha bonyeza   
-                                   <a class=class="btn btn-follow" href="{% url 'home:chat'%}"> Kitabu changu</a> kuanza kusoma. Kama kitabu hakitatokea wasiliana na Muandishi wako <span>{{item.author}}</span> kwenye namba yake ya TIGO: +255 {{item.tigopesa}} au  VODA: +255 {{item.mpesa}}</p>
+                                                <p><span>NOTE: </span>After payments, the book will be activated within 30 min. Click   
+                                   <a class=class="btn btn-follow" href="{% url 'home:chat'%}"> My Book</a> to start reading your book. If its not activated within 30 min contact your author  <span>{{item.author}}</span> at TIGO: +255 {{item.tigopesa}} or  VODA: +255 {{item.mpesa}} and if you still can not get the book contact us at 0653397942. Thanks</p>
                                                 <hr>
                                                                                 
                                                         </div>

@@ -1,0 +1,117 @@
+
+{% extends 'base2.html' %}
+
+{% load staticfiles %}
+
+{%block head%}
+     
+    
+    
+{%endblock%}
+
+
+
+   {% block body %}
+      
+      
+
+
+
+
+
+
+<br><br><br><br><br><br>
+ 
+ <main class="page-wrapper">
+		<div class="page-header">
+		</div>
+			<div class="page-conten container mt-50">
+				<div class="row">
+
+					<div class="col-md-6">
+						<div class="mb-8">
+							<h2 class="auth-title">
+								Register here
+							</h2>
+							<div class="line-sep"></div>
+						</div>
+
+
+						<div class="intro mb-8">
+							Your password must be eight characters or more
+						</div>
+
+
+						<div class="row">
+							<div class="col-md-10 col-sm-12">
+								<div class="alert alert-danger">
+									<div class="form">
+                                                                        <form method="post">
+
+                                                                        {% csrf_token%}
+                                                                        {{form.as_p}}
+                                                                    <!--<button type="submit">submit</button>-->
+                                                                    
+                                                            <button type="submit" class="btn btn-follow block btn-login">
+										 	Submit </button>
+                                                                            </form>
+                                                                        
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+						
+							
+
+								<div class="row">
+									<div class="col-md-10 col-sm-12 mb-8">
+										<hr>
+										<p>
+											Have an account? 
+										<small><span class="caps"><a class="btn btn-clear "href="{% url 'accounts:login'%}" role="button">LogIn &raquo;</a></span></small>
+										</p>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+
+
+					<div class="col-md-6">
+						
+						 <img src="{%static 'img/safront9.jpg'%}" class="img-responsive" alt=""'>
+						<hr>
+
+
+						<h3>
+							<a href="http://gis4life.pythonanywhere.com/" target="_blank">GIS ONLINE</a> 
+						</h3>
+
+						<p>
+							Become GIS pro within a short period of time.
+						</p>
+						<hr>
+
+
+
+
+						<h3>
+							Build your Empire
+						</h3>
+
+						<p class="mb-20">
+							Are you an enterpreneur. Do you want to build your Empire? Contact us. Thanks
+						</p>
+						
+					</div>
+				</div>
+			</div>
+	</main>                         
+    
+  
+   {% endblock %}

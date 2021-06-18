@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+{% extends 'base2.html' %}
+{% load staticfiles %}
+
+{%block head%}
+     
+    
+    
+    {%endblock%}
+
+
+
+ {% block body %}
+
+   
+
+
+       
+
+
+
+
+
+    <div class="main-section">
+        <div class="container">
+
+
+                                              <h2>Payment Options</h2>
+                                                <div class="line-sep"></div>
+                                                <hr>
+
+                                                <p><span>Bofya nchi uliyopo kupata options za malipo</span></h2>
+
+                                              <ol>                        
+                                <li><a href="" id="link1">Tanzania</a></li>         
+                                <li><a href="" id="link2">Kenya </a></li>
+                                <li><a href="" id="link3">Abroad</a></li>
+                            </ol>      
+                 
+                        <br><br>
+                                                
+                
+                        <div id="linkintro">
+                              
+                        </div>
+
+            
+    
+
+            
+                                                <div id="link1data" class="animated fadeIn">
+                                                        <p><span>Tanzania</p></span>
+                                                        <div class="line-sep"></div>
+                        <br>
+                                                        <div class="col-md-12"> 
+                                                                <div class="row">    
+                                                
+                                                
+                                                                        <div class="col-md-5">
+
+                                                                            <p><span>MPESA: 0{{item.mpesa}}</p>
+                                                                            </span></p>
+                                                                        </div>
+                                                                       
+                                                                        <div class="col-md-5">
+
+                                                                            <p><span>TIGO PESA: 0{{item.tigopesa}} </p>
+
+                                                                             </div>
+
+                                                                       <P></P>
+                        
+                        
+                                                                </div>
+                                                             
+                                                 <p><div class="menuItem"><a class="level2"href= "" target="sites"> Mwenye Account: {{item.author}}.</a></p></div> 
+                                                        </div>
+                                                
+                                                <hr>
+                                     
+                                                <p><span>NOTE: </span>Baada ya kulipa, subiri nusu saa, kisha bonyeza   
+                                   <a class=class="btn btn-follow" href="{% url 'home:chat'%}"> Kitabu changu</a> kuanza kusoma. Kama kitabu hakitatokea wasiliana na Muandishi wako <span>{{item.author}}</span> kwenye namba yake ya TIGO: 0{{item.tigopesa}} au  VODA: 0{{item.mpesa}}</p>
+                                                <hr>
+                       
+                       <br><br>
+                        </div>
+
+            
+
+
+
+                                        <div id="link2data" class="animated fadeIn">
+                                                        <h3>Kenya</h3>
+                                                                <div class="line-sep"></div>
+                                                <div class="col-md-12"> 
+                                                        <div class="row">    
+                                        
+                                        
+                                                                <div class="col-md-3">
+
+
+                                                                
+
+                                                                    <p><span>SAFARICOM: 0{{item.mpesa}}</p>
+                                                                            </span></p>
+
+
+                                                                </div>
+                                                             
+                                                        </div>
+                                                     
+                                <p><div class="menuItem"><a class="level2"href= "" target="sites"> Jina la mwenye Account: {{item.author}}.</a></p></div> 
+                                                </div>
+                       
+
+                       <br>
+                                                <p><span>NOTE: </span>Baada ya kulipa, subiri nusu saa, kisha bonyeza   
+                                   <a class=class="btn btn-follow" href="{% url 'home:chat'%}"> Kitabu changu</a> kuanza kusoma. Kama kitabu hakitatokea wasiliana na Muandishi wako <span>{{item.author}}</span> kwenye namba yake ya VODACOM: +255 {{item.mpesa}}</p>
+                                                <hr>
+                                                <hr>
+                                        </div>
+
+
+
+                                        <div id="link3data" class="animated fadeIn">
+                                                        <h3>
+                                                                Abroad
+                                                                <div class="line-sep"></div>
+                                                        </h3>
+                                 <div class="col-md-12"> 
+                                                                                                <div class="row">    
+                                                                                
+                                                                                
+                                       USA <div class="col-md-3">
+                                               <p><span>MPESA: +255 {{item.mpesa}} </p>
+                                        </span></p>
+                                            </div>
+                                            EUROPE<div class="col-md-3">
+                                             <p><span>TIGO PESA: +255 {{item.tigopesa}}</p>
+
+                                                </div>
+                                                                                                        
+                                                        
+                                                       </div>
+                                                                                             
+                                                         <p><div class="menuItem"><a class="level2"href= "" target="sites"> Accounts Holder: {{item.author}}.</a></p></div> 
+
+<br>
+                                                <p><span>NOTE: </span>Baada ya kulipa, subiri nusu saa, kisha bonyeza   
+                                   <a class=class="btn btn-follow" href="{% url 'home:chat'%}"> Kitabu changu</a> kuanza kusoma. Kama kitabu hakitatokea wasiliana na Muandishi wako <span>{{item.author}}</span> kwenye namba yake ya TIGO: +255 {{item.tigopesa}} au  VODA: +255 {{item.mpesa}}</p>
+                                                <hr>
+                                                                                
+                                                        </div>
+                                 <br>
+                                                
+                        
+
+
+                        
+                        
+                        
+                          
+                        
+                        
+                </div>
+                </div>
+       
+        
+    
+
+
+  {% endblock %}   

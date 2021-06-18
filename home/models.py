@@ -9,7 +9,8 @@ class Post(models.Model):
     post = models.CharField(max_length=200)
     bookname = models.CharField (max_length=220, default='', blank=True)
     booklink = models.CharField (max_length=220, default='', blank=True)
-    user = models.ForeignKey(User)
+    bookimage = models.ImageField(default='default.jpg', upload_to='media')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated = models.DateTimeField(auto_now=True)
     
@@ -57,7 +58,7 @@ class Item(models.Model):
     mpesa = models.IntegerField(default=0, blank=True)
     airtel = models.IntegerField(default=0, blank=True)
     halotel = models.IntegerField(default=0, blank=True)
-    category = models.ForeignKey(Category)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     paymentdetail = models.ForeignKey(Paymentdetail, null=True, on_delete=models.PROTECT)
     
     def __str__(self):
@@ -87,8 +88,8 @@ class Friend(models.Model):
 
         
     
-    # def __str__(self):
-    #     return self.current_user
+    def __str__(self):
+        return str(self.current_user)
 
         
     # @classmethod

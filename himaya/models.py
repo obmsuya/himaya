@@ -34,7 +34,7 @@ class Item(models.Model):
     author = models.CharField(max_length=200, default= "")
     author_description = models.TextField(default= "")
     price = models.IntegerField(default=0)
-    category = models.ForeignKey(Category)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.name

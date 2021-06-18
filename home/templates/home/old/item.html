@@ -1,0 +1,248 @@
+
+{% extends 'base2.html' %}
+{% load staticfiles %}
+    {%block head%}
+     
+    {% if item != None %}
+        <title>{{item.name}}-Selected Class</title>
+        
+    {% else %}
+        <title>Invalid Item ID- Selected Class</title>
+    {% endif %}
+    
+    {%endblock%}
+
+
+   {% block body %}
+
+ 
+    
+      
+         
+   <div class="container">
+    <br><br>
+<p><a href="{% url 'home:index' %}">&lt; Rudi kwenye Orodha</a></p>
+      <br>   
+
+
+     <div class="text-center">                        
+       {% if item != None %}   
+                                    
+     <div class="section-title">
+        <h1>{{item.name}}</h1>
+
+       </div>
+     </div>
+                                    <hr>
+                      </div>
+                     
+               
+                
+<section class="section grey-scale">
+   <div class="container">
+       <div class="row">
+            <div class="col-md-5">
+<hr>
+
+<h3>Video</h3>
+  
+  
+
+<video width="400" controls>
+  <source src="{{item.videofile.url}}"> 
+  Your browser does not support HTML5 video.
+</video>
+
+
+
+
+              
+        <br><br>
+
+ <h3>Maelezo Mafupi ya Kitabu</h3>
+ <div class="line-sep"></div>
+<p>{{item.description|linebreaks}}</p>
+   </div><br>
+                                  <!-- moja -->
+                                  
+ <div class="col-md-5">
+                                           
+                                                     
+      {%if item.subtitle %}
+
+
+
+
+<h3>Book Cover</h3><div class="line-sep"></div>
+  
+  {% if item.image%}
+ <img src='{{item.image.url}}' class= 'img-responsive'/>                                         
+       {%endif%}
+
+
+      
+
+
+
+
+
+
+
+
+<br><br>
+
+
+        <div class="card right-in">
+        <div class="card-icon">
+                        <br>
+<u<h4><a class="btn btn-follow btn-lg "href="{{item.subtitle}}"> Soma Bure</a></h4>
+                                                        
+ <h4><a class="btn btn-success btn-lg "href="{% url 'home:donate' item_id=item.id %}"> Changia.</a></h4>
+
+                                                        
+    </ul>
+    <br>
+   <hr>
+
+                                                   
+ </div>
+                                                  
+</div>
+
+
+                                            
+ {%else%}
+
+
+
+
+ <div class="col-md-14">
+  <hr>
+
+<h3>Book Cover</h3><div class="line-sep"></div>
+  
+  {% if item.image%}
+ <img src='{{item.image.url}}' class= 'img-responsive'/>                                         
+       {%endif%}
+<br><br>
+
+</div>
+
+
+                                 
+<div class="card right-in">
+                                    <br>
+
+
+
+
+
+ <h4>Bei: Tsh {{item.price}} </h4>
+
+   <div class="card-icon">
+                                                <br>
+ <div class="text-center">
+<ul class="tutor-icons">
+                                                  
+   <h4><a class="btn btn-follow btn-lg "href="{% url 'home:book' item_id=item.id %}"> NUNUA.</a></h4>
+                                                  
+                                    
+ </ul>
+   </div> 
+</div>
+
+
+
+
+
+</div>
+  </div>
+                                  <br>
+
+               
+                                        
+        </div>
+
+              {%endif%} 
+                                
+
+
+
+                                {% else %}
+       <p>Invalid Item ID.</p>
+                                {% endif %}
+                                       
+
+</div>
+                  
+</section>
+
+  <section>            
+                
+      <br>
+                
+                <div class="container"
+        <section class="section">
+            
+                 <small><span class="caps">Muandishi</span></small>
+                            <div class="line-sep"></div>
+                
+                 <div class="col-md-12">
+            
+   <div class="row">
+<h1>Kuhusu Muandishi</h1>
+              
+                                                            
+    <div class="tutor">
+                                                                    
+    <div class="tutor-image">
+{% if item.image%}
+   <img src='{{item.image_author.url}}' />
+                    {%endif%}
+    </div>
+
+                  
+   <div class="text-center">
+       <h4>
+   {{item.author}}
+                    </h4>
+                    
+                                                                                <hr>
+                  </div>
+
+                  
+                      
+                </div>
+              </div>
+        
+           
+
+                  <div class="text-left">
+                    <p>
+                    {{item.author_description}}
+                      
+                                                                                        
+                    </p>
+                    
+                                                                             
+                  </div>
+
+                  
+
+
+
+
+              </div>
+
+
+        </section>
+        
+      
+           <hr>
+            
+            <br><br>
+
+
+
+
+   {% endblock %}

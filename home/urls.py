@@ -5,51 +5,57 @@
 
 
 from django.conf.urls import url
+from django.urls import path, re_path
 from . import views
 from home.views import HomeView
 
-
+app_name='home'
 
 urlpatterns = [
 
-    url(r'^$', views.index),
+    path('', views.index),
     
     
-    url(r'^chat', HomeView.as_view(), name = 'chat'),
+    path('chat', HomeView.as_view(), name = 'chat'),
     
-    url(r'^home/$', views.home, name = "home"),
-    url(r'^index/$', views.index, name = "index"),    
-    url(r'^item/(?P<item_id>\d+)/$', views.item, name = "item"),
-    url(r'^item/(?P<item_id>\d+)/book/$', views.book, name = "book"),
-    url(r'^item/(?P<item_id>\d+)/payment/$', views.payment, name = "payment"),
-    url(r'^item/(?P<item_id>\d+)/donate/$', views.donate, name = "donate"),
-    url(r'^activate/$', views.activate, name = "activate"),
-    url(r'^activatefriend/$', views.activatefriend, name = "activatefriend"),
-
-    url(r'^makala/$', views.makala, name = "makala"),
-    url(r'^authors/$', views.authors, name = "authors"),
+    path('home/', views.home, name = "home"),
+    path('index/', views.index, name = "index"), 
+ 
     
-
-    url(r'^category/(?P<category_id>\d+)/$', views.category, name = "category"),
-
-    url(r'^hasira/$', views.hasira, name = "hasira"),
-    url(r'^gis/$', views.gis, name = "gis"),
-    url(r'^myrefference/$', views.myrefference, name = "myrefference"),
-
-    url(r'^gispay/$', views.gispay, name = "gispay"),
-    url(r'^bitcoin/$', views.bitcoin, name = "bitcoin"),
-    url(r'^matangazo/$', views.matangazo, name = "matangazo"),
-    url(r'^mahesabu/$', views.mahesabu, name = "mahesabu"),
-    url(r'^uaminifu/$', views.uaminifu, name = "uaminifu"),
-    url(r'^english_book/$', views.english_book, name = "english_book"),
-    url(r'^lulu_book/$', views.lulu_book, name = "lulu_book"),
-    url(r'^gis_project/$', views.gis_project, name = "gis_project"),
-    url(r'^wito/$', views.wito, name = "wito"),
-    url(r'^nisome_kabla/$', views.nisome_kabla, name = "nisome_kabla"),
+    re_path(r'^item/(?P<item_id>\d+)/$', views.item, name = "item"),
+    re_path(r'^item/(?P<item_id>\d+)/book/$', views.book, name = "book"),
+    re_path(r'^item/(?P<item_id>\d+)/payment/$', views.payment, name = "payment"),
+    re_path(r'^item/(?P<item_id>\d+)/donate/$', views.donate, name = "donate"),
     
 
 
-    url(r'^register/$', views.register, name = "register"),
+    path('activate/', views.activate, name = "activate"),
+    path('activatefriend/', views.activatefriend, name = "activatefriend"),
+
+    path('makala/', views.makala, name = "makala"),
+    path('authors/', views.authors, name = "authors"),
+    
+
+    re_path(r'^category/(?P<category_id>\d+)/$', views.category, name = "category"),
+
+    path('hasira/', views.hasira, name = "hasira"),
+    path('gis/', views.gis, name = "gis"),
+    path('myrefference/', views.myrefference, name = "myrefference"),
+
+    path('gispay/', views.gispay, name = "gispay"),
+    path('bitcoin/', views.bitcoin, name = "bitcoin"),
+    path('matangazo/', views.matangazo, name = "matangazo"),
+    path('mahesabu/', views.mahesabu, name = "mahesabu"),
+    path('uaminifu/', views.uaminifu, name = "uaminifu"),
+    path('english_book/', views.english_book, name = "english_book"),
+    path('lulu_book/', views.lulu_book, name = "lulu_book"),
+    path('gis_project/', views.gis_project, name = "gis_project"),
+    path('wito/', views.wito, name = "wito"),
+    path('nisome_kabla/', views.nisome_kabla, name = "nisome_kabla"),
+    
+
+
+    path('register/', views.register, name = "register"),
     
       
 ]

@@ -1,0 +1,79 @@
+
+
+
+{% extends 'base2.html' %}
+
+{% load static %}
+<br><br>
+
+   {% block body %}
+     <br><br>
+      
+      
+      
+      
+       <main class="page-wrapper">
+		<div class="page-header">
+		
+			<div class="page-conten container mt-50">
+				
+                           
+           <div class="text-center">
+                <h2>ACTIVATE A BOOK</h2> 
+               </div>                                   <hr>
+                    
+        
+                                       
+                                        
+               
+					
+				<div class="row">
+							<div class="col-md-8 col-sm-12">
+								<div class="alert alert-danger">
+									<div class="form">
+                                                                        
+		<form method="POST" action ='' enctype='multipart/form-data'>
+                               {% csrf_token%}
+                               {{form.as_p}}
+                             <button type="submit" class="btn btn-follow block btn-login">
+							submit </button>
+                      </form>                                                    
+					</div>
+							</div>
+						
+	
+
+								
+				
+							
+						</div>
+					</div>
+
+					hi
+					
+				</div>
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+			
+	</main>
+
+
+
+
+
+
+
+
+
+
+   {% endblock %}

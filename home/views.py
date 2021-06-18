@@ -44,8 +44,8 @@ class HomeView(TemplateView):
             
         args = {'form': form, 'text':text}
         return render(request, self.template_name, args)
-
-
+        
+@login_required
 def activate(request):
         form = HomeForm(request.POST or None, request.FILES or None)
         if form.is_valid():
@@ -56,14 +56,14 @@ def activate(request):
             
         args = {'form': form}
         return render(request, 'home/activate.html', args)
-
+@login_required
 def activatefriend(request):
         form = FriendForm(request.POST or None, request.FILES or None)
         if form.is_valid():
             create = form.save()
             create.save
             
-            return redirect('home:chat')
+            return redirect('home:authors')
             
         args = {'form': form}
         return render(request, 'home/activatefriend.html', args)
@@ -131,7 +131,7 @@ def register(request):
             create = form.save()
             create.save
             
-            return redirect('accounts:login')
+            return redirect('login')
             
         args = {'form': form}
         return render(request, 'home/create.html', args)

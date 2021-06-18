@@ -1,0 +1,81 @@
+
+
+
+
+
+{%block head%}
+     
+    
+    
+{%endblock%}
+
+
+
+   {% block body %}
+      
+      
+
+ 
+ <!-- <main class="page-wrapper"> -->
+		
+			<!-- <div class="container"> --> -->
+				<div class="row">
+
+					<div class="col-md-6">
+						<div class="mb-8">
+							<h2 class="auth-title">
+								Register here
+							</h2>
+							<div class="line-sep"></div>
+						</div>
+
+
+						<div class="intro mb-8">
+							Your password must be eight characters or more
+						</div>
+
+
+						<div class="row">
+							<div class="col-md-10 col-sm-12">
+								<div class="alert alert-danger">
+									<div class="form">
+                          <form method="post">
+
+                             {% csrf_token%}
+                                  {{form.as_p}}
+                                         <!--<button type="submit">submit</button>-->
+                                                                    
+                              <button type="submit" class="btn btn-follow block btn-login">
+										 	Signup </button>
+                             </form>
+                                                                        
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+						
+
+								<div class="row">
+									<div class="col-md-10 col-sm-12 mb-8">
+										<hr>
+										<p>
+											Have an account? 
+										<small><span class="caps"><a class="btn btn-clear "href="" role="button">LogIn &raquo;</a></span></small>
+										</p>
+									</div>
+								</div>
+					
+						<!-- </div>  -->
+					
+
+
+
+				
+		
+
+	<!-- </main>                          -->
+    
+  
+   {% endblock %}

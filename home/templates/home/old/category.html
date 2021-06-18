@@ -1,0 +1,120 @@
+
+{% extends 'basebooks.html' %}
+{% load staticfiles %}
+    {%block head%}
+
+     {% if category != None %}
+        <title>{{category.name}}-Selected Class</title>
+        
+    {% else %}
+     
+    
+        <title>Invalid Item ID- Selected Class</title>
+
+    {% endif %}
+    
+    
+    {%endblock%}
+
+
+   {% block body %}
+
+
+  <section class="section" style="padding-top: 64px">
+      <div class="container-fluid">
+        <div class="row">
+
+
+
+
+
+          <!-- the side menu -->  <div class="sidebar">
+            <div class="side-bar">
+              <div class="sb-title">
+                <p>
+                  <!-- AINA ZA VITABU -->
+                </p>
+              </div>
+
+              <!-- category lists -->
+
+              <ul class="cat-lists">
+                <li>
+                  <a href="{% url 'home:index' %}">
+                    Vitabu Vyote
+                  </a>
+                </li>
+                {% for category in categories %}
+                <li>
+                  <a href="{% url 'home:category' category_id=category.id %}" id="category_{{category.id}}">
+                    {{category.name}}
+                  </a>
+                </li>
+                {% endfor %}
+
+                
+              </ul>
+            </div>
+          </div> 
+
+
+
+
+          <!-- the main menu -->
+            <div class="col-md-8">
+            <div class="main-part">
+              <div class="mp-title">
+                <h2>
+                  {{category.name}}
+                </h2>
+                <div class="mp-books-count">
+                  <span>
+                    Idadi {{ count }} 
+                  </span>
+                </div>
+                <hr>
+              </div>
+
+
+              <div class="mp-books">
+                <div class="row">
+                  
+                 {%for item in category.item_set.all %}
+                  <div class="">
+                    <div class="card book-card">
+                      <div class="book-body">
+                        <div class="book-image">
+                          <a href="{% url 'home:item' item_id=item.id %}">
+                          <img src="{{item.image_index.url}}" alt="">
+                          </a>
+                        </div>
+
+                              
+                              
+                      </div>
+                    </div>
+                  </div>
+
+                 {%endfor%}
+
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+   <script>
+
+      </script>
+      
+
+
+               
+      
+
+
+   {% endblock %}

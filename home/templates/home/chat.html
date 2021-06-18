@@ -1,7 +1,7 @@
 
 
 {% extends 'base2.html' %}
-{% load staticfiles %}
+{% load static %}
 
 
   
@@ -14,22 +14,36 @@
    
                 
 			<div class="page-conten container mt-50">
+        
         <div class="text-center">
-                            <h3>Hi {{ user.first_name }}!</h3>
+                            <h3>Hi {{request.user.username}}!</h3>
      </div>
+
      <br>
-		<div class="intro mb-8"><span>LIPA KUONA KITABU</span></div>
-              <hr><hr>
-				<div class="row">
+
+				
+
+        <div class="row">
 					<div class="col-md-7">
-                   
+            <hr>
+                <h3><span>Listi Vitabu  mtandaoni ulivyonunua.</span></h3>
+              <hr>   
 
       {% for post in posts%}
 
                {%if post.user in friends%}
-               <!-- this is for authors only -->
-                     <a href="{{post.booklink}}">{{post.booklink}} </a>                                                                        <br>                                           
-                    <h3>Read: <a href="{{post.post}}">{{post.bookname}}</a></h3>
+                 
+                    <h3><a href="{{post.post}}">{{post.bookname}}</a></h3>
+                    <!-- <h3><a href="{{post.bookimage}}">picha</a></h3> -->
+
+                    {% if post.bookimage%}
+                      <img src='{{post.bookimage.url}}' class= 'img-responsive'/>                                         
+                    {%endif%}
+
+
+
+                   
+
                                                                
            <br>
                                                                  

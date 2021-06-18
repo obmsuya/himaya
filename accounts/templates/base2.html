@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% load staticfiles %}
+{% load static %}
 
 <html>
 
@@ -49,44 +49,27 @@
 			  	<i class="fa fa-bars"></i>
 			  </button>
 
-			  <a class="navbar-brand" href="#">VITABU TANZANIA</a>
+			  <a class="navbar-brand" href="#">VITABU TANZANIA </a>
 			
-                            <div id="mySidenav" class="asidenav">
-                              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                                {% if user.is_authenticated %}
-
-                              <a href="{% url 'accounts:logout'%}" role="button">Logout </a>
-			                 <a href="{% url 'home:chat'%}">Vitabu nilivyolipia</a>
-                             <a href="{% url 'home:index'%}">Vitabu vingine</a>
-
-                            {%else%}  
-                        <a href="{% url 'accounts:login'%}">Login</a>
-                        <a href="{% url 'accounts:logout'%}"> Home</a>
-                        <a href="#top">Contact us </a> 
-
-                            {%endif %}  
-
-                              
-                            </div>
-
+                            
 			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			    <ul class="navbar-nav ml-auto">
 			     	  {% if user.is_authenticated %}
                                 
                                 
                 
-                
-                <li class="nav-item mr-20"><a href="{% url 'accounts:logout'%}">Logout</a></li>
-		<li class="nav-item mr-20"><a href="{% url 'home:chat'%}">Vitabu Nilivyolipia</a></li>
-        <li class="nav-item mr-20"><a href="{% url 'home:index'%}">Vitabu vingine</a></li>
+               <li class="nav-item mr-20"><a href="{% url 'accounts:entry'%}" role="button">Home </a></li>
+                <li class="nav-item mr-20"><a href="{% url 'logout'%}">Logout</a></li>
+		<li class="nav-item mr-20"><a href="{% url 'home:chat'%}">Akaunti yangu</a></li>
+        <li class="nav-item mr-20"><a href="{% url 'home:index'%}">Vitabu chapishwa</a></li>
 			    </ul>
                             
                       {%else%}         
                             
                <ul class="navbar-nav ml-auto">
-               <!-- <li class="nav-item mr-20"><a href="#top">Contact us </a></li>  -->
-		<li class="nav-item mr-20"><a href="{% url 'accounts:login'%}">Login</a></li>
-         <li class="nav-item mr-20"><a href="{% url 'accounts:logout'%}"> Home</a></li>
+               
+		<li class="nav-item mr-20"><a href="{% url 'login'%}">Login</a></li>
+         <li class="nav-item mr-20"><a href="{% url 'logout'%}"> Home</a></li>
                
                 
             </ul>
