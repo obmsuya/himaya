@@ -37,9 +37,9 @@ SECRET_KEY = 'mob_we*$0e2cpfq^0jey+wakxnzl&46%6v=tov)0p+&0!4(4!b'
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
-DEBUG = True
+# DEBUG = True
 
-# DEBUG = False
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'oamsuy06.pythonanywhere.com','www.obgmycompany.com', 'www.vitabutanzania.com']
 
@@ -92,50 +92,50 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # local/mysql(og)
 
-DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.mysql',
-       'NAME':'sitaki',
-       'USER': 'obmsuya',
-       'PASSWORD': 'Savioury9',
-       'OPTIONS': {
-           'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-           #Tell mysql to connect with 'utf8mb4' character set
-           'charset':'utf8mb4',
-           },
-       #Tell django to build the test database with 'utf8mb4'character set
-       'TEST': {
-           'CHARSET': 'utf8mb4',
-           'COLLATION': 'utf8mb4_unicode_ci',
-       },
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME':'sitaki',
+#        'USER': 'obmsuya',
+#        'PASSWORD': 'Savioury9',
+#        'OPTIONS': {
+#            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#            #Tell mysql to connect with 'utf8mb4' character set
+#            'charset':'utf8mb4',
+#            },
+#        #Tell django to build the test database with 'utf8mb4'character set
+#        'TEST': {
+#            'CHARSET': 'utf8mb4',
+#            'COLLATION': 'utf8mb4_unicode_ci',
+#        },
        
-   }
-}
+#    }
+# }
 
 
 #LIVE
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME':'oamsuy06$default',
-#         'USER': 'oamsuy06',
-#         'OPTIONS': {
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-#             #Tell mysql to connect with 'utf8mb4' character set
-#             'charset':'utf8mb4',
-#             },
-#         #Tell django to build the test database with 'utf8mb4'character set
-#         'TEST': {
-#             'CHARSET': 'utf8mb4',
-#             'COLLATION': 'utf8mb4_unicode_ci',
-#         },
-#         'PASSWORD': 'Pa55w0rd',
-#         'HOST': 'oamsuy06.mysql.pythonanywhere-services.com',
-#         'PORT': '',
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'oamsuy06$default',
+        'USER': 'oamsuy06',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            #Tell mysql to connect with 'utf8mb4' character set
+            'charset':'utf8mb4',
+            },
+        #Tell django to build the test database with 'utf8mb4'character set
+        'TEST': {
+            'CHARSET': 'utf8mb4',
+            'COLLATION': 'utf8mb4_unicode_ci',
+        },
+        'PASSWORD': 'Pa55w0rd',
+        'HOST': 'oamsuy06.mysql.pythonanywhere-services.com',
+        'PORT': '',
        
-#     }
-# }
+    }
+}
 
 
 # CORS_REPLACE_HTTPS_REFERER = True
