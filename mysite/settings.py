@@ -113,29 +113,42 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # }
 
 
-#LIVE
 
+# local postgres
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME':'oamsuy06$default',
-        'USER': 'oamsuy06',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            #Tell mysql to connect with 'utf8mb4' character set
-            'charset':'utf8mb4',
-            },
-        #Tell django to build the test database with 'utf8mb4'character set
-        'TEST': {
-            'CHARSET': 'utf8mb4',
-            'COLLATION': 'utf8mb4_unicode_ci',
-        },
-        'PASSWORD': 'Pa55w0rd',
-        'HOST': 'oamsuy06.mysql.pythonanywhere-services.com',
-        'PORT': '',
-       
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'test2',
+        'USER': 'postgres',
+        'HOST': 'localhost',
+        'PASSWORD': 'Savioury9',
+        'PORT': '5432',
     }
 }
+
+#LIVE mysql
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME':'oamsuy06$default',
+#         'USER': 'oamsuy06',
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#             #Tell mysql to connect with 'utf8mb4' character set
+#             'charset':'utf8mb4',
+#             },
+#         #Tell django to build the test database with 'utf8mb4'character set
+#         'TEST': {
+#             'CHARSET': 'utf8mb4',
+#             'COLLATION': 'utf8mb4_unicode_ci',
+#         },
+#         'PASSWORD': 'Pa55w0rd',
+#         'HOST': 'oamsuy06.mysql.pythonanywhere-services.com',
+#         'PORT': '',
+       
+#     }
+# }
 
 
 # CORS_REPLACE_HTTPS_REFERER = True
