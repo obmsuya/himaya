@@ -111,29 +111,29 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
-# # local postgres
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'test2',
-        'USER': 'postgres',
-        'HOST': 'localhost',
-        'PASSWORD': 'Savioury9',
-        'PORT': '5432',
-    }
-}
-
-# live postgres
+# # local postgres w
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-#         'NAME': 'mygis',
-#         'USER': 'obmsuya',
+#         'NAME': 'test2',
+#         'USER': 'postgres',
+#         'HOST': 'localhost',
 #         'PASSWORD': 'Savioury9',
-#         'HOST': 'oamsuy06-2358.postgres.pythonanywhere-services.com',
-#         'PORT': '12358',
+#         'PORT': '5432',
 #     }
 # }
+
+# live postgres
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'gis',
+        'USER': 'obmen',
+        'PASSWORD': 'Savioury9',
+        'HOST': 'oamsuy06-2358.postgres.pythonanywhere-services.com',
+        'PORT': '12358',
+    }
+}
 
 
 
@@ -210,18 +210,18 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'media')
 MEDIA_URL = '/media/'
 
 
-# AWS_ACCESS_KEY_ID = 'AKIAIGCRUOY6E5QWAXDQ'
-# AWS_SECRET_ACCESS_KEY = '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'
-# AWS_STORAGE_BUCKET_NAME = 'www.obgmycompany.com'
-# AWS_S3_FILE_OVERWRITE = False
-# AWS_DEFAULT_ACL = None
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID = 'AKIAIGCRUOY6E5QWAXDQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'www.obgmycompany.com'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-# AWS_S3_REGION_NAME = 'eu-west-2'
-# AWS_S3_SIGNATURE_VERSION = "s3v4"
-# AWS_S3_FILE_OVERWRITE = True
-# AWS_FILE_EXPIRE = 200
+AWS_S3_REGION_NAME = 'eu-west-2'
+AWS_S3_SIGNATURE_VERSION = "s3v4"
+AWS_S3_FILE_OVERWRITE = True
+AWS_FILE_EXPIRE = 200
 
 
 
