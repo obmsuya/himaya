@@ -1,0 +1,156 @@
+
+
+        #map {
+            width: 100%;
+            height: 1048px;
+        }
+
+        /*#mymap {
+            width: 100%;
+            height: 825px;
+        }*/
+		
+        #sidebar {
+            position: right;
+        }
+
+        .error {
+            display: none;
+            margin-left: 10px;
+        }
+
+        .error_show {
+            color: red;
+            margin-left: 10px;
+        }
+html,
+body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: 100%;
+    /* Negative indent footer by its height */
+    margin: 0 auto -82px 0;
+    /* Pad bottom by footer height */
+    padding: 0 0 80px 0;
+}
+
+
+
+#wrap > .center-container {
+    padding: 50px 0 0 0;
+    margin: 0;
+}
+
+
+
+.center-container {
+    height: 100%;
+    display: table;
+    width: 100%;
+    margin: 0;
+}
+
+.center-row {
+    height: 50%;
+    width: 100%;
+    display: table-row;
+}
+
+    .center-row > div {
+        height: 100%;
+        width: 50%;
+        display: table-cell;
+        border: 1px solid #eee
+    }
+
+.footer-top {
+    position: relative;
+    background-color: gray;
+    color: #c5c5c5;
+    z-index: 10001;
+    padding: 5px 0 5px;
+    border-top: 1px solid #696969;
+    border-bottom: 1px solid #696969;
+}
+
+
+
+.bluecircle {
+  background: #456BD9;
+  clip-path: circle(50%);
+  height: 3em;
+  width: 3m;
+}
+.yellowcircle {
+  background: yellow;
+  clip-path: circle(50%);
+  height: 3em;
+  width: 3em;
+}
+.greencircle {
+  background: green;
+  clip-path: circle(50%);
+  height: 3em;
+  width: 3em;
+}
+.purplecircle {
+  background: purple;
+  clip-path: circle(50%);
+  height: 3em;
+  width: 3em;
+}
+
+.graycircle {
+  background: white;
+  clip-path: circle(50%);
+  height: 3em;
+  width: 3em;
+}
+
+.whitecircle {
+  background: white;
+  clip-path: circle(50%);
+  height: 3em;
+  width: 3em;
+}
+
+
+.sm_bluecircle {
+  background: #456BD9;
+  clip-path: circle(50%);
+  height: 2em;
+  width: 2em;
+}
+.sm_yellowcircle {
+  background: yellow;
+  clip-path: circle(50%);
+  height: 2em;
+  width: 2em;
+}
+.sm_greencircle {
+  background: green;
+  clip-path: circle(50%);
+  height: 2em;
+  width: 2em;
+}
+.sm_purplecircle {
+  background: purple;
+  clip-path: circle(50%);
+  height: 2em;
+  width: 2em;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+
+
