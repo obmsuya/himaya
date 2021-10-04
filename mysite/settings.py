@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
+
+
 if os.name == 'nt':
     import platform
     OSGEO4W = r"C:\OSGeo4W"
@@ -124,8 +127,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'mygis',
-        'USER': 'obmsuya',
+        'NAME': 'gis',
+        'USER': 'obmen',
         'PASSWORD': 'Savioury9',
         'HOST': 'oamsuy06-2358.postgres.pythonanywhere-services.com',
         'PORT': '12358',
