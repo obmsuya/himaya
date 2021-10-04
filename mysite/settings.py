@@ -11,6 +11,17 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+if os.name == 'nt':
+    import platform
+    OSGEO4W = r"C:\OSGeo4W"
+    if '64' in platform.architecture()[0]:
+        OSGEO4W += "64"
+    assert os.path.isdir(OSGEO4W), "Directory does not exist: " + OSGEO4W
+    os.environ['OSGEO4W_ROOT'] = OSGEO4W
+    #os.environ['GDAL_DATA'] = "C:\Program Files\GDAL\gdal-data" 
+    os.environ['PROJ_LIB'] = OSGEO4W + r"\share\proj"
+    #GDAL_LIBRARY_PATH = r'C:\OSGeo4W64\bin\gdal204'
+    os.environ['PATH'] = OSGEO4W + r"\bin;" + os.environ['PATH']
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,9 +48,9 @@ SECRET_KEY = 'mob_we*$0e2cpfq^0jey+wakxnzl&46%6v=tov)0p+&0!4(4!b'
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
-# DEBUG = True
+DEBUG = True
 
-DEBUG = False
+# DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'oamsuy06.pythonanywhere.com','www.obgmycompany.com', 'www.vitabutanzania.com']
 
@@ -58,6 +69,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'storages',
     'django.contrib.sitemaps',
+    'django.contrib.gis',
+    'leaflet',
+    'django.contrib.gis.db.models',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
