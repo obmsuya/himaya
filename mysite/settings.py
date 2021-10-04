@@ -53,7 +53,9 @@ DEBUG = True
 # DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'oamsuy06.pythonanywhere.com','www.obgmycompany.com', 'www.vitabutanzania.com']
-
+SERIALIZATION_MODULES = {
+    "geojson": "django.contrib.gis.serializers.geojson", 
+ }
 
 # Application definition
 
@@ -79,7 +81,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -105,65 +107,36 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-# local/mysql(og)
 
+# # local postgres
 # DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME':'sitaki',
-#        'USER': 'obmsuya',
-#        'PASSWORD': 'Savioury9',
-#        'OPTIONS': {
-#            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-#            #Tell mysql to connect with 'utf8mb4' character set
-#            'charset':'utf8mb4',
-#            },
-#        #Tell django to build the test database with 'utf8mb4'character set
-#        'TEST': {
-#            'CHARSET': 'utf8mb4',
-#            'COLLATION': 'utf8mb4_unicode_ci',
-#        },
-       
-#    }
+#     'default': {
+#         'ENGINE': 'django.contrib.gis.db.backends.postgis',
+#         'NAME': 'test2',
+#         'USER': 'postgres',
+#         'HOST': 'localhost',
+#         'PASSWORD': 'Savioury9',
+#         'PORT': '5432',
+#     }
 # }
 
-
-
-# local postgres
+# live postgres
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'test2',
-        'USER': 'postgres',
-        'HOST': 'localhost',
+        'NAME': 'mygis',
+        'USER': 'obmsuya',
         'PASSWORD': 'Savioury9',
-        'PORT': '5432',
+        'HOST': 'oamsuy06-2358.postgres.pythonanywhere-services.com',
+        'PORT': '12358',
     }
 }
 
-#LIVE mysql
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME':'oamsuy06$default',
-#         'USER': 'oamsuy06',
-#         'OPTIONS': {
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-#             #Tell mysql to connect with 'utf8mb4' character set
-#             'charset':'utf8mb4',
-#             },
-#         #Tell django to build the test database with 'utf8mb4'character set
-#         'TEST': {
-#             'CHARSET': 'utf8mb4',
-#             'COLLATION': 'utf8mb4_unicode_ci',
-#         },
-#         'PASSWORD': 'Pa55w0rd',
-#         'HOST': 'oamsuy06.mysql.pythonanywhere-services.com',
-#         'PORT': '',
-       
-#     }
-# }
+
+
+
+
 
 
 # CORS_REPLACE_HTTPS_REFERER = True
@@ -234,18 +207,18 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static', 'media')
 MEDIA_URL = '/media/'
 
 
-AWS_ACCESS_KEY_ID = 'AKIAIGCRUOY6E5QWAXDQ'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'www.obgmycompany.com'
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# AWS_ACCESS_KEY_ID = 'AKIAIGCRUOY6E5QWAXDQ'
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_STORAGE_BUCKET_NAME = 'www.obgmycompany.com'
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL = None
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-AWS_S3_REGION_NAME = 'eu-west-2'
-AWS_S3_SIGNATURE_VERSION = "s3v4"
-AWS_S3_FILE_OVERWRITE = True
-AWS_FILE_EXPIRE = 200
+# AWS_S3_REGION_NAME = 'eu-west-2'
+# AWS_S3_SIGNATURE_VERSION = "s3v4"
+# AWS_S3_FILE_OVERWRITE = True
+# AWS_FILE_EXPIRE = 200
 
 
 
