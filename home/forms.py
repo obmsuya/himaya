@@ -1,7 +1,7 @@
 from django import forms
 from home.models import Post
 from home.models import Post4
-from home.models import Downliner, Friend
+from home.models import Friend
 
 
 
@@ -82,12 +82,3 @@ class PostForm2(forms.ModelForm):
         
         
         
-class Images(forms.ModelForm):
-    class Meta:
-        model = Downliner 
-        fields= [
-            "title",
-            "content",
-            "image",
-            
-        ]

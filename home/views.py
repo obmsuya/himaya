@@ -7,8 +7,8 @@ from django.shortcuts import render, get_object_or_404
 from django.template import loader
 
 
-from home.forms import HomeForm, ClassRegistration, PostForm2, Images, FriendForm
-from home.models import Post,Item, Category,Post4, Downliner, Friend, Paymentdetail
+from home.forms import HomeForm, ClassRegistration, PostForm2, FriendForm
+from home.models import Post,Item, Category,Post4, Friend, Paymentdetail
 from django.contrib.auth.decorators import login_required
 
 #These class views is for chating
