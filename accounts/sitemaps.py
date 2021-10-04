@@ -13,7 +13,7 @@ class StaticViewSitemap(Sitemap):
 	def location(self, item):
 		return (item)
 
-# class ItemSitemap(Sitemap):
+# class ItemSitemap(Sitemap): ok
 # 	changefreq="daily"
 # 	priority = 1.0
 
