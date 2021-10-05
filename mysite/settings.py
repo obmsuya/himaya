@@ -186,7 +186,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-# changed
+# changedd
 
 LOGIN_REDIRECT_URL = '/home/authors'
 
