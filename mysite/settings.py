@@ -128,7 +128,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'mygis',
-        'USER': 'oamsuy06',
+        'USER': 'super',
         'PASSWORD': 'Savioury9',
         'HOST': 'oamsuy06-2358.postgres.pythonanywhere-services.com',
         'PORT': '12358',
