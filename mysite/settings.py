@@ -127,8 +127,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'gis',
-        'USER': 'obmen',
+        'NAME': 'mygis',
+        'USER': 'obmsuya',
         'PASSWORD': 'Savioury9',
         'HOST': 'oamsuy06-2358.postgres.pythonanywhere-services.com',
         'PORT': '12358',
